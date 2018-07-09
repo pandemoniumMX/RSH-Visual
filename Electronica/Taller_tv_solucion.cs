@@ -7,132 +7,132 @@ using System.Windows.Forms;
 
 namespace Electronica
 {
-	public class Taller_tv_solucion : Form
-	{
-		private MySqlConnection conn = ConexionBD.ObtenerConexion();
+    public class Taller_tv_solucion : Form
+    {
+        private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
-		private IContainer components = null;
+        private IContainer components = null;
 
-		private Label label2;
+        private Label label2;
 
-		private DataGridView TablaEquipos;
+        private DataGridView TablaEquipos;
 
-		private TextBox Buscador;
+        private TextBox Buscador;
 
-		private Label label1;
+        private Label label1;
 
-		public TextBox txtfolio;
+        public TextBox txtfolio;
 
-		public TextBox txttipo;
+        public TextBox txttipo;
 
-		public Taller_tv_solucion()
-		{
-			InitializeComponent();
-		}
+        public Taller_tv_solucion()
+        {
+            InitializeComponent();
+        }
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
 
-		public void BuscarEquipos(string valueToSearch)
-		{
-			string query_tabla_equipos = "SELECT * FROM `reparar_tv` WHERE estado='Sin solucion' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
-			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
-			try
-			{
-				MySqlDataAdapter tabla = new MySqlDataAdapter();
-				tabla.SelectCommand = cmd_query_tabla_equipos;
-				DataTable dbdataset = new DataTable();
-				tabla.Fill(dbdataset);
-				BindingSource bSource = new BindingSource();
-				bSource.DataSource = dbdataset;
-				TablaEquipos.DataSource = bSource;
-				tabla.Update(dbdataset);
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-		}
+        public void BuscarEquipos(string valueToSearch)
+        {
+            string query_tabla_equipos = "SELECT * FROM `reparar_tv` WHERE estado='Sin solucion' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+            MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
+            try
+            {
+                MySqlDataAdapter tabla = new MySqlDataAdapter();
+                tabla.SelectCommand = cmd_query_tabla_equipos;
+                DataTable dbdataset = new DataTable();
+                tabla.Fill(dbdataset);
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = dbdataset;
+                TablaEquipos.DataSource = bSource;
+                tabla.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
 
-		private void TablaEquipos_CellClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+        private void TablaEquipos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
 
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
 
-		private void Buscador_TextChanged(object sender, EventArgs e)
-		{
-		}
+        private void Buscador_TextChanged(object sender, EventArgs e)
+        {
+        }
 
-		private void Buscador_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			string valueToSearch = Buscador.Text.ToString();
-			BuscarEquipos(valueToSearch);
-		}
+        private void Buscador_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string valueToSearch = Buscador.Text.ToString();
+            BuscarEquipos(valueToSearch);
+        }
 
-		private void Taller_Load(object sender, EventArgs e)
-		{
-			BuscarEquipos("");
-		}
+        private void Taller_Load(object sender, EventArgs e)
+        {
+            BuscarEquipos("");
+        }
 
-		private void Cliente_nuevo(object sender, EventArgs e)
-		{
-		}
+        private void Cliente_nuevo(object sender, EventArgs e)
+        {
+        }
 
-		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				Taller_actualizar3 cl = new Taller_actualizar3();
-				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
-				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.txttipo.Text = txttipo.Text.ToString();
-				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
-				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
-				cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
-				cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
-				cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
-				cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
-				cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
-				cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-				cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
-				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
-				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
-				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
+        private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
+                Taller_actualizar3 cl = new Taller_actualizar3();
+                cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.txttipo.Text = txttipo.Text.ToString();
+                cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
+                cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
+                cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
+                cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
+                cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
+                cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
+                cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
+                cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+                cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
+                cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
+                cl.txtabono.Text = row.Cells["abono"].Value.ToString();
+                cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
                 cl.txtresta.Text = row.Cells["restante"].Value.ToString();
                 cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
                 cl.txtestado.Text = row.Cells["estado"].Value.ToString();
-				cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
-				cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
-				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.ShowDialog();
-				Close();
-			}
-		}
+                cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
+                cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.ShowDialog();
+                Close();
+            }
+        }
 
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+        private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
 
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && components != null)
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null)
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		private void InitializeComponent()
-		{
+        private void InitializeComponent()
+        {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
@@ -218,15 +218,25 @@ namespace Electronica
             this.Controls.Add(this.TablaEquipos);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
             this.Name = "Taller_tv_solucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Taller_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_tv_solucion_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
-	}
+        }
+
+        private void Taller_tv_solucion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

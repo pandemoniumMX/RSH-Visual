@@ -89,126 +89,171 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			txtaviso = new System.Windows.Forms.TextBox();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtidaviso = new System.Windows.Forms.TextBox();
-			label2 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			comboestado = new System.Windows.Forms.ComboBox();
-			label5 = new System.Windows.Forms.Label();
-			txtfecha = new System.Windows.Forms.TextBox();
-			button1 = new System.Windows.Forms.Button();
-			SuspendLayout();
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(53, 50);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(140, 20);
-			label1.TabIndex = 18;
-			label1.Text = "Folio del cliente:";
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(59, 128);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(211, 20);
-			label3.TabIndex = 20;
-			label3.Text = "Aviso o queja en general:";
-			txtaviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			txtaviso.Location = new System.Drawing.Point(24, 167);
-			txtaviso.Margin = new System.Windows.Forms.Padding(2);
-			txtaviso.Multiline = true;
-			txtaviso.Name = "txtaviso";
-			txtaviso.Size = new System.Drawing.Size(302, 296);
-			txtaviso.TabIndex = 2;
-			txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtfolio.Location = new System.Drawing.Point(213, 47);
-			txtfolio.Name = "txtfolio";
-			txtfolio.ReadOnly = true;
-			txtfolio.Size = new System.Drawing.Size(81, 26);
-			txtfolio.TabIndex = 48;
-			txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtidaviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtidaviso.Location = new System.Drawing.Point(213, 9);
-			txtidaviso.Name = "txtidaviso";
-			txtidaviso.ReadOnly = true;
-			txtidaviso.Size = new System.Drawing.Size(81, 26);
-			txtidaviso.TabIndex = 50;
-			txtidaviso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(53, 9);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(122, 20);
-			label2.TabIndex = 49;
-			label2.Text = "Aviso número:";
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(53, 96);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(71, 20);
-			label4.TabIndex = 51;
-			label4.Text = "Estado:";
-			comboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			comboestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			comboestado.FormattingEnabled = true;
-			comboestado.Items.AddRange(new object[2]
-			{
-				"Pendiente",
-				"Solucionado"
-			});
-			comboestado.Location = new System.Drawing.Point(168, 93);
-			comboestado.Name = "comboestado";
-			comboestado.Size = new System.Drawing.Size(126, 28);
-			comboestado.TabIndex = 52;
-			label5.AutoSize = true;
-			label5.Location = new System.Drawing.Point(21, 533);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(85, 13);
-			label5.TabIndex = 53;
-			label5.Text = "Fecha del aviso:";
-			txtfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtfecha.Location = new System.Drawing.Point(24, 554);
-			txtfecha.Name = "txtfecha";
-			txtfecha.ReadOnly = true;
-			txtfecha.Size = new System.Drawing.Size(90, 26);
-			txtfecha.TabIndex = 54;
-			txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Image = Electronica.Properties.Resources._003_refresh_button1;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(188, 533);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(147, 47);
-			button1.TabIndex = 47;
-			button1.Text = "      Actualizar aviso";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(347, 592);
-			base.Controls.Add(txtfecha);
-			base.Controls.Add(label5);
-			base.Controls.Add(comboestado);
-			base.Controls.Add(label4);
-			base.Controls.Add(txtidaviso);
-			base.Controls.Add(label2);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(button1);
-			base.Controls.Add(label3);
-			base.Controls.Add(txtaviso);
-			base.Controls.Add(label1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Name = "Administrar_avisos_editar";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			Text = "Avisos y quejas de clientes";
-			base.Load += new System.EventHandler(Inicio_Load);
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtaviso = new System.Windows.Forms.TextBox();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtidaviso = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboestado = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtfecha = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Folio del cliente:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(59, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Aviso o queja en general:";
+            // 
+            // txtaviso
+            // 
+            this.txtaviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaviso.Location = new System.Drawing.Point(24, 167);
+            this.txtaviso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaviso.Multiline = true;
+            this.txtaviso.Name = "txtaviso";
+            this.txtaviso.Size = new System.Drawing.Size(302, 296);
+            this.txtaviso.TabIndex = 2;
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfolio.Location = new System.Drawing.Point(213, 47);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.ReadOnly = true;
+            this.txtfolio.Size = new System.Drawing.Size(81, 26);
+            this.txtfolio.TabIndex = 48;
+            this.txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtidaviso
+            // 
+            this.txtidaviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidaviso.Location = new System.Drawing.Point(213, 9);
+            this.txtidaviso.Name = "txtidaviso";
+            this.txtidaviso.ReadOnly = true;
+            this.txtidaviso.Size = new System.Drawing.Size(81, 26);
+            this.txtidaviso.TabIndex = 50;
+            this.txtidaviso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Aviso número:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(53, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Estado:";
+            // 
+            // comboestado
+            // 
+            this.comboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboestado.FormattingEnabled = true;
+            this.comboestado.Items.AddRange(new object[] {
+            "Pendiente",
+            "Solucionado"});
+            this.comboestado.Location = new System.Drawing.Point(168, 93);
+            this.comboestado.Name = "comboestado";
+            this.comboestado.Size = new System.Drawing.Size(126, 28);
+            this.comboestado.TabIndex = 52;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 533);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Fecha del aviso:";
+            // 
+            // txtfecha
+            // 
+            this.txtfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Location = new System.Drawing.Point(24, 554);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.ReadOnly = true;
+            this.txtfecha.Size = new System.Drawing.Size(90, 26);
+            this.txtfecha.TabIndex = 54;
+            this.txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Electronica.Properties.Resources._003_refresh_button1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(188, 533);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 47);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "      Actualizar aviso";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Administrar_avisos_editar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(347, 592);
+            this.Controls.Add(this.txtfecha);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboestado);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtidaviso);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtaviso);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Name = "Administrar_avisos_editar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Avisos y quejas de clientes";
+            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Administrar_avisos_editar_KeyDown);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Administrar_avisos_editar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

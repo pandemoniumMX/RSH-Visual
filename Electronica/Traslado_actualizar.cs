@@ -157,252 +157,326 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			txtdireccion = new System.Windows.Forms.TextBox();
-			button1 = new System.Windows.Forms.Button();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtcomentarios = new System.Windows.Forms.TextBox();
-			label2 = new System.Windows.Forms.Label();
-			txtidtraslado = new System.Windows.Forms.TextBox();
-			label4 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
-			comboestado = new System.Windows.Forms.ComboBox();
-			label6 = new System.Windows.Forms.Label();
-			txtfecha = new System.Windows.Forms.TextBox();
-			txtpersonal = new System.Windows.Forms.TextBox();
-			label7 = new System.Windows.Forms.Label();
-			txtcarro = new System.Windows.Forms.TextBox();
-			label8 = new System.Windows.Forms.Label();
-			label9 = new System.Windows.Forms.Label();
-			button2 = new System.Windows.Forms.Button();
-			label10 = new System.Windows.Forms.Label();
-			comboubicacion = new System.Windows.Forms.ComboBox();
-			combodestino = new System.Windows.Forms.ComboBox();
-			SuspendLayout();
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(257, 15);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(140, 20);
-			label1.TabIndex = 18;
-			label1.Text = "Folio del cliente:";
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(72, 124);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(147, 20);
-			label3.TabIndex = 20;
-			label3.Text = "Dirección exacta:";
-			txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			txtdireccion.Location = new System.Drawing.Point(6, 162);
-			txtdireccion.Margin = new System.Windows.Forms.Padding(2);
-			txtdireccion.Multiline = true;
-			txtdireccion.Name = "txtdireccion";
-			txtdireccion.Size = new System.Drawing.Size(247, 201);
-			txtdireccion.TabIndex = 3;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Image = Electronica.Properties.Resources.mail_sent__1_;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(349, 425);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(147, 47);
-			button1.TabIndex = 5;
-			button1.Text = "      Actualizar traslado";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtfolio.Location = new System.Drawing.Point(415, 12);
-			txtfolio.Name = "txtfolio";
-			txtfolio.ReadOnly = true;
-			txtfolio.Size = new System.Drawing.Size(81, 26);
-			txtfolio.TabIndex = 48;
-			txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtfolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtfolio_KeyPress);
-			txtcomentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			txtcomentarios.Location = new System.Drawing.Point(261, 162);
-			txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
-			txtcomentarios.Multiline = true;
-			txtcomentarios.Name = "txtcomentarios";
-			txtcomentarios.Size = new System.Drawing.Size(247, 201);
-			txtcomentarios.TabIndex = 4;
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(286, 124);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(210, 20);
-			label2.TabIndex = 50;
-			label2.Text = "Comentarios adicionales:";
-			txtidtraslado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtidtraslado.Location = new System.Drawing.Point(160, 12);
-			txtidtraslado.Name = "txtidtraslado";
-			txtidtraslado.ReadOnly = true;
-			txtidtraslado.Size = new System.Drawing.Size(81, 26);
-			txtidtraslado.TabIndex = 52;
-			txtidtraslado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(2, 15);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(148, 20);
-			label4.TabIndex = 51;
-			label4.Text = "Traslado número:";
-			label5.AutoSize = true;
-			label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label5.Location = new System.Drawing.Point(7, 72);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(71, 20);
-			label5.TabIndex = 53;
-			label5.Text = "Estado:";
-			comboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			comboestado.Enabled = false;
-			comboestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			comboestado.FormattingEnabled = true;
-			comboestado.Items.AddRange(new object[6]
-			{
-				"Pendiente",
-				"Recoleccion",
-				"En transito",
-				"No se encontro",
-				"Realizado",
-				"Cancelado"
-			});
-			comboestado.Location = new System.Drawing.Point(98, 69);
-			comboestado.Name = "comboestado";
-			comboestado.Size = new System.Drawing.Size(121, 28);
-			comboestado.TabIndex = 1;
-			label6.AutoSize = true;
-			label6.Location = new System.Drawing.Point(383, 372);
-			label6.Name = "label6";
-			label6.Size = new System.Drawing.Size(96, 13);
-			label6.TabIndex = 55;
-			label6.Text = "Fecha de solicitud:";
-			txtfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtfecha.Location = new System.Drawing.Point(386, 393);
-			txtfecha.Name = "txtfecha";
-			txtfecha.ReadOnly = true;
-			txtfecha.Size = new System.Drawing.Size(93, 26);
-			txtfecha.TabIndex = 56;
-			txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtpersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtpersonal.Location = new System.Drawing.Point(209, 393);
-			txtpersonal.Name = "txtpersonal";
-			txtpersonal.ReadOnly = true;
-			txtpersonal.Size = new System.Drawing.Size(93, 26);
-			txtpersonal.TabIndex = 58;
-			txtpersonal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label7.AutoSize = true;
-			label7.Location = new System.Drawing.Point(213, 372);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(89, 13);
-			label7.TabIndex = 57;
-			label7.Text = "Personal número:";
-			txtcarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtcarro.Location = new System.Drawing.Point(23, 393);
-			txtcarro.Name = "txtcarro";
-			txtcarro.ReadOnly = true;
-			txtcarro.Size = new System.Drawing.Size(93, 26);
-			txtcarro.TabIndex = 60;
-			txtcarro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label8.AutoSize = true;
-			label8.Location = new System.Drawing.Point(47, 372);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(46, 13);
-			label8.TabIndex = 59;
-			label8.Text = "Id carro:";
-			label9.AutoSize = true;
-			label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label9.Location = new System.Drawing.Point(257, 52);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(93, 20);
-			label9.TabIndex = 61;
-			label9.Text = "Ubicación:";
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button2.Image = Electronica.Properties.Resources._unchecked;
-			button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button2.Location = new System.Drawing.Point(23, 425);
-			button2.Name = "button2";
-			button2.Size = new System.Drawing.Size(147, 47);
-			button2.TabIndex = 62;
-			button2.Text = "      Cancelar solicitud";
-			button2.UseVisualStyleBackColor = true;
-			button2.Click += new System.EventHandler(button2_Click);
-			label10.AutoSize = true;
-			label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label10.Location = new System.Drawing.Point(257, 96);
-			label10.Name = "label10";
-			label10.Size = new System.Drawing.Size(76, 20);
-			label10.TabIndex = 64;
-			label10.Text = "Destino:";
-			comboubicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			comboubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			comboubicacion.FormattingEnabled = true;
-			comboubicacion.Items.AddRange(new object[6]
-			{
-				"Camioneta",
-				"Cliente",
-				"DHL",
-				"Bodega",
-				"Taller",
-				"Recepcion"
-			});
-			comboubicacion.Location = new System.Drawing.Point(368, 49);
-			comboubicacion.Name = "comboubicacion";
-			comboubicacion.Size = new System.Drawing.Size(128, 28);
-			comboubicacion.TabIndex = 67;
-			combodestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combodestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			combodestino.FormattingEnabled = true;
-			combodestino.Items.AddRange(new object[6]
-			{
-				"Camioneta",
-				"Cliente",
-				"DHL",
-				"Bodega",
-				"Taller",
-				"Recepcion"
-			});
-			combodestino.Location = new System.Drawing.Point(368, 93);
-			combodestino.Name = "combodestino";
-			combodestino.Size = new System.Drawing.Size(128, 28);
-			combodestino.TabIndex = 68;
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(519, 481);
-			base.Controls.Add(combodestino);
-			base.Controls.Add(comboubicacion);
-			base.Controls.Add(label10);
-			base.Controls.Add(button2);
-			base.Controls.Add(label9);
-			base.Controls.Add(txtcarro);
-			base.Controls.Add(label8);
-			base.Controls.Add(txtpersonal);
-			base.Controls.Add(label7);
-			base.Controls.Add(txtfecha);
-			base.Controls.Add(label6);
-			base.Controls.Add(comboestado);
-			base.Controls.Add(label5);
-			base.Controls.Add(txtidtraslado);
-			base.Controls.Add(label4);
-			base.Controls.Add(label2);
-			base.Controls.Add(txtcomentarios);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(button1);
-			base.Controls.Add(label3);
-			base.Controls.Add(txtdireccion);
-			base.Controls.Add(label1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Name = "Traslado_actualizar";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			Text = "Solicitud de traslado";
-			base.Load += new System.EventHandler(Inicio_Load);
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtcomentarios = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtidtraslado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboestado = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtfecha = new System.Windows.Forms.TextBox();
+            this.txtpersonal = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtcarro = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboubicacion = new System.Windows.Forms.ComboBox();
+            this.combodestino = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(257, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Folio del cliente:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(72, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Dirección exacta:";
+            // 
+            // txtdireccion
+            // 
+            this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdireccion.Location = new System.Drawing.Point(6, 162);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtdireccion.Multiline = true;
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(247, 201);
+            this.txtdireccion.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Electronica.Properties.Resources.mail_sent__1_;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(349, 425);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 47);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "      Actualizar traslado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfolio.Location = new System.Drawing.Point(415, 12);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.ReadOnly = true;
+            this.txtfolio.Size = new System.Drawing.Size(81, 26);
+            this.txtfolio.TabIndex = 48;
+            this.txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfolio_KeyPress);
+            // 
+            // txtcomentarios
+            // 
+            this.txtcomentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcomentarios.Location = new System.Drawing.Point(261, 162);
+            this.txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcomentarios.Multiline = true;
+            this.txtcomentarios.Name = "txtcomentarios";
+            this.txtcomentarios.Size = new System.Drawing.Size(247, 201);
+            this.txtcomentarios.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(286, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 20);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Comentarios adicionales:";
+            // 
+            // txtidtraslado
+            // 
+            this.txtidtraslado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidtraslado.Location = new System.Drawing.Point(160, 12);
+            this.txtidtraslado.Name = "txtidtraslado";
+            this.txtidtraslado.ReadOnly = true;
+            this.txtidtraslado.Size = new System.Drawing.Size(81, 26);
+            this.txtidtraslado.TabIndex = 52;
+            this.txtidtraslado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(2, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 20);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Traslado número:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Estado:";
+            // 
+            // comboestado
+            // 
+            this.comboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboestado.Enabled = false;
+            this.comboestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboestado.FormattingEnabled = true;
+            this.comboestado.Items.AddRange(new object[] {
+            "Pendiente",
+            "Recoleccion",
+            "En transito",
+            "No se encontro",
+            "Realizado",
+            "Cancelado"});
+            this.comboestado.Location = new System.Drawing.Point(98, 69);
+            this.comboestado.Name = "comboestado";
+            this.comboestado.Size = new System.Drawing.Size(121, 28);
+            this.comboestado.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(383, 372);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Fecha de solicitud:";
+            // 
+            // txtfecha
+            // 
+            this.txtfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Location = new System.Drawing.Point(386, 393);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.ReadOnly = true;
+            this.txtfecha.Size = new System.Drawing.Size(93, 26);
+            this.txtfecha.TabIndex = 56;
+            this.txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtpersonal
+            // 
+            this.txtpersonal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpersonal.Location = new System.Drawing.Point(209, 393);
+            this.txtpersonal.Name = "txtpersonal";
+            this.txtpersonal.ReadOnly = true;
+            this.txtpersonal.Size = new System.Drawing.Size(93, 26);
+            this.txtpersonal.TabIndex = 58;
+            this.txtpersonal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(213, 372);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 13);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Personal número:";
+            // 
+            // txtcarro
+            // 
+            this.txtcarro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcarro.Location = new System.Drawing.Point(23, 393);
+            this.txtcarro.Name = "txtcarro";
+            this.txtcarro.ReadOnly = true;
+            this.txtcarro.Size = new System.Drawing.Size(93, 26);
+            this.txtcarro.TabIndex = 60;
+            this.txtcarro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 372);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "Id carro:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(257, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 20);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Ubicación:";
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Electronica.Properties.Resources._unchecked;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(23, 425);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 47);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "      Cancelar solicitud";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(257, 96);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 20);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Destino:";
+            // 
+            // comboubicacion
+            // 
+            this.comboubicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboubicacion.FormattingEnabled = true;
+            this.comboubicacion.Items.AddRange(new object[] {
+            "Camioneta",
+            "Cliente",
+            "DHL",
+            "Bodega",
+            "Taller",
+            "Recepcion"});
+            this.comboubicacion.Location = new System.Drawing.Point(368, 49);
+            this.comboubicacion.Name = "comboubicacion";
+            this.comboubicacion.Size = new System.Drawing.Size(128, 28);
+            this.comboubicacion.TabIndex = 67;
+            // 
+            // combodestino
+            // 
+            this.combodestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combodestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combodestino.FormattingEnabled = true;
+            this.combodestino.Items.AddRange(new object[] {
+            "Camioneta",
+            "Cliente",
+            "DHL",
+            "Bodega",
+            "Taller",
+            "Recepcion"});
+            this.combodestino.Location = new System.Drawing.Point(368, 93);
+            this.combodestino.Name = "combodestino";
+            this.combodestino.Size = new System.Drawing.Size(128, 28);
+            this.combodestino.TabIndex = 68;
+            // 
+            // Traslado_actualizar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(519, 481);
+            this.Controls.Add(this.combodestino);
+            this.Controls.Add(this.comboubicacion);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtcarro);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtpersonal);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtfecha);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboestado);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtidtraslado);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtcomentarios);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtdireccion);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Name = "Traslado_actualizar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Solicitud de traslado";
+            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Traslado_actualizar_KeyDown);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Traslado_actualizar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

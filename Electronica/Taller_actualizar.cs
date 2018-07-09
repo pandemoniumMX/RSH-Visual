@@ -1033,12 +1033,14 @@ namespace Electronica
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Taller_actualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Ordenes de Servicio";
             this.Load += new System.EventHandler(this.Taller_actualizar_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_actualizar_KeyDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1055,6 +1057,14 @@ namespace Electronica
             int sub;
             sub = int.Parse(txtrefaccion.Text) + int.Parse(txtmano.Text);
             txtsubtotal.Text= sub.ToString();
+        }
+
+        private void Taller_actualizar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

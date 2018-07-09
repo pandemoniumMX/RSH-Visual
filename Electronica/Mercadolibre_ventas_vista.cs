@@ -234,252 +234,329 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Electronica.Mercadolibre_ventas_vista));
-			txtcosto = new System.Windows.Forms.TextBox();
-			label8 = new System.Windows.Forms.Label();
-			txtserie = new System.Windows.Forms.TextBox();
-			txtmarca = new System.Windows.Forms.TextBox();
-			button4 = new System.Windows.Forms.Button();
-			button2 = new System.Windows.Forms.Button();
-			button1 = new System.Windows.Forms.Button();
-			label10 = new System.Windows.Forms.Label();
-			txtidoculto = new System.Windows.Forms.TextBox();
-			label7 = new System.Windows.Forms.Label();
-			txtmodelo = new System.Windows.Forms.TextBox();
-			label3 = new System.Windows.Forms.Label();
-			label2 = new System.Windows.Forms.Label();
-			label1 = new System.Windows.Forms.Label();
-			pictureBox3 = new System.Windows.Forms.PictureBox();
-			pictureBox2 = new System.Windows.Forms.PictureBox();
-			pictureBox1 = new System.Windows.Forms.PictureBox();
-			btngenerar = new System.Windows.Forms.Button();
-			button3 = new System.Windows.Forms.Button();
-			txtvendedor = new System.Windows.Forms.TextBox();
-			label4 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			SuspendLayout();
-			txtcosto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			txtcosto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtcosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtcosto.Location = new System.Drawing.Point(809, 72);
-			txtcosto.Margin = new System.Windows.Forms.Padding(2);
-			txtcosto.Name = "txtcosto";
-			txtcosto.ReadOnly = true;
-			txtcosto.Size = new System.Drawing.Size(142, 26);
-			txtcosto.TabIndex = 58;
-			label8.AutoSize = true;
-			label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label8.Location = new System.Drawing.Point(755, 75);
-			label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(55, 20);
-			label8.TabIndex = 57;
-			label8.Text = "Costo:";
-			txtserie.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			txtserie.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtserie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtserie.Location = new System.Drawing.Point(593, 72);
-			txtserie.Margin = new System.Windows.Forms.Padding(2);
-			txtserie.Name = "txtserie";
-			txtserie.ReadOnly = true;
-			txtserie.Size = new System.Drawing.Size(142, 26);
-			txtserie.TabIndex = 56;
-			txtmarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			txtmarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtmarca.Location = new System.Drawing.Point(158, 72);
-			txtmarca.Margin = new System.Windows.Forms.Padding(2);
-			txtmarca.Name = "txtmarca";
-			txtmarca.ReadOnly = true;
-			txtmarca.Size = new System.Drawing.Size(136, 26);
-			txtmarca.TabIndex = 55;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button4.Location = new System.Drawing.Point(836, 428);
-			button4.Name = "button4";
-			button4.Size = new System.Drawing.Size(191, 34);
-			button4.TabIndex = 54;
-			button4.Text = "Cargar Imagen #3";
-			button4.UseVisualStyleBackColor = true;
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button2.Location = new System.Drawing.Point(465, 428);
-			button2.Name = "button2";
-			button2.Size = new System.Drawing.Size(191, 34);
-			button2.TabIndex = 53;
-			button2.Text = "Cargar Imagen #2";
-			button2.UseVisualStyleBackColor = true;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Location = new System.Drawing.Point(103, 428);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(191, 34);
-			button1.TabIndex = 52;
-			button1.Text = "Cargar Imagen #1";
-			button1.UseVisualStyleBackColor = true;
-			label10.AutoSize = true;
-			label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label10.Location = new System.Drawing.Point(23, 132);
-			label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label10.Name = "label10";
-			label10.Size = new System.Drawing.Size(93, 20);
-			label10.TabIndex = 49;
-			label10.Text = "Imagenes:";
-			txtidoculto.Location = new System.Drawing.Point(481, 23);
-			txtidoculto.Margin = new System.Windows.Forms.Padding(2);
-			txtidoculto.Name = "txtidoculto";
-			txtidoculto.Size = new System.Drawing.Size(76, 20);
-			txtidoculto.TabIndex = 47;
-			txtidoculto.Visible = false;
-			label7.AutoSize = true;
-			label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label7.Location = new System.Drawing.Point(319, 75);
-			label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(65, 20);
-			label7.TabIndex = 45;
-			label7.Text = "Modelo:";
-			txtmodelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			txtmodelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtmodelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtmodelo.Location = new System.Drawing.Point(388, 72);
-			txtmodelo.Margin = new System.Windows.Forms.Padding(2);
-			txtmodelo.Name = "txtmodelo";
-			txtmodelo.ReadOnly = true;
-			txtmodelo.Size = new System.Drawing.Size(147, 26);
-			txtmodelo.TabIndex = 44;
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(539, 75);
-			label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(50, 20);
-			label3.TabIndex = 43;
-			label3.Text = "Serie:";
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(97, 75);
-			label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(57, 20);
-			label2.TabIndex = 42;
-			label2.Text = "Marca:";
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(21, 23);
-			label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(285, 25);
-			label1.TabIndex = 41;
-			label1.Text = "Nueva television en venta";
-			pictureBox3.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox3.BackgroundImage");
-			pictureBox3.Location = new System.Drawing.Point(759, 171);
-			pictureBox3.Name = "pictureBox3";
-			pictureBox3.Size = new System.Drawing.Size(303, 234);
-			pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			pictureBox3.TabIndex = 51;
-			pictureBox3.TabStop = false;
-			pictureBox2.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox2.BackgroundImage");
-			pictureBox2.Location = new System.Drawing.Point(412, 171);
-			pictureBox2.Name = "pictureBox2";
-			pictureBox2.Size = new System.Drawing.Size(303, 234);
-			pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			pictureBox2.TabIndex = 50;
-			pictureBox2.TabStop = false;
-			pictureBox1.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox1.BackgroundImage");
-			pictureBox1.Location = new System.Drawing.Point(54, 171);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new System.Drawing.Size(303, 234);
-			pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			pictureBox1.TabIndex = 48;
-			pictureBox1.TabStop = false;
-			btngenerar.FlatAppearance.BorderSize = 0;
-			btngenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btngenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btngenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			btngenerar.Image = Electronica.Properties.Resources.tick_inside_circle;
-			btngenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btngenerar.Location = new System.Drawing.Point(858, 535);
-			btngenerar.Margin = new System.Windows.Forms.Padding(2);
-			btngenerar.Name = "btngenerar";
-			btngenerar.Size = new System.Drawing.Size(191, 49);
-			btngenerar.TabIndex = 46;
-			btngenerar.Text = "   Vendida";
-			btngenerar.UseVisualStyleBackColor = true;
-			btngenerar.Click += new System.EventHandler(btngenerar_Click);
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			button3.Image = Electronica.Properties.Resources.tick_inside_circle;
-			button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button3.Location = new System.Drawing.Point(465, 535);
-			button3.Margin = new System.Windows.Forms.Padding(2);
-			button3.Name = "button3";
-			button3.Size = new System.Drawing.Size(191, 49);
-			button3.TabIndex = 59;
-			button3.Text = "   Abrir carpeta";
-			button3.UseVisualStyleBackColor = true;
-			button3.Click += new System.EventHandler(button3_Click);
-			txtvendedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-			txtvendedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtvendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtvendedor.Location = new System.Drawing.Point(1000, 18);
-			txtvendedor.Margin = new System.Windows.Forms.Padding(2);
-			txtvendedor.Name = "txtvendedor";
-			txtvendedor.Size = new System.Drawing.Size(84, 26);
-			txtvendedor.TabIndex = 62;
-			txtvendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(879, 21);
-			label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(108, 20);
-			label4.TabIndex = 61;
-			label4.Text = "ID de usuario:";
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 702);
-			base.Controls.Add(txtvendedor);
-			base.Controls.Add(label4);
-			base.Controls.Add(button3);
-			base.Controls.Add(txtcosto);
-			base.Controls.Add(label8);
-			base.Controls.Add(txtserie);
-			base.Controls.Add(txtmarca);
-			base.Controls.Add(button4);
-			base.Controls.Add(button2);
-			base.Controls.Add(button1);
-			base.Controls.Add(pictureBox3);
-			base.Controls.Add(pictureBox2);
-			base.Controls.Add(label10);
-			base.Controls.Add(pictureBox1);
-			base.Controls.Add(txtidoculto);
-			base.Controls.Add(btngenerar);
-			base.Controls.Add(label7);
-			base.Controls.Add(txtmodelo);
-			base.Controls.Add(label3);
-			base.Controls.Add(label2);
-			base.Controls.Add(label1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Margin = new System.Windows.Forms.Padding(2);
-			base.Name = "Mercadolibre_ventas_vista";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "RecepcionTelevisores";
-			base.Load += new System.EventHandler(RecepcionTelevisores_Load);
-			((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mercadolibre_ventas_vista));
+            this.txtcosto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtserie = new System.Windows.Forms.TextBox();
+            this.txtmarca = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtidoculto = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtmodelo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btngenerar = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtvendedor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtcosto
+            // 
+            this.txtcosto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtcosto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtcosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcosto.Location = new System.Drawing.Point(809, 72);
+            this.txtcosto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.ReadOnly = true;
+            this.txtcosto.Size = new System.Drawing.Size(142, 26);
+            this.txtcosto.TabIndex = 58;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(755, 75);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 20);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Costo:";
+            // 
+            // txtserie
+            // 
+            this.txtserie.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtserie.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtserie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtserie.Location = new System.Drawing.Point(593, 72);
+            this.txtserie.Margin = new System.Windows.Forms.Padding(2);
+            this.txtserie.Name = "txtserie";
+            this.txtserie.ReadOnly = true;
+            this.txtserie.Size = new System.Drawing.Size(142, 26);
+            this.txtserie.TabIndex = 56;
+            // 
+            // txtmarca
+            // 
+            this.txtmarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtmarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmarca.Location = new System.Drawing.Point(158, 72);
+            this.txtmarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.ReadOnly = true;
+            this.txtmarca.Size = new System.Drawing.Size(136, 26);
+            this.txtmarca.TabIndex = 55;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(836, 428);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(191, 34);
+            this.button4.TabIndex = 54;
+            this.button4.Text = "Cargar Imagen #3";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(465, 428);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 34);
+            this.button2.TabIndex = 53;
+            this.button2.Text = "Cargar Imagen #2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(103, 428);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 34);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Cargar Imagen #1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(23, 132);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 20);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "Imagenes:";
+            // 
+            // txtidoculto
+            // 
+            this.txtidoculto.Location = new System.Drawing.Point(481, 23);
+            this.txtidoculto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidoculto.Name = "txtidoculto";
+            this.txtidoculto.Size = new System.Drawing.Size(76, 20);
+            this.txtidoculto.TabIndex = 47;
+            this.txtidoculto.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(319, 75);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Modelo:";
+            // 
+            // txtmodelo
+            // 
+            this.txtmodelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtmodelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtmodelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmodelo.Location = new System.Drawing.Point(388, 72);
+            this.txtmodelo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.ReadOnly = true;
+            this.txtmodelo.Size = new System.Drawing.Size(147, 26);
+            this.txtmodelo.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(539, 75);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Serie:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(97, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 20);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Marca:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 25);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Nueva television en venta";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(759, 171);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(303, 234);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 51;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(412, 171);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(303, 234);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(54, 171);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(303, 234);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btngenerar
+            // 
+            this.btngenerar.FlatAppearance.BorderSize = 0;
+            this.btngenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btngenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngenerar.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.btngenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btngenerar.Location = new System.Drawing.Point(858, 535);
+            this.btngenerar.Margin = new System.Windows.Forms.Padding(2);
+            this.btngenerar.Name = "btngenerar";
+            this.btngenerar.Size = new System.Drawing.Size(191, 49);
+            this.btngenerar.TabIndex = 46;
+            this.btngenerar.Text = "   Vendida";
+            this.btngenerar.UseVisualStyleBackColor = true;
+            this.btngenerar.Click += new System.EventHandler(this.btngenerar_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(465, 535);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(191, 49);
+            this.button3.TabIndex = 59;
+            this.button3.Text = "   Abrir carpeta";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtvendedor
+            // 
+            this.txtvendedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtvendedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtvendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtvendedor.Location = new System.Drawing.Point(1000, 18);
+            this.txtvendedor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtvendedor.Name = "txtvendedor";
+            this.txtvendedor.Size = new System.Drawing.Size(84, 26);
+            this.txtvendedor.TabIndex = 62;
+            this.txtvendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(879, 21);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 20);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "ID de usuario:";
+            // 
+            // Mercadolibre_ventas_vista
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.txtvendedor);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtcosto);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtserie);
+            this.Controls.Add(this.txtmarca);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtidoculto);
+            this.Controls.Add(this.btngenerar);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtmodelo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Mercadolibre_ventas_vista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "RecepcionTelevisores";
+            this.Load += new System.EventHandler(this.RecepcionTelevisores_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Mercadolibre_ventas_vista_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Mercadolibre_ventas_vista_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

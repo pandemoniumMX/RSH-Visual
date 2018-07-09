@@ -120,140 +120,183 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			txtaviso = new System.Windows.Forms.TextBox();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtcomentarios = new System.Windows.Forms.TextBox();
-			label2 = new System.Windows.Forms.Label();
-			button1 = new System.Windows.Forms.Button();
-			label4 = new System.Windows.Forms.Label();
-			comboubicacion = new System.Windows.Forms.ComboBox();
-			combodestino = new System.Windows.Forms.ComboBox();
-			label5 = new System.Windows.Forms.Label();
-			SuspendLayout();
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(58, 15);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(140, 20);
-			label1.TabIndex = 18;
-			label1.Text = "Folio del cliente:";
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(96, 144);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(147, 20);
-			label3.TabIndex = 20;
-			label3.Text = "Dirección exacta:";
-			txtaviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			txtaviso.Location = new System.Drawing.Point(23, 171);
-			txtaviso.Margin = new System.Windows.Forms.Padding(2);
-			txtaviso.Multiline = true;
-			txtaviso.Name = "txtaviso";
-			txtaviso.Size = new System.Drawing.Size(302, 201);
-			txtaviso.TabIndex = 3;
-			txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtfolio.Location = new System.Drawing.Point(218, 12);
-			txtfolio.Name = "txtfolio";
-			txtfolio.Size = new System.Drawing.Size(81, 26);
-			txtfolio.TabIndex = 1;
-			txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtfolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtfolio_KeyPress);
-			txtcomentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			txtcomentarios.Location = new System.Drawing.Point(23, 409);
-			txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
-			txtcomentarios.Multiline = true;
-			txtcomentarios.Name = "txtcomentarios";
-			txtcomentarios.Size = new System.Drawing.Size(302, 138);
-			txtcomentarios.TabIndex = 4;
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(69, 374);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(210, 20);
-			label2.TabIndex = 50;
-			label2.Text = "Comentarios adicionales:";
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Image = Electronica.Properties.Resources.mail_sent__1_;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(185, 552);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(140, 47);
-			button1.TabIndex = 5;
-			button1.Text = "      Solicitar traslado";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(59, 65);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(93, 20);
-			label4.TabIndex = 51;
-			label4.Text = "Ubicación:";
-			comboubicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			comboubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			comboubicacion.FormattingEnabled = true;
-			comboubicacion.Items.AddRange(new object[6]
-			{
-				"Camioneta",
-				"Cliente",
-				"DHL",
-				"Bodega",
-				"Taller",
-				"Recepcion"
-			});
-			comboubicacion.Location = new System.Drawing.Point(192, 62);
-			comboubicacion.Name = "comboubicacion";
-			comboubicacion.Size = new System.Drawing.Size(121, 28);
-			comboubicacion.TabIndex = 2;
-			combodestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combodestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			combodestino.FormattingEnabled = true;
-			combodestino.Items.AddRange(new object[6]
-			{
-				"Camioneta",
-				"Cliente",
-				"DHL",
-				"Bodega",
-				"Taller",
-				"Recepcion"
-			});
-			combodestino.Location = new System.Drawing.Point(192, 105);
-			combodestino.Name = "combodestino";
-			combodestino.Size = new System.Drawing.Size(121, 28);
-			combodestino.TabIndex = 52;
-			label5.AutoSize = true;
-			label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label5.Location = new System.Drawing.Point(59, 108);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(76, 20);
-			label5.TabIndex = 53;
-			label5.Text = "Destino:";
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(347, 605);
-			base.Controls.Add(combodestino);
-			base.Controls.Add(label5);
-			base.Controls.Add(comboubicacion);
-			base.Controls.Add(label4);
-			base.Controls.Add(label2);
-			base.Controls.Add(txtcomentarios);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(button1);
-			base.Controls.Add(label3);
-			base.Controls.Add(txtaviso);
-			base.Controls.Add(label1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Name = "Traslado_nuevo";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			Text = "Solicitud de traslado";
-			base.Load += new System.EventHandler(Inicio_Load);
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtaviso = new System.Windows.Forms.TextBox();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtcomentarios = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboubicacion = new System.Windows.Forms.ComboBox();
+            this.combodestino = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Folio del cliente:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(96, 144);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Dirección exacta:";
+            // 
+            // txtaviso
+            // 
+            this.txtaviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaviso.Location = new System.Drawing.Point(23, 171);
+            this.txtaviso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaviso.Multiline = true;
+            this.txtaviso.Name = "txtaviso";
+            this.txtaviso.Size = new System.Drawing.Size(302, 201);
+            this.txtaviso.TabIndex = 3;
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfolio.Location = new System.Drawing.Point(218, 12);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(81, 26);
+            this.txtfolio.TabIndex = 1;
+            this.txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfolio_KeyPress);
+            // 
+            // txtcomentarios
+            // 
+            this.txtcomentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcomentarios.Location = new System.Drawing.Point(23, 409);
+            this.txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcomentarios.Multiline = true;
+            this.txtcomentarios.Name = "txtcomentarios";
+            this.txtcomentarios.Size = new System.Drawing.Size(302, 138);
+            this.txtcomentarios.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(69, 374);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 20);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Comentarios adicionales:";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Electronica.Properties.Resources.mail_sent__1_;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(185, 552);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 47);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "      Solicitar traslado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(59, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Ubicación:";
+            // 
+            // comboubicacion
+            // 
+            this.comboubicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboubicacion.FormattingEnabled = true;
+            this.comboubicacion.Items.AddRange(new object[] {
+            "Camioneta",
+            "Cliente",
+            "DHL",
+            "Bodega",
+            "Taller",
+            "Recepcion"});
+            this.comboubicacion.Location = new System.Drawing.Point(192, 62);
+            this.comboubicacion.Name = "comboubicacion";
+            this.comboubicacion.Size = new System.Drawing.Size(121, 28);
+            this.comboubicacion.TabIndex = 2;
+            // 
+            // combodestino
+            // 
+            this.combodestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combodestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combodestino.FormattingEnabled = true;
+            this.combodestino.Items.AddRange(new object[] {
+            "Camioneta",
+            "Cliente",
+            "DHL",
+            "Bodega",
+            "Taller",
+            "Recepcion"});
+            this.combodestino.Location = new System.Drawing.Point(192, 105);
+            this.combodestino.Name = "combodestino";
+            this.combodestino.Size = new System.Drawing.Size(121, 28);
+            this.combodestino.TabIndex = 52;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(59, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "Destino:";
+            // 
+            // Traslado_nuevo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(347, 605);
+            this.Controls.Add(this.combodestino);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboubicacion);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtcomentarios);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtaviso);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Name = "Traslado_nuevo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Solicitud de traslado";
+            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Traslado_nuevo_KeyDown);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Traslado_nuevo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

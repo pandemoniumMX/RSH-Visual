@@ -160,155 +160,202 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			label2 = new System.Windows.Forms.Label();
-			TablaEquipos = new System.Windows.Forms.DataGridView();
-			Buscador = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
-			txtfolio = new System.Windows.Forms.TextBox();
-			btntele = new System.Windows.Forms.Button();
-			button1 = new System.Windows.Forms.Button();
-			button2 = new System.Windows.Forms.Button();
-			button3 = new System.Windows.Forms.Button();
-			button4 = new System.Windows.Forms.Button();
-			txttipo = new System.Windows.Forms.TextBox();
-			((System.ComponentModel.ISupportInitialize)TablaEquipos).BeginInit();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(15, 20);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(282, 24);
-			label2.TabIndex = 2;
-			label2.Text = "Buscar linea blanca en Taller";
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-			TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-			TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			TablaEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TablaEquipos.Location = new System.Drawing.Point(12, 129);
-			TablaEquipos.Name = "TablaEquipos";
-			TablaEquipos.ReadOnly = true;
-			TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			TablaEquipos.Size = new System.Drawing.Size(1080, 417);
-			TablaEquipos.TabIndex = 3;
-			TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(TablaEquipos_CellClick);
-			Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			Buscador.Location = new System.Drawing.Point(104, 87);
-			Buscador.Name = "Buscador";
-			Buscador.Size = new System.Drawing.Size(100, 26);
-			Buscador.TabIndex = 5;
-			Buscador.TextChanged += new System.EventHandler(Buscador_TextChanged);
-			Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Buscador_KeyPress);
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(18, 87);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(80, 24);
-			label1.TabIndex = 6;
-			label1.Text = "Buscar:";
-			txtfolio.Location = new System.Drawing.Point(565, 25);
-			txtfolio.Name = "txtfolio";
-			txtfolio.Size = new System.Drawing.Size(100, 20);
-			txtfolio.TabIndex = 7;
-			txtfolio.Visible = false;
-			btntele.FlatAppearance.BorderSize = 0;
-			btntele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btntele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btntele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btntele.Location = new System.Drawing.Point(297, 82);
-			btntele.Margin = new System.Windows.Forms.Padding(2);
-			btntele.Name = "btntele";
-			btntele.Size = new System.Drawing.Size(119, 29);
-			btntele.TabIndex = 30;
-			btntele.Text = "Pendientes";
-			btntele.UseVisualStyleBackColor = true;
-			btntele.Click += new System.EventHandler(btntele_Click);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button1.Location = new System.Drawing.Point(465, 82);
-			button1.Margin = new System.Windows.Forms.Padding(2);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(119, 29);
-			button1.TabIndex = 31;
-			button1.Text = "Diagnosticadas";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button2.Location = new System.Drawing.Point(639, 82);
-			button2.Margin = new System.Windows.Forms.Padding(2);
-			button2.Name = "button2";
-			button2.Size = new System.Drawing.Size(119, 29);
-			button2.TabIndex = 32;
-			button2.Text = "En reparacion";
-			button2.UseVisualStyleBackColor = true;
-			button2.Click += new System.EventHandler(button2_Click);
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button3.Location = new System.Drawing.Point(804, 82);
-			button3.Margin = new System.Windows.Forms.Padding(2);
-			button3.Name = "button3";
-			button3.Size = new System.Drawing.Size(119, 29);
-			button3.TabIndex = 33;
-			button3.Text = "Sin Solucion";
-			button3.UseVisualStyleBackColor = true;
-			button3.Click += new System.EventHandler(button3_Click);
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button4.Location = new System.Drawing.Point(981, 82);
-			button4.Margin = new System.Windows.Forms.Padding(2);
-			button4.Name = "button4";
-			button4.Size = new System.Drawing.Size(119, 29);
-			button4.TabIndex = 34;
-			button4.Text = "Reparadas";
-			button4.UseVisualStyleBackColor = true;
-			button4.Click += new System.EventHandler(button4_Click);
-			txttipo.Location = new System.Drawing.Point(1190, 25);
-			txttipo.Name = "txttipo";
-			txttipo.Size = new System.Drawing.Size(100, 20);
-			txttipo.TabIndex = 36;
-			txttipo.Text = "reparar_electrodomesticos";
-			txttipo.Visible = false;
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 558);
-			base.Controls.Add(txttipo);
-			base.Controls.Add(button4);
-			base.Controls.Add(button3);
-			base.Controls.Add(button2);
-			base.Controls.Add(button1);
-			base.Controls.Add(btntele);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(label1);
-			base.Controls.Add(Buscador);
-			base.Controls.Add(TablaEquipos);
-			base.Controls.Add(label2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Name = "Taller_electrodomesticos";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "Clientes";
-			base.Load += new System.EventHandler(Taller_Load);
-			((System.ComponentModel.ISupportInitialize)TablaEquipos).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TablaEquipos = new System.Windows.Forms.DataGridView();
+            this.Buscador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.btntele = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txttipo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(282, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Buscar linea blanca en Taller";
+            // 
+            // TablaEquipos
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TablaEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaEquipos.Location = new System.Drawing.Point(12, 129);
+            this.TablaEquipos.Name = "TablaEquipos";
+            this.TablaEquipos.ReadOnly = true;
+            this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
+            this.TablaEquipos.TabIndex = 3;
+            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellClick);
+            // 
+            // Buscador
+            // 
+            this.Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscador.Location = new System.Drawing.Point(104, 87);
+            this.Buscador.Name = "Buscador";
+            this.Buscador.Size = new System.Drawing.Size(100, 26);
+            this.Buscador.TabIndex = 5;
+            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
+            this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar:";
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(565, 25);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(100, 20);
+            this.txtfolio.TabIndex = 7;
+            this.txtfolio.Visible = false;
+            // 
+            // btntele
+            // 
+            this.btntele.FlatAppearance.BorderSize = 0;
+            this.btntele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btntele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntele.Location = new System.Drawing.Point(297, 82);
+            this.btntele.Margin = new System.Windows.Forms.Padding(2);
+            this.btntele.Name = "btntele";
+            this.btntele.Size = new System.Drawing.Size(119, 29);
+            this.btntele.TabIndex = 30;
+            this.btntele.Text = "Pendientes";
+            this.btntele.UseVisualStyleBackColor = true;
+            this.btntele.Click += new System.EventHandler(this.btntele_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(465, 82);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 29);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Diagnosticadas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(639, 82);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 29);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "En reparacion";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(804, 82);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(119, 29);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Sin Solucion";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(981, 82);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 29);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "Reparadas";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txttipo
+            // 
+            this.txttipo.Location = new System.Drawing.Point(1190, 25);
+            this.txttipo.Name = "txttipo";
+            this.txttipo.Size = new System.Drawing.Size(100, 20);
+            this.txttipo.TabIndex = 36;
+            this.txttipo.Text = "reparar_electrodomesticos";
+            this.txttipo.Visible = false;
+            // 
+            // Taller_electrodomesticos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 558);
+            this.Controls.Add(this.txttipo);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btntele);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Buscador);
+            this.Controls.Add(this.TablaEquipos);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Name = "Taller_electrodomesticos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Taller_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_electrodomesticos_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Taller_electrodomesticos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

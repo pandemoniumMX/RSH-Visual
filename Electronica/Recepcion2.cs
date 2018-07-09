@@ -264,340 +264,435 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtnombre = new System.Windows.Forms.TextBox();
-			txtapellido = new System.Windows.Forms.TextBox();
-			txtdireccion = new System.Windows.Forms.TextBox();
-			txtcorreo = new System.Windows.Forms.TextBox();
-			txtcelular = new System.Windows.Forms.TextBox();
-			txtpuntos = new System.Windows.Forms.TextBox();
-			label3 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
-			label6 = new System.Windows.Forms.Label();
-			label7 = new System.Windows.Forms.Label();
-			label8 = new System.Windows.Forms.Label();
-			txtfecha = new System.Windows.Forms.TextBox();
-			label2 = new System.Windows.Forms.Label();
-			panelanidado = new System.Windows.Forms.Panel();
-			label9 = new System.Windows.Forms.Label();
-			button1 = new System.Windows.Forms.Button();
-			btnaudio = new System.Windows.Forms.Button();
-			btnelectro = new System.Windows.Forms.Button();
-			btncel = new System.Windows.Forms.Button();
-			btntele = new System.Windows.Forms.Button();
-			btnhistorial = new System.Windows.Forms.Button();
-			btnnuevo = new System.Windows.Forms.Button();
-			btnbuscar = new System.Windows.Forms.Button();
-			btnverificar = new System.Windows.Forms.Button();
-			SuspendLayout();
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(2, 31);
-			label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(53, 20);
-			label1.TabIndex = 4;
-			label1.Text = "Folio:";
-			txtfolio.Location = new System.Drawing.Point(69, 31);
-			txtfolio.Margin = new System.Windows.Forms.Padding(2);
-			txtfolio.Name = "txtfolio";
-			txtfolio.ReadOnly = true;
-			txtfolio.Size = new System.Drawing.Size(76, 20);
-			txtfolio.TabIndex = 5;
-			txtfolio.TextChanged += new System.EventHandler(txtfolio_TextChanged);
-			txtfolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtfolio_KeyPress);
-			txtnombre.Location = new System.Drawing.Point(78, 79);
-			txtnombre.Margin = new System.Windows.Forms.Padding(2);
-			txtnombre.Name = "txtnombre";
-			txtnombre.ReadOnly = true;
-			txtnombre.Size = new System.Drawing.Size(136, 20);
-			txtnombre.TabIndex = 6;
-			txtapellido.Location = new System.Drawing.Point(325, 77);
-			txtapellido.Margin = new System.Windows.Forms.Padding(2);
-			txtapellido.Name = "txtapellido";
-			txtapellido.ReadOnly = true;
-			txtapellido.Size = new System.Drawing.Size(151, 20);
-			txtapellido.TabIndex = 7;
-			txtdireccion.Location = new System.Drawing.Point(572, 79);
-			txtdireccion.Margin = new System.Windows.Forms.Padding(2);
-			txtdireccion.Name = "txtdireccion";
-			txtdireccion.ReadOnly = true;
-			txtdireccion.Size = new System.Drawing.Size(212, 20);
-			txtdireccion.TabIndex = 8;
-			txtcorreo.Location = new System.Drawing.Point(78, 109);
-			txtcorreo.Margin = new System.Windows.Forms.Padding(2);
-			txtcorreo.Name = "txtcorreo";
-			txtcorreo.ReadOnly = true;
-			txtcorreo.Size = new System.Drawing.Size(136, 20);
-			txtcorreo.TabIndex = 10;
-			txtcelular.Location = new System.Drawing.Point(325, 106);
-			txtcelular.Margin = new System.Windows.Forms.Padding(2);
-			txtcelular.Name = "txtcelular";
-			txtcelular.ReadOnly = true;
-			txtcelular.Size = new System.Drawing.Size(151, 20);
-			txtcelular.TabIndex = 11;
-			txtpuntos.Location = new System.Drawing.Point(572, 106);
-			txtpuntos.Margin = new System.Windows.Forms.Padding(2);
-			txtpuntos.Name = "txtpuntos";
-			txtpuntos.ReadOnly = true;
-			txtpuntos.Size = new System.Drawing.Size(76, 20);
-			txtpuntos.TabIndex = 12;
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(5, 77);
-			label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(69, 20);
-			label3.TabIndex = 14;
-			label3.Text = "Nombre:";
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(5, 107);
-			label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(61, 20);
-			label4.TabIndex = 15;
-			label4.Text = "Correo:";
-			label5.AutoSize = true;
-			label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label5.Location = new System.Drawing.Point(244, 77);
-			label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(77, 20);
-			label5.TabIndex = 16;
-			label5.Text = "Apellidos:";
-			label6.AutoSize = true;
-			label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label6.Location = new System.Drawing.Point(259, 107);
-			label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label6.Name = "label6";
-			label6.Size = new System.Drawing.Size(62, 20);
-			label6.TabIndex = 17;
-			label6.Text = "Celular:";
-			label7.AutoSize = true;
-			label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label7.Location = new System.Drawing.Point(489, 77);
-			label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(79, 20);
-			label7.TabIndex = 18;
-			label7.Text = "Direccion:";
-			label8.AutoSize = true;
-			label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label8.Location = new System.Drawing.Point(489, 107);
-			label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(63, 20);
-			label8.TabIndex = 19;
-			label8.Text = "Puntos:";
-			txtfecha.BackColor = System.Drawing.SystemColors.Control;
-			txtfecha.Location = new System.Drawing.Point(96, 637);
-			txtfecha.Margin = new System.Windows.Forms.Padding(2);
-			txtfecha.Name = "txtfecha";
-			txtfecha.Size = new System.Drawing.Size(144, 20);
-			txtfecha.TabIndex = 20;
-			label2.AutoSize = true;
-			label2.Location = new System.Drawing.Point(10, 640);
-			label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(82, 13);
-			label2.TabIndex = 21;
-			label2.Text = "Miembro desde:";
-			label2.Click += new System.EventHandler(label2_Click);
-			panelanidado.BackColor = System.Drawing.SystemColors.Control;
-			panelanidado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			panelanidado.Location = new System.Drawing.Point(118, 200);
-			panelanidado.Margin = new System.Windows.Forms.Padding(2);
-			panelanidado.Name = "panelanidado";
-			panelanidado.Size = new System.Drawing.Size(857, 419);
-			panelanidado.TabIndex = 22;
-			panelanidado.Paint += new System.Windows.Forms.PaintEventHandler(panelanidado_Paint);
-			label9.AutoSize = true;
-			label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label9.Location = new System.Drawing.Point(2, -1);
-			label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(186, 24);
-			label9.TabIndex = 27;
-			label9.Text = "Orden de Servicio:";
-			label9.Click += new System.EventHandler(label9_Click);
-			button1.BackColor = System.Drawing.SystemColors.Control;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button1.Image = Electronica.Properties.Resources._002_laptop1;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(642, 157);
-			button1.Margin = new System.Windows.Forms.Padding(2);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(135, 39);
-			button1.TabIndex = 28;
-			button1.Text = "       Laptop/Cpu";
-			button1.UseVisualStyleBackColor = false;
-			button1.Click += new System.EventHandler(button1_Click);
-			btnaudio.BackColor = System.Drawing.SystemColors.Control;
-			btnaudio.FlatAppearance.BorderSize = 0;
-			btnaudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnaudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnaudio.Image = Electronica.Properties.Resources._003_big_music_player_speaker;
-			btnaudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnaudio.Location = new System.Drawing.Point(475, 157);
-			btnaudio.Margin = new System.Windows.Forms.Padding(2);
-			btnaudio.Name = "btnaudio";
-			btnaudio.Size = new System.Drawing.Size(139, 39);
-			btnaudio.TabIndex = 26;
-			btnaudio.Text = "      Audio/Sonido";
-			btnaudio.UseVisualStyleBackColor = false;
-			btnaudio.Click += new System.EventHandler(btnaudio_Click);
-			btnelectro.BackColor = System.Drawing.SystemColors.Control;
-			btnelectro.FlatAppearance.BorderSize = 0;
-			btnelectro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnelectro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnelectro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnelectro.Image = Electronica.Properties.Resources._001_washing_machine;
-			btnelectro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnelectro.Location = new System.Drawing.Point(796, 157);
-			btnelectro.Margin = new System.Windows.Forms.Padding(2);
-			btnelectro.Name = "btnelectro";
-			btnelectro.Size = new System.Drawing.Size(140, 39);
-			btnelectro.TabIndex = 25;
-			btnelectro.Text = "      Linea blanca";
-			btnelectro.UseVisualStyleBackColor = false;
-			btnelectro.Click += new System.EventHandler(btnelectro_Click);
-			btncel.BackColor = System.Drawing.SystemColors.Control;
-			btncel.FlatAppearance.BorderSize = 0;
-			btncel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btncel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btncel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btncel.Image = Electronica.Properties.Resources._004_smartphone_call;
-			btncel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btncel.Location = new System.Drawing.Point(302, 157);
-			btncel.Margin = new System.Windows.Forms.Padding(2);
-			btncel.Name = "btncel";
-			btncel.Size = new System.Drawing.Size(148, 39);
-			btncel.TabIndex = 24;
-			btncel.Text = "     Celular / Tablet";
-			btncel.UseVisualStyleBackColor = false;
-			btncel.Click += new System.EventHandler(btncel_Click);
-			btntele.BackColor = System.Drawing.SystemColors.Control;
-			btntele.FlatAppearance.BorderSize = 0;
-			btntele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btntele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btntele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btntele.Image = Electronica.Properties.Resources._005_computer_screen;
-			btntele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btntele.Location = new System.Drawing.Point(143, 157);
-			btntele.Margin = new System.Windows.Forms.Padding(2);
-			btntele.Name = "btntele";
-			btntele.Size = new System.Drawing.Size(127, 39);
-			btntele.TabIndex = 23;
-			btntele.Text = "       Televisores";
-			btntele.UseVisualStyleBackColor = false;
-			btntele.Click += new System.EventHandler(btntele_Click);
-			btnhistorial.FlatAppearance.BorderSize = 0;
-			btnhistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnhistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnhistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnhistorial.Image = Electronica.Properties.Resources.history_clock_button;
-			btnhistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnhistorial.Location = new System.Drawing.Point(162, 27);
-			btnhistorial.Margin = new System.Windows.Forms.Padding(2);
-			btnhistorial.Name = "btnhistorial";
-			btnhistorial.Size = new System.Drawing.Size(108, 29);
-			btnhistorial.TabIndex = 3;
-			btnhistorial.Text = "    Historial";
-			btnhistorial.UseVisualStyleBackColor = true;
-			btnhistorial.Click += new System.EventHandler(btnhistorial_Click);
-			btnnuevo.FlatAppearance.BorderSize = 0;
-			btnnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnnuevo.Image = Electronica.Properties.Resources.new_user;
-			btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnnuevo.Location = new System.Drawing.Point(969, 26);
-			btnnuevo.Margin = new System.Windows.Forms.Padding(2);
-			btnnuevo.Name = "btnnuevo";
-			btnnuevo.Size = new System.Drawing.Size(96, 30);
-			btnnuevo.TabIndex = 2;
-			btnnuevo.Text = "   Nuevo";
-			btnnuevo.UseVisualStyleBackColor = true;
-			btnnuevo.Visible = false;
-			btnnuevo.Click += new System.EventHandler(btnnuevo_Click);
-			btnbuscar.FlatAppearance.BorderSize = 0;
-			btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnbuscar.Image = Electronica.Properties.Resources.magnifier;
-			btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnbuscar.Location = new System.Drawing.Point(854, 26);
-			btnbuscar.Margin = new System.Windows.Forms.Padding(2);
-			btnbuscar.Name = "btnbuscar";
-			btnbuscar.Size = new System.Drawing.Size(94, 30);
-			btnbuscar.TabIndex = 1;
-			btnbuscar.Text = "    Buscar";
-			btnbuscar.UseVisualStyleBackColor = true;
-			btnbuscar.Visible = false;
-			btnbuscar.Click += new System.EventHandler(btnbuscar_Click);
-			btnverificar.FlatAppearance.BorderSize = 0;
-			btnverificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnverificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnverificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnverificar.Image = Electronica.Properties.Resources.tick_inside_circle;
-			btnverificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnverificar.Location = new System.Drawing.Point(730, 26);
-			btnverificar.Margin = new System.Windows.Forms.Padding(2);
-			btnverificar.Name = "btnverificar";
-			btnverificar.Size = new System.Drawing.Size(105, 30);
-			btnverificar.TabIndex = 0;
-			btnverificar.Text = "    Verificar";
-			btnverificar.UseVisualStyleBackColor = true;
-			btnverificar.Visible = false;
-			btnverificar.Click += new System.EventHandler(btnverificar_Click);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			base.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 702);
-			base.Controls.Add(button1);
-			base.Controls.Add(label9);
-			base.Controls.Add(btnaudio);
-			base.Controls.Add(btnelectro);
-			base.Controls.Add(btncel);
-			base.Controls.Add(btntele);
-			base.Controls.Add(panelanidado);
-			base.Controls.Add(label2);
-			base.Controls.Add(txtfecha);
-			base.Controls.Add(label8);
-			base.Controls.Add(label7);
-			base.Controls.Add(label6);
-			base.Controls.Add(label5);
-			base.Controls.Add(label4);
-			base.Controls.Add(label3);
-			base.Controls.Add(txtpuntos);
-			base.Controls.Add(txtcelular);
-			base.Controls.Add(txtcorreo);
-			base.Controls.Add(txtdireccion);
-			base.Controls.Add(txtapellido);
-			base.Controls.Add(txtnombre);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(label1);
-			base.Controls.Add(btnhistorial);
-			base.Controls.Add(btnnuevo);
-			base.Controls.Add(btnbuscar);
-			base.Controls.Add(btnverificar);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Margin = new System.Windows.Forms.Padding(2);
-			base.Name = "Recepcion2";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "Orden de Servicio";
-			base.Load += new System.EventHandler(Recepcion_Load);
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
+            this.txtcelular = new System.Windows.Forms.TextBox();
+            this.txtpuntos = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtfecha = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelanidado = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnaudio = new System.Windows.Forms.Button();
+            this.btnelectro = new System.Windows.Forms.Button();
+            this.btncel = new System.Windows.Forms.Button();
+            this.btntele = new System.Windows.Forms.Button();
+            this.btnhistorial = new System.Windows.Forms.Button();
+            this.btnnuevo = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnverificar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Folio:";
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(69, 31);
+            this.txtfolio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.ReadOnly = true;
+            this.txtfolio.Size = new System.Drawing.Size(76, 20);
+            this.txtfolio.TabIndex = 5;
+            this.txtfolio.TextChanged += new System.EventHandler(this.txtfolio_TextChanged);
+            this.txtfolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfolio_KeyPress);
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(78, 79);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.ReadOnly = true;
+            this.txtnombre.Size = new System.Drawing.Size(136, 20);
+            this.txtnombre.TabIndex = 6;
+            // 
+            // txtapellido
+            // 
+            this.txtapellido.Location = new System.Drawing.Point(325, 77);
+            this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.ReadOnly = true;
+            this.txtapellido.Size = new System.Drawing.Size(151, 20);
+            this.txtapellido.TabIndex = 7;
+            // 
+            // txtdireccion
+            // 
+            this.txtdireccion.Location = new System.Drawing.Point(572, 79);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.ReadOnly = true;
+            this.txtdireccion.Size = new System.Drawing.Size(212, 20);
+            this.txtdireccion.TabIndex = 8;
+            // 
+            // txtcorreo
+            // 
+            this.txtcorreo.Location = new System.Drawing.Point(78, 109);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.ReadOnly = true;
+            this.txtcorreo.Size = new System.Drawing.Size(136, 20);
+            this.txtcorreo.TabIndex = 10;
+            // 
+            // txtcelular
+            // 
+            this.txtcelular.Location = new System.Drawing.Point(325, 106);
+            this.txtcelular.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.ReadOnly = true;
+            this.txtcelular.Size = new System.Drawing.Size(151, 20);
+            this.txtcelular.TabIndex = 11;
+            // 
+            // txtpuntos
+            // 
+            this.txtpuntos.Location = new System.Drawing.Point(572, 106);
+            this.txtpuntos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpuntos.Name = "txtpuntos";
+            this.txtpuntos.ReadOnly = true;
+            this.txtpuntos.Size = new System.Drawing.Size(76, 20);
+            this.txtpuntos.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 77);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Nombre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(5, 107);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Correo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(244, 77);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Apellidos:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(259, 107);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Celular:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(489, 77);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Direccion:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(489, 107);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Puntos:";
+            // 
+            // txtfecha
+            // 
+            this.txtfecha.BackColor = System.Drawing.SystemColors.Control;
+            this.txtfecha.Location = new System.Drawing.Point(96, 637);
+            this.txtfecha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.Size = new System.Drawing.Size(144, 20);
+            this.txtfecha.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 640);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Miembro desde:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panelanidado
+            // 
+            this.panelanidado.BackColor = System.Drawing.SystemColors.Control;
+            this.panelanidado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelanidado.Location = new System.Drawing.Point(118, 200);
+            this.panelanidado.Margin = new System.Windows.Forms.Padding(2);
+            this.panelanidado.Name = "panelanidado";
+            this.panelanidado.Size = new System.Drawing.Size(857, 419);
+            this.panelanidado.TabIndex = 22;
+            this.panelanidado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelanidado_Paint);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(2, -1);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(186, 24);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Orden de Servicio:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Electronica.Properties.Resources._002_laptop1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(642, 157);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 39);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "       Laptop/Cpu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnaudio
+            // 
+            this.btnaudio.BackColor = System.Drawing.SystemColors.Control;
+            this.btnaudio.FlatAppearance.BorderSize = 0;
+            this.btnaudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnaudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaudio.Image = global::Electronica.Properties.Resources._003_big_music_player_speaker;
+            this.btnaudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnaudio.Location = new System.Drawing.Point(475, 157);
+            this.btnaudio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnaudio.Name = "btnaudio";
+            this.btnaudio.Size = new System.Drawing.Size(139, 39);
+            this.btnaudio.TabIndex = 26;
+            this.btnaudio.Text = "      Audio/Sonido";
+            this.btnaudio.UseVisualStyleBackColor = false;
+            this.btnaudio.Click += new System.EventHandler(this.btnaudio_Click);
+            // 
+            // btnelectro
+            // 
+            this.btnelectro.BackColor = System.Drawing.SystemColors.Control;
+            this.btnelectro.FlatAppearance.BorderSize = 0;
+            this.btnelectro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnelectro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnelectro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnelectro.Image = global::Electronica.Properties.Resources._001_washing_machine;
+            this.btnelectro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnelectro.Location = new System.Drawing.Point(796, 157);
+            this.btnelectro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnelectro.Name = "btnelectro";
+            this.btnelectro.Size = new System.Drawing.Size(140, 39);
+            this.btnelectro.TabIndex = 25;
+            this.btnelectro.Text = "      Linea blanca";
+            this.btnelectro.UseVisualStyleBackColor = false;
+            this.btnelectro.Click += new System.EventHandler(this.btnelectro_Click);
+            // 
+            // btncel
+            // 
+            this.btncel.BackColor = System.Drawing.SystemColors.Control;
+            this.btncel.FlatAppearance.BorderSize = 0;
+            this.btncel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btncel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncel.Image = global::Electronica.Properties.Resources._004_smartphone_call;
+            this.btncel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncel.Location = new System.Drawing.Point(302, 157);
+            this.btncel.Margin = new System.Windows.Forms.Padding(2);
+            this.btncel.Name = "btncel";
+            this.btncel.Size = new System.Drawing.Size(148, 39);
+            this.btncel.TabIndex = 24;
+            this.btncel.Text = "     Celular / Tablet";
+            this.btncel.UseVisualStyleBackColor = false;
+            this.btncel.Click += new System.EventHandler(this.btncel_Click);
+            // 
+            // btntele
+            // 
+            this.btntele.BackColor = System.Drawing.SystemColors.Control;
+            this.btntele.FlatAppearance.BorderSize = 0;
+            this.btntele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btntele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntele.Image = global::Electronica.Properties.Resources._005_computer_screen;
+            this.btntele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntele.Location = new System.Drawing.Point(143, 157);
+            this.btntele.Margin = new System.Windows.Forms.Padding(2);
+            this.btntele.Name = "btntele";
+            this.btntele.Size = new System.Drawing.Size(127, 39);
+            this.btntele.TabIndex = 23;
+            this.btntele.Text = "       Televisores";
+            this.btntele.UseVisualStyleBackColor = false;
+            this.btntele.Click += new System.EventHandler(this.btntele_Click);
+            // 
+            // btnhistorial
+            // 
+            this.btnhistorial.FlatAppearance.BorderSize = 0;
+            this.btnhistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnhistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnhistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhistorial.Image = global::Electronica.Properties.Resources.history_clock_button;
+            this.btnhistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnhistorial.Location = new System.Drawing.Point(162, 27);
+            this.btnhistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnhistorial.Name = "btnhistorial";
+            this.btnhistorial.Size = new System.Drawing.Size(108, 29);
+            this.btnhistorial.TabIndex = 3;
+            this.btnhistorial.Text = "    Historial";
+            this.btnhistorial.UseVisualStyleBackColor = true;
+            this.btnhistorial.Click += new System.EventHandler(this.btnhistorial_Click);
+            // 
+            // btnnuevo
+            // 
+            this.btnnuevo.FlatAppearance.BorderSize = 0;
+            this.btnnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnuevo.Image = global::Electronica.Properties.Resources.new_user;
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnnuevo.Location = new System.Drawing.Point(969, 26);
+            this.btnnuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(96, 30);
+            this.btnnuevo.TabIndex = 2;
+            this.btnnuevo.Text = "   Nuevo";
+            this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Visible = false;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.FlatAppearance.BorderSize = 0;
+            this.btnbuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.Image = global::Electronica.Properties.Resources.magnifier;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbuscar.Location = new System.Drawing.Point(854, 26);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(94, 30);
+            this.btnbuscar.TabIndex = 1;
+            this.btnbuscar.Text = "    Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Visible = false;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+            // btnverificar
+            // 
+            this.btnverificar.FlatAppearance.BorderSize = 0;
+            this.btnverificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnverificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnverificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnverificar.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.btnverificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnverificar.Location = new System.Drawing.Point(730, 26);
+            this.btnverificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnverificar.Name = "btnverificar";
+            this.btnverificar.Size = new System.Drawing.Size(105, 30);
+            this.btnverificar.TabIndex = 0;
+            this.btnverificar.Text = "    Verificar";
+            this.btnverificar.UseVisualStyleBackColor = true;
+            this.btnverificar.Visible = false;
+            this.btnverificar.Click += new System.EventHandler(this.btnverificar_Click);
+            // 
+            // Recepcion2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnaudio);
+            this.Controls.Add(this.btnelectro);
+            this.Controls.Add(this.btncel);
+            this.Controls.Add(this.btntele);
+            this.Controls.Add(this.panelanidado);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtfecha);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtpuntos);
+            this.Controls.Add(this.txtcelular);
+            this.Controls.Add(this.txtcorreo);
+            this.Controls.Add(this.txtdireccion);
+            this.Controls.Add(this.txtapellido);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnhistorial);
+            this.Controls.Add(this.btnnuevo);
+            this.Controls.Add(this.btnbuscar);
+            this.Controls.Add(this.btnverificar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Recepcion2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Orden de Servicio";
+            this.Load += new System.EventHandler(this.Recepcion_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recepcion2_KeyDown);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Recepcion2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

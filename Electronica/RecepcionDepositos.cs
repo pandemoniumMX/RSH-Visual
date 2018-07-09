@@ -115,79 +115,111 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
-			label2 = new System.Windows.Forms.Label();
-			TablaEquipos = new System.Windows.Forms.DataGridView();
-			Buscador = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
-			txt_folio = new System.Windows.Forms.TextBox();
-			txtfolio = new System.Windows.Forms.TextBox();
-			((System.ComponentModel.ISupportInitialize)TablaEquipos).BeginInit();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(15, 20);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(212, 24);
-			label2.TabIndex = 2;
-			label2.Text = "Depositos pendientes";
-			dataGridViewCellStyle.BackColor = System.Drawing.Color.Silver;
-			TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle;
-			TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-			TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TablaEquipos.Location = new System.Drawing.Point(12, 133);
-			TablaEquipos.Name = "TablaEquipos";
-			TablaEquipos.ReadOnly = true;
-			TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			TablaEquipos.Size = new System.Drawing.Size(1085, 419);
-			TablaEquipos.TabIndex = 3;
-			TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(TablaEquipos_CellContentClick_1);
-			TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(TablaEquipos_CellMouseClick);
-			Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			Buscador.Location = new System.Drawing.Point(104, 87);
-			Buscador.Name = "Buscador";
-			Buscador.Size = new System.Drawing.Size(100, 26);
-			Buscador.TabIndex = 5;
-			Buscador.TextChanged += new System.EventHandler(Buscador_TextChanged);
-			Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Buscador_KeyPress);
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(18, 87);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(80, 24);
-			label1.TabIndex = 6;
-			label1.Text = "Buscar:";
-			txt_folio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txt_folio.Location = new System.Drawing.Point(1373, 12);
-			txt_folio.Name = "txt_folio";
-			txt_folio.Size = new System.Drawing.Size(100, 26);
-			txt_folio.TabIndex = 7;
-			txt_folio.Visible = false;
-			txtfolio.Location = new System.Drawing.Point(1149, 25);
-			txtfolio.Margin = new System.Windows.Forms.Padding(2);
-			txtfolio.Name = "txtfolio";
-			txtfolio.Size = new System.Drawing.Size(76, 20);
-			txtfolio.TabIndex = 8;
-			txtfolio.Visible = false;
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 702);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(txt_folio);
-			base.Controls.Add(label1);
-			base.Controls.Add(Buscador);
-			base.Controls.Add(TablaEquipos);
-			base.Controls.Add(label2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Name = "RecepcionDepositos";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "Clientes";
-			base.Load += new System.EventHandler(Taller_Load);
-			((System.ComponentModel.ISupportInitialize)TablaEquipos).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TablaEquipos = new System.Windows.Forms.DataGridView();
+            this.Buscador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_folio = new System.Windows.Forms.TextBox();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Depositos pendientes";
+            // 
+            // TablaEquipos
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaEquipos.Location = new System.Drawing.Point(12, 133);
+            this.TablaEquipos.Name = "TablaEquipos";
+            this.TablaEquipos.ReadOnly = true;
+            this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TablaEquipos.Size = new System.Drawing.Size(1085, 419);
+            this.TablaEquipos.TabIndex = 3;
+            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
+            this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
+            // 
+            // Buscador
+            // 
+            this.Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscador.Location = new System.Drawing.Point(104, 87);
+            this.Buscador.Name = "Buscador";
+            this.Buscador.Size = new System.Drawing.Size(100, 26);
+            this.Buscador.TabIndex = 5;
+            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
+            this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar:";
+            // 
+            // txt_folio
+            // 
+            this.txt_folio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_folio.Location = new System.Drawing.Point(1373, 12);
+            this.txt_folio.Name = "txt_folio";
+            this.txt_folio.Size = new System.Drawing.Size(100, 26);
+            this.txt_folio.TabIndex = 7;
+            this.txt_folio.Visible = false;
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(1149, 25);
+            this.txtfolio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(76, 20);
+            this.txtfolio.TabIndex = 8;
+            this.txtfolio.Visible = false;
+            // 
+            // RecepcionDepositos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.txt_folio);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Buscador);
+            this.Controls.Add(this.TablaEquipos);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Name = "RecepcionDepositos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Taller_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionDepositos_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void RecepcionDepositos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

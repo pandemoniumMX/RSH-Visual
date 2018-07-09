@@ -356,601 +356,781 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label2 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
-			label6 = new System.Windows.Forms.Label();
-			label7 = new System.Windows.Forms.Label();
-			label8 = new System.Windows.Forms.Label();
-			label9 = new System.Windows.Forms.Label();
-			label10 = new System.Windows.Forms.Label();
-			txtequipo = new System.Windows.Forms.TextBox();
-			txtfalla = new System.Windows.Forms.TextBox();
-			txtmarca = new System.Windows.Forms.TextBox();
-			txtaccesorios = new System.Windows.Forms.TextBox();
-			txtcomentarios = new System.Windows.Forms.TextBox();
-			txtrefaccion = new System.Windows.Forms.TextBox();
-			combolocacion = new System.Windows.Forms.ComboBox();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtmodelo = new System.Windows.Forms.TextBox();
-			label12 = new System.Windows.Forms.Label();
-			label13 = new System.Windows.Forms.Label();
-			label14 = new System.Windows.Forms.Label();
-			label11 = new System.Windows.Forms.Label();
-			txtmano = new System.Windows.Forms.TextBox();
-			label15 = new System.Windows.Forms.Label();
-			label16 = new System.Windows.Forms.Label();
-			combotecnico = new System.Windows.Forms.ComboBox();
-			label17 = new System.Windows.Forms.Label();
-			label18 = new System.Windows.Forms.Label();
-			txttotal = new System.Windows.Forms.TextBox();
-			txtabono = new System.Windows.Forms.TextBox();
-			label19 = new System.Windows.Forms.Label();
-			txttipo = new System.Windows.Forms.TextBox();
-			txtfechaen = new System.Windows.Forms.TextBox();
-			txtfechain = new System.Windows.Forms.TextBox();
-			txtestado = new System.Windows.Forms.TextBox();
-			panel1 = new System.Windows.Forms.Panel();
-			txtpersonal = new System.Windows.Forms.TextBox();
-			txtidequipo = new System.Windows.Forms.TextBox();
-			panel2 = new System.Windows.Forms.Panel();
-			pictureBox1 = new System.Windows.Forms.PictureBox();
-			label21 = new System.Windows.Forms.Label();
-			label20 = new System.Windows.Forms.Label();
-			txtcorreo = new System.Windows.Forms.TextBox();
-			txtcelular = new System.Windows.Forms.TextBox();
-			txtapellidos = new System.Windows.Forms.TextBox();
-			txtnombre = new System.Windows.Forms.TextBox();
-			label22 = new System.Windows.Forms.Label();
-			label24 = new System.Windows.Forms.Label();
-			label23 = new System.Windows.Forms.Label();
-			panel3 = new System.Windows.Forms.Panel();
-			button4 = new System.Windows.Forms.Button();
-			txtpuntos = new System.Windows.Forms.TextBox();
-			button3 = new System.Windows.Forms.Button();
-			button2 = new System.Windows.Forms.Button();
-			label1 = new System.Windows.Forms.Label();
-			button1 = new System.Windows.Forms.Button();
-			panel1.SuspendLayout();
-			panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			panel3.SuspendLayout();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label2.Location = new System.Drawing.Point(17, 68);
-			label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(43, 13);
-			label2.TabIndex = 1;
-			label2.Text = "Equipo:";
-			label3.AutoSize = true;
-			label3.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label3.Location = new System.Drawing.Point(455, 38);
-			label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(68, 13);
-			label3.TabIndex = 2;
-			label3.Text = "Comentarios:";
-			label4.AutoSize = true;
-			label4.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label4.Location = new System.Drawing.Point(21, 162);
-			label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(150, 13);
-			label4.TabIndex = 3;
-			label4.Text = "Fecha de solicitud de servicio:";
-			label5.AutoSize = true;
-			label5.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label5.Location = new System.Drawing.Point(240, 126);
-			label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(62, 13);
-			label5.TabIndex = 4;
-			label5.Text = "Accesorios:";
-			label6.AutoSize = true;
-			label6.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label6.Location = new System.Drawing.Point(19, 469);
-			label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label6.Name = "label6";
-			label6.Size = new System.Drawing.Size(89, 13);
-			label6.TabIndex = 5;
-			label6.Text = "Costo Refaccion:";
-			label7.AutoSize = true;
-			label7.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label7.Location = new System.Drawing.Point(20, 431);
-			label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(190, 20);
-			label7.TabIndex = 6;
-			label7.Text = "Presupuesto acordado";
-			label8.AutoSize = true;
-			label8.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label8.Location = new System.Drawing.Point(17, 118);
-			label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(54, 13);
-			label8.TabIndex = 7;
-			label8.Text = "Locacion:";
-			label9.AutoSize = true;
-			label9.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label9.Location = new System.Drawing.Point(17, 93);
-			label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(32, 13);
-			label9.TabIndex = 8;
-			label9.Text = "Falla:";
-			label10.AutoSize = true;
-			label10.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label10.Location = new System.Drawing.Point(238, 68);
-			label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label10.Name = "label10";
-			label10.Size = new System.Drawing.Size(40, 13);
-			label10.TabIndex = 9;
-			label10.Text = "Marca:";
-			txtequipo.BackColor = System.Drawing.SystemColors.Window;
-			txtequipo.Location = new System.Drawing.Point(64, 65);
-			txtequipo.Margin = new System.Windows.Forms.Padding(2);
-			txtequipo.Name = "txtequipo";
-			txtequipo.ReadOnly = true;
-			txtequipo.Size = new System.Drawing.Size(157, 20);
-			txtequipo.TabIndex = 10;
-			txtfalla.BackColor = System.Drawing.SystemColors.Window;
-			txtfalla.Location = new System.Drawing.Point(64, 93);
-			txtfalla.Margin = new System.Windows.Forms.Padding(2);
-			txtfalla.Name = "txtfalla";
-			txtfalla.ReadOnly = true;
-			txtfalla.Size = new System.Drawing.Size(157, 20);
-			txtfalla.TabIndex = 11;
-			txtmarca.BackColor = System.Drawing.SystemColors.Window;
-			txtmarca.Location = new System.Drawing.Point(307, 65);
-			txtmarca.Margin = new System.Windows.Forms.Padding(2);
-			txtmarca.Name = "txtmarca";
-			txtmarca.ReadOnly = true;
-			txtmarca.Size = new System.Drawing.Size(123, 20);
-			txtmarca.TabIndex = 12;
-			txtaccesorios.BackColor = System.Drawing.SystemColors.Window;
-			txtaccesorios.Location = new System.Drawing.Point(307, 126);
-			txtaccesorios.Margin = new System.Windows.Forms.Padding(2);
-			txtaccesorios.Name = "txtaccesorios";
-			txtaccesorios.ReadOnly = true;
-			txtaccesorios.Size = new System.Drawing.Size(120, 20);
-			txtaccesorios.TabIndex = 13;
-			txtcomentarios.BackColor = System.Drawing.SystemColors.Window;
-			txtcomentarios.Location = new System.Drawing.Point(458, 65);
-			txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
-			txtcomentarios.Multiline = true;
-			txtcomentarios.Name = "txtcomentarios";
-			txtcomentarios.ReadOnly = true;
-			txtcomentarios.Size = new System.Drawing.Size(467, 96);
-			txtcomentarios.TabIndex = 14;
-			txtrefaccion.BackColor = System.Drawing.SystemColors.Window;
-			txtrefaccion.Location = new System.Drawing.Point(112, 466);
-			txtrefaccion.Margin = new System.Windows.Forms.Padding(2);
-			txtrefaccion.Name = "txtrefaccion";
-			txtrefaccion.ReadOnly = true;
-			txtrefaccion.Size = new System.Drawing.Size(76, 20);
-			txtrefaccion.TabIndex = 17;
-			combolocacion.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combolocacion.FormattingEnabled = true;
-			combolocacion.Items.AddRange(new object[4]
-			{
-				"Taller",
-				"Servicio a domicilio",
-				"Re-ingreso por garantia",
-				"Otros (Especificar en comentarios)"
-			});
-			combolocacion.Location = new System.Drawing.Point(70, 118);
-			combolocacion.Margin = new System.Windows.Forms.Padding(2);
-			combolocacion.Name = "combolocacion";
-			combolocacion.Size = new System.Drawing.Size(92, 21);
-			combolocacion.TabIndex = 19;
-			txtfolio.Location = new System.Drawing.Point(889, 27);
-			txtfolio.Margin = new System.Windows.Forms.Padding(2);
-			txtfolio.Name = "txtfolio";
-			txtfolio.Size = new System.Drawing.Size(76, 20);
-			txtfolio.TabIndex = 20;
-			txtmodelo.BackColor = System.Drawing.SystemColors.Window;
-			txtmodelo.Location = new System.Drawing.Point(307, 96);
-			txtmodelo.Margin = new System.Windows.Forms.Padding(2);
-			txtmodelo.Name = "txtmodelo";
-			txtmodelo.ReadOnly = true;
-			txtmodelo.Size = new System.Drawing.Size(123, 20);
-			txtmodelo.TabIndex = 22;
-			label12.AutoSize = true;
-			label12.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label12.Location = new System.Drawing.Point(240, 99);
-			label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label12.Name = "label12";
-			label12.Size = new System.Drawing.Size(45, 13);
-			label12.TabIndex = 23;
-			label12.Text = "Modelo:";
-			label13.AutoSize = true;
-			label13.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label13.Location = new System.Drawing.Point(241, 162);
-			label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label13.Name = "label13";
-			label13.Size = new System.Drawing.Size(91, 13);
-			label13.TabIndex = 24;
-			label13.Text = "Fecha de entrega";
-			label14.AutoSize = true;
-			label14.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label14.Location = new System.Drawing.Point(24, 290);
-			label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label14.Name = "label14";
-			label14.Size = new System.Drawing.Size(75, 13);
-			label14.TabIndex = 26;
-			label14.Text = "Estado actual:";
-			label11.AutoSize = true;
-			label11.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label11.Location = new System.Drawing.Point(236, 469);
-			label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label11.Name = "label11";
-			label11.Size = new System.Drawing.Size(78, 13);
-			label11.TabIndex = 29;
-			label11.Text = "Mano de Obra:";
-			txtmano.BackColor = System.Drawing.SystemColors.Window;
-			txtmano.Location = new System.Drawing.Point(318, 466);
-			txtmano.Margin = new System.Windows.Forms.Padding(2);
-			txtmano.Name = "txtmano";
-			txtmano.ReadOnly = true;
-			txtmano.Size = new System.Drawing.Size(76, 20);
-			txtmano.TabIndex = 30;
-			label15.AutoSize = true;
-			label15.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label15.Location = new System.Drawing.Point(16, 31);
-			label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label15.Name = "label15";
-			label15.Size = new System.Drawing.Size(161, 20);
-			label15.TabIndex = 31;
-			label15.Text = " Orden de Servicio:";
-			label16.AutoSize = true;
-			label16.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label16.Location = new System.Drawing.Point(20, 241);
-			label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label16.Name = "label16";
-			label16.Size = new System.Drawing.Size(200, 20);
-			label16.TabIndex = 33;
-			label16.Text = "Estado de la reparación";
-			combotecnico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			combotecnico.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			combotecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combotecnico.FormattingEnabled = true;
-			combotecnico.Location = new System.Drawing.Point(281, 171);
-			combotecnico.Margin = new System.Windows.Forms.Padding(2);
-			combotecnico.Name = "combotecnico";
-			combotecnico.Size = new System.Drawing.Size(126, 21);
-			combotecnico.TabIndex = 35;
-			combotecnico.Visible = false;
-			combotecnico.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged);
-			label17.AutoSize = true;
-			label17.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label17.Location = new System.Drawing.Point(190, 174);
-			label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label17.Name = "label17";
-			label17.Size = new System.Drawing.Size(87, 13);
-			label17.TabIndex = 34;
-			label17.Text = "Técnico número:";
-			label17.Visible = false;
-			label18.AutoSize = true;
-			label18.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label18.Location = new System.Drawing.Point(278, 122);
-			label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label18.Name = "label18";
-			label18.Size = new System.Drawing.Size(34, 13);
-			label18.TabIndex = 37;
-			label18.Text = "Total:";
-			txttotal.BackColor = System.Drawing.SystemColors.Window;
-			txttotal.Location = new System.Drawing.Point(318, 119);
-			txttotal.Margin = new System.Windows.Forms.Padding(2);
-			txttotal.Name = "txttotal";
-			txttotal.ReadOnly = true;
-			txttotal.Size = new System.Drawing.Size(76, 20);
-			txttotal.TabIndex = 38;
-			txttotal.TextChanged += new System.EventHandler(txttotal_TextChanged);
-			txttotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txttotal_KeyPress);
-			txtabono.BackColor = System.Drawing.SystemColors.Window;
-			txtabono.Location = new System.Drawing.Point(505, 53);
-			txtabono.Margin = new System.Windows.Forms.Padding(2);
-			txtabono.Name = "txtabono";
-			txtabono.ReadOnly = true;
-			txtabono.Size = new System.Drawing.Size(76, 20);
-			txtabono.TabIndex = 40;
-			label19.AutoSize = true;
-			label19.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label19.Location = new System.Drawing.Point(454, 56);
-			label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label19.Name = "label19";
-			label19.Size = new System.Drawing.Size(41, 13);
-			label19.TabIndex = 39;
-			label19.Text = "Abono:";
-			txttipo.Location = new System.Drawing.Point(775, 11);
-			txttipo.Margin = new System.Windows.Forms.Padding(2);
-			txttipo.Name = "txttipo";
-			txttipo.Size = new System.Drawing.Size(150, 20);
-			txttipo.TabIndex = 41;
-			txttipo.Visible = false;
-			txtfechaen.BackColor = System.Drawing.SystemColors.Window;
-			txtfechaen.Location = new System.Drawing.Point(244, 191);
-			txtfechaen.Margin = new System.Windows.Forms.Padding(2);
-			txtfechaen.Name = "txtfechaen";
-			txtfechaen.ReadOnly = true;
-			txtfechaen.Size = new System.Drawing.Size(101, 20);
-			txtfechaen.TabIndex = 44;
-			txtfechain.BackColor = System.Drawing.SystemColors.Window;
-			txtfechain.Location = new System.Drawing.Point(24, 191);
-			txtfechain.Margin = new System.Windows.Forms.Padding(2);
-			txtfechain.Name = "txtfechain";
-			txtfechain.ReadOnly = true;
-			txtfechain.Size = new System.Drawing.Size(120, 20);
-			txtfechain.TabIndex = 43;
-			txtestado.BackColor = System.Drawing.SystemColors.Window;
-			txtestado.Location = new System.Drawing.Point(103, 287);
-			txtestado.Margin = new System.Windows.Forms.Padding(2);
-			txtestado.Name = "txtestado";
-			txtestado.ReadOnly = true;
-			txtestado.Size = new System.Drawing.Size(101, 20);
-			txtestado.TabIndex = 45;
-			panel1.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			panel1.Controls.Add(txtpersonal);
-			panel1.Controls.Add(txtidequipo);
-			panel1.Location = new System.Drawing.Point(0, -7);
-			panel1.Name = "panel1";
-			panel1.Size = new System.Drawing.Size(1106, 235);
-			panel1.TabIndex = 46;
-			panel1.Paint += new System.Windows.Forms.PaintEventHandler(panel1_Paint);
-			txtpersonal.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			txtpersonal.Location = new System.Drawing.Point(532, 28);
-			txtpersonal.Margin = new System.Windows.Forms.Padding(2);
-			txtpersonal.Name = "txtpersonal";
-			txtpersonal.Size = new System.Drawing.Size(49, 20);
-			txtpersonal.TabIndex = 48;
-			txtpersonal.Visible = false;
-			txtidequipo.BackColor = System.Drawing.Color.White;
-			txtidequipo.Location = new System.Drawing.Point(177, 38);
-			txtidequipo.Margin = new System.Windows.Forms.Padding(2);
-			txtidequipo.Name = "txtidequipo";
-			txtidequipo.Size = new System.Drawing.Size(101, 20);
-			txtidequipo.TabIndex = 54;
-			txtidequipo.Visible = false;
-			panel2.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			panel2.Controls.Add(pictureBox1);
-			panel2.Controls.Add(label21);
-			panel2.Controls.Add(label20);
-			panel2.Controls.Add(txtcorreo);
-			panel2.Controls.Add(combotecnico);
-			panel2.Controls.Add(txtcelular);
-			panel2.Controls.Add(txtapellidos);
-			panel2.Controls.Add(label17);
-			panel2.Controls.Add(txtnombre);
-			panel2.Controls.Add(txtfolio);
-			panel2.Controls.Add(label22);
-			panel2.Controls.Add(label24);
-			panel2.Controls.Add(label23);
-			panel2.Location = new System.Drawing.Point(0, 216);
-			panel2.Name = "panel2";
-			panel2.Size = new System.Drawing.Size(1106, 201);
-			panel2.TabIndex = 47;
-			panel2.Paint += new System.Windows.Forms.PaintEventHandler(panel2_Paint);
-			pictureBox1.Image = Electronica.Properties.Resources.call_answer;
-			pictureBox1.Location = new System.Drawing.Point(668, 18);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new System.Drawing.Size(38, 34);
-			pictureBox1.TabIndex = 57;
-			pictureBox1.TabStop = false;
-			label21.AutoSize = true;
-			label21.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label21.Location = new System.Drawing.Point(862, 120);
-			label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label21.Name = "label21";
-			label21.Size = new System.Drawing.Size(41, 13);
-			label21.TabIndex = 56;
-			label21.Text = "Correo:";
-			label20.AutoSize = true;
-			label20.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label20.Location = new System.Drawing.Point(711, 25);
-			label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label20.Name = "label20";
-			label20.Size = new System.Drawing.Size(174, 20);
-			label20.TabIndex = 49;
-			label20.Text = "Contacto del cliente:";
-			txtcorreo.BackColor = System.Drawing.SystemColors.Window;
-			txtcorreo.Location = new System.Drawing.Point(907, 117);
-			txtcorreo.Margin = new System.Windows.Forms.Padding(2);
-			txtcorreo.Name = "txtcorreo";
-			txtcorreo.ReadOnly = true;
-			txtcorreo.Size = new System.Drawing.Size(158, 20);
-			txtcorreo.TabIndex = 55;
-			txtcelular.BackColor = System.Drawing.SystemColors.Window;
-			txtcelular.Location = new System.Drawing.Point(908, 86);
-			txtcelular.Margin = new System.Windows.Forms.Padding(2);
-			txtcelular.Name = "txtcelular";
-			txtcelular.ReadOnly = true;
-			txtcelular.Size = new System.Drawing.Size(145, 20);
-			txtcelular.TabIndex = 54;
-			txtapellidos.BackColor = System.Drawing.SystemColors.Window;
-			txtapellidos.Location = new System.Drawing.Point(687, 114);
-			txtapellidos.Margin = new System.Windows.Forms.Padding(2);
-			txtapellidos.Name = "txtapellidos";
-			txtapellidos.ReadOnly = true;
-			txtapellidos.Size = new System.Drawing.Size(157, 20);
-			txtapellidos.TabIndex = 53;
-			txtnombre.BackColor = System.Drawing.SystemColors.Window;
-			txtnombre.Location = new System.Drawing.Point(687, 86);
-			txtnombre.Margin = new System.Windows.Forms.Padding(2);
-			txtnombre.Name = "txtnombre";
-			txtnombre.ReadOnly = true;
-			txtnombre.Size = new System.Drawing.Size(157, 20);
-			txtnombre.TabIndex = 52;
-			label22.AutoSize = true;
-			label22.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label22.Location = new System.Drawing.Point(631, 117);
-			label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label22.Name = "label22";
-			label22.Size = new System.Drawing.Size(52, 13);
-			label22.TabIndex = 51;
-			label22.Text = "Apellidos:";
-			label24.AutoSize = true;
-			label24.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label24.Location = new System.Drawing.Point(625, 89);
-			label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label24.Name = "label24";
-			label24.Size = new System.Drawing.Size(58, 13);
-			label24.TabIndex = 49;
-			label24.Text = "Nombre(s):";
-			label23.AutoSize = true;
-			label23.BackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			label23.Location = new System.Drawing.Point(862, 89);
-			label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label23.Name = "label23";
-			label23.Size = new System.Drawing.Size(42, 13);
-			label23.TabIndex = 50;
-			label23.Text = "Celular:";
-			panel3.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			panel3.Controls.Add(button4);
-			panel3.Controls.Add(txtpuntos);
-			panel3.Controls.Add(button3);
-			panel3.Controls.Add(button2);
-			panel3.Controls.Add(label1);
-			panel3.Controls.Add(txttotal);
-			panel3.Controls.Add(label18);
-			panel3.Controls.Add(label19);
-			panel3.Controls.Add(txtabono);
-			panel3.Location = new System.Drawing.Point(0, 413);
-			panel3.Name = "panel3";
-			panel3.Size = new System.Drawing.Size(1106, 301);
-			panel3.TabIndex = 48;
-			panel3.Paint += new System.Windows.Forms.PaintEventHandler(panel3_Paint);
-			button4.BackColor = System.Drawing.SystemColors.Control;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button4.Image = Electronica.Properties.Resources.shipped;
-			button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button4.Location = new System.Drawing.Point(879, 186);
-			button4.Margin = new System.Windows.Forms.Padding(2);
-			button4.Name = "button4";
-			button4.Size = new System.Drawing.Size(161, 35);
-			button4.TabIndex = 45;
-			button4.Text = "    Confirmar entrega del equipo";
-			button4.UseVisualStyleBackColor = false;
-			button4.Click += new System.EventHandler(button4_Click);
-			txtpuntos.BackColor = System.Drawing.SystemColors.Window;
-			txtpuntos.Location = new System.Drawing.Point(112, 119);
-			txtpuntos.Margin = new System.Windows.Forms.Padding(2);
-			txtpuntos.Name = "txtpuntos";
-			txtpuntos.ReadOnly = true;
-			txtpuntos.Size = new System.Drawing.Size(76, 20);
-			txtpuntos.TabIndex = 42;
-			txtpuntos.Text = "0";
-			button3.BackColor = System.Drawing.SystemColors.Control;
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button3.Image = Electronica.Properties.Resources.tick_inside_circle;
-			button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button3.Location = new System.Drawing.Point(879, 111);
-			button3.Margin = new System.Windows.Forms.Padding(2);
-			button3.Name = "button3";
-			button3.Size = new System.Drawing.Size(161, 35);
-			button3.TabIndex = 44;
-			button3.Text = "    Confirmar descuento";
-			button3.UseVisualStyleBackColor = false;
-			button3.Click += new System.EventHandler(button3_Click);
-			button2.BackColor = System.Drawing.SystemColors.Control;
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button2.Image = Electronica.Properties.Resources.discount;
-			button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button2.Location = new System.Drawing.Point(634, 111);
-			button2.Margin = new System.Windows.Forms.Padding(2);
-			button2.Name = "button2";
-			button2.Size = new System.Drawing.Size(161, 35);
-			button2.TabIndex = 43;
-			button2.Text = "       Ver y aplicar descuento";
-			button2.UseVisualStyleBackColor = false;
-			button2.Click += new System.EventHandler(button2_Click_1);
-			label1.AutoSize = true;
-			label1.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label1.Location = new System.Drawing.Point(65, 122);
-			label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(43, 13);
-			label1.TabIndex = 41;
-			label1.Text = "Puntos:";
-			button1.BackColor = System.Drawing.SystemColors.Control;
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Image = Electronica.Properties.Resources._001_binoculars;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(27, 346);
-			button1.Margin = new System.Windows.Forms.Padding(2);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(137, 35);
-			button1.TabIndex = 42;
-			button1.Text = "Ver Reporte";
-			button1.UseVisualStyleBackColor = false;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 702);
-			base.Controls.Add(txtestado);
-			base.Controls.Add(txtfechaen);
-			base.Controls.Add(txtfechain);
-			base.Controls.Add(button1);
-			base.Controls.Add(txttipo);
-			base.Controls.Add(label16);
-			base.Controls.Add(label15);
-			base.Controls.Add(txtmano);
-			base.Controls.Add(label11);
-			base.Controls.Add(label14);
-			base.Controls.Add(label13);
-			base.Controls.Add(label12);
-			base.Controls.Add(txtmodelo);
-			base.Controls.Add(combolocacion);
-			base.Controls.Add(txtrefaccion);
-			base.Controls.Add(txtcomentarios);
-			base.Controls.Add(txtaccesorios);
-			base.Controls.Add(txtmarca);
-			base.Controls.Add(txtfalla);
-			base.Controls.Add(txtequipo);
-			base.Controls.Add(label10);
-			base.Controls.Add(label9);
-			base.Controls.Add(label8);
-			base.Controls.Add(label7);
-			base.Controls.Add(label6);
-			base.Controls.Add(label5);
-			base.Controls.Add(label4);
-			base.Controls.Add(label3);
-			base.Controls.Add(label2);
-			base.Controls.Add(panel1);
-			base.Controls.Add(panel2);
-			base.Controls.Add(panel3);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Margin = new System.Windows.Forms.Padding(2);
-			base.Name = "RecepcionHistorial_vista";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "Ordenes de Servicio";
-			base.Load += new System.EventHandler(Taller_actualizar_Load);
-			panel1.ResumeLayout(false);
-			panel1.PerformLayout();
-			panel2.ResumeLayout(false);
-			panel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			panel3.ResumeLayout(false);
-			panel3.PerformLayout();
-			ResumeLayout(false);
-			PerformLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtequipo = new System.Windows.Forms.TextBox();
+            this.txtfalla = new System.Windows.Forms.TextBox();
+            this.txtmarca = new System.Windows.Forms.TextBox();
+            this.txtaccesorios = new System.Windows.Forms.TextBox();
+            this.txtcomentarios = new System.Windows.Forms.TextBox();
+            this.txtrefaccion = new System.Windows.Forms.TextBox();
+            this.combolocacion = new System.Windows.Forms.ComboBox();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtmodelo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtmano = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.combotecnico = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.txtabono = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txttipo = new System.Windows.Forms.TextBox();
+            this.txtfechaen = new System.Windows.Forms.TextBox();
+            this.txtfechain = new System.Windows.Forms.TextBox();
+            this.txtestado = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtpersonal = new System.Windows.Forms.TextBox();
+            this.txtidequipo = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
+            this.txtcelular = new System.Windows.Forms.TextBox();
+            this.txtapellidos = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtpuntos = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label2.Location = new System.Drawing.Point(17, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Equipo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label3.Location = new System.Drawing.Point(455, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Comentarios:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label4.Location = new System.Drawing.Point(21, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fecha de solicitud de servicio:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label5.Location = new System.Drawing.Point(240, 126);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Accesorios:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label6.Location = new System.Drawing.Point(19, 469);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Costo Refaccion:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 431);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(190, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Presupuesto acordado";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label8.Location = new System.Drawing.Point(17, 118);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Locacion:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label9.Location = new System.Drawing.Point(17, 93);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Falla:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label10.Location = new System.Drawing.Point(238, 68);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Marca:";
+            // 
+            // txtequipo
+            // 
+            this.txtequipo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtequipo.Location = new System.Drawing.Point(64, 65);
+            this.txtequipo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtequipo.Name = "txtequipo";
+            this.txtequipo.ReadOnly = true;
+            this.txtequipo.Size = new System.Drawing.Size(157, 20);
+            this.txtequipo.TabIndex = 10;
+            // 
+            // txtfalla
+            // 
+            this.txtfalla.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfalla.Location = new System.Drawing.Point(64, 93);
+            this.txtfalla.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfalla.Name = "txtfalla";
+            this.txtfalla.ReadOnly = true;
+            this.txtfalla.Size = new System.Drawing.Size(157, 20);
+            this.txtfalla.TabIndex = 11;
+            // 
+            // txtmarca
+            // 
+            this.txtmarca.BackColor = System.Drawing.SystemColors.Window;
+            this.txtmarca.Location = new System.Drawing.Point(307, 65);
+            this.txtmarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.ReadOnly = true;
+            this.txtmarca.Size = new System.Drawing.Size(123, 20);
+            this.txtmarca.TabIndex = 12;
+            // 
+            // txtaccesorios
+            // 
+            this.txtaccesorios.BackColor = System.Drawing.SystemColors.Window;
+            this.txtaccesorios.Location = new System.Drawing.Point(307, 126);
+            this.txtaccesorios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaccesorios.Name = "txtaccesorios";
+            this.txtaccesorios.ReadOnly = true;
+            this.txtaccesorios.Size = new System.Drawing.Size(120, 20);
+            this.txtaccesorios.TabIndex = 13;
+            // 
+            // txtcomentarios
+            // 
+            this.txtcomentarios.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcomentarios.Location = new System.Drawing.Point(458, 65);
+            this.txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcomentarios.Multiline = true;
+            this.txtcomentarios.Name = "txtcomentarios";
+            this.txtcomentarios.ReadOnly = true;
+            this.txtcomentarios.Size = new System.Drawing.Size(467, 96);
+            this.txtcomentarios.TabIndex = 14;
+            // 
+            // txtrefaccion
+            // 
+            this.txtrefaccion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtrefaccion.Location = new System.Drawing.Point(112, 466);
+            this.txtrefaccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtrefaccion.Name = "txtrefaccion";
+            this.txtrefaccion.ReadOnly = true;
+            this.txtrefaccion.Size = new System.Drawing.Size(76, 20);
+            this.txtrefaccion.TabIndex = 17;
+            // 
+            // combolocacion
+            // 
+            this.combolocacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combolocacion.FormattingEnabled = true;
+            this.combolocacion.Items.AddRange(new object[] {
+            "Taller",
+            "Servicio a domicilio",
+            "Re-ingreso por garantia",
+            "Otros (Especificar en comentarios)"});
+            this.combolocacion.Location = new System.Drawing.Point(70, 118);
+            this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
+            this.combolocacion.Name = "combolocacion";
+            this.combolocacion.Size = new System.Drawing.Size(92, 21);
+            this.combolocacion.TabIndex = 19;
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(889, 27);
+            this.txtfolio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(76, 20);
+            this.txtfolio.TabIndex = 20;
+            // 
+            // txtmodelo
+            // 
+            this.txtmodelo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtmodelo.Location = new System.Drawing.Point(307, 96);
+            this.txtmodelo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.ReadOnly = true;
+            this.txtmodelo.Size = new System.Drawing.Size(123, 20);
+            this.txtmodelo.TabIndex = 22;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label12.Location = new System.Drawing.Point(240, 99);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Modelo:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label13.Location = new System.Drawing.Point(241, 162);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Fecha de entrega";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label14.Location = new System.Drawing.Point(24, 290);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Estado actual:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label11.Location = new System.Drawing.Point(236, 469);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Mano de Obra:";
+            // 
+            // txtmano
+            // 
+            this.txtmano.BackColor = System.Drawing.SystemColors.Window;
+            this.txtmano.Location = new System.Drawing.Point(318, 466);
+            this.txtmano.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmano.Name = "txtmano";
+            this.txtmano.ReadOnly = true;
+            this.txtmano.Size = new System.Drawing.Size(76, 20);
+            this.txtmano.TabIndex = 30;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(16, 31);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(161, 20);
+            this.label15.TabIndex = 31;
+            this.label15.Text = " Orden de Servicio:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(20, 241);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(200, 20);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "Estado de la reparación";
+            // 
+            // combotecnico
+            // 
+            this.combotecnico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.combotecnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.combotecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combotecnico.FormattingEnabled = true;
+            this.combotecnico.Location = new System.Drawing.Point(281, 171);
+            this.combotecnico.Margin = new System.Windows.Forms.Padding(2);
+            this.combotecnico.Name = "combotecnico";
+            this.combotecnico.Size = new System.Drawing.Size(126, 21);
+            this.combotecnico.TabIndex = 35;
+            this.combotecnico.Visible = false;
+            this.combotecnico.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label17.Location = new System.Drawing.Point(190, 174);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 13);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Técnico número:";
+            this.label17.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label18.Location = new System.Drawing.Point(278, 122);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 13);
+            this.label18.TabIndex = 37;
+            this.label18.Text = "Total:";
+            // 
+            // txttotal
+            // 
+            this.txttotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txttotal.Location = new System.Drawing.Point(318, 119);
+            this.txttotal.Margin = new System.Windows.Forms.Padding(2);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.ReadOnly = true;
+            this.txttotal.Size = new System.Drawing.Size(76, 20);
+            this.txttotal.TabIndex = 38;
+            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
+            this.txttotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
+            // 
+            // txtabono
+            // 
+            this.txtabono.BackColor = System.Drawing.SystemColors.Window;
+            this.txtabono.Location = new System.Drawing.Point(505, 53);
+            this.txtabono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtabono.Name = "txtabono";
+            this.txtabono.ReadOnly = true;
+            this.txtabono.Size = new System.Drawing.Size(76, 20);
+            this.txtabono.TabIndex = 40;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label19.Location = new System.Drawing.Point(454, 56);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 13);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "Abono:";
+            // 
+            // txttipo
+            // 
+            this.txttipo.Location = new System.Drawing.Point(775, 11);
+            this.txttipo.Margin = new System.Windows.Forms.Padding(2);
+            this.txttipo.Name = "txttipo";
+            this.txttipo.Size = new System.Drawing.Size(150, 20);
+            this.txttipo.TabIndex = 41;
+            this.txttipo.Visible = false;
+            // 
+            // txtfechaen
+            // 
+            this.txtfechaen.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfechaen.Location = new System.Drawing.Point(244, 191);
+            this.txtfechaen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfechaen.Name = "txtfechaen";
+            this.txtfechaen.ReadOnly = true;
+            this.txtfechaen.Size = new System.Drawing.Size(101, 20);
+            this.txtfechaen.TabIndex = 44;
+            // 
+            // txtfechain
+            // 
+            this.txtfechain.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfechain.Location = new System.Drawing.Point(24, 191);
+            this.txtfechain.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfechain.Name = "txtfechain";
+            this.txtfechain.ReadOnly = true;
+            this.txtfechain.Size = new System.Drawing.Size(120, 20);
+            this.txtfechain.TabIndex = 43;
+            // 
+            // txtestado
+            // 
+            this.txtestado.BackColor = System.Drawing.SystemColors.Window;
+            this.txtestado.Location = new System.Drawing.Point(103, 287);
+            this.txtestado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtestado.Name = "txtestado";
+            this.txtestado.ReadOnly = true;
+            this.txtestado.Size = new System.Drawing.Size(101, 20);
+            this.txtestado.TabIndex = 45;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txtpersonal);
+            this.panel1.Controls.Add(this.txtidequipo);
+            this.panel1.Location = new System.Drawing.Point(0, -7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1106, 235);
+            this.panel1.TabIndex = 46;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtpersonal
+            // 
+            this.txtpersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.txtpersonal.Location = new System.Drawing.Point(532, 28);
+            this.txtpersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpersonal.Name = "txtpersonal";
+            this.txtpersonal.Size = new System.Drawing.Size(49, 20);
+            this.txtpersonal.TabIndex = 48;
+            this.txtpersonal.Visible = false;
+            // 
+            // txtidequipo
+            // 
+            this.txtidequipo.BackColor = System.Drawing.Color.White;
+            this.txtidequipo.Location = new System.Drawing.Point(177, 38);
+            this.txtidequipo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidequipo.Name = "txtidequipo";
+            this.txtidequipo.Size = new System.Drawing.Size(101, 20);
+            this.txtidequipo.TabIndex = 54;
+            this.txtidequipo.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label21);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.txtcorreo);
+            this.panel2.Controls.Add(this.combotecnico);
+            this.panel2.Controls.Add(this.txtcelular);
+            this.panel2.Controls.Add(this.txtapellidos);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.txtnombre);
+            this.panel2.Controls.Add(this.txtfolio);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Location = new System.Drawing.Point(0, 216);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1106, 201);
+            this.panel2.TabIndex = 47;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Electronica.Properties.Resources.call_answer;
+            this.pictureBox1.Location = new System.Drawing.Point(668, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label21.Location = new System.Drawing.Point(862, 120);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 56;
+            this.label21.Text = "Correo:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(711, 25);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(174, 20);
+            this.label20.TabIndex = 49;
+            this.label20.Text = "Contacto del cliente:";
+            // 
+            // txtcorreo
+            // 
+            this.txtcorreo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcorreo.Location = new System.Drawing.Point(907, 117);
+            this.txtcorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.ReadOnly = true;
+            this.txtcorreo.Size = new System.Drawing.Size(158, 20);
+            this.txtcorreo.TabIndex = 55;
+            // 
+            // txtcelular
+            // 
+            this.txtcelular.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcelular.Location = new System.Drawing.Point(908, 86);
+            this.txtcelular.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.ReadOnly = true;
+            this.txtcelular.Size = new System.Drawing.Size(145, 20);
+            this.txtcelular.TabIndex = 54;
+            // 
+            // txtapellidos
+            // 
+            this.txtapellidos.BackColor = System.Drawing.SystemColors.Window;
+            this.txtapellidos.Location = new System.Drawing.Point(687, 114);
+            this.txtapellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtapellidos.Name = "txtapellidos";
+            this.txtapellidos.ReadOnly = true;
+            this.txtapellidos.Size = new System.Drawing.Size(157, 20);
+            this.txtapellidos.TabIndex = 53;
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtnombre.Location = new System.Drawing.Point(687, 86);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.ReadOnly = true;
+            this.txtnombre.Size = new System.Drawing.Size(157, 20);
+            this.txtnombre.TabIndex = 52;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label22.Location = new System.Drawing.Point(631, 117);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 13);
+            this.label22.TabIndex = 51;
+            this.label22.Text = "Apellidos:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label24.Location = new System.Drawing.Point(625, 89);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 13);
+            this.label24.TabIndex = 49;
+            this.label24.Text = "Nombre(s):";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label23.Location = new System.Drawing.Point(862, 89);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(42, 13);
+            this.label23.TabIndex = 50;
+            this.label23.Text = "Celular:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.txtpuntos);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txttotal);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.txtabono);
+            this.panel3.Location = new System.Drawing.Point(0, 413);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1106, 301);
+            this.panel3.TabIndex = 48;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::Electronica.Properties.Resources.shipped;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(879, 186);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 35);
+            this.button4.TabIndex = 45;
+            this.button4.Text = "    Confirmar entrega del equipo";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtpuntos
+            // 
+            this.txtpuntos.BackColor = System.Drawing.SystemColors.Window;
+            this.txtpuntos.Location = new System.Drawing.Point(112, 119);
+            this.txtpuntos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpuntos.Name = "txtpuntos";
+            this.txtpuntos.ReadOnly = true;
+            this.txtpuntos.Size = new System.Drawing.Size(76, 20);
+            this.txtpuntos.TabIndex = 42;
+            this.txtpuntos.Text = "0";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(879, 111);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(161, 35);
+            this.button3.TabIndex = 44;
+            this.button3.Text = "    Confirmar descuento";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Electronica.Properties.Resources.discount;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(634, 111);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(161, 35);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "       Ver y aplicar descuento";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label1.Location = new System.Drawing.Point(65, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Puntos:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Electronica.Properties.Resources._001_binoculars;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(27, 346);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 35);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Ver Reporte";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // RecepcionHistorial_vista
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.txtestado);
+            this.Controls.Add(this.txtfechaen);
+            this.Controls.Add(this.txtfechain);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txttipo);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtmano);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtmodelo);
+            this.Controls.Add(this.combolocacion);
+            this.Controls.Add(this.txtrefaccion);
+            this.Controls.Add(this.txtcomentarios);
+            this.Controls.Add(this.txtaccesorios);
+            this.Controls.Add(this.txtmarca);
+            this.Controls.Add(this.txtfalla);
+            this.Controls.Add(this.txtequipo);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "RecepcionHistorial_vista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Ordenes de Servicio";
+            this.Load += new System.EventHandler(this.Taller_actualizar_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionHistorial_vista_KeyDown);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void RecepcionHistorial_vista_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

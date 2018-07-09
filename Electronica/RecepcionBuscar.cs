@@ -95,62 +95,88 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
-			label2 = new System.Windows.Forms.Label();
-			TablaClientes = new System.Windows.Forms.DataGridView();
-			Buscador = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)TablaClientes).BeginInit();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(15, 20);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(155, 24);
-			label2.TabIndex = 2;
-			label2.Text = "Buscar Clientes";
-			dataGridViewCellStyle.BackColor = System.Drawing.Color.Silver;
-			TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle;
-			TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-			TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TablaClientes.Location = new System.Drawing.Point(22, 133);
-			TablaClientes.Name = "TablaClientes";
-			TablaClientes.ReadOnly = true;
-			TablaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			TablaClientes.Size = new System.Drawing.Size(848, 574);
-			TablaClientes.TabIndex = 3;
-			TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(TablaClientes_CellContentClick);
-			Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			Buscador.Location = new System.Drawing.Point(94, 86);
-			Buscador.Name = "Buscador";
-			Buscador.Size = new System.Drawing.Size(100, 26);
-			Buscador.TabIndex = 5;
-			Buscador.TextChanged += new System.EventHandler(Buscador_TextChanged);
-			Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Buscador_KeyPress);
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(18, 86);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(80, 24);
-			label1.TabIndex = 6;
-			label1.Text = "Buscar:";
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 702);
-			base.Controls.Add(label1);
-			base.Controls.Add(Buscador);
-			base.Controls.Add(TablaClientes);
-			base.Controls.Add(label2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Name = "RecepcionBuscar";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "Buscador de Clientes";
-			base.Load += new System.EventHandler(Clientes_Load);
-			((System.ComponentModel.ISupportInitialize)TablaClientes).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TablaClientes = new System.Windows.Forms.DataGridView();
+            this.Buscador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Buscar Clientes";
+            // 
+            // TablaClientes
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaClientes.Location = new System.Drawing.Point(22, 133);
+            this.TablaClientes.Name = "TablaClientes";
+            this.TablaClientes.ReadOnly = true;
+            this.TablaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TablaClientes.Size = new System.Drawing.Size(848, 574);
+            this.TablaClientes.TabIndex = 3;
+            this.TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaClientes_CellContentClick);
+            // 
+            // Buscador
+            // 
+            this.Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscador.Location = new System.Drawing.Point(94, 86);
+            this.Buscador.Name = "Buscador";
+            this.Buscador.Size = new System.Drawing.Size(100, 26);
+            this.Buscador.TabIndex = 5;
+            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
+            this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar:";
+            // 
+            // RecepcionBuscar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Buscador);
+            this.Controls.Add(this.TablaClientes);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Name = "RecepcionBuscar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Buscador de Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionBuscar_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void RecepcionBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

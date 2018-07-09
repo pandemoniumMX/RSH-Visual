@@ -143,167 +143,223 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label2 = new System.Windows.Forms.Label();
-			label1 = new System.Windows.Forms.Label();
-			txtautorizacion = new System.Windows.Forms.TextBox();
-			txtcantidad = new System.Windows.Forms.TextBox();
-			label3 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			pictureBox = new System.Windows.Forms.PictureBox();
-			button4 = new System.Windows.Forms.Button();
-			button3 = new System.Windows.Forms.Button();
-			txtserie = new System.Windows.Forms.TextBox();
-			txtpersonal = new System.Windows.Forms.TextBox();
-			txtidfolio = new System.Windows.Forms.TextBox();
-			label5 = new System.Windows.Forms.Label();
-			txtcuenta = new System.Windows.Forms.TextBox();
-			((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(12, 9);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(339, 24);
-			label2.TabIndex = 47;
-			label2.Text = "Confirmación de pago por deposito";
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(103, 57);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(250, 20);
-			label1.TabIndex = 48;
-			label1.Text = "Imagen del ticket del deposito";
-			txtautorizacion.BackColor = System.Drawing.SystemColors.Window;
-			txtautorizacion.Location = new System.Drawing.Point(773, 170);
-			txtautorizacion.Margin = new System.Windows.Forms.Padding(2);
-			txtautorizacion.Name = "txtautorizacion";
-			txtautorizacion.Size = new System.Drawing.Size(181, 20);
-			txtautorizacion.TabIndex = 49;
-			txtautorizacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtcantidad.BackColor = System.Drawing.SystemColors.Window;
-			txtcantidad.Location = new System.Drawing.Point(773, 262);
-			txtcantidad.Margin = new System.Windows.Forms.Padding(2);
-			txtcantidad.Name = "txtcantidad";
-			txtcantidad.Size = new System.Drawing.Size(181, 20);
-			txtcantidad.TabIndex = 50;
-			txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(605, 168);
-			label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(159, 20);
-			label3.TabIndex = 51;
-			label3.Text = "Folio de autorización:";
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(605, 262);
-			label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(160, 20);
-			label4.TabIndex = 52;
-			label4.Text = "Cantidad depositada:";
-			pictureBox.Location = new System.Drawing.Point(107, 84);
-			pictureBox.Name = "pictureBox";
-			pictureBox.Size = new System.Drawing.Size(394, 471);
-			pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			pictureBox.TabIndex = 46;
-			pictureBox.TabStop = false;
-			button4.BackColor = System.Drawing.SystemColors.Window;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button4.Image = Electronica.Properties.Resources.tick_inside_circle;
-			button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button4.Location = new System.Drawing.Point(837, 600);
-			button4.Margin = new System.Windows.Forms.Padding(2);
-			button4.Name = "button4";
-			button4.Size = new System.Drawing.Size(117, 35);
-			button4.TabIndex = 45;
-			button4.Text = "         Enviar deposito";
-			button4.UseVisualStyleBackColor = false;
-			button4.Click += new System.EventHandler(button4_Click);
-			button3.BackColor = System.Drawing.SystemColors.Window;
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(111, 206, 220);
-			button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button3.Image = Electronica.Properties.Resources.photo_camera;
-			button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button3.Location = new System.Drawing.Point(229, 600);
-			button3.Margin = new System.Windows.Forms.Padding(2);
-			button3.Name = "button3";
-			button3.Size = new System.Drawing.Size(124, 35);
-			button3.TabIndex = 44;
-			button3.Text = "         Imagen del ticket";
-			button3.UseVisualStyleBackColor = false;
-			button3.Click += new System.EventHandler(button3_Click);
-			txtserie.BackColor = System.Drawing.SystemColors.Window;
-			txtserie.Location = new System.Drawing.Point(533, 32);
-			txtserie.Margin = new System.Windows.Forms.Padding(2);
-			txtserie.Name = "txtserie";
-			txtserie.ReadOnly = true;
-			txtserie.Size = new System.Drawing.Size(90, 20);
-			txtserie.TabIndex = 53;
-			txtserie.Visible = false;
-			txtpersonal.BackColor = System.Drawing.SystemColors.Window;
-			txtpersonal.Location = new System.Drawing.Point(652, 32);
-			txtpersonal.Margin = new System.Windows.Forms.Padding(2);
-			txtpersonal.Name = "txtpersonal";
-			txtpersonal.ReadOnly = true;
-			txtpersonal.Size = new System.Drawing.Size(66, 20);
-			txtpersonal.TabIndex = 54;
-			txtpersonal.Visible = false;
-			txtidfolio.BackColor = System.Drawing.SystemColors.Window;
-			txtidfolio.Location = new System.Drawing.Point(740, 32);
-			txtidfolio.Margin = new System.Windows.Forms.Padding(2);
-			txtidfolio.Name = "txtidfolio";
-			txtidfolio.ReadOnly = true;
-			txtidfolio.Size = new System.Drawing.Size(66, 20);
-			txtidfolio.TabIndex = 55;
-			txtidfolio.Visible = false;
-			label5.AutoSize = true;
-			label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label5.Location = new System.Drawing.Point(605, 218);
-			label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(155, 20);
-			label5.TabIndex = 57;
-			label5.Text = "# de cuenta o tarjeta";
-			txtcuenta.BackColor = System.Drawing.SystemColors.Window;
-			txtcuenta.Location = new System.Drawing.Point(773, 220);
-			txtcuenta.Margin = new System.Windows.Forms.Padding(2);
-			txtcuenta.Name = "txtcuenta";
-			txtcuenta.Size = new System.Drawing.Size(181, 20);
-			txtcuenta.TabIndex = 56;
-			txtcuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1104, 702);
-			base.Controls.Add(label5);
-			base.Controls.Add(txtcuenta);
-			base.Controls.Add(txtidfolio);
-			base.Controls.Add(txtpersonal);
-			base.Controls.Add(txtserie);
-			base.Controls.Add(label4);
-			base.Controls.Add(label3);
-			base.Controls.Add(txtcantidad);
-			base.Controls.Add(txtautorizacion);
-			base.Controls.Add(label1);
-			base.Controls.Add(label2);
-			base.Controls.Add(pictureBox);
-			base.Controls.Add(button4);
-			base.Controls.Add(button3);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Location = new System.Drawing.Point(242, 35);
-			base.Margin = new System.Windows.Forms.Padding(2);
-			base.Name = "Recepcion_ventas_deposito_vista";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			Text = "Ordenes de Servicio";
-			base.Load += new System.EventHandler(Taller_actualizar_Load);
-			((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtautorizacion = new System.Windows.Forms.TextBox();
+            this.txtcantidad = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtserie = new System.Windows.Forms.TextBox();
+            this.txtpersonal = new System.Windows.Forms.TextBox();
+            this.txtidfolio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtcuenta = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(339, 24);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Confirmación de pago por deposito";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(103, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 20);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Imagen del ticket del deposito";
+            // 
+            // txtautorizacion
+            // 
+            this.txtautorizacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtautorizacion.Location = new System.Drawing.Point(773, 170);
+            this.txtautorizacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtautorizacion.Name = "txtautorizacion";
+            this.txtautorizacion.Size = new System.Drawing.Size(181, 20);
+            this.txtautorizacion.TabIndex = 49;
+            this.txtautorizacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcantidad.Location = new System.Drawing.Point(773, 262);
+            this.txtcantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.Size = new System.Drawing.Size(181, 20);
+            this.txtcantidad.TabIndex = 50;
+            this.txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(605, 168);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 20);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Folio de autorización:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(605, 262);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(160, 20);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Cantidad depositada:";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(107, 84);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(394, 471);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 46;
+            this.pictureBox.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Window;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(837, 600);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(117, 35);
+            this.button4.TabIndex = 45;
+            this.button4.Text = "         Enviar deposito";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Window;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::Electronica.Properties.Resources.photo_camera;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(229, 600);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(124, 35);
+            this.button3.TabIndex = 44;
+            this.button3.Text = "         Imagen del ticket";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtserie
+            // 
+            this.txtserie.BackColor = System.Drawing.SystemColors.Window;
+            this.txtserie.Location = new System.Drawing.Point(533, 32);
+            this.txtserie.Margin = new System.Windows.Forms.Padding(2);
+            this.txtserie.Name = "txtserie";
+            this.txtserie.ReadOnly = true;
+            this.txtserie.Size = new System.Drawing.Size(90, 20);
+            this.txtserie.TabIndex = 53;
+            this.txtserie.Visible = false;
+            // 
+            // txtpersonal
+            // 
+            this.txtpersonal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtpersonal.Location = new System.Drawing.Point(652, 32);
+            this.txtpersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpersonal.Name = "txtpersonal";
+            this.txtpersonal.ReadOnly = true;
+            this.txtpersonal.Size = new System.Drawing.Size(66, 20);
+            this.txtpersonal.TabIndex = 54;
+            this.txtpersonal.Visible = false;
+            // 
+            // txtidfolio
+            // 
+            this.txtidfolio.BackColor = System.Drawing.SystemColors.Window;
+            this.txtidfolio.Location = new System.Drawing.Point(740, 32);
+            this.txtidfolio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidfolio.Name = "txtidfolio";
+            this.txtidfolio.ReadOnly = true;
+            this.txtidfolio.Size = new System.Drawing.Size(66, 20);
+            this.txtidfolio.TabIndex = 55;
+            this.txtidfolio.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(605, 218);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 20);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "# de cuenta o tarjeta";
+            // 
+            // txtcuenta
+            // 
+            this.txtcuenta.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcuenta.Location = new System.Drawing.Point(773, 220);
+            this.txtcuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcuenta.Name = "txtcuenta";
+            this.txtcuenta.Size = new System.Drawing.Size(181, 20);
+            this.txtcuenta.TabIndex = 56;
+            this.txtcuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Recepcion_ventas_deposito_vista
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtcuenta);
+            this.Controls.Add(this.txtidfolio);
+            this.Controls.Add(this.txtpersonal);
+            this.Controls.Add(this.txtserie);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtcantidad);
+            this.Controls.Add(this.txtautorizacion);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Recepcion_ventas_deposito_vista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Ordenes de Servicio";
+            this.Load += new System.EventHandler(this.Taller_actualizar_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recepcion_ventas_deposito_vista_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Recepcion_ventas_deposito_vista_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }

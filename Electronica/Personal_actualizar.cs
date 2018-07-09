@@ -272,193 +272,256 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			txtnombre = new System.Windows.Forms.TextBox();
-			label2 = new System.Windows.Forms.Label();
-			txtapellidos = new System.Windows.Forms.TextBox();
-			label4 = new System.Windows.Forms.Label();
-			txtcorreo = new System.Windows.Forms.TextBox();
-			label5 = new System.Windows.Forms.Label();
-			txtcelular = new System.Windows.Forms.TextBox();
-			label6 = new System.Windows.Forms.Label();
-			AgregarClientes = new System.Windows.Forms.Button();
-			label7 = new System.Windows.Forms.Label();
-			txtfoliop = new System.Windows.Forms.TextBox();
-			txtcontraseña = new System.Windows.Forms.TextBox();
-			label8 = new System.Windows.Forms.Label();
-			txtusuario = new System.Windows.Forms.TextBox();
-			label9 = new System.Windows.Forms.Label();
-			combotipo = new System.Windows.Forms.ComboBox();
-			SuspendLayout();
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(21, 43);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(124, 20);
-			label1.TabIndex = 0;
-			label1.Text = "Tipo de Usuario:";
-			label1.Click += new System.EventHandler(label1_Click);
-			txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtnombre.Location = new System.Drawing.Point(123, 181);
-			txtnombre.Name = "txtnombre";
-			txtnombre.Size = new System.Drawing.Size(187, 26);
-			txtnombre.TabIndex = 4;
-			txtnombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtnombre.TextChanged += new System.EventHandler(txtnombre_TextChanged);
-			txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtnombre_KeyPress);
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(21, 184);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(87, 20);
-			label2.TabIndex = 2;
-			label2.Text = "Nombre(s):";
-			txtapellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtapellidos.Location = new System.Drawing.Point(123, 229);
-			txtapellidos.Name = "txtapellidos";
-			txtapellidos.Size = new System.Drawing.Size(187, 26);
-			txtapellidos.TabIndex = 5;
-			txtapellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtapellidos.TextChanged += new System.EventHandler(txtapellidos_TextChanged);
-			txtapellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtapellidos_KeyPress);
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(21, 232);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(77, 20);
-			label4.TabIndex = 4;
-			label4.Text = "Apellidos:";
-			txtcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtcorreo.Location = new System.Drawing.Point(123, 275);
-			txtcorreo.Name = "txtcorreo";
-			txtcorreo.Size = new System.Drawing.Size(187, 26);
-			txtcorreo.TabIndex = 6;
-			txtcorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtcorreo_KeyPress);
-			label5.AutoSize = true;
-			label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label5.Location = new System.Drawing.Point(21, 278);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(61, 20);
-			label5.TabIndex = 10;
-			label5.Text = "Correo:";
-			txtcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtcelular.Location = new System.Drawing.Point(123, 316);
-			txtcelular.Name = "txtcelular";
-			txtcelular.Size = new System.Drawing.Size(187, 26);
-			txtcelular.TabIndex = 7;
-			txtcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtcelular.TextChanged += new System.EventHandler(txtcelular_TextChanged);
-			txtcelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtcelular_KeyPress);
-			label6.AutoSize = true;
-			label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label6.Location = new System.Drawing.Point(21, 319);
-			label6.Name = "label6";
-			label6.Size = new System.Drawing.Size(62, 20);
-			label6.TabIndex = 8;
-			label6.Text = "Celular:";
-			AgregarClientes.FlatAppearance.BorderSize = 0;
-			AgregarClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			AgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			AgregarClientes.Image = Electronica.Properties.Resources._003_refresh_button;
-			AgregarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			AgregarClientes.Location = new System.Drawing.Point(153, 357);
-			AgregarClientes.Name = "AgregarClientes";
-			AgregarClientes.Size = new System.Drawing.Size(139, 45);
-			AgregarClientes.TabIndex = 8;
-			AgregarClientes.Text = "      Actualizar";
-			AgregarClientes.UseVisualStyleBackColor = true;
-			AgregarClientes.Click += new System.EventHandler(AgregarClientes_Click);
-			label7.AutoSize = true;
-			label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label7.Location = new System.Drawing.Point(1, 9);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(41, 16);
-			label7.TabIndex = 13;
-			label7.Text = "Folio:";
-			txtfoliop.Location = new System.Drawing.Point(77, 8);
-			txtfoliop.Name = "txtfoliop";
-			txtfoliop.ReadOnly = true;
-			txtfoliop.Size = new System.Drawing.Size(62, 20);
-			txtfoliop.TabIndex = 14;
-			txtfoliop.TextChanged += new System.EventHandler(txtfoliosig_TextChanged);
-			txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtcontraseña.Location = new System.Drawing.Point(123, 133);
-			txtcontraseña.Name = "txtcontraseña";
-			txtcontraseña.Size = new System.Drawing.Size(187, 26);
-			txtcontraseña.TabIndex = 3;
-			txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtcontraseña.UseSystemPasswordChar = true;
-			txtcontraseña.TextChanged += new System.EventHandler(textBox2_TextChanged);
-			txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtcontraseña_KeyPress);
-			label8.AutoSize = true;
-			label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label8.Location = new System.Drawing.Point(21, 136);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(96, 20);
-			label8.TabIndex = 18;
-			label8.Text = "Contraseña:";
-			txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtusuario.Location = new System.Drawing.Point(123, 85);
-			txtusuario.Name = "txtusuario";
-			txtusuario.Size = new System.Drawing.Size(187, 26);
-			txtusuario.TabIndex = 2;
-			txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			label9.AutoSize = true;
-			label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label9.Location = new System.Drawing.Point(21, 88);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(68, 20);
-			label9.TabIndex = 16;
-			label9.Text = "Usuario:";
-			combotipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combotipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			combotipo.FormattingEnabled = true;
-			combotipo.Items.AddRange(new object[7]
-			{
-				"Administrador",
-				"Jefe de Tecnicos",
-				"Jefe de Taller",
-				"Jefe de Bodega",
-				"Tecnico",
-				"Recepcion",
-				"Chofer"
-			});
-			combotipo.Location = new System.Drawing.Point(140, 40);
-			combotipo.Margin = new System.Windows.Forms.Padding(2);
-			combotipo.Name = "combotipo";
-			combotipo.Size = new System.Drawing.Size(170, 28);
-			combotipo.TabIndex = 1;
-			combotipo.SelectedIndexChanged += new System.EventHandler(combotipo_SelectedIndexChanged);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(330, 445);
-			base.Controls.Add(combotipo);
-			base.Controls.Add(txtcontraseña);
-			base.Controls.Add(label8);
-			base.Controls.Add(txtusuario);
-			base.Controls.Add(label9);
-			base.Controls.Add(txtfoliop);
-			base.Controls.Add(label7);
-			base.Controls.Add(AgregarClientes);
-			base.Controls.Add(txtcorreo);
-			base.Controls.Add(label5);
-			base.Controls.Add(txtcelular);
-			base.Controls.Add(label6);
-			base.Controls.Add(txtapellidos);
-			base.Controls.Add(label4);
-			base.Controls.Add(txtnombre);
-			base.Controls.Add(label2);
-			base.Controls.Add(label1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Name = "Personal_actualizar";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			Text = "Actualizar Personal";
-			base.Load += new System.EventHandler(Clientes_nuevos_Load);
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtapellidos = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtcelular = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.AgregarClientes = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtfoliop = new System.Windows.Forms.TextBox();
+            this.txtcontraseña = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.combotipo = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tipo de Usuario:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombre.Location = new System.Drawing.Point(123, 181);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(187, 26);
+            this.txtnombre.TabIndex = 4;
+            this.txtnombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre(s):";
+            // 
+            // txtapellidos
+            // 
+            this.txtapellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtapellidos.Location = new System.Drawing.Point(123, 229);
+            this.txtapellidos.Name = "txtapellidos";
+            this.txtapellidos.Size = new System.Drawing.Size(187, 26);
+            this.txtapellidos.TabIndex = 5;
+            this.txtapellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtapellidos.TextChanged += new System.EventHandler(this.txtapellidos_TextChanged);
+            this.txtapellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidos_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 232);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Apellidos:";
+            // 
+            // txtcorreo
+            // 
+            this.txtcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcorreo.Location = new System.Drawing.Point(123, 275);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(187, 26);
+            this.txtcorreo.TabIndex = 6;
+            this.txtcorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 278);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Correo:";
+            // 
+            // txtcelular
+            // 
+            this.txtcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcelular.Location = new System.Drawing.Point(123, 316);
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.Size = new System.Drawing.Size(187, 26);
+            this.txtcelular.TabIndex = 7;
+            this.txtcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcelular.TextChanged += new System.EventHandler(this.txtcelular_TextChanged);
+            this.txtcelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcelular_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 319);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 20);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Celular:";
+            // 
+            // AgregarClientes
+            // 
+            this.AgregarClientes.FlatAppearance.BorderSize = 0;
+            this.AgregarClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarClientes.Image = global::Electronica.Properties.Resources._003_refresh_button;
+            this.AgregarClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AgregarClientes.Location = new System.Drawing.Point(153, 357);
+            this.AgregarClientes.Name = "AgregarClientes";
+            this.AgregarClientes.Size = new System.Drawing.Size(139, 45);
+            this.AgregarClientes.TabIndex = 8;
+            this.AgregarClientes.Text = "      Actualizar";
+            this.AgregarClientes.UseVisualStyleBackColor = true;
+            this.AgregarClientes.Click += new System.EventHandler(this.AgregarClientes_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Folio:";
+            // 
+            // txtfoliop
+            // 
+            this.txtfoliop.Location = new System.Drawing.Point(77, 8);
+            this.txtfoliop.Name = "txtfoliop";
+            this.txtfoliop.ReadOnly = true;
+            this.txtfoliop.Size = new System.Drawing.Size(62, 20);
+            this.txtfoliop.TabIndex = 14;
+            this.txtfoliop.TextChanged += new System.EventHandler(this.txtfoliosig_TextChanged);
+            // 
+            // txtcontraseña
+            // 
+            this.txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontraseña.Location = new System.Drawing.Point(123, 133);
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.Size = new System.Drawing.Size(187, 26);
+            this.txtcontraseña.TabIndex = 3;
+            this.txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcontraseña.UseSystemPasswordChar = true;
+            this.txtcontraseña.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(21, 136);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 20);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Contraseña:";
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.Location = new System.Drawing.Point(123, 85);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(187, 26);
+            this.txtusuario.TabIndex = 2;
+            this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(21, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Usuario:";
+            // 
+            // combotipo
+            // 
+            this.combotipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combotipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combotipo.FormattingEnabled = true;
+            this.combotipo.Items.AddRange(new object[] {
+            "Administrador",
+            "Jefe de Tecnicos",
+            "Jefe de Taller",
+            "Jefe de Bodega",
+            "Tecnico",
+            "Recepcion",
+            "Chofer"});
+            this.combotipo.Location = new System.Drawing.Point(140, 40);
+            this.combotipo.Margin = new System.Windows.Forms.Padding(2);
+            this.combotipo.Name = "combotipo";
+            this.combotipo.Size = new System.Drawing.Size(170, 28);
+            this.combotipo.TabIndex = 1;
+            this.combotipo.SelectedIndexChanged += new System.EventHandler(this.combotipo_SelectedIndexChanged);
+            // 
+            // Personal_actualizar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(330, 445);
+            this.Controls.Add(this.combotipo);
+            this.Controls.Add(this.txtcontraseña);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtusuario);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtfoliop);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.AgregarClientes);
+            this.Controls.Add(this.txtcorreo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtcelular);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtapellidos);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
+            this.Name = "Personal_actualizar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Actualizar Personal";
+            this.Load += new System.EventHandler(this.Clientes_nuevos_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Personal_actualizar_KeyDown);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void Personal_actualizar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+    }
 }
