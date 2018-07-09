@@ -77,7 +77,7 @@ namespace Electronica
 
 		private Label label18;
 
-		public TextBox txttotal;
+		public TextBox txtresta;
 
 		public TextBox txtabono;
 
@@ -202,62 +202,61 @@ namespace Electronica
 			}
 		}
 
-		private void comboestado_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void Combotecnico_Load(object sender, EventArgs e)
 		{
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			DialogResult dr = MessageBox.Show("¿Son correctos los costos de la orden número?", "Confirmar información", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
-			if (dr == DialogResult.Yes)
-			{
-				if (string.IsNullOrWhiteSpace(txtrefaccion.Text))
-				{
-					MessageBox.Show("Campo costo de refacción");
-				}
-				if (string.IsNullOrWhiteSpace(txtmano.Text))
-				{
-					MessageBox.Show("Campo mano de obra vacío");
-				}
-				if (string.IsNullOrWhiteSpace(txttotal.Text))
-				{
-					MessageBox.Show("Campo total vacio");
-				}
-				if (string.IsNullOrWhiteSpace(txtabono.Text))
-				{
-					MessageBox.Show("Campo abono vacio");
-				}
-				int refaccion = Convert.ToInt32(txtrefaccion.Text);
-				int mano = Convert.ToInt32(txtmano.Text);
-				int abono = Convert.ToInt32(txtabono.Text);
-				int total2 = Convert.ToInt32(txttotal.Text);
-				int folio = Convert.ToInt32(txtfolio.Text);
-				int equipo = Convert.ToInt32(txtidequipo.Text);
-				string tabla = txttipo.Text;
-				total2 = refaccion + mano - abono;
-				string query_costos = "update " + tabla + "  set presupuesto='" + refaccion + "', mano_obra='" + mano + "', abono='" + abono + "', costo_total='" + total2 + "'where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-				MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
-				try
-				{
-					conn.Open();
-					MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
-					MessageBox.Show("Costos agregados satisfactoriamente");
-					conn.Close();
-					Close();
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
-			}
+            if (dr == DialogResult.Yes)
+            {
+                if (string.IsNullOrWhiteSpace(txtrefaccion.Text))
+                {
+                    MessageBox.Show("Campo costo de refacción");
+                }
+                if (string.IsNullOrWhiteSpace(txtmano.Text))
+                {
+                    MessageBox.Show("Campo mano de obra vacío");
+                }
+                if (string.IsNullOrWhiteSpace(txtresta.Text))
+                {
+                    MessageBox.Show("Campo total vacio");
+                }
+                if (string.IsNullOrWhiteSpace(txtabono.Text))
+                {
+                    MessageBox.Show("Campo abono vacio");
+                }
+
+                int refaccion = Convert.ToInt32(txtrefaccion.Text);
+                int mano = Convert.ToInt32(txtmano.Text);
+                int abono = Convert.ToInt32(txtabono.Text);
+                int resta = Convert.ToInt32(txtresta.Text);
+                int folio = Convert.ToInt32(txtfolio.Text);
+                int equipo = Convert.ToInt32(txtidequipo.Text);
+
+                int sub;
+
+                string tabla = txttipo.Text;
+             
+                sub = refaccion + mano;
+                resta = refaccion + mano - abono;
+
+                string query_costos = "update " + tabla + "  set presupuesto='" + refaccion + "', mano_obra='" + mano + "', abono='" + abono + "',restante='" + resta + "', costo_total='" + sub + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
+                try
+                {
+                    conn.Open();
+                    MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
+                    MessageBox.Show("Costos agregados satisfactoriamente");
+                    conn.Close();
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -346,10 +345,6 @@ namespace Electronica
 		{
 		}
 
-		private void txtmano_Click(object sender, EventArgs e)
-		{
-		}
-
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && components != null)
@@ -361,315 +356,705 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Electronica.Taller_actualizar));
-			label1 = new System.Windows.Forms.Label();
-			label2 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
-			label6 = new System.Windows.Forms.Label();
-			label7 = new System.Windows.Forms.Label();
-			label8 = new System.Windows.Forms.Label();
-			label9 = new System.Windows.Forms.Label();
-			label10 = new System.Windows.Forms.Label();
-			txtequipo = new System.Windows.Forms.TextBox();
-			txtfalla = new System.Windows.Forms.TextBox();
-			txtmarca = new System.Windows.Forms.TextBox();
-			txtaccesorios = new System.Windows.Forms.TextBox();
-			txtcomentarios = new System.Windows.Forms.TextBox();
-			txtrefaccion = new System.Windows.Forms.TextBox();
-			combolocacion = new System.Windows.Forms.ComboBox();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtmodelo = new System.Windows.Forms.TextBox();
-			label12 = new System.Windows.Forms.Label();
-			label13 = new System.Windows.Forms.Label();
-			label14 = new System.Windows.Forms.Label();
-			label11 = new System.Windows.Forms.Label();
-			txtmano = new System.Windows.Forms.TextBox();
-			label15 = new System.Windows.Forms.Label();
-			label16 = new System.Windows.Forms.Label();
-			combotecnico = new System.Windows.Forms.ComboBox();
-			label17 = new System.Windows.Forms.Label();
-			label18 = new System.Windows.Forms.Label();
-			txttotal = new System.Windows.Forms.TextBox();
-			txtabono = new System.Windows.Forms.TextBox();
-			label19 = new System.Windows.Forms.Label();
-			txttipo = new System.Windows.Forms.TextBox();
-			txtfechaen = new System.Windows.Forms.TextBox();
-			txtfechain = new System.Windows.Forms.TextBox();
-			txt_puntos = new System.Windows.Forms.TextBox();
-			label20 = new System.Windows.Forms.Label();
-			txtpersonal1 = new System.Windows.Forms.TextBox();
-			label21 = new System.Windows.Forms.Label();
-			panel2 = new System.Windows.Forms.Panel();
-			txtestado = new System.Windows.Forms.TextBox();
-			txtpersonal = new System.Windows.Forms.Label();
-			panel3 = new System.Windows.Forms.Panel();
-			label22 = new System.Windows.Forms.Label();
-			txtsubtotal = new System.Windows.Forms.TextBox();
-			panel1 = new System.Windows.Forms.Panel();
-			txtidequipo = new System.Windows.Forms.TextBox();
-			btncostos = new System.Windows.Forms.Button();
-			btnasignar = new System.Windows.Forms.Button();
-			btngenerar = new System.Windows.Forms.Button();
-			button1 = new System.Windows.Forms.Button();
-			panel2.SuspendLayout();
-			panel3.SuspendLayout();
-			panel1.SuspendLayout();
-			SuspendLayout();
-			resources.ApplyResources(label1, "label1");
-			label1.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label1.Name = "label1";
-			resources.ApplyResources(label2, "label2");
-			label2.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label2.Name = "label2";
-			resources.ApplyResources(label3, "label3");
-			label3.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label3.Name = "label3";
-			resources.ApplyResources(label4, "label4");
-			label4.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label4.Name = "label4";
-			resources.ApplyResources(label5, "label5");
-			label5.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label5.Name = "label5";
-			resources.ApplyResources(label6, "label6");
-			label6.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label6.Name = "label6";
-			resources.ApplyResources(label7, "label7");
-			label7.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label7.Name = "label7";
-			resources.ApplyResources(label8, "label8");
-			label8.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label8.Name = "label8";
-			resources.ApplyResources(label9, "label9");
-			label9.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label9.Name = "label9";
-			resources.ApplyResources(label10, "label10");
-			label10.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label10.Name = "label10";
-			txtequipo.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtequipo, "txtequipo");
-			txtequipo.Name = "txtequipo";
-			txtfalla.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtfalla, "txtfalla");
-			txtfalla.Name = "txtfalla";
-			txtmarca.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtmarca, "txtmarca");
-			txtmarca.Name = "txtmarca";
-			txtaccesorios.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtaccesorios, "txtaccesorios");
-			txtaccesorios.Name = "txtaccesorios";
-			txtcomentarios.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtcomentarios, "txtcomentarios");
-			txtcomentarios.Name = "txtcomentarios";
-			txtrefaccion.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtrefaccion, "txtrefaccion");
-			txtrefaccion.Name = "txtrefaccion";
-			txtrefaccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtrefaccion_KeyPress);
-			combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combolocacion.FormattingEnabled = true;
-			combolocacion.Items.AddRange(new object[4]
-			{
-				resources.GetString("combolocacion.Items"),
-				resources.GetString("combolocacion.Items1"),
-				resources.GetString("combolocacion.Items2"),
-				resources.GetString("combolocacion.Items3")
-			});
-			resources.ApplyResources(combolocacion, "combolocacion");
-			combolocacion.Name = "combolocacion";
-			resources.ApplyResources(txtfolio, "txtfolio");
-			txtfolio.Name = "txtfolio";
-			txtmodelo.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtmodelo, "txtmodelo");
-			txtmodelo.Name = "txtmodelo";
-			resources.ApplyResources(label12, "label12");
-			label12.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label12.Name = "label12";
-			resources.ApplyResources(label13, "label13");
-			label13.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label13.Name = "label13";
-			resources.ApplyResources(label14, "label14");
-			label14.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			label14.Name = "label14";
-			resources.ApplyResources(label11, "label11");
-			label11.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label11.Name = "label11";
-			txtmano.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtmano, "txtmano");
-			txtmano.Name = "txtmano";
-			txtmano.Click += new System.EventHandler(txtmano_Click);
-			resources.ApplyResources(label15, "label15");
-			label15.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			label15.Name = "label15";
-			resources.ApplyResources(label16, "label16");
-			label16.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			label16.Name = "label16";
-			combotecnico.BackColor = System.Drawing.SystemColors.Window;
-			combotecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combotecnico.FormattingEnabled = true;
-			resources.ApplyResources(combotecnico, "combotecnico");
-			combotecnico.Name = "combotecnico";
-			combotecnico.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged);
-			resources.ApplyResources(label17, "label17");
-			label17.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			label17.Name = "label17";
-			resources.ApplyResources(label18, "label18");
-			label18.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label18.Name = "label18";
-			txttotal.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txttotal, "txttotal");
-			txttotal.Name = "txttotal";
-			txttotal.ReadOnly = true;
-			txttotal.TextChanged += new System.EventHandler(txttotal_TextChanged);
-			txttotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txttotal_KeyPress);
-			txtabono.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtabono, "txtabono");
-			txtabono.Name = "txtabono";
-			txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(txtabono_KeyPress);
-			resources.ApplyResources(label19, "label19");
-			label19.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label19.Name = "label19";
-			resources.ApplyResources(txttipo, "txttipo");
-			txttipo.Name = "txttipo";
-			txtfechaen.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtfechaen, "txtfechaen");
-			txtfechaen.Name = "txtfechaen";
-			txtfechain.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtfechain, "txtfechain");
-			txtfechain.Name = "txtfechain";
-			txt_puntos.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txt_puntos, "txt_puntos");
-			txt_puntos.Name = "txt_puntos";
-			resources.ApplyResources(label20, "label20");
-			label20.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label20.Name = "label20";
-			txtpersonal1.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtpersonal1, "txtpersonal1");
-			txtpersonal1.Name = "txtpersonal1";
-			resources.ApplyResources(label21, "label21");
-			label21.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			label21.Name = "label21";
-			panel2.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			panel2.Controls.Add(txtestado);
-			panel2.Controls.Add(txtpersonal);
-			resources.ApplyResources(panel2, "panel2");
-			panel2.Name = "panel2";
-			panel2.Paint += new System.Windows.Forms.PaintEventHandler(panel2_Paint);
-			txtestado.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtestado, "txtestado");
-			txtestado.Name = "txtestado";
-			txtpersonal.BackColor = System.Drawing.Color.FromArgb(51, 133, 198);
-			resources.ApplyResources(txtpersonal, "txtpersonal");
-			txtpersonal.Name = "txtpersonal";
-			panel3.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			panel3.Controls.Add(label22);
-			panel3.Controls.Add(txtsubtotal);
-			panel3.Controls.Add(txtrefaccion);
-			panel3.Controls.Add(txtabono);
-			panel3.Controls.Add(txtmano);
-			panel3.Controls.Add(txttotal);
-			resources.ApplyResources(panel3, "panel3");
-			panel3.Name = "panel3";
-			resources.ApplyResources(label22, "label22");
-			label22.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label22.Name = "label22";
-			txtsubtotal.BackColor = System.Drawing.SystemColors.Window;
-			resources.ApplyResources(txtsubtotal, "txtsubtotal");
-			txtsubtotal.Name = "txtsubtotal";
-			txtsubtotal.ReadOnly = true;
-			panel1.BackColor = System.Drawing.Color.FromArgb(66, 174, 202);
-			panel1.Controls.Add(txttipo);
-			panel1.Controls.Add(txtfolio);
-			panel1.Controls.Add(label1);
-			panel1.Controls.Add(txtidequipo);
-			resources.ApplyResources(panel1, "panel1");
-			panel1.Name = "panel1";
-			panel1.Paint += new System.Windows.Forms.PaintEventHandler(panel1_Paint);
-			txtidequipo.BackColor = System.Drawing.Color.White;
-			resources.ApplyResources(txtidequipo, "txtidequipo");
-			txtidequipo.Name = "txtidequipo";
-			txtidequipo.ReadOnly = true;
-			btncostos.FlatAppearance.BorderSize = 0;
-			btncostos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			resources.ApplyResources(btncostos, "btncostos");
-			btncostos.Image = Electronica.Properties.Resources._002_coin;
-			btncostos.Name = "btncostos";
-			btncostos.UseVisualStyleBackColor = true;
-			btncostos.Click += new System.EventHandler(button2_Click);
-			btnasignar.FlatAppearance.BorderSize = 0;
-			btnasignar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			resources.ApplyResources(btnasignar, "btnasignar");
-			btnasignar.Image = Electronica.Properties.Resources.tick_inside_circle;
-			btnasignar.Name = "btnasignar";
-			btnasignar.UseVisualStyleBackColor = true;
-			btnasignar.Click += new System.EventHandler(button1_Click);
-			btngenerar.FlatAppearance.BorderSize = 0;
-			btngenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			resources.ApplyResources(btngenerar, "btngenerar");
-			btngenerar.Image = Electronica.Properties.Resources._003_refresh_button1;
-			btngenerar.Name = "btngenerar";
-			btngenerar.UseVisualStyleBackColor = true;
-			btngenerar.Click += new System.EventHandler(btngenorden_Click);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			resources.ApplyResources(button1, "button1");
-			button1.Image = Electronica.Properties.Resources._001_binoculars;
-			button1.Name = "button1";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			resources.ApplyResources(this, "$this");
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.Controls.Add(label21);
-			base.Controls.Add(txtpersonal1);
-			base.Controls.Add(txt_puntos);
-			base.Controls.Add(label20);
-			base.Controls.Add(txtfechaen);
-			base.Controls.Add(txtfechain);
-			base.Controls.Add(label19);
-			base.Controls.Add(label18);
-			base.Controls.Add(btncostos);
-			base.Controls.Add(combotecnico);
-			base.Controls.Add(label17);
-			base.Controls.Add(label16);
-			base.Controls.Add(btnasignar);
-			base.Controls.Add(label15);
-			base.Controls.Add(label11);
-			base.Controls.Add(label14);
-			base.Controls.Add(label13);
-			base.Controls.Add(label12);
-			base.Controls.Add(txtmodelo);
-			base.Controls.Add(btngenerar);
-			base.Controls.Add(combolocacion);
-			base.Controls.Add(txtcomentarios);
-			base.Controls.Add(txtaccesorios);
-			base.Controls.Add(txtmarca);
-			base.Controls.Add(txtfalla);
-			base.Controls.Add(txtequipo);
-			base.Controls.Add(label10);
-			base.Controls.Add(label9);
-			base.Controls.Add(label8);
-			base.Controls.Add(label7);
-			base.Controls.Add(label6);
-			base.Controls.Add(label5);
-			base.Controls.Add(label4);
-			base.Controls.Add(label3);
-			base.Controls.Add(label2);
-			base.Controls.Add(panel3);
-			base.Controls.Add(panel1);
-			base.Controls.Add(panel2);
-			base.Controls.Add(button1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			base.Name = "Taller_actualizar";
-			base.Load += new System.EventHandler(Taller_actualizar_Load);
-			panel2.ResumeLayout(false);
-			panel2.PerformLayout();
-			panel3.ResumeLayout(false);
-			panel3.PerformLayout();
-			panel1.ResumeLayout(false);
-			panel1.PerformLayout();
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtequipo = new System.Windows.Forms.TextBox();
+            this.txtfalla = new System.Windows.Forms.TextBox();
+            this.txtmarca = new System.Windows.Forms.TextBox();
+            this.txtaccesorios = new System.Windows.Forms.TextBox();
+            this.txtcomentarios = new System.Windows.Forms.TextBox();
+            this.txtrefaccion = new System.Windows.Forms.TextBox();
+            this.combolocacion = new System.Windows.Forms.ComboBox();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtmodelo = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtmano = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.combotecnico = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtresta = new System.Windows.Forms.TextBox();
+            this.txtabono = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txttipo = new System.Windows.Forms.TextBox();
+            this.txtfechaen = new System.Windows.Forms.TextBox();
+            this.txtfechain = new System.Windows.Forms.TextBox();
+            this.txt_puntos = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtpersonal1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtestado = new System.Windows.Forms.TextBox();
+            this.txtpersonal = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtsubtotal = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtidequipo = new System.Windows.Forms.TextBox();
+            this.btncostos = new System.Windows.Forms.Button();
+            this.btnasignar = new System.Windows.Forms.Button();
+            this.btngenerar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Asignar Tareas a Tecnicos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label2.Location = new System.Drawing.Point(17, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Equipo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label3.Location = new System.Drawing.Point(455, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Comentarios:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label4.Location = new System.Drawing.Point(21, 162);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Fecha de solicitud de servicio:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label5.Location = new System.Drawing.Point(240, 126);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Accesorios:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label6.Location = new System.Drawing.Point(19, 469);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 16);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Costo Refaccion:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(20, 431);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Presupuesto";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label8.Location = new System.Drawing.Point(17, 118);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Locacion:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label9.Location = new System.Drawing.Point(17, 93);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Falla:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label10.Location = new System.Drawing.Point(238, 68);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Marca:";
+            // 
+            // txtequipo
+            // 
+            this.txtequipo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtequipo.Location = new System.Drawing.Point(64, 65);
+            this.txtequipo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtequipo.Name = "txtequipo";
+            this.txtequipo.Size = new System.Drawing.Size(157, 20);
+            this.txtequipo.TabIndex = 0;
+            // 
+            // txtfalla
+            // 
+            this.txtfalla.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfalla.Location = new System.Drawing.Point(64, 93);
+            this.txtfalla.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfalla.Name = "txtfalla";
+            this.txtfalla.Size = new System.Drawing.Size(157, 20);
+            this.txtfalla.TabIndex = 2;
+            // 
+            // txtmarca
+            // 
+            this.txtmarca.BackColor = System.Drawing.SystemColors.Window;
+            this.txtmarca.Location = new System.Drawing.Point(307, 65);
+            this.txtmarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.Size = new System.Drawing.Size(123, 20);
+            this.txtmarca.TabIndex = 1;
+            // 
+            // txtaccesorios
+            // 
+            this.txtaccesorios.BackColor = System.Drawing.SystemColors.Window;
+            this.txtaccesorios.Location = new System.Drawing.Point(307, 126);
+            this.txtaccesorios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaccesorios.Name = "txtaccesorios";
+            this.txtaccesorios.Size = new System.Drawing.Size(120, 20);
+            this.txtaccesorios.TabIndex = 5;
+            // 
+            // txtcomentarios
+            // 
+            this.txtcomentarios.BackColor = System.Drawing.SystemColors.Window;
+            this.txtcomentarios.Location = new System.Drawing.Point(458, 65);
+            this.txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcomentarios.Multiline = true;
+            this.txtcomentarios.Name = "txtcomentarios";
+            this.txtcomentarios.Size = new System.Drawing.Size(467, 96);
+            this.txtcomentarios.TabIndex = 9;
+            // 
+            // txtrefaccion
+            // 
+            this.txtrefaccion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtrefaccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtrefaccion.Location = new System.Drawing.Point(137, 50);
+            this.txtrefaccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtrefaccion.Name = "txtrefaccion";
+            this.txtrefaccion.Size = new System.Drawing.Size(76, 22);
+            this.txtrefaccion.TabIndex = 15;
+            this.txtrefaccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrefaccion_KeyPress);
+            // 
+            // combolocacion
+            // 
+            this.combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combolocacion.FormattingEnabled = true;
+            this.combolocacion.Items.AddRange(new object[] {
+            "Taller",
+            "Domicilio",
+            "Garantia",
+            "Otros"});
+            this.combolocacion.Location = new System.Drawing.Point(70, 118);
+            this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
+            this.combolocacion.Name = "combolocacion";
+            this.combolocacion.Size = new System.Drawing.Size(92, 21);
+            this.combolocacion.TabIndex = 4;
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(651, 11);
+            this.txtfolio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(76, 20);
+            this.txtfolio.TabIndex = 20;
+            this.txtfolio.Visible = false;
+            // 
+            // txtmodelo
+            // 
+            this.txtmodelo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtmodelo.Location = new System.Drawing.Point(307, 96);
+            this.txtmodelo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.Size = new System.Drawing.Size(123, 20);
+            this.txtmodelo.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label12.Location = new System.Drawing.Point(240, 99);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Modelo:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label13.Location = new System.Drawing.Point(241, 162);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Fecha de entrega";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label14.Location = new System.Drawing.Point(270, 292);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Estado actual:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label11.Location = new System.Drawing.Point(236, 469);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 16);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Mano de Obra:";
+            // 
+            // txtmano
+            // 
+            this.txtmano.BackColor = System.Drawing.SystemColors.Window;
+            this.txtmano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtmano.Location = new System.Drawing.Point(341, 50);
+            this.txtmano.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmano.Name = "txtmano";
+            this.txtmano.Size = new System.Drawing.Size(76, 22);
+            this.txtmano.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(16, 31);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(234, 20);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Modificar Orden de Servicio:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(20, 241);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(264, 20);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "Asignar tecnico para reparacion";
+            // 
+            // combotecnico
+            // 
+            this.combotecnico.BackColor = System.Drawing.SystemColors.Window;
+            this.combotecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combotecnico.FormattingEnabled = true;
+            this.combotecnico.Location = new System.Drawing.Point(124, 289);
+            this.combotecnico.Margin = new System.Windows.Forms.Padding(2);
+            this.combotecnico.Name = "combotecnico";
+            this.combotecnico.Size = new System.Drawing.Size(126, 21);
+            this.combotecnico.TabIndex = 11;
+            this.combotecnico.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label17.Location = new System.Drawing.Point(33, 292);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 13);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Técnico número:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label18.Location = new System.Drawing.Point(278, 522);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(47, 16);
+            this.label18.TabIndex = 37;
+            this.label18.Text = "Resta:";
+            // 
+            // txtresta
+            // 
+            this.txtresta.BackColor = System.Drawing.SystemColors.Window;
+            this.txtresta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtresta.Location = new System.Drawing.Point(341, 103);
+            this.txtresta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtresta.Name = "txtresta";
+            this.txtresta.ReadOnly = true;
+            this.txtresta.Size = new System.Drawing.Size(76, 22);
+            this.txtresta.TabIndex = 18;
+            this.txtresta.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
+            this.txtresta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
+            // 
+            // txtabono
+            // 
+            this.txtabono.BackColor = System.Drawing.SystemColors.Window;
+            this.txtabono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtabono.Location = new System.Drawing.Point(137, 103);
+            this.txtabono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtabono.Name = "txtabono";
+            this.txtabono.Size = new System.Drawing.Size(76, 22);
+            this.txtabono.TabIndex = 17;
+            this.txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtabono_KeyPress);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label19.Location = new System.Drawing.Point(61, 522);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 16);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "Abono:";
+            // 
+            // txttipo
+            // 
+            this.txttipo.Location = new System.Drawing.Point(775, 11);
+            this.txttipo.Margin = new System.Windows.Forms.Padding(2);
+            this.txttipo.Name = "txttipo";
+            this.txttipo.Size = new System.Drawing.Size(150, 20);
+            this.txttipo.TabIndex = 41;
+            this.txttipo.Visible = false;
+            // 
+            // txtfechaen
+            // 
+            this.txtfechaen.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfechaen.Location = new System.Drawing.Point(244, 191);
+            this.txtfechaen.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfechaen.Name = "txtfechaen";
+            this.txtfechaen.Size = new System.Drawing.Size(101, 20);
+            this.txtfechaen.TabIndex = 8;
+            // 
+            // txtfechain
+            // 
+            this.txtfechain.BackColor = System.Drawing.SystemColors.Window;
+            this.txtfechain.Location = new System.Drawing.Point(24, 191);
+            this.txtfechain.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfechain.Name = "txtfechain";
+            this.txtfechain.Size = new System.Drawing.Size(120, 20);
+            this.txtfechain.TabIndex = 7;
+            // 
+            // txt_puntos
+            // 
+            this.txt_puntos.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_puntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txt_puntos.Location = new System.Drawing.Point(512, 519);
+            this.txt_puntos.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_puntos.Name = "txt_puntos";
+            this.txt_puntos.Size = new System.Drawing.Size(76, 22);
+            this.txt_puntos.TabIndex = 46;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label20.Location = new System.Drawing.Point(430, 522);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(52, 16);
+            this.label20.TabIndex = 45;
+            this.label20.Text = "Puntos:";
+            // 
+            // txtpersonal1
+            // 
+            this.txtpersonal1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtpersonal1.Location = new System.Drawing.Point(876, 289);
+            this.txtpersonal1.Name = "txtpersonal1";
+            this.txtpersonal1.Size = new System.Drawing.Size(100, 20);
+            this.txtpersonal1.TabIndex = 47;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.label21.Location = new System.Drawing.Point(772, 292);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(105, 13);
+            this.label21.TabIndex = 48;
+            this.label21.Text = "Tecnico asignado #:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.panel2.Controls.Add(this.txtestado);
+            this.panel2.Controls.Add(this.txtpersonal);
+            this.panel2.Location = new System.Drawing.Point(-4, 219);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1109, 201);
+            this.panel2.TabIndex = 50;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtestado
+            // 
+            this.txtestado.BackColor = System.Drawing.SystemColors.Window;
+            this.txtestado.Location = new System.Drawing.Point(354, 66);
+            this.txtestado.Name = "txtestado";
+            this.txtestado.Size = new System.Drawing.Size(100, 20);
+            this.txtestado.TabIndex = 53;
+            // 
+            // txtpersonal
+            // 
+            this.txtpersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
+            this.txtpersonal.Location = new System.Drawing.Point(876, 289);
+            this.txtpersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpersonal.Name = "txtpersonal";
+            this.txtpersonal.Size = new System.Drawing.Size(49, 20);
+            this.txtpersonal.TabIndex = 47;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Controls.Add(this.txtsubtotal);
+            this.panel3.Controls.Add(this.txtrefaccion);
+            this.panel3.Controls.Add(this.txtabono);
+            this.panel3.Controls.Add(this.txtmano);
+            this.panel3.Controls.Add(this.txtresta);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.panel3.Location = new System.Drawing.Point(-4, 416);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1112, 301);
+            this.panel3.TabIndex = 51;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label22.Location = new System.Drawing.Point(434, 53);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 16);
+            this.label22.TabIndex = 52;
+            this.label22.Text = "Total:";
+            // 
+            // txtsubtotal
+            // 
+            this.txtsubtotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtsubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtsubtotal.Location = new System.Drawing.Point(516, 50);
+            this.txtsubtotal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtsubtotal.Name = "txtsubtotal";
+            this.txtsubtotal.ReadOnly = true;
+            this.txtsubtotal.Size = new System.Drawing.Size(76, 22);
+            this.txtsubtotal.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txttipo);
+            this.panel1.Controls.Add(this.txtfolio);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtidequipo);
+            this.panel1.Location = new System.Drawing.Point(-4, -4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1109, 235);
+            this.panel1.TabIndex = 49;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtidequipo
+            // 
+            this.txtidequipo.BackColor = System.Drawing.Color.White;
+            this.txtidequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txtidequipo.Location = new System.Drawing.Point(259, 31);
+            this.txtidequipo.Name = "txtidequipo";
+            this.txtidequipo.ReadOnly = true;
+            this.txtidequipo.Size = new System.Drawing.Size(100, 24);
+            this.txtidequipo.TabIndex = 53;
+            // 
+            // btncostos
+            // 
+            this.btncostos.FlatAppearance.BorderSize = 0;
+            this.btncostos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btncostos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncostos.Image = global::Electronica.Properties.Resources._002_coin;
+            this.btncostos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncostos.Location = new System.Drawing.Point(788, 511);
+            this.btncostos.Margin = new System.Windows.Forms.Padding(2);
+            this.btncostos.Name = "btncostos";
+            this.btncostos.Size = new System.Drawing.Size(137, 35);
+            this.btncostos.TabIndex = 19;
+            this.btncostos.Text = "Asignar costos";
+            this.btncostos.UseVisualStyleBackColor = true;
+            this.btncostos.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnasignar
+            // 
+            this.btnasignar.FlatAppearance.BorderSize = 0;
+            this.btnasignar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnasignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnasignar.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.btnasignar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnasignar.Location = new System.Drawing.Point(788, 349);
+            this.btnasignar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnasignar.Name = "btnasignar";
+            this.btnasignar.Size = new System.Drawing.Size(137, 35);
+            this.btnasignar.TabIndex = 14;
+            this.btnasignar.Text = " Asignar Tecnico";
+            this.btnasignar.UseVisualStyleBackColor = true;
+            this.btnasignar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btngenerar
+            // 
+            this.btngenerar.FlatAppearance.BorderSize = 0;
+            this.btngenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btngenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngenerar.Image = global::Electronica.Properties.Resources._003_refresh_button1;
+            this.btngenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btngenerar.Location = new System.Drawing.Point(788, 176);
+            this.btngenerar.Margin = new System.Windows.Forms.Padding(2);
+            this.btngenerar.Name = "btngenerar";
+            this.btngenerar.Size = new System.Drawing.Size(137, 35);
+            this.btngenerar.TabIndex = 10;
+            this.btngenerar.Text = "Actualizar Orden";
+            this.btngenerar.UseVisualStyleBackColor = true;
+            this.btngenerar.Click += new System.EventHandler(this.btngenorden_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Electronica.Properties.Resources._001_binoculars;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(24, 349);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 35);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Ver Reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Taller_actualizar
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.txtpersonal1);
+            this.Controls.Add(this.txt_puntos);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.txtfechaen);
+            this.Controls.Add(this.txtfechain);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.btncostos);
+            this.Controls.Add(this.combotecnico);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.btnasignar);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtmodelo);
+            this.Controls.Add(this.btngenerar);
+            this.Controls.Add(this.combolocacion);
+            this.Controls.Add(this.txtcomentarios);
+            this.Controls.Add(this.txtaccesorios);
+            this.Controls.Add(this.txtmarca);
+            this.Controls.Add(this.txtfalla);
+            this.Controls.Add(this.txtequipo);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(242, 35);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Taller_actualizar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Ordenes de Servicio";
+            this.Load += new System.EventHandler(this.Taller_actualizar_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void txtmano_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int sub;
+            sub = int.Parse(txtrefaccion.Text) + int.Parse(txtmano.Text);
+            txtsubtotal.Text= sub.ToString();
+        }
+    }
 }

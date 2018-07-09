@@ -135,7 +135,7 @@ namespace Electronica
 			if (e.RowIndex >= 0)
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				Taller_actualizar2 cl = new Taller_actualizar2();
+				Taller_actualizar3 cl = new Taller_actualizar3();
 				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
 				cl.txttipo.Text = txttipo.Text.ToString();
@@ -151,8 +151,9 @@ namespace Electronica
 				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
 				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
 				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
-				cl.txttotal.Text = row.Cells["costo_total"].Value.ToString();
-				cl.txtestado.Text = row.Cells["estado"].Value.ToString();
+                cl.txtresta.Text = row.Cells["restante"].Value.ToString();
+                cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
+                cl.txtestado.Text = row.Cells["estado"].Value.ToString();
 				cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
 				cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();

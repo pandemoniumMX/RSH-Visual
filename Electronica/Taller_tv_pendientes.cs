@@ -24,7 +24,7 @@ namespace Electronica
 		public TextBox txtfolio;
 
 		public TextBox txttipo;
-
+        
 		public Taller_tv_pendientes()
 		{
 			InitializeComponent();
@@ -107,7 +107,8 @@ namespace Electronica
 				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
 				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
 				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
-				cl.txttotal.Text = row.Cells["costo_total"].Value.ToString();
+                cl.txtresta.Text = row.Cells["restante"].Value.ToString();
+                cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
 				cl.txtestado.Text = row.Cells["estado"].Value.ToString();
 				cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
 				cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();

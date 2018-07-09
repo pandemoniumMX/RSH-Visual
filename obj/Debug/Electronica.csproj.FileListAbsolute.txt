@@ -60,3 +60,6 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_actual
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_actualizar2.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_actualizar3.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csproj.GenerateResource.Cache
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Properties.Resources.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_tv_pendientes.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_tv_solucion.resources
