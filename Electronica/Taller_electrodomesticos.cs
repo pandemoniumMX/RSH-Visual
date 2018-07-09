@@ -69,33 +69,7 @@ namespace Electronica
 		{
 		}
 
-		private void TablaEquipos_CellClick(object sender, DataGridViewCellEventArgs e)
-		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				Taller_actualizar3 cl = new Taller_actualizar3();
-				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
-				cl.txttipo.Text = txttipo.Text.ToString();
-				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
-				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
-				cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
-				cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
-				cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
-				cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
-				cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
-				cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-				cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
-				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
-				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
-				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
-                cl.txtresta.Text = row.Cells["restante"].Value.ToString();
-                cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
-                cl.txtestado.Text = row.Cells["estado"].Value.ToString();
-				cl.ShowDialog();
-			}
-		}
-
+	
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 		}
@@ -160,8 +134,8 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -188,16 +162,16 @@ namespace Electronica
             // 
             // TablaEquipos
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TablaEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TablaEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 129);
             this.TablaEquipos.Name = "TablaEquipos";
@@ -205,7 +179,7 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellClick);
+            this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador
             // 
@@ -355,6 +329,38 @@ namespace Electronica
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
+                Taller_actualizar3 cl = new Taller_actualizar3();
+                cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.txttipo.Text = txttipo.Text.ToString();
+                cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
+                cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
+                cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
+                cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
+                cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
+                cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
+                cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
+                cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+                cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
+                cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
+                cl.txtabono.Text = row.Cells["abono"].Value.ToString();
+                cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
+                cl.txtresta.Text = row.Cells["restante"].Value.ToString();
+                cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
+                cl.txtestado.Text = row.Cells["estado"].Value.ToString();
+                cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
+                cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.ShowDialog();
+                Close();
             }
         }
     }

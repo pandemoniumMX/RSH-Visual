@@ -40,10 +40,6 @@ namespace Electronica
 			InitializeComponent();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
 		public void BuscarEquipos(string valueToSearch)
 		{
 			string query_tabla_equipos = "SELECT * FROM `reparar_tv` WHERE concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
@@ -126,37 +122,7 @@ namespace Electronica
 		{
 		}
 
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				Taller_actualizar3 cl = new Taller_actualizar3();
-				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
-				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.txttipo.Text = txttipo.Text.ToString();
-				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
-				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
-				cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
-				cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
-				cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
-				cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
-				cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
-				cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-				cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
-				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
-				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
-				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
-                cl.txtresta.Text = row.Cells["restante"].Value.ToString();
-                cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
-                cl.txtestado.Text = row.Cells["estado"].Value.ToString();
-				cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
-				cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
-				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.ShowDialog();
-				Close();
-			}
-		}
+		
 
 		protected override void Dispose(bool disposing)
 		{
@@ -169,7 +135,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -196,8 +162,8 @@ namespace Electronica
             // 
             // TablaEquipos
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 129);
@@ -206,8 +172,8 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick);
-            this.TablaEquipos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentDoubleClick);
+            this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
+            this.TablaEquipos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TablaEquipos_MouseClick);
             // 
             // Buscador
             // 
@@ -357,6 +323,42 @@ namespace Electronica
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void TablaEquipos_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
+                Taller_actualizar3 cl = new Taller_actualizar3();
+                cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.txttipo.Text = txttipo.Text.ToString();
+                cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
+                cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
+                cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
+                cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
+                cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
+                cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
+                cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
+                cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+                cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
+                cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
+                cl.txtabono.Text = row.Cells["abono"].Value.ToString();
+                cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
+                cl.txtresta.Text = row.Cells["costo_total"].Value.ToString();
+                cl.txtestado.Text = row.Cells["estado"].Value.ToString();
+                cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
+                cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.ShowDialog();
+                Close();
             }
         }
     }
