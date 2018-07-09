@@ -276,7 +276,7 @@ namespace Electronica
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Image = global::Electronica.Properties.Resources._002_people_12;
+            this.button6.Image = global::Properties.Resources.contract__1_1;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(-1, 241);
             this.button6.Margin = new System.Windows.Forms.Padding(2);

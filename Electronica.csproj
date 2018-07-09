@@ -357,5 +357,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\contract1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\contract %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
