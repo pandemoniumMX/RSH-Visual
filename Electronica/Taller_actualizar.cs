@@ -280,7 +280,7 @@ namespace Electronica
 				int equipo = Convert.ToInt32(txtidequipo.Text);
 				string tabla = txttipo.Text;
 				string tecnico = combotecnico.SelectedItem.ToString();
-				string query_tecnico = "update " + tabla + "  set id_personal='" + tecnico + "'where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+				string query_tecnico = "update " + tabla + "  set id_personal='" + tecnico + "', fecha_entregar='CURRENT_TIMESTAMP' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
 				MySqlCommand cmd_query_tecnico = new MySqlCommand(query_tecnico, conn);
 				try
 				{

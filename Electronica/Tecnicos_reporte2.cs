@@ -68,6 +68,7 @@ namespace Electronica
 
 		private void Inicio_Load(object sender, EventArgs e)
 		{
+
 		}
 
 		private void Cliente_nuevo(object sender, EventArgs e)

@@ -640,9 +640,9 @@ namespace Electronica
             this.label13.Location = new System.Drawing.Point(241, 162);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 13);
+            this.label13.Size = new System.Drawing.Size(150, 13);
             this.label13.TabIndex = 24;
-            this.label13.Text = "Fecha de entrega";
+            this.label13.Text = "Fecha de inicio de reparacion:";
             // 
             // label14
             // 
@@ -785,7 +785,7 @@ namespace Electronica
             // txtfechaen
             // 
             this.txtfechaen.BackColor = System.Drawing.SystemColors.Control;
-            this.txtfechaen.Location = new System.Drawing.Point(244, 191);
+            this.txtfechaen.Location = new System.Drawing.Point(248, 195);
             this.txtfechaen.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechaen.Name = "txtfechaen";
             this.txtfechaen.Size = new System.Drawing.Size(101, 20);
@@ -878,6 +878,7 @@ namespace Electronica
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txtfechaen);
             this.panel1.Controls.Add(this.txtidequipo);
             this.panel1.Controls.Add(this.txttipo);
             this.panel1.Controls.Add(this.txtfolio);
@@ -997,7 +998,6 @@ namespace Electronica
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1104, 702);
-            this.Controls.Add(this.txtfechaen);
             this.Controls.Add(this.txtfechain);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);

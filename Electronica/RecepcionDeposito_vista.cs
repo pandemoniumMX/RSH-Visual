@@ -88,7 +88,7 @@ namespace Electronica
 			{
 				MessageBox.Show("Campo cuenta vacío");
 			}
-			if (string.IsNullOrWhiteSpace(pictureBox.Text))
+			if (pictureBox.Image == null)
 			{
 				MessageBox.Show("Campo imagen ticke no seleccionada");
 			}
@@ -247,7 +247,6 @@ namespace Electronica
             // 
             // pictureBox
             // 
-            this.pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.BackgroundImage")));
             this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
             this.pictureBox.Location = new System.Drawing.Point(107, 84);
             this.pictureBox.Name = "pictureBox";

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Electronica
 {
-	public class RecepcionReparado : Form
+	public class RecepcionSinsolucion : Form
 	{
 		private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
@@ -25,7 +25,7 @@ namespace Electronica
 
 		public TextBox txtfolio;
 
-		public RecepcionReparado()
+		public RecepcionSinsolucion()
 		{
 			InitializeComponent();
 		}
@@ -36,7 +36,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM clientes LEFT JOIN reparar_laptops USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where estado = 'Reparada' and CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_audio USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_smartphones USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT * FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where estado = 'Sin solución' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM clientes LEFT JOIN reparar_laptops USING(id_folio) where estado = 'Sin solución' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where estado = 'Sin solución' and CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_audio USING(id_folio) where estado = 'Sin solución' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_smartphones USING(id_folio) where estado = 'Sin solución' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -134,7 +134,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -150,14 +150,14 @@ namespace Electronica
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(364, 24);
+            this.label2.Size = new System.Drawing.Size(329, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Equipos reparados listos para entrega";
+            this.label2.Text = "Equipos sin solución para entrega";
             // 
             // TablaEquipos
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 133);
@@ -207,7 +207,7 @@ namespace Electronica
             this.txtfolio.TabIndex = 8;
             this.txtfolio.Visible = false;
             // 
-            // RecepcionReparado
+            // RecepcionSinsolucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,9 +222,9 @@ namespace Electronica
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
-            this.Name = "RecepcionReparado";
+            this.Name = "RecepcionSinsolucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Recepcion";
+            this.Text = "Recepción";
             this.Load += new System.EventHandler(this.Taller_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionReparado_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();

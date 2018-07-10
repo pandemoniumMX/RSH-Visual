@@ -38,8 +38,8 @@ namespace Electronica
 		public TextBox txtfolio;
 
 		public TextBox txtpersonal;
-
-		private Button button4;
+        private Button button5;
+        private Button button4;
 
 		public Recepcion()
 		{
@@ -242,165 +242,225 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
-			label2 = new System.Windows.Forms.Label();
-			TablaClientes = new System.Windows.Forms.DataGridView();
-			Buscador = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
-			txtfolio = new System.Windows.Forms.TextBox();
-			txtreparado = new System.Windows.Forms.TextBox();
-			txtdeposito = new System.Windows.Forms.TextBox();
-			button3 = new System.Windows.Forms.Button();
-			button2 = new System.Windows.Forms.Button();
-			button1 = new System.Windows.Forms.Button();
-			btn_cliente_nuevo = new System.Windows.Forms.Button();
-			txtpersonal = new System.Windows.Forms.TextBox();
-			button4 = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)TablaClientes).BeginInit();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(15, 20);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(201, 24);
-			label2.TabIndex = 2;
-			label2.Text = "Clientes Registrados";
-			label2.Click += new System.EventHandler(label2_Click);
-			dataGridViewCellStyle.BackColor = System.Drawing.Color.Silver;
-			TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle;
-			TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-			TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TablaClientes.GridColor = System.Drawing.Color.FromArgb(45, 45, 48);
-			TablaClientes.Location = new System.Drawing.Point(110, 180);
-			TablaClientes.Name = "TablaClientes";
-			TablaClientes.ReadOnly = true;
-			TablaClientes.Size = new System.Drawing.Size(885, 419);
-			TablaClientes.TabIndex = 3;
-			TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(TablaClientes_CellContentClick);
-			TablaClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(TablaClientes_CellMouseClick);
-			Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			Buscador.Location = new System.Drawing.Point(129, 103);
-			Buscador.Name = "Buscador";
-			Buscador.Size = new System.Drawing.Size(100, 26);
-			Buscador.TabIndex = 5;
-			Buscador.TextChanged += new System.EventHandler(Buscador_TextChanged);
-			Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Buscador_KeyPress);
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(53, 103);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(80, 24);
-			label1.TabIndex = 6;
-			label1.Text = "Buscar:";
-			txtfolio.Location = new System.Drawing.Point(423, 25);
-			txtfolio.Name = "txtfolio";
-			txtfolio.Size = new System.Drawing.Size(100, 20);
-			txtfolio.TabIndex = 7;
-			txtfolio.Visible = false;
-			txtreparado.Location = new System.Drawing.Point(557, 25);
-			txtreparado.Name = "txtreparado";
-			txtreparado.Size = new System.Drawing.Size(100, 20);
-			txtreparado.TabIndex = 9;
-			txtreparado.Visible = false;
-			txtdeposito.Location = new System.Drawing.Point(688, 24);
-			txtdeposito.Name = "txtdeposito";
-			txtdeposito.Size = new System.Drawing.Size(100, 20);
-			txtdeposito.TabIndex = 11;
-			txtdeposito.Visible = false;
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button3.Image = Electronica.Properties.Resources.shopping_cart;
-			button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button3.Location = new System.Drawing.Point(877, 98);
-			button3.Name = "button3";
-			button3.Size = new System.Drawing.Size(178, 36);
-			button3.TabIndex = 12;
-			button3.Text = "      Ventas";
-			button3.UseVisualStyleBackColor = true;
-			button3.Click += new System.EventHandler(button3_Click);
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button2.Image = Electronica.Properties.Resources._002_coin;
-			button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button2.Location = new System.Drawing.Point(621, 98);
-			button2.Name = "button2";
-			button2.Size = new System.Drawing.Size(233, 36);
-			button2.TabIndex = 10;
-			button2.Text = "      Depositos en reparacion";
-			button2.UseVisualStyleBackColor = true;
-			button2.Click += new System.EventHandler(button2_Click);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button1.Image = Electronica.Properties.Resources.tick_inside_circle;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(419, 98);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(178, 36);
-			button1.TabIndex = 8;
-			button1.Text = "      Equipos reparados";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click_1);
-			btn_cliente_nuevo.FlatAppearance.BorderSize = 0;
-			btn_cliente_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btn_cliente_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btn_cliente_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btn_cliente_nuevo.Image = Electronica.Properties.Resources.new_user;
-			btn_cliente_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btn_cliente_nuevo.Location = new System.Drawing.Point(263, 98);
-			btn_cliente_nuevo.Name = "btn_cliente_nuevo";
-			btn_cliente_nuevo.Size = new System.Drawing.Size(138, 36);
-			btn_cliente_nuevo.TabIndex = 4;
-			btn_cliente_nuevo.Text = "     Nuevo Cliente";
-			btn_cliente_nuevo.UseVisualStyleBackColor = true;
-			btn_cliente_nuevo.Click += new System.EventHandler(Cliente_nuevo);
-			txtpersonal.Location = new System.Drawing.Point(688, 61);
-			txtpersonal.Name = "txtpersonal";
-			txtpersonal.Size = new System.Drawing.Size(100, 20);
-			txtpersonal.TabIndex = 13;
-			txtpersonal.Visible = false;
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button4.Image = Electronica.Properties.Resources.alert;
-			button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button4.Location = new System.Drawing.Point(877, 25);
-			button4.Name = "button4";
-			button4.Size = new System.Drawing.Size(178, 36);
-			button4.TabIndex = 14;
-			button4.Text = "      Avisos";
-			button4.UseVisualStyleBackColor = true;
-			button4.Click += new System.EventHandler(button4_Click);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1120, 707);
-			base.Controls.Add(button4);
-			base.Controls.Add(txtpersonal);
-			base.Controls.Add(button3);
-			base.Controls.Add(txtdeposito);
-			base.Controls.Add(button2);
-			base.Controls.Add(txtreparado);
-			base.Controls.Add(button1);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(label1);
-			base.Controls.Add(Buscador);
-			base.Controls.Add(btn_cliente_nuevo);
-			base.Controls.Add(TablaClientes);
-			base.Controls.Add(label2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			base.Name = "Recepcion";
-			Text = "Clientes";
-			base.Load += new System.EventHandler(Clientes_Load);
-			((System.ComponentModel.ISupportInitialize)TablaClientes).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TablaClientes = new System.Windows.Forms.DataGridView();
+            this.Buscador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.txtreparado = new System.Windows.Forms.TextBox();
+            this.txtdeposito = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cliente_nuevo = new System.Windows.Forms.Button();
+            this.txtpersonal = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(201, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Clientes Registrados";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // TablaClientes
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.TablaClientes.Location = new System.Drawing.Point(110, 180);
+            this.TablaClientes.Name = "TablaClientes";
+            this.TablaClientes.ReadOnly = true;
+            this.TablaClientes.Size = new System.Drawing.Size(885, 419);
+            this.TablaClientes.TabIndex = 3;
+            this.TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaClientes_CellContentClick);
+            this.TablaClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaClientes_CellMouseClick);
+            // 
+            // Buscador
+            // 
+            this.Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscador.Location = new System.Drawing.Point(129, 103);
+            this.Buscador.Name = "Buscador";
+            this.Buscador.Size = new System.Drawing.Size(100, 26);
+            this.Buscador.TabIndex = 5;
+            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
+            this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar:";
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(423, 25);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(100, 20);
+            this.txtfolio.TabIndex = 7;
+            this.txtfolio.Visible = false;
+            // 
+            // txtreparado
+            // 
+            this.txtreparado.Location = new System.Drawing.Point(557, 25);
+            this.txtreparado.Name = "txtreparado";
+            this.txtreparado.Size = new System.Drawing.Size(100, 20);
+            this.txtreparado.TabIndex = 9;
+            this.txtreparado.Visible = false;
+            // 
+            // txtdeposito
+            // 
+            this.txtdeposito.Location = new System.Drawing.Point(688, 24);
+            this.txtdeposito.Name = "txtdeposito";
+            this.txtdeposito.Size = new System.Drawing.Size(100, 20);
+            this.txtdeposito.TabIndex = 11;
+            this.txtdeposito.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::Electronica.Properties.Resources.shopping_cart;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(877, 98);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(178, 36);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "      Ventas";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::Electronica.Properties.Resources._002_coin;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(621, 98);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(233, 36);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "      Depositos en reparacion";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(419, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 36);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "      Equipos reparados";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btn_cliente_nuevo
+            // 
+            this.btn_cliente_nuevo.FlatAppearance.BorderSize = 0;
+            this.btn_cliente_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_cliente_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cliente_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cliente_nuevo.Image = global::Electronica.Properties.Resources.new_user;
+            this.btn_cliente_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cliente_nuevo.Location = new System.Drawing.Point(263, 98);
+            this.btn_cliente_nuevo.Name = "btn_cliente_nuevo";
+            this.btn_cliente_nuevo.Size = new System.Drawing.Size(138, 36);
+            this.btn_cliente_nuevo.TabIndex = 4;
+            this.btn_cliente_nuevo.Text = "     Nuevo Cliente";
+            this.btn_cliente_nuevo.UseVisualStyleBackColor = true;
+            this.btn_cliente_nuevo.Click += new System.EventHandler(this.Cliente_nuevo);
+            // 
+            // txtpersonal
+            // 
+            this.txtpersonal.Location = new System.Drawing.Point(688, 61);
+            this.txtpersonal.Name = "txtpersonal";
+            this.txtpersonal.Size = new System.Drawing.Size(100, 20);
+            this.txtpersonal.TabIndex = 13;
+            this.txtpersonal.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::Electronica.Properties.Resources.alert;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(877, 25);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(178, 36);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "      Avisos";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = global::Properties.Resources.sad1;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(419, 51);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(191, 36);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "      Equipos sin solución";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // Recepcion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1120, 707);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.txtpersonal);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtdeposito);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtreparado);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Buscador);
+            this.Controls.Add(this.btn_cliente_nuevo);
+            this.Controls.Add(this.TablaClientes);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Recepcion";
+            this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 	}
 }

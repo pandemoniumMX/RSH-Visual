@@ -678,9 +678,9 @@ namespace Electronica
             this.label13.Location = new System.Drawing.Point(241, 162);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 13);
+            this.label13.Size = new System.Drawing.Size(135, 13);
             this.label13.TabIndex = 24;
-            this.label13.Text = "Fecha de reparación:";
+            this.label13.Text = "Fecha de inicio reparación:";
             // 
             // label14
             // 
@@ -904,7 +904,7 @@ namespace Electronica
             // txtegreso
             // 
             this.txtegreso.BackColor = System.Drawing.SystemColors.Window;
-            this.txtegreso.Location = new System.Drawing.Point(374, 71);
+            this.txtegreso.Location = new System.Drawing.Point(434, 71);
             this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
             this.txtegreso.Name = "txtegreso";
             this.txtegreso.ReadOnly = true;
@@ -915,12 +915,12 @@ namespace Electronica
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
-            this.label25.Location = new System.Drawing.Point(276, 74);
+            this.label25.Location = new System.Drawing.Point(242, 74);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(94, 13);
+            this.label25.Size = new System.Drawing.Size(188, 13);
             this.label25.TabIndex = 49;
-            this.label25.Text = "Fecha de entrega:";
+            this.label25.Text = "Fecha de entrega e inicio de garantía:";
             // 
             // pictureBox1
             // 

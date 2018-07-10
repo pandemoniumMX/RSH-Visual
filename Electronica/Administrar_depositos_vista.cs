@@ -435,8 +435,10 @@ namespace Electronica
             // 
             this.txtdeposito.Location = new System.Drawing.Point(991, 30);
             this.txtdeposito.Name = "txtdeposito";
+            this.txtdeposito.ReadOnly = true;
             this.txtdeposito.Size = new System.Drawing.Size(100, 20);
             this.txtdeposito.TabIndex = 62;
+            this.txtdeposito.Visible = false;
             // 
             // Administrar_depositos_vista
             // 

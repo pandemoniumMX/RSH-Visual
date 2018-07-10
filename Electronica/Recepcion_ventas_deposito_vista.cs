@@ -224,6 +224,7 @@ namespace Electronica
             // 
             // pictureBox
             // 
+            this.pictureBox.InitialImage = null;
             this.pictureBox.Location = new System.Drawing.Point(107, 84);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(394, 471);

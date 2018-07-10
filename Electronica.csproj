@@ -178,6 +178,9 @@
     <Compile Include="Electronica\RecepcionLaptops.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\RecepcionSinsolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Electronica\RecepcionReparado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +345,9 @@
     <EmbeddedResource Include="Electronica\Administrar_depositos_vista.resx">
       <DependentUpon>Administrar_depositos_vista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Administrar_taller.resx">
+      <DependentUpon>Administrar_taller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Avisos.resx">
       <DependentUpon>Avisos.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +386,9 @@
     <EmbeddedResource Include="Electronica\Principal_recepcion.resx" />
     <EmbeddedResource Include="Electronica\Principal_taller.resx" />
     <EmbeddedResource Include="Electronica\Principal_tecnicos.resx" />
+    <EmbeddedResource Include="Electronica\Recepcion.resx">
+      <DependentUpon>Recepcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Recepcion2.resx">
       <DependentUpon>Recepcion2.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionHistorial_vista2.resx">
       <DependentUpon>RecepcionHistorial_vista2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\RecepcionSinsolucion.resx">
+      <DependentUpon>RecepcionSinsolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionReparado.resx">
       <DependentUpon>RecepcionReparado.cs</DependentUpon>
@@ -539,6 +551,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="iconos\contract %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iconos\sad1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
