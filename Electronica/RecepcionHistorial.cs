@@ -106,8 +106,9 @@ namespace Electronica
 				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
 				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
 				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
-				cl.txttotal.Text = row.Cells["costo_total"].Value.ToString();
-				cl.txtestado.Text = row.Cells["estado"].Value.ToString();
+                cl.txtrestante.Text = row.Cells["restante"].Value.ToString();
+                cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
+                cl.txtestado.Text = row.Cells["estado"].Value.ToString();
 				cl.txtpersonal.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
 				cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();

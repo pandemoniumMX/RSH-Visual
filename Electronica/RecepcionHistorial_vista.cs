@@ -69,7 +69,7 @@ namespace Electronica
 
 		private Label label18;
 
-		public TextBox txttotal;
+		public TextBox txtsubtotal;
 
 		public TextBox txtabono;
 
@@ -122,8 +122,9 @@ namespace Electronica
 		private Label label24;
 
 		private Label label23;
-
-		private Button button4;
+        private Label label25;
+        public TextBox txtrestante;
+        private Button button4;
 
 		public RecepcionHistorial_vista()
 		{
@@ -185,7 +186,7 @@ namespace Electronica
 			int presupuesto = Convert.ToInt32(txtrefaccion.Text);
 			int mano = Convert.ToInt32(txtmano.Text);
 			int abono = Convert.ToInt32(txtabono.Text);
-			int total = Convert.ToInt32(txttotal.Text);
+			int total = Convert.ToInt32(txtsubtotal.Text);
 			string tabla = txttipo.Text;
 			string query_costos = "update " + tabla + "  set presupuesto='" + presupuesto + "', mano_obra='" + mano + "', abono='" + abono + "', costo_total='" + total + "'";
 			MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
@@ -219,7 +220,7 @@ namespace Electronica
 		{
 			if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
 			{
-				txttotal.Text = (Convert.ToInt32(txtrefaccion.Text) + Convert.ToInt32(txtmano.Text) - Convert.ToInt32(txtabono.Text)).ToString();
+				txtsubtotal.Text = (Convert.ToInt32(txtrefaccion.Text) + Convert.ToInt32(txtmano.Text) - Convert.ToInt32(txtabono.Text)).ToString();
 			}
 		}
 
@@ -261,7 +262,7 @@ namespace Electronica
 			if (dr == DialogResult.Yes)
 			{
 				string folio = txtfolio.Text;
-				string total = txttotal.Text;
+				string total = txtsubtotal.Text;
 				string descuento8 = "UPDATE reparar_tv SET puntos = '0', costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='Reparado'";
 				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
 				string descuento7 = "UPDATE reparar_laptops SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
@@ -384,7 +385,7 @@ namespace Electronica
             this.combotecnico = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.txttotal = new System.Windows.Forms.TextBox();
+            this.txtsubtotal = new System.Windows.Forms.TextBox();
             this.txtabono = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txttipo = new System.Windows.Forms.TextBox();
@@ -412,6 +413,8 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtrestante = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -721,29 +724,29 @@ namespace Electronica
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
-            this.label18.Location = new System.Drawing.Point(278, 122);
+            this.label18.Location = new System.Drawing.Point(444, 56);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(34, 13);
             this.label18.TabIndex = 37;
             this.label18.Text = "Total:";
             // 
-            // txttotal
+            // txtsubtotal
             // 
-            this.txttotal.BackColor = System.Drawing.SystemColors.Window;
-            this.txttotal.Location = new System.Drawing.Point(318, 119);
-            this.txttotal.Margin = new System.Windows.Forms.Padding(2);
-            this.txttotal.Name = "txttotal";
-            this.txttotal.ReadOnly = true;
-            this.txttotal.Size = new System.Drawing.Size(76, 20);
-            this.txttotal.TabIndex = 38;
-            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
-            this.txttotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
+            this.txtsubtotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtsubtotal.Location = new System.Drawing.Point(484, 53);
+            this.txtsubtotal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtsubtotal.Name = "txtsubtotal";
+            this.txtsubtotal.ReadOnly = true;
+            this.txtsubtotal.Size = new System.Drawing.Size(76, 20);
+            this.txtsubtotal.TabIndex = 38;
+            this.txtsubtotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
+            this.txtsubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
             // 
             // txtabono
             // 
             this.txtabono.BackColor = System.Drawing.SystemColors.Window;
-            this.txtabono.Location = new System.Drawing.Point(505, 53);
+            this.txtabono.Location = new System.Drawing.Point(484, 119);
             this.txtabono.Margin = new System.Windows.Forms.Padding(2);
             this.txtabono.Name = "txtabono";
             this.txtabono.ReadOnly = true;
@@ -754,7 +757,7 @@ namespace Electronica
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
-            this.label19.Location = new System.Drawing.Point(454, 56);
+            this.label19.Location = new System.Drawing.Point(437, 122);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 13);
@@ -961,12 +964,14 @@ namespace Electronica
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Controls.Add(this.txtrestante);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.txtpuntos);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txttotal);
+            this.panel3.Controls.Add(this.txtsubtotal);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.txtabono);
@@ -1012,7 +1017,7 @@ namespace Electronica
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Electronica.Properties.Resources.tick_inside_circle;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(879, 111);
+            this.button3.Location = new System.Drawing.Point(683, 186);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 35);
@@ -1029,7 +1034,7 @@ namespace Electronica
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Electronica.Properties.Resources.discount;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(634, 111);
+            this.button2.Location = new System.Drawing.Point(484, 186);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 35);
@@ -1065,6 +1070,27 @@ namespace Electronica
             this.button1.Text = "Ver Reporte";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label25.Location = new System.Drawing.Point(261, 122);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 13);
+            this.label25.TabIndex = 46;
+            this.label25.Text = "Restante:";
+            // 
+            // txtrestante
+            // 
+            this.txtrestante.BackColor = System.Drawing.SystemColors.Window;
+            this.txtrestante.Location = new System.Drawing.Point(318, 119);
+            this.txtrestante.Margin = new System.Windows.Forms.Padding(2);
+            this.txtrestante.Name = "txtrestante";
+            this.txtrestante.ReadOnly = true;
+            this.txtrestante.Size = new System.Drawing.Size(76, 20);
+            this.txtrestante.TabIndex = 47;
             // 
             // RecepcionHistorial_vista
             // 

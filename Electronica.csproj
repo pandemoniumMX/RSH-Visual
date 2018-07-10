@@ -169,6 +169,9 @@
     <Compile Include="Electronica\RecepcionHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\RecepcionHistorial_vista3.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Electronica\RecepcionHistorial_vista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +404,9 @@
     <EmbeddedResource Include="Electronica\RecepcionDeposito_vista.resx" />
     <EmbeddedResource Include="Electronica\RecepcionHistorial.resx">
       <DependentUpon>RecepcionHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\RecepcionHistorial_vista3.resx">
+      <DependentUpon>RecepcionHistorial_vista3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionHistorial_vista.resx">
       <DependentUpon>RecepcionHistorial_vista.cs</DependentUpon>

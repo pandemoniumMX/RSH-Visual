@@ -242,7 +242,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaClientes = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -273,8 +273,8 @@ namespace Electronica
             // 
             // TablaClientes
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -396,7 +396,7 @@ namespace Electronica
             // 
             // txtpersonal
             // 
-            this.txtpersonal.Location = new System.Drawing.Point(688, 61);
+            this.txtpersonal.Location = new System.Drawing.Point(821, 25);
             this.txtpersonal.Name = "txtpersonal";
             this.txtpersonal.Size = new System.Drawing.Size(100, 20);
             this.txtpersonal.TabIndex = 13;
@@ -410,7 +410,7 @@ namespace Electronica
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = global::Electronica.Properties.Resources.alert;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(877, 25);
+            this.button4.Location = new System.Drawing.Point(877, 51);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(178, 36);
             this.button4.TabIndex = 14;
