@@ -105,6 +105,9 @@
     <Compile Include="Electronica\Mercadolibre_publicadas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\Administrar_Tecnicos_reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Electronica\Mercadolibre_todas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +320,9 @@
     <Compile Include="Electronica\Tecnicos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\Administrar_Tecnicos_reporte_actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Electronica\Tecnicos_reporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Electronica.Properties\Resources.resx" />
+    <EmbeddedResource Include="Electronica\Administrar.resx">
+      <DependentUpon>Administrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Administrar_avisos_editar.resx">
       <DependentUpon>Administrar_avisos_editar.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +375,9 @@
     <EmbeddedResource Include="Electronica\Mercadolibre_nueva.resx" />
     <EmbeddedResource Include="Electronica\Mercadolibre_publicadas.resx">
       <DependentUpon>Mercadolibre_publicadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Administrar_Tecnicos_reporte.resx">
+      <DependentUpon>Administrar_Tecnicos_reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Mercadolibre_todas.resx">
       <DependentUpon>Mercadolibre_todas.cs</DependentUpon>
@@ -528,6 +540,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Taller_tv_solucion.resx">
       <DependentUpon>Taller_tv_solucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Administrar_Tecnicos_reporte_actualizar.resx">
+      <DependentUpon>Administrar_Tecnicos_reporte_actualizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Tecnicos_reporte.resx">
       <DependentUpon>Tecnicos_reporte.cs</DependentUpon>

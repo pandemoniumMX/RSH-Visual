@@ -348,6 +348,7 @@ namespace Electronica
                 cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
                 cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
                 cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+                cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
                 cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
                 cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
                 cl.txtabono.Text = row.Cells["abono"].Value.ToString();

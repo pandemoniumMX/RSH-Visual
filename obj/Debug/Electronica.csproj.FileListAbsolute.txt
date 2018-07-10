@@ -211,3 +211,7 @@ C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Tras
 C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Traslado_nuevo.resources
 C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Properties.Resources.resources
 C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.csproj.GenerateResource.Cache
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHistorial_vista3.resources
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar.resources
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar_Tecnicos_reporte.resources
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar_Tecnicos_reporte_actualizar.resources

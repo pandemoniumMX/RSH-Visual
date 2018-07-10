@@ -407,14 +407,14 @@ namespace Electronica
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtrestante = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.txtpuntos = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtrestante = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -776,11 +776,11 @@ namespace Electronica
             // txtfechaen
             // 
             this.txtfechaen.BackColor = System.Drawing.SystemColors.Window;
-            this.txtfechaen.Location = new System.Drawing.Point(244, 191);
+            this.txtfechaen.Location = new System.Drawing.Point(244, 198);
             this.txtfechaen.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechaen.Name = "txtfechaen";
             this.txtfechaen.ReadOnly = true;
-            this.txtfechaen.Size = new System.Drawing.Size(101, 20);
+            this.txtfechaen.Size = new System.Drawing.Size(140, 20);
             this.txtfechaen.TabIndex = 44;
             // 
             // txtfechain
@@ -790,7 +790,7 @@ namespace Electronica
             this.txtfechain.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechain.Name = "txtfechain";
             this.txtfechain.ReadOnly = true;
-            this.txtfechain.Size = new System.Drawing.Size(120, 20);
+            this.txtfechain.Size = new System.Drawing.Size(138, 20);
             this.txtfechain.TabIndex = 43;
             // 
             // txtestado
@@ -807,6 +807,7 @@ namespace Electronica
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
             this.panel1.Controls.Add(this.txtpersonal);
+            this.panel1.Controls.Add(this.txtfechaen);
             this.panel1.Controls.Add(this.txtidequipo);
             this.panel1.Location = new System.Drawing.Point(0, -7);
             this.panel1.Name = "panel1";
@@ -981,6 +982,27 @@ namespace Electronica
             this.panel3.TabIndex = 48;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label25.Location = new System.Drawing.Point(261, 122);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(53, 13);
+            this.label25.TabIndex = 46;
+            this.label25.Text = "Restante:";
+            // 
+            // txtrestante
+            // 
+            this.txtrestante.BackColor = System.Drawing.SystemColors.Window;
+            this.txtrestante.Location = new System.Drawing.Point(318, 119);
+            this.txtrestante.Margin = new System.Windows.Forms.Padding(2);
+            this.txtrestante.Name = "txtrestante";
+            this.txtrestante.ReadOnly = true;
+            this.txtrestante.Size = new System.Drawing.Size(76, 20);
+            this.txtrestante.TabIndex = 47;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Control;
@@ -1071,27 +1093,6 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
-            this.label25.Location = new System.Drawing.Point(261, 122);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(53, 13);
-            this.label25.TabIndex = 46;
-            this.label25.Text = "Restante:";
-            // 
-            // txtrestante
-            // 
-            this.txtrestante.BackColor = System.Drawing.SystemColors.Window;
-            this.txtrestante.Location = new System.Drawing.Point(318, 119);
-            this.txtrestante.Margin = new System.Windows.Forms.Padding(2);
-            this.txtrestante.Name = "txtrestante";
-            this.txtrestante.ReadOnly = true;
-            this.txtrestante.Size = new System.Drawing.Size(76, 20);
-            this.txtrestante.TabIndex = 47;
-            // 
             // RecepcionHistorial_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1099,7 +1100,6 @@ namespace Electronica
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1104, 702);
             this.Controls.Add(this.txtestado);
-            this.Controls.Add(this.txtfechaen);
             this.Controls.Add(this.txtfechain);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txttipo);

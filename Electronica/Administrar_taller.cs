@@ -103,8 +103,9 @@ namespace Electronica
 		private TextBox textBox14;
 
 		private TextBox textBox15;
-
-		private TextBox textBox16;
+        private Label label23;
+        private TextBox txtdevuelto;
+        private TextBox textBox16;
 
 		public Administrar_taller()
 		{
@@ -121,7 +122,22 @@ namespace Electronica
 			{
 				MessageBox.Show(ex4.Message);
 			}
-			try
+
+            //total equipos devueltos
+            try
+            {
+                string query = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_audio WHERE estado =  'Devuelto' )p";
+                conn.Open();
+                MySqlCommand cmd_query2 = new MySqlCommand(query, conn);
+                txtdevuelto.Text = cmd_query2.ExecuteScalar().ToString();
+                conn.Close();
+            }
+            catch (Exception ex4)
+            {
+                MessageBox.Show(ex4.Message);
+            }
+
+            try
 			{
 				string query5 = "SELECT sum( p.costo_total ) AS total_total FROM (SELECT costo_total FROM reparar_smartphones WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_tv WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_laptops WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' )p";
 				conn.Open();
@@ -345,6 +361,8 @@ namespace Electronica
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtdevuelto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -372,9 +390,9 @@ namespace Electronica
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(25, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 24);
+            this.label1.Size = new System.Drawing.Size(282, 24);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Total depositado por reaparación:";
+            this.label1.Text = "Total depositado por reparación:";
             // 
             // label3
             // 
@@ -768,12 +786,32 @@ namespace Electronica
             this.textBox16.Size = new System.Drawing.Size(67, 26);
             this.textBox16.TabIndex = 56;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(506, 132);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(215, 24);
+            this.label23.TabIndex = 60;
+            this.label23.Text = "Total equipos devueltos:";
+            // 
+            // txtdevuelto
+            // 
+            this.txtdevuelto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdevuelto.Location = new System.Drawing.Point(759, 128);
+            this.txtdevuelto.Name = "txtdevuelto";
+            this.txtdevuelto.Size = new System.Drawing.Size(100, 31);
+            this.txtdevuelto.TabIndex = 59;
+            // 
             // Administrar_taller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1096, 582);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.txtdevuelto);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox16);

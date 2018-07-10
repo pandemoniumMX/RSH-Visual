@@ -91,7 +91,7 @@ namespace Electronica
 			if (e.RowIndex >= 0)
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				RecepcionHistorial_vista cl = new RecepcionHistorial_vista();
+				RecepcionHistorial_vista3 cl = new RecepcionHistorial_vista3();
 				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
 				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
 				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
@@ -101,7 +101,8 @@ namespace Electronica
 				cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
 				cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
 				cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-				cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
+                cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
+                cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
 				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
 				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
 				cl.txtabono.Text = row.Cells["abono"].Value.ToString();

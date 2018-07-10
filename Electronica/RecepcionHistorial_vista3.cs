@@ -124,6 +124,8 @@ namespace Electronica
 		private Label label23;
         private Label label25;
         public TextBox txtrestante;
+        public TextBox txtegreso;
+        private Label label26;
         private Button button4;
 
 		public RecepcionHistorial_vista3()
@@ -415,6 +417,8 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtegreso = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -837,6 +841,8 @@ namespace Electronica
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.panel2.Controls.Add(this.txtegreso);
+            this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label20);
@@ -1093,6 +1099,27 @@ namespace Electronica
             this.button1.Text = "Ver Reporte";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // txtegreso
+            // 
+            this.txtegreso.BackColor = System.Drawing.SystemColors.Window;
+            this.txtegreso.Location = new System.Drawing.Point(422, 71);
+            this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtegreso.Name = "txtegreso";
+            this.txtegreso.ReadOnly = true;
+            this.txtegreso.Size = new System.Drawing.Size(138, 20);
+            this.txtegreso.TabIndex = 52;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label26.Location = new System.Drawing.Point(230, 74);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(188, 13);
+            this.label26.TabIndex = 51;
+            this.label26.Text = "Fecha de entrega e inicio de garantía:";
             // 
             // RecepcionHistorial_vista3
             // 

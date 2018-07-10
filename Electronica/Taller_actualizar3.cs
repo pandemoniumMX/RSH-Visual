@@ -110,8 +110,9 @@ namespace Electronica
 		private Panel panel2;
 
 		private Label label22;
-
-		public TextBox txtsubtotal;
+        public TextBox txtegreso;
+        private Label label23;
+        public TextBox txtsubtotal;
 
 		public Taller_actualizar3()
 		{
@@ -414,6 +415,8 @@ namespace Electronica
             this.txtpersonal1 = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtegreso = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -457,7 +460,7 @@ namespace Electronica
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label4.Location = new System.Drawing.Point(21, 162);
+            this.label4.Location = new System.Drawing.Point(21, 175);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 13);
@@ -637,7 +640,7 @@ namespace Electronica
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label13.Location = new System.Drawing.Point(241, 162);
+            this.label13.Location = new System.Drawing.Point(196, 179);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(150, 13);
@@ -785,10 +788,10 @@ namespace Electronica
             // txtfechaen
             // 
             this.txtfechaen.BackColor = System.Drawing.SystemColors.Control;
-            this.txtfechaen.Location = new System.Drawing.Point(248, 195);
+            this.txtfechaen.Location = new System.Drawing.Point(199, 195);
             this.txtfechaen.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechaen.Name = "txtfechaen";
-            this.txtfechaen.Size = new System.Drawing.Size(101, 20);
+            this.txtfechaen.Size = new System.Drawing.Size(138, 20);
             this.txtfechaen.TabIndex = 8;
             // 
             // txtfechain
@@ -797,7 +800,7 @@ namespace Electronica
             this.txtfechain.Location = new System.Drawing.Point(24, 191);
             this.txtfechain.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechain.Name = "txtfechain";
-            this.txtfechain.Size = new System.Drawing.Size(120, 20);
+            this.txtfechain.Size = new System.Drawing.Size(138, 20);
             this.txtfechain.TabIndex = 7;
             // 
             // txt_puntos
@@ -878,11 +881,14 @@ namespace Electronica
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txtegreso);
             this.panel1.Controls.Add(this.txtfechaen);
+            this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.txtidequipo);
             this.panel1.Controls.Add(this.txttipo);
             this.panel1.Controls.Add(this.txtfolio);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Location = new System.Drawing.Point(-4, -4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1109, 235);
@@ -975,6 +981,7 @@ namespace Electronica
             this.txtestado.FormattingEnabled = true;
             this.txtestado.Items.AddRange(new object[] {
             "Diagnosticada",
+            "Devuelto",
             "Reparada",
             "Sin solución",
             "Necesita pieza"});
@@ -992,6 +999,26 @@ namespace Electronica
             this.panel2.Size = new System.Drawing.Size(1108, 200);
             this.panel2.TabIndex = 56;
             // 
+            // txtegreso
+            // 
+            this.txtegreso.BackColor = System.Drawing.SystemColors.Control;
+            this.txtegreso.Location = new System.Drawing.Point(370, 196);
+            this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtegreso.Name = "txtegreso";
+            this.txtegreso.Size = new System.Drawing.Size(138, 20);
+            this.txtegreso.TabIndex = 58;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label23.Location = new System.Drawing.Point(367, 180);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(161, 13);
+            this.label23.TabIndex = 57;
+            this.label23.Text = "Fecha egreso(Inicio de garantía)";
+            // 
             // Taller_actualizar3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1004,7 +1031,6 @@ namespace Electronica
             this.Controls.Add(this.btncostos);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtmodelo);
             this.Controls.Add(this.btngenerar);
