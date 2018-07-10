@@ -36,7 +36,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM reparar_Tv where estado = 'Entregado' AND CONCAT(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM reparar_laptops where estado = 'Entregado' AND CONCAT(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM reparar_electrodomesticos where estado = 'Entregado' and CONCAT(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM reparar_audio where estado = 'Entregado' AND CONCAT(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM reparar_smartphones where estado = 'Entregado' AND CONCAT(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_equipo,id_folio,costo_total FROM reparar_Tv where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_laptops where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_electrodomesticos where estado = 'Entregado' and CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_audio where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_smartphones where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -92,10 +92,11 @@ namespace Electronica
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
 				RecepcionDeposito_vista cl = new RecepcionDeposito_vista();
-				cl.txtidpersonal.Text = row.Cells["id_personal"].Value.ToString();
+				//cl.txtidpersonal.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
 				cl.txtidfolio.Text = row.Cells["id_folio"].Value.ToString();
-				cl.ShowDialog();
+                cl.txtcantidad.Text = row.Cells["costo_total"].Value.ToString();
+                cl.ShowDialog();
 				Close();
 			}
 		}
@@ -145,7 +146,7 @@ namespace Electronica
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(1085, 557);
+            this.TablaEquipos.Size = new System.Drawing.Size(343, 557);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);

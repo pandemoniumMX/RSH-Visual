@@ -41,8 +41,8 @@ namespace Electronica
 		public TextBox txtidfolio;
 
 		private Label label5;
-
-		public TextBox txtcuenta;
+        private Label label6;
+        public TextBox txtcuenta;
 
 		public RecepcionDeposito_vista()
 		{
@@ -62,7 +62,8 @@ namespace Electronica
 			{
 				pictureBox.Image = Image.FromFile(opf.FileName);
 				pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-			}
+                button4.Visible = true;
+            }
 			if (!opf.CheckFileExists)
 			{
 				return;
@@ -76,82 +77,90 @@ namespace Electronica
 		public void button4_Click(object sender, EventArgs e)
 		{
 			DialogResult dr = MessageBox.Show("¿Está seguro de enviar ticket de deposito? Verifique información, esta acción es irreversible", "Informacion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
-			if (dr == DialogResult.Yes && string.IsNullOrWhiteSpace(txtautorizacion.Text))
-			{
-				MessageBox.Show("Campo autorización vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtcantidad.Text))
-			{
-				MessageBox.Show("Campo cantidad vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtcuenta.Text))
-			{
-				MessageBox.Show("Campo cuenta vacío");
-			}
-			if (pictureBox.Image == null)
-			{
-				MessageBox.Show("Campo imagen ticke no seleccionada");
-			}
-			else if (opf.CheckFileExists)
-			{
-				int equipo = Convert.ToInt32(txtidequipo.Text);
-				int personal = Convert.ToInt32(txtidpersonal.Text);
-				int folio = Convert.ToInt32(txtidfolio.Text);
-				string auto = txtautorizacion.Text;
-				int cantidad = Convert.ToInt32(txtcantidad.Text);
-				string cuenta = txtcuenta.Text;
-				string CorrectFilename = Path.GetFileName(opf.FileName.Replace("\\\\", "\\"));
-				Directory.CreateDirectory(("Base de datos\\Equipos Reparados\\Depositos\\" + folio + "\\" + personal + "\\" + equipo) ?? "");
-				string ruta = "\\\\Base de datos\\\\Equipos Reparados\\\\Depositos\\\\" + folio + "\\\\" + personal + "\\\\" + equipo + "\\\\";
-				string paths = Application.StartupPath;
-				File.Copy(opf.FileName, paths + ruta + CorrectFilename);
-				conn.Open();
-				string query = "insert into depositos (autorizacion,cuenta,cantidad,imagen,id_personal,id_equipo,id_folio) values('" + auto + "','" + cuenta + "','" + cantidad + "','" + ruta + CorrectFilename + "','" + personal + "','" + equipo + "','" + folio + "')";
-				MySqlCommand cmd_query = new MySqlCommand(query, conn);
-				try
-				{
-					MySqlDataReader leer = cmd_query.ExecuteReader();
-					conn.Close();
-					Close();
-				}
-				catch (Exception ex2)
-				{
-					MessageBox.Show(ex2.Message);
-				}
-				string descuento8 = "UPDATE reparar_tv SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-				string descuento7 = "UPDATE reparar_laptops SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-				string descuento6 = "UPDATE reparar_smartphones SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-				string descuento5 = "UPDATE reparar_audio SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-				string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
-				try
-				{
-					conn.Open();
-					MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
-					MessageBox.Show("Ticket de pago registrado exitosamente");
-					conn.Close();
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
-			}
+            if (dr == DialogResult.Yes);
+            {
+
+                if (string.IsNullOrWhiteSpace(txtautorizacion.Text))
+                {
+                    MessageBox.Show("Campo autorización vacío");
+                }
+                if (string.IsNullOrWhiteSpace(txtcantidad.Text))
+                {
+                    MessageBox.Show("Campo cantidad vacío");
+                }
+                if (string.IsNullOrWhiteSpace(txtcuenta.Text))
+                {
+                    MessageBox.Show("Campo cuenta vacío");
+                }
+                if (pictureBox.Image == null)
+                {
+                   
+                    MessageBox.Show("Campo imagen ticke no seleccionada");
+                }
+                else if (opf.CheckFileExists)
+                {
+                 
+
+                    int equipo = Convert.ToInt32(txtidequipo.Text);
+                    int personal = Convert.ToInt32(txtidpersonal.Text);
+                    int folio = Convert.ToInt32(txtidfolio.Text);
+                    string auto = txtautorizacion.Text;
+                    int cantidad = Convert.ToInt32(txtcantidad.Text);
+                    string cuenta = txtcuenta.Text;
+                    string CorrectFilename = Path.GetFileName(opf.FileName.Replace("\\\\", "\\"));
+                    Directory.CreateDirectory(("Base de datos\\Equipos Reparados\\Depositos\\" + folio + "\\" + personal + "\\" + equipo) ?? "");
+                    string ruta = "\\\\Base de datos\\\\Equipos Reparados\\\\Depositos\\\\" + folio + "\\\\" + personal + "\\\\" + equipo + "\\\\";
+                    string paths = Application.StartupPath;
+                    File.Copy(opf.FileName, paths + ruta + CorrectFilename);
+                    conn.Open();
+                    string query = "insert into depositos (autorizacion,cuenta,cantidad,imagen,id_personal,id_equipo,id_folio) values('" + auto + "','" + cuenta + "','" + cantidad + "','" + ruta + CorrectFilename + "','" + personal + "','" + equipo + "','" + folio + "')";
+                    MySqlCommand cmd_query = new MySqlCommand(query, conn);
+                    try
+                    {
+                        MySqlDataReader leer = cmd_query.ExecuteReader();
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex2)
+                    {
+                        MessageBox.Show(ex2.Message);
+                    }
+
+                    string descuento8 = "UPDATE reparar_tv SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
+                    MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
+                    string descuento7 = "UPDATE reparar_laptops SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
+                    MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
+                    string descuento6 = "UPDATE reparar_smartphones SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "'";
+                    MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
+                    string descuento5 = "UPDATE reparar_audio SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "'";
+                    MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
+                    string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "'";
+                    MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
+                        conn.Close();
+                        conn.Open();
+                        MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
+                        conn.Close();
+                        conn.Open();
+                        MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
+                        conn.Close();
+                        conn.Open();
+                        MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
+                        conn.Close();
+                        conn.Open();
+                        MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
+                        MessageBox.Show("Ticket de pago registrado exitosamente");
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
 		}
 
 		protected override void Dispose(bool disposing)
@@ -180,6 +189,7 @@ namespace Electronica
             this.txtidfolio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtcuenta = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,9 +229,11 @@ namespace Electronica
             this.txtcantidad.Location = new System.Drawing.Point(773, 262);
             this.txtcantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.ReadOnly = true;
             this.txtcantidad.Size = new System.Drawing.Size(181, 20);
             this.txtcantidad.TabIndex = 50;
             this.txtcantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcantidad_KeyPress);
             // 
             // label3
             // 
@@ -263,13 +275,14 @@ namespace Electronica
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Electronica.Properties.Resources.tick_inside_circle;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(837, 600);
+            this.button4.Location = new System.Drawing.Point(932, 505);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 35);
             this.button4.TabIndex = 45;
             this.button4.Text = "         Enviar deposito";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
@@ -292,13 +305,12 @@ namespace Electronica
             // txtidpersonal
             // 
             this.txtidpersonal.BackColor = System.Drawing.SystemColors.Window;
-            this.txtidpersonal.Location = new System.Drawing.Point(533, 32);
+            this.txtidpersonal.Location = new System.Drawing.Point(979, 30);
             this.txtidpersonal.Margin = new System.Windows.Forms.Padding(2);
             this.txtidpersonal.Name = "txtidpersonal";
-            this.txtidpersonal.ReadOnly = true;
-            this.txtidpersonal.Size = new System.Drawing.Size(90, 20);
+            this.txtidpersonal.Size = new System.Drawing.Size(82, 20);
             this.txtidpersonal.TabIndex = 53;
-            this.txtidpersonal.Visible = false;
+            this.txtidpersonal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidpersonal_KeyPress);
             // 
             // txtidequipo
             // 
@@ -343,12 +355,24 @@ namespace Electronica
             this.txtcuenta.TabIndex = 56;
             this.txtcuenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(867, 30);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 20);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "ID de usuario:";
+            // 
             // RecepcionDeposito_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1104, 702);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtcuenta);
             this.Controls.Add(this.txtidfolio);
@@ -383,6 +407,48 @@ namespace Electronica
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void txtcantidad_KeyPress(object sender, KeyPressEventArgs v)
+        {
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
+            }
+        }
+
+        private void txtidpersonal_KeyPress(object sender, KeyPressEventArgs v)
+        {
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
             }
         }
     }

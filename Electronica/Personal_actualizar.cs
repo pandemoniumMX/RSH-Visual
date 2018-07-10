@@ -64,7 +64,7 @@ namespace Electronica
 		{
 			DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar actualización personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes)
-			{
+			
 				if (string.IsNullOrWhiteSpace(combotipo.Text))
 				{
 					MessageBox.Show("Campo tipo no seleccionado vacío");
@@ -114,7 +114,7 @@ namespace Electronica
 						MessageBox.Show(ex.Message);
 					}
 				}
-			}
+			
 		}
 
 		private void txtfoliosig_TextChanged(object sender, EventArgs e)
@@ -295,7 +295,7 @@ namespace Electronica
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 43);
+            this.label1.Location = new System.Drawing.Point(11, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 0;
@@ -404,16 +404,16 @@ namespace Electronica
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1, 9);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(42, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
+            this.label7.Size = new System.Drawing.Size(47, 20);
             this.label7.TabIndex = 13;
             this.label7.Text = "Folio:";
             // 
             // txtfoliop
             // 
-            this.txtfoliop.Location = new System.Drawing.Point(77, 8);
+            this.txtfoliop.Location = new System.Drawing.Point(186, 8);
             this.txtfoliop.Name = "txtfoliop";
             this.txtfoliop.ReadOnly = true;
             this.txtfoliop.Size = new System.Drawing.Size(62, 20);

@@ -224,35 +224,39 @@ namespace Electronica
                 {
                     MessageBox.Show("Campo abono vacio");
                 }
-
-                int refaccion = Convert.ToInt32(txtrefaccion.Text);
-                int mano = Convert.ToInt32(txtmano.Text);
-                int abono = Convert.ToInt32(txtabono.Text);
-                int resta = Convert.ToInt32(txtresta.Text);
-                int folio = Convert.ToInt32(txtfolio.Text);
-                int equipo = Convert.ToInt32(txtidequipo.Text);
-
-                int sub;
-
-                string tabla = txttipo.Text;
-             
-                sub = refaccion + mano;
-                resta = refaccion + mano - abono;
-
-                string query_costos = "update " + tabla + "  set presupuesto='" + refaccion + "', mano_obra='" + mano + "', abono='" + abono + "',restante='" + resta + "', costo_total='" + sub + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-                MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
-                try
+                else
                 {
-                    conn.Open();
-                    MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
-                    MessageBox.Show("Costos agregados satisfactoriamente");
-                    conn.Close();
-                    Close();
+
+                    int refaccion = Convert.ToInt32(txtrefaccion.Text);
+                    int mano = Convert.ToInt32(txtmano.Text);
+                    int abono = Convert.ToInt32(txtabono.Text);
+                    int resta = Convert.ToInt32(txtresta.Text);
+                    int folio = Convert.ToInt32(txtfolio.Text);
+                    int equipo = Convert.ToInt32(txtidequipo.Text);
+
+                    int sub;
+
+                    string tabla = txttipo.Text;
+
+                    sub = refaccion + mano;
+                    resta = refaccion + mano - abono;
+
+                    string query_costos = "update " + tabla + "  set presupuesto='" + refaccion + "', mano_obra='" + mano + "', abono='" + abono + "',restante='" + resta + "', costo_total='" + sub + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
+                        MessageBox.Show("Costos agregados satisfactoriamente");
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+
             }
 		}
 
@@ -273,37 +277,41 @@ namespace Electronica
 				{
 					MessageBox.Show("Campo tecnico asigado vacio");
 				}
-				int folio = Convert.ToInt32(txtfolio.Text);
-				int equipo = Convert.ToInt32(txtidequipo.Text);
-				string tabla = txttipo.Text;
-				string tecnico = combotecnico.SelectedItem.ToString();
-				string query_tecnico = "update " + tabla + "  set id_personal='" + tecnico + "', fecha_entregar='CURRENT_TIMESTAMP' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-				MySqlCommand cmd_query_tecnico = new MySqlCommand(query_tecnico, conn);
-				try
-				{
-					conn.Open();
-					MySqlDataReader leercomando2 = cmd_query_tecnico.ExecuteReader();
-					MessageBox.Show("Tecnico asignado satisfactoriamente");
-					conn.Close();
-					Close();
-				}
-				catch (Exception ex2)
-				{
-					MessageBox.Show(ex2.Message);
-				}
-				string query_estado = "update " + tabla + " set estado='En Reparación', ubicacion='Taller' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-				MySqlCommand cmd_query_estado = new MySqlCommand(query_estado, conn);
-				try
-				{
-					conn.Open();
-					MySqlDataReader leercomando = cmd_query_estado.ExecuteReader();
-					conn.Close();
-					Close();
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
+                else
+                {
+                    int folio = Convert.ToInt32(txtfolio.Text);
+                    int equipo = Convert.ToInt32(txtidequipo.Text);
+                    string tabla = txttipo.Text;
+                    string tecnico = combotecnico.SelectedItem.ToString();
+                    string query_tecnico = "update " + tabla + "  set id_personal='" + tecnico + "', fecha_entregar='CURRENT_TIMESTAMP' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_tecnico = new MySqlCommand(query_tecnico, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando2 = cmd_query_tecnico.ExecuteReader();
+                        MessageBox.Show("Tecnico asignado satisfactoriamente");
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex2)
+                    {
+                        MessageBox.Show(ex2.Message);
+                    }
+                    string query_estado = "update " + tabla + " set estado='En Reparación', ubicacion='Taller' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_estado = new MySqlCommand(query_estado, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_estado.ExecuteReader();
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+				
 			}
 		}
 

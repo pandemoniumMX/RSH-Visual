@@ -223,32 +223,36 @@ namespace Electronica
 				{
 					MessageBox.Show("Campo abono vacio");
 				}
-				int refaccion = Convert.ToInt32(txtrefaccion.Text);
-				int mano = Convert.ToInt32(txtmano.Text);
-				int abono = Convert.ToInt32(txtabono.Text);
-				int resta = Convert.ToInt32(txtresta.Text);
-				int folio = Convert.ToInt32(txtfolio.Text);
-				int equipo = Convert.ToInt32(txtidequipo.Text);
-				string tabla = txttipo.Text;
-                int sub;
+                else
+                {
+                    int refaccion = Convert.ToInt32(txtrefaccion.Text);
+                    int mano = Convert.ToInt32(txtmano.Text);
+                    int abono = Convert.ToInt32(txtabono.Text);
+                    int resta = Convert.ToInt32(txtresta.Text);
+                    int folio = Convert.ToInt32(txtfolio.Text);
+                    int equipo = Convert.ToInt32(txtidequipo.Text);
+                    string tabla = txttipo.Text;
+                    int sub;
 
-                sub = refaccion + mano;
-                resta = refaccion + mano - abono;
+                    sub = refaccion + mano;
+                    resta = refaccion + mano - abono;
 
-                string query_costos = "update " + tabla + "  set presupuesto='" + refaccion + "', mano_obra='" + mano + "', abono='" + abono + "',restante='" + resta + "', costo_total='" + sub + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-                MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
-                try
-				{
-					conn.Open();
-					MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
-					MessageBox.Show("Costos agregados satisfactoriamente");
-					conn.Close();
-					Close();
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
+                    string query_costos = "update " + tabla + "  set presupuesto='" + refaccion + "', mano_obra='" + mano + "', abono='" + abono + "',restante='" + resta + "', costo_total='" + sub + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
+                        MessageBox.Show("Costos agregados satisfactoriamente");
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+				
 			}
 		}
 
@@ -407,6 +411,8 @@ namespace Electronica
             this.label22 = new System.Windows.Forms.Label();
             this.txtsubtotal = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtegreso = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btncostos = new System.Windows.Forms.Button();
@@ -415,8 +421,6 @@ namespace Electronica
             this.txtpersonal1 = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtegreso = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -895,6 +899,26 @@ namespace Electronica
             this.panel1.TabIndex = 49;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtegreso
+            // 
+            this.txtegreso.BackColor = System.Drawing.SystemColors.Control;
+            this.txtegreso.Location = new System.Drawing.Point(370, 196);
+            this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtegreso.Name = "txtegreso";
+            this.txtegreso.Size = new System.Drawing.Size(138, 20);
+            this.txtegreso.TabIndex = 58;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label23.Location = new System.Drawing.Point(367, 180);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(161, 13);
+            this.label23.TabIndex = 57;
+            this.label23.Text = "Fecha egreso(Inicio de garantía)";
+            // 
             // txtidequipo
             // 
             this.txtidequipo.BackColor = System.Drawing.Color.White;
@@ -982,6 +1006,7 @@ namespace Electronica
             this.txtestado.Items.AddRange(new object[] {
             "Diagnosticada",
             "Devuelto",
+            "Entregado",
             "Reparada",
             "Sin solución",
             "Necesita pieza"});
@@ -998,26 +1023,6 @@ namespace Electronica
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1108, 200);
             this.panel2.TabIndex = 56;
-            // 
-            // txtegreso
-            // 
-            this.txtegreso.BackColor = System.Drawing.SystemColors.Control;
-            this.txtegreso.Location = new System.Drawing.Point(370, 196);
-            this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
-            this.txtegreso.Name = "txtegreso";
-            this.txtegreso.Size = new System.Drawing.Size(138, 20);
-            this.txtegreso.TabIndex = 58;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label23.Location = new System.Drawing.Point(367, 180);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(161, 13);
-            this.label23.TabIndex = 57;
-            this.label23.Text = "Fecha egreso(Inicio de garantía)";
             // 
             // Taller_actualizar3
             // 

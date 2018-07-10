@@ -69,52 +69,60 @@ namespace Electronica
 		{
 		}
 
-		private void AgregarClientes_Click(object sender, EventArgs e)
-		{
-			int folio = Convert.ToInt32(txtfolio.Text);
-			string nombre = txtnombre.Text;
-			string apellido = txtapellidos.Text;
-			string direccion = txtdireccion.Text;
-			string correo = txtcorreo.Text;
-			string celular = txtcelular.Text;
-			string query_insertar_clientes = "insert into clientes (id_folio, nombre, apellidos, direccion, correo, celular) values ('" + folio + "','" + nombre + "','" + apellido + "','" + direccion + "','" + correo + "','" + celular + "')";
-			string query_check = "select * from clientes where celular='" + celular + "'";
-			MySqlCommand cmd_query_check = new MySqlCommand(query_check, conn);
-			MySqlCommand cmd_query_insertar_clientes = new MySqlCommand(query_insertar_clientes, conn);
-			DialogResult dr = MessageBox.Show("¿Los datos del cliente son correctos?", "Confirmar cliente nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
-			if (dr == DialogResult.Yes && string.IsNullOrWhiteSpace(txtfolio.Text))
-			{
-				MessageBox.Show("Campo folio vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtnombre.Text))
-			{
-				MessageBox.Show("Campo nombre vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtapellidos.Text))
-			{
-				MessageBox.Show("Campo apellido vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtdireccion.Text))
-			{
-				MessageBox.Show("Campo direccion vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtcelular.Text))
-			{
-				MessageBox.Show("Campo celular vacío");
-			}
-			try
-			{
-				conn.Open();
-				MySqlDataReader leercomando = cmd_query_insertar_clientes.ExecuteReader();
-				MessageBox.Show("Cliente con el folio " + folio + " agregado satisfactoriamente");
-				conn.Close();
-				Close();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-		}
+        private void AgregarClientes_Click(object sender, EventArgs e)
+        {
+            int folio = Convert.ToInt32(txtfolio.Text);
+            string nombre = txtnombre.Text;
+            string apellido = txtapellidos.Text;
+            string direccion = txtdireccion.Text;
+            string correo = txtcorreo.Text;
+            string celular = txtcelular.Text;
+            string query_insertar_clientes = "insert into clientes (id_folio, nombre, apellidos, direccion, correo, celular) values ('" + folio + "','" + nombre + "','" + apellido + "','" + direccion + "','" + correo + "','" + celular + "')";
+            string query_check = "select * from clientes where celular='" + celular + "'";
+            MySqlCommand cmd_query_check = new MySqlCommand(query_check, conn);
+
+            MySqlCommand cmd_query_insertar_clientes = new MySqlCommand(query_insertar_clientes, conn);
+
+
+            DialogResult dr = MessageBox.Show("¿Los datos del cliente son correctos?", "Confirmar cliente nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+            if (dr == DialogResult.Yes && string.IsNullOrWhiteSpace(txtfolio.Text))
+            {
+                MessageBox.Show("Campo folio vacío");
+            }
+            if (string.IsNullOrWhiteSpace(txtnombre.Text))
+            {
+                MessageBox.Show("Campo nombre vacío");
+            }
+            if (string.IsNullOrWhiteSpace(txtapellidos.Text))
+            {
+                MessageBox.Show("Campo apellido vacío");
+            }
+            if (string.IsNullOrWhiteSpace(txtdireccion.Text))
+            {
+                MessageBox.Show("Campo direccion vacío");
+            }
+            if (string.IsNullOrWhiteSpace(txtcelular.Text))
+            {
+                MessageBox.Show("Campo celular vacío");
+            }
+            else
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlDataReader leercomando = cmd_query_insertar_clientes.ExecuteReader();
+                    MessageBox.Show("Cliente con el folio " + folio + " agregado satisfactoriamente");
+                    conn.Close();
+                    Close();
+                }
+
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
 		private void txtfoliosig_TextChanged(object sender, EventArgs e)
 		{

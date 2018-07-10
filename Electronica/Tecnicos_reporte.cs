@@ -117,67 +117,73 @@ namespace Electronica
 		{
 		}
 
-		private void button1_Click_1(object sender, EventArgs e)
-		{
-			if (string.IsNullOrWhiteSpace(txtfalla.Text))
-			{
-				MessageBox.Show("Campo falla vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtsolucion.Text))
-			{
-				MessageBox.Show("Campo solución vacío");
-			}
-			if (string.IsNullOrWhiteSpace(txtconclusion.Text))
-			{
-				MessageBox.Show("Campo comentario final vacío");
-			}
-			string tabla = txttipo.Text;
-			string falla = txtfalla.Text;
-			string solucion = txtsolucion.Text;
-			string conclusion = txtconclusion.Text;
-			int personal = Convert.ToInt32(txtidpersonal.Text);
-			int equipo = Convert.ToInt32(txtidequipo.Text);
-			string parte = txtsolicitud.Text;
-			string query_reporte = "insert into reportes_tecnicos (falla_especifica, solucion_especifica, conclusion,parte,id_personal, id_equipo) values ('" + falla + "', '" + solucion + "','" + conclusion + "','" + parte + "', '" + personal + "', '" + equipo + "') ";
-			MySqlCommand cmd_query_reporte = new MySqlCommand(query_reporte, conn);
-			string query_estado8 = "update reparar_tv set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
-			MySqlCommand cmd_query_estado8 = new MySqlCommand(query_estado8, conn);
-			string query_estado7 = "update reparar_smartphones set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
-			MySqlCommand cmd_query_estado7 = new MySqlCommand(query_estado7, conn);
-			string query_estado6 = "update reparar_smartphones set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
-			MySqlCommand cmd_query_estado6 = new MySqlCommand(query_estado6, conn);
-			string query_estado5 = "update reparar_audio set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
-			MySqlCommand cmd_query_estado5 = new MySqlCommand(query_estado5, conn);
-			string query_estado4 = "update reparar_electrodomesticos set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
-			MySqlCommand cmd_query_estado4 = new MySqlCommand(query_estado4, conn);
-			try
-			{
-				conn.Open();
-				MySqlDataReader leercomand = cmd_query_reporte.ExecuteReader();
-				conn.Close();
-				conn.Open();
-				MySqlDataReader leercomando8 = cmd_query_estado8.ExecuteReader();
-				conn.Close();
-				conn.Open();
-				MySqlDataReader leercomando7 = cmd_query_estado7.ExecuteReader();
-				conn.Close();
-				conn.Open();
-				MySqlDataReader leercomando6 = cmd_query_estado6.ExecuteReader();
-				conn.Close();
-				conn.Open();
-				MySqlDataReader leercomando5 = cmd_query_estado5.ExecuteReader();
-				conn.Close();
-				conn.Open();
-				MySqlDataReader leercomando4 = cmd_query_estado4.ExecuteReader();
-				MessageBox.Show("Reporte enviado satisfactoriamente");
-				conn.Close();
-				Close();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-		}
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro de solicitar traslado?", "Confirmar solicitud de traslado", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+            if (dr == DialogResult.Yes && string.IsNullOrWhiteSpace(txtfalla.Text))
+            {
+                MessageBox.Show("Campo falla vacío");
+            }
+            if (string.IsNullOrWhiteSpace(txtsolucion.Text))
+            {
+                MessageBox.Show("Campo solución vacío");
+            }
+            if (string.IsNullOrWhiteSpace(txtconclusion.Text))
+            {
+                MessageBox.Show("Campo comentario final vacío");
+            }
+            else
+            {
+                string tabla = txttipo.Text;
+                string falla = txtfalla.Text;
+                string solucion = txtsolucion.Text;
+                string conclusion = txtconclusion.Text;
+                int personal = Convert.ToInt32(txtidpersonal.Text);
+                int equipo = Convert.ToInt32(txtidequipo.Text);
+                string parte = txtsolicitud.Text;
+                string query_reporte = "insert into reportes_tecnicos (falla_especifica, solucion_especifica, conclusion,parte,id_personal, id_equipo) values ('" + falla + "', '" + solucion + "','" + conclusion + "','" + parte + "', '" + personal + "', '" + equipo + "') ";
+                MySqlCommand cmd_query_reporte = new MySqlCommand(query_reporte, conn);
+                string query_estado8 = "update reparar_tv set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
+                MySqlCommand cmd_query_estado8 = new MySqlCommand(query_estado8, conn);
+                string query_estado7 = "update reparar_smartphones set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
+                MySqlCommand cmd_query_estado7 = new MySqlCommand(query_estado7, conn);
+                string query_estado6 = "update reparar_smartphones set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
+                MySqlCommand cmd_query_estado6 = new MySqlCommand(query_estado6, conn);
+                string query_estado5 = "update reparar_audio set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
+                MySqlCommand cmd_query_estado5 = new MySqlCommand(query_estado5, conn);
+                string query_estado4 = "update reparar_electrodomesticos set estado='Diagnosticada', ubicacion='Taller' where id_equipo='" + equipo + "' and id_personal='" + personal + "'";
+                MySqlCommand cmd_query_estado4 = new MySqlCommand(query_estado4, conn);
+                try
+                {
+                    conn.Open();
+                    MySqlDataReader leercomand = cmd_query_reporte.ExecuteReader();
+                    conn.Close();
+                    conn.Open();
+                    MySqlDataReader leercomando8 = cmd_query_estado8.ExecuteReader();
+                    conn.Close();
+                    conn.Open();
+                    MySqlDataReader leercomando7 = cmd_query_estado7.ExecuteReader();
+                    conn.Close();
+                    conn.Open();
+                    MySqlDataReader leercomando6 = cmd_query_estado6.ExecuteReader();
+                    conn.Close();
+                    conn.Open();
+                    MySqlDataReader leercomando5 = cmd_query_estado5.ExecuteReader();
+                    conn.Close();
+                    conn.Open();
+                    MySqlDataReader leercomando4 = cmd_query_estado4.ExecuteReader();
+                    MessageBox.Show("Reporte enviado satisfactoriamente");
+                    conn.Close();
+                    Close();
+                }
+
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
 		{
