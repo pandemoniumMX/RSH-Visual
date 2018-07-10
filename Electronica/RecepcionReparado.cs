@@ -134,7 +134,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -156,15 +156,15 @@ namespace Electronica
             // 
             // TablaEquipos
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 133);
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(1085, 419);
+            this.TablaEquipos.Size = new System.Drawing.Size(1085, 557);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
@@ -212,7 +212,7 @@ namespace Electronica
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1104, 558);
+            this.ClientSize = new System.Drawing.Size(1104, 702);
             this.Controls.Add(this.txtfolio);
             this.Controls.Add(this.txt_folio);
             this.Controls.Add(this.label1);

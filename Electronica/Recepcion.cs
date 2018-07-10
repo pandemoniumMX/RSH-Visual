@@ -242,7 +242,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaClientes = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -273,8 +273,8 @@ namespace Electronica
             // 
             // TablaClientes
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -432,6 +432,7 @@ namespace Electronica
             this.button5.TabIndex = 15;
             this.button5.Text = "      Equipos sin solución";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Recepcion
             // 
@@ -462,5 +463,11 @@ namespace Electronica
             this.PerformLayout();
 
 		}
-	}
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RecepcionSinsolucion ss = new RecepcionSinsolucion();
+            ss.ShowDialog();
+        }
+    }
 }

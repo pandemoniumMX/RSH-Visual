@@ -118,3 +118,6 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csproj.Genera
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.exe
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.pdb
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csprojResolveAssemblyReference.cache
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar_taller.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Recepcion.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionSinsolucion.resources

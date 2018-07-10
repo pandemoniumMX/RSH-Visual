@@ -145,7 +145,7 @@ namespace Electronica
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(1085, 419);
+            this.TablaEquipos.Size = new System.Drawing.Size(1085, 557);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
