@@ -10,6 +10,8 @@ namespace Electronica
 {
 	public class RecepcionDeposito_vista : Form
 	{
+        private Principal prin;
+
 		private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
 		private OpenFileDialog opf = new OpenFileDialog();
@@ -44,14 +46,20 @@ namespace Electronica
         private Label label6;
         public TextBox txtcuenta;
 
-		public RecepcionDeposito_vista()
-		{
-			InitializeComponent();
-		}
+        public RecepcionDeposito_vista()
+        {
+            InitializeComponent();
+            /*
+            int perso;
+                perso = Convert.ToInt32(txtidpersonal.Text);
+         perso = Convert.ToInt32(prin.txtpersonal.Text);
+         */
+        }
 
 		private void Taller_actualizar_Load(object sender, EventArgs e)
 		{
-		}
+            
+        }
 
 		public void button3_Click(object sender, EventArgs e)
 		{
@@ -308,6 +316,7 @@ namespace Electronica
             this.txtidpersonal.Location = new System.Drawing.Point(979, 30);
             this.txtidpersonal.Margin = new System.Windows.Forms.Padding(2);
             this.txtidpersonal.Name = "txtidpersonal";
+            this.txtidpersonal.ReadOnly = true;
             this.txtidpersonal.Size = new System.Drawing.Size(82, 20);
             this.txtidpersonal.TabIndex = 53;
             this.txtidpersonal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidpersonal_KeyPress);
