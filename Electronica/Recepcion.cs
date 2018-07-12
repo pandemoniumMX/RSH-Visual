@@ -250,13 +250,13 @@ namespace Electronica
             this.txtfolio = new System.Windows.Forms.TextBox();
             this.txtreparado = new System.Windows.Forms.TextBox();
             this.txtdeposito = new System.Windows.Forms.TextBox();
+            this.txtpersonal = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_cliente_nuevo = new System.Windows.Forms.Button();
-            this.txtpersonal = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -330,6 +330,46 @@ namespace Electronica
             this.txtdeposito.TabIndex = 11;
             this.txtdeposito.Visible = false;
             // 
+            // txtpersonal
+            // 
+            this.txtpersonal.Location = new System.Drawing.Point(821, 25);
+            this.txtpersonal.Name = "txtpersonal";
+            this.txtpersonal.Size = new System.Drawing.Size(100, 20);
+            this.txtpersonal.TabIndex = 13;
+            this.txtpersonal.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = global::Properties.Resources.sad1;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(419, 51);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(191, 36);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "      Equipos sin solución";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::Electronica.Properties.Resources.alert;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(877, 51);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(178, 36);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "      Avisos";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
@@ -394,46 +434,6 @@ namespace Electronica
             this.btn_cliente_nuevo.UseVisualStyleBackColor = true;
             this.btn_cliente_nuevo.Click += new System.EventHandler(this.Cliente_nuevo);
             // 
-            // txtpersonal
-            // 
-            this.txtpersonal.Location = new System.Drawing.Point(821, 25);
-            this.txtpersonal.Name = "txtpersonal";
-            this.txtpersonal.Size = new System.Drawing.Size(100, 20);
-            this.txtpersonal.TabIndex = 13;
-            this.txtpersonal.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::Electronica.Properties.Resources.alert;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(877, 51);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(178, 36);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "      Avisos";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::Properties.Resources.sad1;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(419, 51);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(191, 36);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "      Equipos sin solución";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Recepcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,5 +469,6 @@ namespace Electronica
             RecepcionSinsolucion ss = new RecepcionSinsolucion();
             ss.ShowDialog();
         }
+
     }
 }

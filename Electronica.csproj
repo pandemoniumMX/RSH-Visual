@@ -335,6 +335,9 @@
     <Compile Include="Electronica\Traslado_actualizar.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\Recepcion_Traslado_nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Electronica\Traslado_nuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -553,6 +556,9 @@
     <EmbeddedResource Include="Electronica\Traslado_actualizar.resx">
       <DependentUpon>Traslado_actualizar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Recepcion_Traslado_nuevo.resx">
+      <DependentUpon>Recepcion_Traslado_nuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Traslado_nuevo.resx">
       <DependentUpon>Traslado_nuevo.cs</DependentUpon>
     </EmbeddedResource>
@@ -575,6 +581,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="iconos\sad1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipped.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

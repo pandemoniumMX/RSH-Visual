@@ -1007,6 +1007,7 @@ namespace Electronica
             "Diagnosticada",
             "Devuelto",
             "Entregado",
+            "Pendiente",
             "Reparada",
             "Sin solución",
             "Necesita pieza"});

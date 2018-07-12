@@ -128,12 +128,19 @@ namespace Electronica
 		public TextBox txtegreso;
         private Label label26;
         public TextBox txtrestante;
+        private Button button6;
+        public TextBox txtubicacion;
+        private Label label27;
         private Label label25;
 
-		public RecepcionHistorial_vista2()
-		{
-			InitializeComponent();
-		}
+        public RecepcionHistorial_vista2()
+        {
+            InitializeComponent();
+
+            
+        
+
+        }
 
 		private void btngenorden_Click(object sender, EventArgs e)
 		{
@@ -201,7 +208,11 @@ namespace Electronica
 
 		private void Taller_actualizar_Load(object sender, EventArgs e)
 		{
-		}
+            if (txtubicacion.Text == "Recepcion")
+            {
+                button6.Visible = true;
+            }
+        }
 
 		private void txttotal_TextChanged(object sender, EventArgs e)
 		{
@@ -462,6 +473,9 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -539,7 +553,7 @@ namespace Electronica
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label8.Location = new System.Drawing.Point(17, 118);
+            this.label8.Location = new System.Drawing.Point(17, 128);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 13);
@@ -639,10 +653,10 @@ namespace Electronica
             "Domicilio",
             "Garantia",
             "Otros"});
-            this.combolocacion.Location = new System.Drawing.Point(70, 118);
+            this.combolocacion.Location = new System.Drawing.Point(96, 125);
             this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
             this.combolocacion.Name = "combolocacion";
-            this.combolocacion.Size = new System.Drawing.Size(92, 21);
+            this.combolocacion.Size = new System.Drawing.Size(124, 21);
             this.combolocacion.TabIndex = 19;
             // 
             // txtfolio
@@ -853,12 +867,16 @@ namespace Electronica
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txtubicacion);
+            this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.txtidequipo);
             this.panel1.Controls.Add(this.txtpersonal);
             this.panel1.Controls.Add(this.txtfechaen);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtcomentarios);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.combolocacion);
             this.panel1.Location = new System.Drawing.Point(0, -7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1106, 235);
@@ -887,6 +905,7 @@ namespace Electronica
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.txtegreso);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -1076,18 +1095,18 @@ namespace Electronica
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Electronica.Properties.Resources.shipped;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(879, 186);
+            this.button4.Location = new System.Drawing.Point(870, 111);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 35);
+            this.button4.Size = new System.Drawing.Size(195, 35);
             this.button4.TabIndex = 45;
-            this.button4.Text = "    Confirmar entrega del equipo";
+            this.button4.Text = "       Confirmar entrega del equipo";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -1105,13 +1124,13 @@ namespace Electronica
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Electronica.Properties.Resources.tick_inside_circle;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(879, 111);
+            this.button3.Location = new System.Drawing.Point(581, 45);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 35);
@@ -1129,7 +1148,7 @@ namespace Electronica
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Electronica.Properties.Resources.discount;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(683, 111);
+            this.button2.Location = new System.Drawing.Point(581, 111);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 35);
@@ -1167,6 +1186,45 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::Electronica.Properties.Resources.shipped;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(870, 151);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(195, 36);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "        Solicitud de traslado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // txtubicacion
+            // 
+            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtubicacion.Location = new System.Drawing.Point(97, 150);
+            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.ReadOnly = true;
+            this.txtubicacion.Size = new System.Drawing.Size(123, 20);
+            this.txtubicacion.TabIndex = 50;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label27.Location = new System.Drawing.Point(17, 153);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 13);
+            this.label27.TabIndex = 49;
+            this.label27.Text = "Ubicación:";
+            // 
             // RecepcionHistorial_vista2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1184,7 +1242,6 @@ namespace Electronica
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtmodelo);
-            this.Controls.Add(this.combolocacion);
             this.Controls.Add(this.txtrefaccion);
             this.Controls.Add(this.txtaccesorios);
             this.Controls.Add(this.txtmarca);
@@ -1192,7 +1249,6 @@ namespace Electronica
             this.Controls.Add(this.txtequipo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -1228,6 +1284,12 @@ namespace Electronica
             {
                 this.Close();
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Recepcion_Traslado_nuevo ss = new Recepcion_Traslado_nuevo(txtfolio.Text, txtidequipo.Text);
+            ss.ShowDialog();
         }
     }
 }

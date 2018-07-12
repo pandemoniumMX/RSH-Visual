@@ -37,7 +37,7 @@ namespace Electronica
 
 		public void BuscarCliente(string valueToSearch)
 		{
-			string query_tabla_clientes = "SELECT id_traslado, estado, direccion, comentarios,ubicacion,destino, fecha_solicitud,id_carro, id_personal, id_folio FROM traslado WHERE CONCAT(`id_traslado`, `estado`, `direccion`, `comentarios`, `fecha_solicitud`,`id_carro`, `id_personal`,'id_folio')LIKE '%" + valueToSearch + "%'";
+			string query_tabla_clientes = "SELECT id_traslado, estado, direccion, comentarios,ubicacion,destino, fecha_solicitud,id_equipo, id_carro, id_personal, id_folio FROM traslado WHERE CONCAT(`id_traslado`, `estado`, `direccion`, `comentarios`, `fecha_solicitud`,`id_carro`, `id_personal`,'id_folio')LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_clientes = new MySqlCommand(query_tabla_clientes, conn);
 			try
 			{
@@ -97,7 +97,8 @@ namespace Electronica
 				cl.txtcarro.Text = row.Cells["id_carro"].Value.ToString();
 				cl.txtpersonal.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
-				cl.ShowDialog();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.ShowDialog();
 			}
 		}
 

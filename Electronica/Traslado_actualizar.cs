@@ -56,8 +56,9 @@ namespace Electronica
 		private Label label10;
 
 		public ComboBox comboubicacion;
-
-		public ComboBox combodestino;
+        public TextBox txtidequipo;
+        private Label label11;
+        public ComboBox combodestino;
 
 		public Traslado_actualizar()
 		{
@@ -86,8 +87,10 @@ namespace Electronica
 				string coment = txtcomentarios.Text;
 				string ubi = comboubicacion.SelectedItem.ToString();
 				string des = combodestino.SelectedItem.ToString();
+                int idequipo = Convert.ToInt32(txtidequipo.Text);
+
 				int idtras = Convert.ToInt32(txtidtraslado.Text);
-				string query = "update traslado set direccion='" + direccion + "', comentarios='" + coment + "', destino='" + des + "', ubicacion='" + ubi + "' where id_traslado='" + idtras + "'";
+				string query = "update traslado set direccion='" + direccion + "', comentarios='" + coment + "', destino='" + des + "', id_equipo ='"+ idequipo + "', ubicacion='" + ubi + "' where id_traslado='" + idtras + "'";
 				MySqlCommand cmd_query = new MySqlCommand(query, conn);
 				try
 				{
@@ -179,6 +182,8 @@ namespace Electronica
             this.label10 = new System.Windows.Forms.Label();
             this.comboubicacion = new System.Windows.Forms.ComboBox();
             this.combodestino = new System.Windows.Forms.ComboBox();
+            this.txtidequipo = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -281,7 +286,7 @@ namespace Electronica
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 72);
+            this.label5.Location = new System.Drawing.Point(7, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 53;
@@ -300,7 +305,7 @@ namespace Electronica
             "No se encontro",
             "Realizado",
             "Cancelado"});
-            this.comboestado.Location = new System.Drawing.Point(98, 69);
+            this.comboestado.Location = new System.Drawing.Point(98, 88);
             this.comboestado.Name = "comboestado";
             this.comboestado.Size = new System.Drawing.Size(121, 28);
             this.comboestado.TabIndex = 1;
@@ -431,12 +436,34 @@ namespace Electronica
             this.combodestino.Size = new System.Drawing.Size(128, 28);
             this.combodestino.TabIndex = 68;
             // 
+            // txtidequipo
+            // 
+            this.txtidequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidequipo.Location = new System.Drawing.Point(160, 49);
+            this.txtidequipo.Name = "txtidequipo";
+            this.txtidequipo.ReadOnly = true;
+            this.txtidequipo.Size = new System.Drawing.Size(81, 26);
+            this.txtidequipo.TabIndex = 70;
+            this.txtidequipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(2, 52);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(141, 20);
+            this.label11.TabIndex = 69;
+            this.label11.Text = "Folio del equipo:";
+            // 
             // Traslado_actualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(519, 481);
+            this.Controls.Add(this.txtidequipo);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.combodestino);
             this.Controls.Add(this.comboubicacion);
             this.Controls.Add(this.label10);

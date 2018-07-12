@@ -116,7 +116,9 @@ namespace Electronica
 				cl.txtapellidos.Text = row.Cells["apellidos"].Value.ToString();
 				cl.txtcelular.Text = row.Cells["celular"].Value.ToString();
 				cl.txtcorreo.Text = row.Cells["correo"].Value.ToString();
-				cl.ShowDialog();
+                cl.txtubicacion.Text = row.Cells["ubicacion"].Value.ToString();
+
+                cl.ShowDialog();
 				Close();
 			}
 		}
