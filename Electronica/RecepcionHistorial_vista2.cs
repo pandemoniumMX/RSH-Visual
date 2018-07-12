@@ -449,9 +449,12 @@ namespace Electronica
             this.txtfechain = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.txtpersonal = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.txtegreso = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -473,9 +476,6 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.txtubicacion = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -591,6 +591,7 @@ namespace Electronica
             this.txtequipo.ReadOnly = true;
             this.txtequipo.Size = new System.Drawing.Size(157, 20);
             this.txtequipo.TabIndex = 10;
+            this.txtequipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtfalla
             // 
@@ -601,6 +602,7 @@ namespace Electronica
             this.txtfalla.ReadOnly = true;
             this.txtfalla.Size = new System.Drawing.Size(157, 20);
             this.txtfalla.TabIndex = 11;
+            this.txtfalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtmarca
             // 
@@ -611,6 +613,7 @@ namespace Electronica
             this.txtmarca.ReadOnly = true;
             this.txtmarca.Size = new System.Drawing.Size(123, 20);
             this.txtmarca.TabIndex = 12;
+            this.txtmarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtaccesorios
             // 
@@ -621,6 +624,7 @@ namespace Electronica
             this.txtaccesorios.ReadOnly = true;
             this.txtaccesorios.Size = new System.Drawing.Size(120, 20);
             this.txtaccesorios.TabIndex = 13;
+            this.txtaccesorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcomentarios
             // 
@@ -642,6 +646,7 @@ namespace Electronica
             this.txtrefaccion.ReadOnly = true;
             this.txtrefaccion.Size = new System.Drawing.Size(76, 20);
             this.txtrefaccion.TabIndex = 17;
+            this.txtrefaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // combolocacion
             // 
@@ -653,10 +658,10 @@ namespace Electronica
             "Domicilio",
             "Garantia",
             "Otros"});
-            this.combolocacion.Location = new System.Drawing.Point(96, 125);
+            this.combolocacion.Location = new System.Drawing.Point(79, 125);
             this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
             this.combolocacion.Name = "combolocacion";
-            this.combolocacion.Size = new System.Drawing.Size(124, 21);
+            this.combolocacion.Size = new System.Drawing.Size(141, 21);
             this.combolocacion.TabIndex = 19;
             // 
             // txtfolio
@@ -666,6 +671,7 @@ namespace Electronica
             this.txtfolio.Name = "txtfolio";
             this.txtfolio.Size = new System.Drawing.Size(76, 20);
             this.txtfolio.TabIndex = 20;
+            this.txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtmodelo
             // 
@@ -676,6 +682,7 @@ namespace Electronica
             this.txtmodelo.ReadOnly = true;
             this.txtmodelo.Size = new System.Drawing.Size(123, 20);
             this.txtmodelo.TabIndex = 22;
+            this.txtmodelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -730,6 +737,7 @@ namespace Electronica
             this.txtmano.ReadOnly = true;
             this.txtmano.Size = new System.Drawing.Size(76, 20);
             this.txtmano.TabIndex = 30;
+            this.txtmano.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -801,6 +809,7 @@ namespace Electronica
             this.txtsubtotal.ReadOnly = true;
             this.txtsubtotal.Size = new System.Drawing.Size(76, 20);
             this.txtsubtotal.TabIndex = 38;
+            this.txtsubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtsubtotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             this.txtsubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
             // 
@@ -812,6 +821,7 @@ namespace Electronica
             this.txtabono.Name = "txtabono";
             this.txtabono.Size = new System.Drawing.Size(76, 20);
             this.txtabono.TabIndex = 40;
+            this.txtabono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtabono_KeyPress);
             // 
             // label19
@@ -832,7 +842,6 @@ namespace Electronica
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(150, 20);
             this.txttipo.TabIndex = 41;
-            this.txttipo.Visible = false;
             // 
             // txtfechaen
             // 
@@ -863,6 +872,7 @@ namespace Electronica
             this.txtestado.ReadOnly = true;
             this.txtestado.Size = new System.Drawing.Size(101, 20);
             this.txtestado.TabIndex = 45;
+            this.txtestado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -882,6 +892,28 @@ namespace Electronica
             this.panel1.Size = new System.Drawing.Size(1106, 235);
             this.panel1.TabIndex = 46;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtubicacion
+            // 
+            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtubicacion.Location = new System.Drawing.Point(79, 150);
+            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.ReadOnly = true;
+            this.txtubicacion.Size = new System.Drawing.Size(165, 20);
+            this.txtubicacion.TabIndex = 50;
+            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label27.Location = new System.Drawing.Point(17, 153);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 13);
+            this.label27.TabIndex = 49;
+            this.label27.Text = "Ubicación:";
             // 
             // txtidequipo
             // 
@@ -926,6 +958,24 @@ namespace Electronica
             this.panel2.Size = new System.Drawing.Size(1106, 201);
             this.panel2.TabIndex = 47;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::Electronica.Properties.Resources.shipped;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(870, 151);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(195, 36);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "        Solicitud de traslado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // txtegreso
             // 
@@ -989,6 +1039,7 @@ namespace Electronica
             this.txtcorreo.ReadOnly = true;
             this.txtcorreo.Size = new System.Drawing.Size(158, 20);
             this.txtcorreo.TabIndex = 55;
+            this.txtcorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcelular
             // 
@@ -999,6 +1050,7 @@ namespace Electronica
             this.txtcelular.ReadOnly = true;
             this.txtcelular.Size = new System.Drawing.Size(145, 20);
             this.txtcelular.TabIndex = 54;
+            this.txtcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtapellidos
             // 
@@ -1009,6 +1061,7 @@ namespace Electronica
             this.txtapellidos.ReadOnly = true;
             this.txtapellidos.Size = new System.Drawing.Size(157, 20);
             this.txtapellidos.TabIndex = 53;
+            this.txtapellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtnombre
             // 
@@ -1019,6 +1072,7 @@ namespace Electronica
             this.txtnombre.ReadOnly = true;
             this.txtnombre.Size = new System.Drawing.Size(157, 20);
             this.txtnombre.TabIndex = 52;
+            this.txtnombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label22
             // 
@@ -1092,6 +1146,7 @@ namespace Electronica
             this.txtrestante.Name = "txtrestante";
             this.txtrestante.Size = new System.Drawing.Size(76, 20);
             this.txtrestante.TabIndex = 47;
+            this.txtrestante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button4
             // 
@@ -1121,6 +1176,7 @@ namespace Electronica
             this.txtpuntos.Size = new System.Drawing.Size(76, 20);
             this.txtpuntos.TabIndex = 42;
             this.txtpuntos.Text = "0";
+            this.txtpuntos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
@@ -1186,45 +1242,6 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::Electronica.Properties.Resources.shipped;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(870, 151);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(195, 36);
-            this.button6.TabIndex = 48;
-            this.button6.Text = "        Solicitud de traslado";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // txtubicacion
-            // 
-            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtubicacion.Location = new System.Drawing.Point(97, 150);
-            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtubicacion.Name = "txtubicacion";
-            this.txtubicacion.ReadOnly = true;
-            this.txtubicacion.Size = new System.Drawing.Size(123, 20);
-            this.txtubicacion.TabIndex = 50;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label27.Location = new System.Drawing.Point(17, 153);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 13);
-            this.label27.TabIndex = 49;
-            this.label27.Text = "Ubicación:";
-            // 
             // RecepcionHistorial_vista2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1288,7 +1305,7 @@ namespace Electronica
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Recepcion_Traslado_nuevo ss = new Recepcion_Traslado_nuevo(txtfolio.Text, txtidequipo.Text);
+            Recepcion_Traslado_nuevo ss = new Recepcion_Traslado_nuevo(txtfolio.Text, txtidequipo.Text, txttipo.Text);
             ss.ShowDialog();
         }
     }

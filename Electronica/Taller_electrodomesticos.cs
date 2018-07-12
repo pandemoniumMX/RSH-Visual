@@ -355,6 +355,7 @@ namespace Electronica
                 cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
                 cl.txtresta.Text = row.Cells["restante"].Value.ToString();
                 cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
+                cl.txtubicacion.Text = row.Cells["ubicacion"].Value.ToString();
                 cl.txtestado.Text = row.Cells["estado"].Value.ToString();
                 cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
                 cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();

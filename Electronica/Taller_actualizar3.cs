@@ -112,6 +112,8 @@ namespace Electronica
 		private Label label22;
         public TextBox txtegreso;
         private Label label23;
+        public TextBox txtubicacion;
+        private Label label27;
         public TextBox txtsubtotal;
 
 		public Taller_actualizar3()
@@ -421,6 +423,8 @@ namespace Electronica
             this.txtpersonal1 = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -547,6 +551,7 @@ namespace Electronica
             this.txtequipo.Name = "txtequipo";
             this.txtequipo.Size = new System.Drawing.Size(157, 20);
             this.txtequipo.TabIndex = 0;
+            this.txtequipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtfalla
             // 
@@ -556,6 +561,7 @@ namespace Electronica
             this.txtfalla.Name = "txtfalla";
             this.txtfalla.Size = new System.Drawing.Size(157, 20);
             this.txtfalla.TabIndex = 2;
+            this.txtfalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtmarca
             // 
@@ -565,6 +571,7 @@ namespace Electronica
             this.txtmarca.Name = "txtmarca";
             this.txtmarca.Size = new System.Drawing.Size(123, 20);
             this.txtmarca.TabIndex = 1;
+            this.txtmarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtaccesorios
             // 
@@ -574,6 +581,7 @@ namespace Electronica
             this.txtaccesorios.Name = "txtaccesorios";
             this.txtaccesorios.Size = new System.Drawing.Size(120, 20);
             this.txtaccesorios.TabIndex = 5;
+            this.txtaccesorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcomentarios
             // 
@@ -594,6 +602,7 @@ namespace Electronica
             this.txtrefaccion.Name = "txtrefaccion";
             this.txtrefaccion.Size = new System.Drawing.Size(76, 22);
             this.txtrefaccion.TabIndex = 15;
+            this.txtrefaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtrefaccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrefaccion_KeyPress);
             // 
             // combolocacion
@@ -628,6 +637,7 @@ namespace Electronica
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(123, 20);
             this.txtmodelo.TabIndex = 3;
+            this.txtmodelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -683,6 +693,7 @@ namespace Electronica
             this.txtmano.Name = "txtmano";
             this.txtmano.Size = new System.Drawing.Size(76, 22);
             this.txtmano.TabIndex = 16;
+            this.txtmano.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtmano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmano_KeyPress);
             // 
             // label15
@@ -754,6 +765,7 @@ namespace Electronica
             this.txtresta.ReadOnly = true;
             this.txtresta.Size = new System.Drawing.Size(76, 22);
             this.txtresta.TabIndex = 18;
+            this.txtresta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtresta.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             this.txtresta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
             // 
@@ -766,6 +778,7 @@ namespace Electronica
             this.txtabono.Name = "txtabono";
             this.txtabono.Size = new System.Drawing.Size(76, 22);
             this.txtabono.TabIndex = 17;
+            this.txtabono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtabono_KeyPress);
             // 
             // label19
@@ -816,6 +829,7 @@ namespace Electronica
             this.txt_puntos.Name = "txt_puntos";
             this.txt_puntos.Size = new System.Drawing.Size(76, 22);
             this.txt_puntos.TabIndex = 46;
+            this.txt_puntos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label20
             // 
@@ -881,10 +895,13 @@ namespace Electronica
             this.txtsubtotal.ReadOnly = true;
             this.txtsubtotal.Size = new System.Drawing.Size(76, 22);
             this.txtsubtotal.TabIndex = 19;
+            this.txtsubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txtubicacion);
+            this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.txtegreso);
             this.panel1.Controls.Add(this.txtfechaen);
             this.panel1.Controls.Add(this.label23);
@@ -998,6 +1015,7 @@ namespace Electronica
             this.txtpersonal1.Name = "txtpersonal1";
             this.txtpersonal1.Size = new System.Drawing.Size(100, 20);
             this.txtpersonal1.TabIndex = 47;
+            this.txtpersonal1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtestado
             // 
@@ -1024,6 +1042,28 @@ namespace Electronica
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1108, 200);
             this.panel2.TabIndex = 56;
+            // 
+            // txtubicacion
+            // 
+            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtubicacion.Location = new System.Drawing.Point(74, 147);
+            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.ReadOnly = true;
+            this.txtubicacion.Size = new System.Drawing.Size(165, 20);
+            this.txtubicacion.TabIndex = 57;
+            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label27.Location = new System.Drawing.Point(12, 150);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 13);
+            this.label27.TabIndex = 56;
+            this.label27.Text = "Ubicación:";
             // 
             // Taller_actualizar3
             // 

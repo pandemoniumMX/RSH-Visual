@@ -398,6 +398,8 @@ namespace Electronica
             this.txtpersonal = new System.Windows.Forms.TextBox();
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtegreso = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -417,8 +419,6 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtegreso = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -534,6 +534,7 @@ namespace Electronica
             this.txtequipo.ReadOnly = true;
             this.txtequipo.Size = new System.Drawing.Size(157, 20);
             this.txtequipo.TabIndex = 10;
+            this.txtequipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtfalla
             // 
@@ -544,6 +545,7 @@ namespace Electronica
             this.txtfalla.ReadOnly = true;
             this.txtfalla.Size = new System.Drawing.Size(157, 20);
             this.txtfalla.TabIndex = 11;
+            this.txtfalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtmarca
             // 
@@ -554,6 +556,7 @@ namespace Electronica
             this.txtmarca.ReadOnly = true;
             this.txtmarca.Size = new System.Drawing.Size(123, 20);
             this.txtmarca.TabIndex = 12;
+            this.txtmarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtaccesorios
             // 
@@ -564,6 +567,7 @@ namespace Electronica
             this.txtaccesorios.ReadOnly = true;
             this.txtaccesorios.Size = new System.Drawing.Size(120, 20);
             this.txtaccesorios.TabIndex = 13;
+            this.txtaccesorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcomentarios
             // 
@@ -585,6 +589,7 @@ namespace Electronica
             this.txtrefaccion.ReadOnly = true;
             this.txtrefaccion.Size = new System.Drawing.Size(76, 20);
             this.txtrefaccion.TabIndex = 17;
+            this.txtrefaccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // combolocacion
             // 
@@ -609,6 +614,7 @@ namespace Electronica
             this.txtfolio.Name = "txtfolio";
             this.txtfolio.Size = new System.Drawing.Size(76, 20);
             this.txtfolio.TabIndex = 20;
+            this.txtfolio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtmodelo
             // 
@@ -619,6 +625,7 @@ namespace Electronica
             this.txtmodelo.ReadOnly = true;
             this.txtmodelo.Size = new System.Drawing.Size(123, 20);
             this.txtmodelo.TabIndex = 22;
+            this.txtmodelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -673,6 +680,7 @@ namespace Electronica
             this.txtmano.ReadOnly = true;
             this.txtmano.Size = new System.Drawing.Size(76, 20);
             this.txtmano.TabIndex = 30;
+            this.txtmano.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -744,6 +752,7 @@ namespace Electronica
             this.txtsubtotal.ReadOnly = true;
             this.txtsubtotal.Size = new System.Drawing.Size(76, 20);
             this.txtsubtotal.TabIndex = 38;
+            this.txtsubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtsubtotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             this.txtsubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
             // 
@@ -756,6 +765,7 @@ namespace Electronica
             this.txtabono.ReadOnly = true;
             this.txtabono.Size = new System.Drawing.Size(76, 20);
             this.txtabono.TabIndex = 40;
+            this.txtabono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
@@ -806,6 +816,7 @@ namespace Electronica
             this.txtestado.ReadOnly = true;
             this.txtestado.Size = new System.Drawing.Size(101, 20);
             this.txtestado.TabIndex = 45;
+            this.txtestado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -836,6 +847,7 @@ namespace Electronica
             this.txtidequipo.Name = "txtidequipo";
             this.txtidequipo.Size = new System.Drawing.Size(101, 20);
             this.txtidequipo.TabIndex = 54;
+            this.txtidequipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtidequipo.Visible = false;
             // 
             // panel2
@@ -861,6 +873,28 @@ namespace Electronica
             this.panel2.Size = new System.Drawing.Size(1106, 201);
             this.panel2.TabIndex = 47;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtegreso
+            // 
+            this.txtegreso.BackColor = System.Drawing.SystemColors.Window;
+            this.txtegreso.Location = new System.Drawing.Point(422, 71);
+            this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtegreso.Name = "txtegreso";
+            this.txtegreso.ReadOnly = true;
+            this.txtegreso.Size = new System.Drawing.Size(138, 20);
+            this.txtegreso.TabIndex = 52;
+            this.txtegreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.label26.Location = new System.Drawing.Point(230, 74);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(188, 13);
+            this.label26.TabIndex = 51;
+            this.label26.Text = "Fecha de entrega e inicio de garantía:";
             // 
             // pictureBox1
             // 
@@ -903,6 +937,7 @@ namespace Electronica
             this.txtcorreo.ReadOnly = true;
             this.txtcorreo.Size = new System.Drawing.Size(158, 20);
             this.txtcorreo.TabIndex = 55;
+            this.txtcorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtcelular
             // 
@@ -913,6 +948,7 @@ namespace Electronica
             this.txtcelular.ReadOnly = true;
             this.txtcelular.Size = new System.Drawing.Size(145, 20);
             this.txtcelular.TabIndex = 54;
+            this.txtcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtapellidos
             // 
@@ -923,6 +959,7 @@ namespace Electronica
             this.txtapellidos.ReadOnly = true;
             this.txtapellidos.Size = new System.Drawing.Size(157, 20);
             this.txtapellidos.TabIndex = 53;
+            this.txtapellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtnombre
             // 
@@ -933,6 +970,7 @@ namespace Electronica
             this.txtnombre.ReadOnly = true;
             this.txtnombre.Size = new System.Drawing.Size(157, 20);
             this.txtnombre.TabIndex = 52;
+            this.txtnombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label22
             // 
@@ -1007,6 +1045,7 @@ namespace Electronica
             this.txtrestante.ReadOnly = true;
             this.txtrestante.Size = new System.Drawing.Size(76, 20);
             this.txtrestante.TabIndex = 47;
+            this.txtrestante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button4
             // 
@@ -1035,6 +1074,7 @@ namespace Electronica
             this.txtpuntos.Size = new System.Drawing.Size(76, 20);
             this.txtpuntos.TabIndex = 42;
             this.txtpuntos.Text = "0";
+            this.txtpuntos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
@@ -1099,27 +1139,6 @@ namespace Electronica
             this.button1.Text = "Ver Reporte";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // txtegreso
-            // 
-            this.txtegreso.BackColor = System.Drawing.SystemColors.Window;
-            this.txtegreso.Location = new System.Drawing.Point(422, 71);
-            this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
-            this.txtegreso.Name = "txtegreso";
-            this.txtegreso.ReadOnly = true;
-            this.txtegreso.Size = new System.Drawing.Size(138, 20);
-            this.txtegreso.TabIndex = 52;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
-            this.label26.Location = new System.Drawing.Point(230, 74);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(188, 13);
-            this.label26.TabIndex = 51;
-            this.label26.Text = "Fecha de entrega e inicio de garantía:";
             // 
             // RecepcionHistorial_vista3
             // 
