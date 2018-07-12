@@ -112,6 +112,7 @@ namespace Electronica
         private Label label13;
         public TextBox txtubicacion;
         private Label label27;
+        private Button button6;
         private Label label22;
 
 		public Taller_actualizar()
@@ -137,7 +138,11 @@ namespace Electronica
 
 		private void Taller_actualizar_Load(object sender, EventArgs e)
 		{
-		}
+            if (txtubicacion.Text == "Taller")
+            {
+                button6.Visible = true;
+            }
+        }
 
 		private void btngenorden_Click(object sender, EventArgs e)
 		{
@@ -285,7 +290,7 @@ namespace Electronica
                     int equipo = Convert.ToInt32(txtidequipo.Text);
                     string tabla = txttipo.Text;
                     string tecnico = combotecnico.SelectedItem.ToString();
-                    string query_tecnico = "update " + tabla + "  set id_personal='" + tecnico + "', fecha_entregar='CURRENT_TIMESTAMP' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    string query_tecnico = "update " + tabla + "  set id_personal='" + tecnico + "', fecha_entregar=CURRENT_TIMESTAMP where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
                     MySqlCommand cmd_query_tecnico = new MySqlCommand(query_tecnico, conn);
                     try
                     {
@@ -402,9 +407,13 @@ namespace Electronica
             this.txtestado = new System.Windows.Forms.TextBox();
             this.txtpersonal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txtsubtotal = new System.Windows.Forms.TextBox();
+            this.btncostos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.txtfechain = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtegreso = new System.Windows.Forms.TextBox();
@@ -412,12 +421,9 @@ namespace Electronica
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btncostos = new System.Windows.Forms.Button();
             this.btnasignar = new System.Windows.Forms.Button();
             this.btngenerar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtubicacion = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -847,17 +853,37 @@ namespace Electronica
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.txtsubtotal);
             this.panel3.Controls.Add(this.txtrefaccion);
             this.panel3.Controls.Add(this.txtabono);
             this.panel3.Controls.Add(this.txtmano);
             this.panel3.Controls.Add(this.txtresta);
+            this.panel3.Controls.Add(this.btncostos);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.panel3.Location = new System.Drawing.Point(-4, 416);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1112, 301);
             this.panel3.TabIndex = 51;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::Electronica.Properties.Resources.shipped;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(889, 97);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(195, 36);
+            this.button6.TabIndex = 53;
+            this.button6.Text = "        Solicitud de traslado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label22
             // 
@@ -884,6 +910,23 @@ namespace Electronica
             this.txtsubtotal.TabIndex = 19;
             this.txtsubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btncostos
+            // 
+            this.btncostos.BackColor = System.Drawing.Color.White;
+            this.btncostos.FlatAppearance.BorderSize = 0;
+            this.btncostos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btncostos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncostos.Image = global::Electronica.Properties.Resources._002_coin;
+            this.btncostos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncostos.Location = new System.Drawing.Point(697, 97);
+            this.btncostos.Margin = new System.Windows.Forms.Padding(2);
+            this.btncostos.Name = "btncostos";
+            this.btncostos.Size = new System.Drawing.Size(137, 35);
+            this.btncostos.TabIndex = 19;
+            this.btncostos.Text = "     Asignar costos";
+            this.btncostos.UseVisualStyleBackColor = false;
+            this.btncostos.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
@@ -905,12 +948,35 @@ namespace Electronica
             this.panel1.TabIndex = 49;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtubicacion
+            // 
+            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtubicacion.Location = new System.Drawing.Point(74, 156);
+            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.ReadOnly = true;
+            this.txtubicacion.Size = new System.Drawing.Size(165, 20);
+            this.txtubicacion.TabIndex = 55;
+            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label27.Location = new System.Drawing.Point(12, 159);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 13);
+            this.label27.TabIndex = 54;
+            this.label27.Text = "Ubicación:";
+            // 
             // txtfechain
             // 
             this.txtfechain.BackColor = System.Drawing.SystemColors.Control;
             this.txtfechain.Location = new System.Drawing.Point(15, 203);
             this.txtfechain.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechain.Name = "txtfechain";
+            this.txtfechain.ReadOnly = true;
             this.txtfechain.Size = new System.Drawing.Size(138, 20);
             this.txtfechain.TabIndex = 60;
             // 
@@ -931,6 +997,7 @@ namespace Electronica
             this.txtegreso.Location = new System.Drawing.Point(361, 208);
             this.txtegreso.Margin = new System.Windows.Forms.Padding(2);
             this.txtegreso.Name = "txtegreso";
+            this.txtegreso.ReadOnly = true;
             this.txtegreso.Size = new System.Drawing.Size(138, 20);
             this.txtegreso.TabIndex = 64;
             // 
@@ -940,6 +1007,7 @@ namespace Electronica
             this.txtfechaen.Location = new System.Drawing.Point(190, 207);
             this.txtfechaen.Margin = new System.Windows.Forms.Padding(2);
             this.txtfechaen.Name = "txtfechaen";
+            this.txtfechaen.ReadOnly = true;
             this.txtfechaen.Size = new System.Drawing.Size(138, 20);
             this.txtfechaen.TabIndex = 61;
             // 
@@ -975,22 +1043,6 @@ namespace Electronica
             this.label13.Size = new System.Drawing.Size(150, 13);
             this.label13.TabIndex = 62;
             this.label13.Text = "Fecha de inicio de reparacion:";
-            // 
-            // btncostos
-            // 
-            this.btncostos.FlatAppearance.BorderSize = 0;
-            this.btncostos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btncostos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncostos.Image = global::Electronica.Properties.Resources._002_coin;
-            this.btncostos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncostos.Location = new System.Drawing.Point(788, 511);
-            this.btncostos.Margin = new System.Windows.Forms.Padding(2);
-            this.btncostos.Name = "btncostos";
-            this.btncostos.Size = new System.Drawing.Size(137, 35);
-            this.btncostos.TabIndex = 19;
-            this.btncostos.Text = "Asignar costos";
-            this.btncostos.UseVisualStyleBackColor = true;
-            this.btncostos.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnasignar
             // 
@@ -1040,28 +1092,6 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // txtubicacion
-            // 
-            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtubicacion.Location = new System.Drawing.Point(74, 156);
-            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtubicacion.Name = "txtubicacion";
-            this.txtubicacion.ReadOnly = true;
-            this.txtubicacion.Size = new System.Drawing.Size(165, 20);
-            this.txtubicacion.TabIndex = 55;
-            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label27.Location = new System.Drawing.Point(12, 159);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 13);
-            this.label27.TabIndex = 54;
-            this.label27.Text = "Ubicación:";
-            // 
             // Taller_actualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1074,7 +1104,6 @@ namespace Electronica
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.btncostos);
             this.Controls.Add(this.combotecnico);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -1136,6 +1165,12 @@ namespace Electronica
             {
                 this.Close();
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Taller_traslado_nuevo ss = new Taller_traslado_nuevo(txtfolio.Text, txtidequipo.Text);
+            ss.ShowDialog();
         }
     }
 }

@@ -196,6 +196,9 @@
     <Compile Include="Electronica\RecepcionTelevisores.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\Taller_traslado_nuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Electronica\Recepcion_ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,9 +219,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\Taller_actualizar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_actualizar2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\Taller_actualizar3.cs">
@@ -435,6 +435,12 @@
     <EmbeddedResource Include="Electronica\RecepcionReparado.resx">
       <DependentUpon>RecepcionReparado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\RecepcionTelevisores.resx">
+      <DependentUpon>RecepcionTelevisores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Taller_traslado_nuevo.resx">
+      <DependentUpon>Taller_traslado_nuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Recepcion_ventas.resx">
       <DependentUpon>Recepcion_ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,7 +455,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Recepcion_ventas_nueva.resx" />
     <EmbeddedResource Include="Electronica\Taller_actualizar.resx" />
-    <EmbeddedResource Include="Electronica\Taller_actualizar2.resx" />
     <EmbeddedResource Include="Electronica\Taller_actualizar3.resx" />
     <EmbeddedResource Include="Electronica\Taller_audio.resx">
       <DependentUpon>Taller_audio.cs</DependentUpon>

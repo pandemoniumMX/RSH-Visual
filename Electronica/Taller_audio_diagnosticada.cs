@@ -87,7 +87,7 @@ namespace Electronica
 			if (e.RowIndex >= 0)
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				Taller_actualizar3 cl = new Taller_actualizar3();
+                Taller_actualizar3 cl = new Taller_actualizar3();
 				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
 				cl.txttipo.Text = txttipo.Text.ToString();
