@@ -4,7 +4,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 namespace Electronica
 {
 	public class RecepcionHistorial_vista : Form
@@ -124,6 +125,7 @@ namespace Electronica
 		private Label label23;
         private Label label25;
         public TextBox txtrestante;
+        private Button button5;
         private Button button4;
 
 		public RecepcionHistorial_vista()
@@ -210,7 +212,11 @@ namespace Electronica
 
 		private void Taller_actualizar_Load(object sender, EventArgs e)
 		{
-		}
+            if (txtestado.Text == "Reparada")
+            {
+                button5.Visible = true;
+            }
+        }
 
 		private void txttotal_TextChanged(object sender, EventArgs e)
 		{
@@ -308,7 +314,8 @@ namespace Electronica
 			DialogResult dr = MessageBox.Show("¿Ya se le hizo entrega al cliente de su equipo? Esta acción es irreversible", "Alerta de entrega", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes)
 			{
-				string folio = txtidequipo.Text;
+              
+                string folio = txtidequipo.Text;
 				string personal = txtpersonal.Text;
 				string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
 				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
@@ -415,6 +422,7 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -965,6 +973,7 @@ namespace Electronica
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.label25);
             this.panel3.Controls.Add(this.txtrestante);
             this.panel3.Controls.Add(this.button4);
@@ -1093,6 +1102,24 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(206)))), ((int)(((byte)(220)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::Electronica.Properties.Resources.tick_inside_circle;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(879, 122);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(161, 35);
+            this.button5.TabIndex = 48;
+            this.button5.Text = "    Generar garantía";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // RecepcionHistorial_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1156,6 +1183,46 @@ namespace Electronica
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea generar una garantía para el equipo: "+txtidequipo+"? ", "Alerta de entrega", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+            if (dr == DialogResult.Yes)
+            {
+                //generador de reporte pdf
+                PDF_Reporte pdf = new PDF_Reporte();
+                PDF_Garantia cr = new PDF_Garantia();
+
+
+                TextObject txtfolio1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
+                TextObject txtidequipo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtidequipo"];
+                TextObject txtequipo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtequipo"];
+                TextObject txtnom = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtnom"];
+                TextObject txtape = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtape"];
+                TextObject txtmarca1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmarca"];
+                TextObject txtmodelo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmodelo"];
+                TextObject txtfalla1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtfalla"];
+                TextObject txtcostototal = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtcostototal"];
+
+                txtfolio1.Text = txtfolio.Text;
+                txtidequipo1.Text = txtidequipo.Text;
+                txtequipo1.Text = txtequipo.Text;
+                txtnom.Text = txtnombre.Text;
+                txtape.Text = txtapellidos.Text;
+                txtmarca1.Text = txtmarca.Text;
+                txtmodelo1.Text = txtmodelo.Text;
+                txtfalla1.Text = txtfalla.Text;
+                txtcostototal.Text = txtsubtotal.Text;
+
+
+
+                txtsubtotal.Text = txtsubtotal.Text;
+
+                pdf.PDF_Generar.ReportSource = cr;
+                //f2.crystalReportViewer1.ReportSource = cr;
+                pdf.Show();
             }
         }
     }
