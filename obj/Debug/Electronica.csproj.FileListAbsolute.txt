@@ -221,3 +221,9 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\bin\Debug\Google.Protobuf.dll
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\bin\Debug\MySql.Data.xml
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.exe
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.pdb
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\bin\Debug\Electronica.exe.config
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionTelevisores.resources
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_traslado_nuevo.resources
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\Electronica.Recepcion_Traslado_nuevo.resources
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\RdlCompile.cache
+C:\Users\.0222222222222222222\Source\Repos\RSH-Visual\obj\Debug\RdlCompile.compiled

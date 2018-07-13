@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="electronicaxDataSet" targetNamespace="http://tempuri.org/electronicaxDataSet.xsd" xmlns:mstns="http://tempuri.org/electronicaxDataSet.xsd" xmlns="http://tempuri.org/electronicaxDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="electronicaxConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="electronicaxConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Properties.Settings.GlobalReference.Default.electronicaxConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="avisosTableAdapter" GeneratorDataComponentClassName="avisosTableAdapter" Name="avisos" UserDataComponentName="avisosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.avisos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_aviso, fecha, folio, aviso, estado FROM avisos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientesTableAdapter" GeneratorDataComponentClassName="clientesTableAdapter" Name="clientes" UserDataComponentName="clientesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_folio, nombre, apellidos, direccion, correo, celular, fecha, puntos FROM clientes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="depositosTableAdapter" GeneratorDataComponentClassName="depositosTableAdapter" Name="depositos" UserDataComponentName="depositosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.depositos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_deposito, fecha, autorizacion, cuenta, cantidad, imagen, serie, id_personal, id_equipo, id_folio FROM depositos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="orden_servicioTableAdapter" GeneratorDataComponentClassName="orden_servicioTableAdapter" Name="orden_servicio" UserDataComponentName="orden_servicioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.orden_servicio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_orden_servicio, Fecha_entrega, Garantia, Id_equipos, id_folio, id_personal FROM orden_servicio</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personalTableAdapter" GeneratorDataComponentClassName="personalTableAdapter" Name="personal" UserDataComponentName="personalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.personal" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_personal, tipo, usuario, contraseña, nombre, apellidos, correo, celular FROM personal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="refacciones_tvTableAdapter" GeneratorDataComponentClassName="refacciones_tvTableAdapter" Name="refacciones_tv" UserDataComponentName="refacciones_tvTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.refacciones_tv" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_refacciones, pieza, marcas, modelos, cantidad, almacen, estado, precio, fecha_entrada, fecha_salida, etiqueta_1, etiqueta_2, imagen1, imagen2, imagen3, imagen4, imagen5, id_personal FROM refacciones_tv</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reparar_audioTableAdapter" GeneratorDataComponentClassName="reparar_audioTableAdapter" Name="reparar_audio" UserDataComponentName="reparar_audioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.reparar_audio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_equipo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, fecha_egreso, servicio, presupuesto, mano_obra, abono, restante, costo_total, estado, ubicacion, puntos, id_folio, id_personal FROM reparar_audio</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reparar_electrodomesticosTableAdapter" GeneratorDataComponentClassName="reparar_electrodomesticosTableAdapter" Name="reparar_electrodomesticos" UserDataComponentName="reparar_electrodomesticosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.reparar_electrodomesticos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_equipo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, fecha_egreso, servicio, presupuesto, mano_obra, abono, restante, costo_total, estado, ubicacion, puntos, id_folio, id_personal FROM reparar_electrodomesticos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reparar_laptopsTableAdapter" GeneratorDataComponentClassName="reparar_laptopsTableAdapter" Name="reparar_laptops" UserDataComponentName="reparar_laptopsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.reparar_laptops" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_equipo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, fecha_egreso, servicio, presupuesto, mano_obra, abono, restante, costo_total, estado, ubicacion, puntos, id_folio, id_personal FROM reparar_laptops</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reparar_smartphonesTableAdapter" GeneratorDataComponentClassName="reparar_smartphonesTableAdapter" Name="reparar_smartphones" UserDataComponentName="reparar_smartphonesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.reparar_smartphones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_equipo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, fecha_egreso, servicio, presupuesto, mano_obra, abono, restante, costo_total, estado, ubicacion, puntos, id_folio, id_personal FROM reparar_smartphones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reparar_tvTableAdapter" GeneratorDataComponentClassName="reparar_tvTableAdapter" Name="reparar_tv" UserDataComponentName="reparar_tvTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.reparar_tv" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_equipo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, fecha_egreso, servicio, presupuesto, mano_obra, abono, restante, costo_total, estado, ubicacion, puntos, id_folio, id_personal FROM reparar_tv</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reportes_tecnicosTableAdapter" GeneratorDataComponentClassName="reportes_tecnicosTableAdapter" Name="reportes_tecnicos" UserDataComponentName="reportes_tecnicosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.reportes_tecnicos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_reporte, falla_especifica, solucion_especifica, conclusion, fecha, solicitud, parte, id_personal, id_equipo FROM reportes_tecnicos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="trasladoTableAdapter" GeneratorDataComponentClassName="trasladoTableAdapter" Name="traslado" UserDataComponentName="trasladoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.traslado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_traslado, estado, direccion, comentarios, ubicacion, destino, fecha_solicitud, fecha_finalizado, id_equipo, id_carro, id_personal, id_folio FROM traslado</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ventas_tvTableAdapter" GeneratorDataComponentClassName="ventas_tvTableAdapter" Name="ventas_tv" UserDataComponentName="ventas_tvTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="electronicaxConnectionString (Settings)" DbObjectName="electronicax.ventas_tv" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idventa_tv, marca, modelo, serie, costo, imagen1, imagen2, imagen3, fecha_alta, fecha_egreso, estado, id_personal, idvendedor FROM ventas_tv</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="electronicaxDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="electronicaxDataSet" msprop:Generator_UserDSName="electronicaxDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="avisos" msprop:Generator_TableClassName="avisosDataTable" msprop:Generator_TableVarName="tableavisos" msprop:Generator_TablePropName="avisos" msprop:Generator_RowDeletingName="avisosRowDeleting" msprop:Generator_RowChangingName="avisosRowChanging" msprop:Generator_RowEvHandlerName="avisosRowChangeEventHandler" msprop:Generator_RowDeletedName="avisosRowDeleted" msprop:Generator_UserTableName="avisos" msprop:Generator_RowChangedName="avisosRowChanged" msprop:Generator_RowEvArgName="avisosRowChangeEvent" msprop:Generator_RowClassName="avisosRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_UserTableName="clientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_RowEvArgName="clientesRowChangeEvent" msprop:Generator_RowClassName="clientesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="depositos" msprop:Generator_TableClassName="depositosDataTable" msprop:Generator_TableVarName="tabledepositos" msprop:Generator_TablePropName="depositos" msprop:Generator_RowDeletingName="depositosRowDeleting" msprop:Generator_RowChangingName="depositosRowChanging" msprop:Generator_RowEvHandlerName="depositosRowChangeEventHandler" msprop:Generator_RowDeletedName="depositosRowDeleted" msprop:Generator_UserTableName="depositos" msprop:Generator_RowChangedName="depositosRowChanged" msprop:Generator_RowEvArgName="depositosRowChangeEvent" msprop:Generator_RowClassName="depositosRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="orden_servicio" msprop:Generator_TableClassName="orden_servicioDataTable" msprop:Generator_TableVarName="tableorden_servicio" msprop:Generator_TablePropName="orden_servicio" msprop:Generator_RowDeletingName="orden_servicioRowDeleting" msprop:Generator_RowChangingName="orden_servicioRowChanging" msprop:Generator_RowEvHandlerName="orden_servicioRowChangeEventHandler" msprop:Generator_RowDeletedName="orden_servicioRowDeleted" msprop:Generator_UserTableName="orden_servicio" msprop:Generator_RowChangedName="orden_servicioRowChanged" msprop:Generator_RowEvArgName="orden_servicioRowChangeEvent" msprop:Generator_RowClassName="orden_servicioRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="personal" msprop:Generator_TableClassName="personalDataTable" msprop:Generator_TableVarName="tablepersonal" msprop:Generator_TablePropName="personal" msprop:Generator_RowDeletingName="personalRowDeleting" msprop:Generator_RowChangingName="personalRowChanging" msprop:Generator_RowEvHandlerName="personalRowChangeEventHandler" msprop:Generator_RowDeletedName="personalRowDeleted" msprop:Generator_UserTableName="personal" msprop:Generator_RowChangedName="personalRowChanged" msprop:Generator_RowEvArgName="personalRowChangeEvent" msprop:Generator_RowClassName="personalRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="refacciones_tv" msprop:Generator_TableClassName="refacciones_tvDataTable" msprop:Generator_TableVarName="tablerefacciones_tv" msprop:Generator_TablePropName="refacciones_tv" msprop:Generator_RowDeletingName="refacciones_tvRowDeleting" msprop:Generator_RowChangingName="refacciones_tvRowChanging" msprop:Generator_RowEvHandlerName="refacciones_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="refacciones_tvRowDeleted" msprop:Generator_UserTableName="refacciones_tv" msprop:Generator_RowChangedName="refacciones_tvRowChanged" msprop:Generator_RowEvArgName="refacciones_tvRowChangeEvent" msprop:Generator_RowClassName="refacciones_tvRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reparar_audio" msprop:Generator_TableClassName="reparar_audioDataTable" msprop:Generator_TableVarName="tablereparar_audio" msprop:Generator_TablePropName="reparar_audio" msprop:Generator_RowDeletingName="reparar_audioRowDeleting" msprop:Generator_RowChangingName="reparar_audioRowChanging" msprop:Generator_RowEvHandlerName="reparar_audioRowChangeEventHandler" msprop:Generator_RowDeletedName="reparar_audioRowDeleted" msprop:Generator_UserTableName="reparar_audio" msprop:Generator_RowChangedName="reparar_audioRowChanged" msprop:Generator_RowEvArgName="reparar_audioRowChangeEvent" msprop:Generator_RowClassName="reparar_audioRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reparar_electrodomesticos" msprop:Generator_TableClassName="reparar_electrodomesticosDataTable" msprop:Generator_TableVarName="tablereparar_electrodomesticos" msprop:Generator_TablePropName="reparar_electrodomesticos" msprop:Generator_RowDeletingName="reparar_electrodomesticosRowDeleting" msprop:Generator_RowChangingName="reparar_electrodomesticosRowChanging" msprop:Generator_RowEvHandlerName="reparar_electrodomesticosRowChangeEventHandler" msprop:Generator_RowDeletedName="reparar_electrodomesticosRowDeleted" msprop:Generator_UserTableName="reparar_electrodomesticos" msprop:Generator_RowChangedName="reparar_electrodomesticosRowChanged" msprop:Generator_RowEvArgName="reparar_electrodomesticosRowChangeEvent" msprop:Generator_RowClassName="reparar_electrodomesticosRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reparar_laptops" msprop:Generator_TableClassName="reparar_laptopsDataTable" msprop:Generator_TableVarName="tablereparar_laptops" msprop:Generator_TablePropName="reparar_laptops" msprop:Generator_RowDeletingName="reparar_laptopsRowDeleting" msprop:Generator_RowChangingName="reparar_laptopsRowChanging" msprop:Generator_RowEvHandlerName="reparar_laptopsRowChangeEventHandler" msprop:Generator_RowDeletedName="reparar_laptopsRowDeleted" msprop:Generator_UserTableName="reparar_laptops" msprop:Generator_RowChangedName="reparar_laptopsRowChanged" msprop:Generator_RowEvArgName="reparar_laptopsRowChangeEvent" msprop:Generator_RowClassName="reparar_laptopsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reparar_smartphones" msprop:Generator_TableClassName="reparar_smartphonesDataTable" msprop:Generator_TableVarName="tablereparar_smartphones" msprop:Generator_TablePropName="reparar_smartphones" msprop:Generator_RowDeletingName="reparar_smartphonesRowDeleting" msprop:Generator_RowChangingName="reparar_smartphonesRowChanging" msprop:Generator_RowEvHandlerName="reparar_smartphonesRowChangeEventHandler" msprop:Generator_RowDeletedName="reparar_smartphonesRowDeleted" msprop:Generator_UserTableName="reparar_smartphones" msprop:Generator_RowChangedName="reparar_smartphonesRowChanged" msprop:Generator_RowEvArgName="reparar_smartphonesRowChangeEvent" msprop:Generator_RowClassName="reparar_smartphonesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reparar_tv" msprop:Generator_TableClassName="reparar_tvDataTable" msprop:Generator_TableVarName="tablereparar_tv" msprop:Generator_TablePropName="reparar_tv" msprop:Generator_RowDeletingName="reparar_tvRowDeleting" msprop:Generator_RowChangingName="reparar_tvRowChanging" msprop:Generator_RowEvHandlerName="reparar_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="reparar_tvRowDeleted" msprop:Generator_UserTableName="reparar_tv" msprop:Generator_RowChangedName="reparar_tvRowChanged" msprop:Generator_RowEvArgName="reparar_tvRowChangeEvent" msprop:Generator_RowClassName="reparar_tvRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reportes_tecnicos" msprop:Generator_TableClassName="reportes_tecnicosDataTable" msprop:Generator_TableVarName="tablereportes_tecnicos" msprop:Generator_TablePropName="reportes_tecnicos" msprop:Generator_RowDeletingName="reportes_tecnicosRowDeleting" msprop:Generator_RowChangingName="reportes_tecnicosRowChanging" msprop:Generator_RowEvHandlerName="reportes_tecnicosRowChangeEventHandler" msprop:Generator_RowDeletedName="reportes_tecnicosRowDeleted" msprop:Generator_UserTableName="reportes_tecnicos" msprop:Generator_RowChangedName="reportes_tecnicosRowChanged" msprop:Generator_RowEvArgName="reportes_tecnicosRowChangeEvent" msprop:Generator_RowClassName="reportes_tecnicosRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="traslado" msprop:Generator_TableClassName="trasladoDataTable" msprop:Generator_TableVarName="tabletraslado" msprop:Generator_TablePropName="traslado" msprop:Generator_RowDeletingName="trasladoRowDeleting" msprop:Generator_RowChangingName="trasladoRowChanging" msprop:Generator_RowEvHandlerName="trasladoRowChangeEventHandler" msprop:Generator_RowDeletedName="trasladoRowDeleted" msprop:Generator_UserTableName="traslado" msprop:Generator_RowChangedName="trasladoRowChanged" msprop:Generator_RowEvArgName="trasladoRowChangeEvent" msprop:Generator_RowClassName="trasladoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ventas_tv" msprop:Generator_TableClassName="ventas_tvDataTable" msprop:Generator_TableVarName="tableventas_tv" msprop:Generator_TablePropName="ventas_tv" msprop:Generator_RowDeletingName="ventas_tvRowDeleting" msprop:Generator_RowChangingName="ventas_tvRowChanging" msprop:Generator_RowEvHandlerName="ventas_tvRowChangeEventHandler" msprop:Generator_RowDeletedName="ventas_tvRowDeleted" msprop:Generator_UserTableName="ventas_tv" msprop:Generator_RowChangedName="ventas_tvRowChanged" msprop:Generator_RowEvArgName="ventas_tvRowChangeEvent" msprop:Generator_RowClassName="ventas_tvRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

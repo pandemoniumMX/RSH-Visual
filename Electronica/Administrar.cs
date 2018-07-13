@@ -35,8 +35,7 @@ namespace Electronica
 		private Button button4;
 
 		private Button button5;
-
-		private Button button6;
+        private Button button6;
 
 		public Administrar()
 		{
@@ -107,9 +106,10 @@ namespace Electronica
 
 		private void Clientes_Load(object sender, EventArgs e)
 		{
-		}
+           
+        }
 
-		private void Cliente_nuevo(object sender, EventArgs e)
+        private void Cliente_nuevo(object sender, EventArgs e)
 		{
 			AbrirFormaHija(new Personal());
 		}
