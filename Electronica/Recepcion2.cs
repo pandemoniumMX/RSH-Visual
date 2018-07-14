@@ -148,7 +148,10 @@ namespace Electronica
 			limpiarpanelanidado();
 			RecepcionTelevisores ret = new RecepcionTelevisores();
 			ret.txtidoculto.Text = txtfolio.Text.ToString();
-			ret.TopLevel = false;
+            ret.txtnombre.Text = txtnombre.Text.ToString();
+            ret.txtapellido.Text = txtapellido.Text.ToString();
+
+            ret.TopLevel = false;
 			ret.Parent = panelanidado;
 			ret.Show();
 		}

@@ -4,6 +4,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Electronica
 {
@@ -46,8 +48,9 @@ namespace Electronica
 		private ComboBox combolacacion;
 
 		public TextBox txtidoculto;
-
-		private TextBox txtfalla;
+        public TextBox txtnombre;
+        public TextBox txtapellido;
+        private TextBox txtfalla;
 
 		public RecepcionTelevisores()
 		{
@@ -79,7 +82,35 @@ namespace Electronica
 			}
 			else
 			{
-				string fecha = Convert.ToDateTime(PickerFecha.Text).ToString("yyyy-MM-dd");
+                //generador de reporte pdf
+                PDF_Reporte pdf = new PDF_Reporte();
+                PDF_Orden cr = new PDF_Orden();
+
+
+                TextObject txtfolio1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];               
+                TextObject txtnom = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtnom"];
+                TextObject txtape = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtape"];
+                TextObject txtmarca1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmarca"];
+                TextObject txtmodelo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmodelo"];
+                TextObject txtservicio = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["servicio"];
+                TextObject txtaccesorios = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["accesorios"];
+                TextObject txtfalla1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtfalla"];
+
+                txtfolio1.Text = txtidoculto.Text;    
+                txtnom.Text = txtnombre.Text;
+                txtape.Text = txtapellido.Text;
+                txtmarca1.Text = combomarca.Text;
+                txtmodelo1.Text = txtmodelo.Text;
+                txtfalla1.Text = txtfalla.Text;
+                txtservicio.Text = combolacacion.Text;
+                txtaccesorios.Text = comboaccesorios.Text;
+
+
+                pdf.PDF_Generar.ReportSource = cr;
+                //f2.crystalReportViewer1.ReportSource = cr;
+                pdf.Show();
+
+                string fecha = Convert.ToDateTime(PickerFecha.Text).ToString("yyyy-MM-dd");
 				string marca = combomarca.SelectedItem.ToString();
 				string falla = txtfalla.Text;
 				string locacion = combolacacion.SelectedItem.ToString();
@@ -241,6 +272,8 @@ namespace Electronica
             this.txtidoculto = new System.Windows.Forms.TextBox();
             this.txtfalla = new System.Windows.Forms.TextBox();
             this.btngenerar = new System.Windows.Forms.Button();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -473,12 +506,32 @@ namespace Electronica
             this.btngenerar.UseVisualStyleBackColor = true;
             this.btngenerar.Click += new System.EventHandler(this.btngenerar_Click);
             // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(593, 11);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(76, 20);
+            this.txtnombre.TabIndex = 24;
+            this.txtnombre.Visible = false;
+            // 
+            // txtapellido
+            // 
+            this.txtapellido.Location = new System.Drawing.Point(724, 11);
+            this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(76, 20);
+            this.txtapellido.TabIndex = 25;
+            this.txtapellido.Visible = false;
+            // 
             // RecepcionTelevisores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(857, 419);
+            this.Controls.Add(this.txtapellido);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.txtfalla);
             this.Controls.Add(this.txtidoculto);
             this.Controls.Add(this.combolacacion);
