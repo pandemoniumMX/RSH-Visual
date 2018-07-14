@@ -64,7 +64,7 @@ namespace Electronica
 		{
 			TablaClientes.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
 			TablaClientes.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-			string query_tabla_clientes = "SELECT * FROM `Ventas_tv` WHERE CONCAT(`idventa_tv`, `marca`, `modelo`, `serie`, `costo`,`estado`)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_clientes = "SELECT * FROM `Ventas_tv` WHERE estado='En venta' and CONCAT(`idventa_tv`, `marca`, `modelo`, `serie`, `costo`,`estado`)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_clientes = new MySqlCommand(query_tabla_clientes, conn);
 			try
 			{
