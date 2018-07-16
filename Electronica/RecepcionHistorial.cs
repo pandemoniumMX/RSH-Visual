@@ -92,7 +92,7 @@ namespace Electronica
 			if (e.RowIndex >= 0)
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				RecepcionHistorial_vista2 cl = new RecepcionHistorial_vista2();
+				RecepcionHistorial_vista cl = new RecepcionHistorial_vista();
 				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
 				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
 				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();

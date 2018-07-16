@@ -30,9 +30,6 @@ namespace Electronica
 			InitializeComponent();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
 
 		public void BuscarEquipos(string valueToSearch)
 		{
@@ -78,13 +75,7 @@ namespace Electronica
 			BuscarEquipos("");
 		}
 
-		private void Cliente_nuevo(object sender, EventArgs e)
-		{
-		}
-
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+	
 
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{

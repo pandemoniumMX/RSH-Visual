@@ -229,9 +229,9 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionBusc
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDepositos.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDeposito_vista.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHistorial.resources
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHistorial_vista3.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionSinsolucion_vista.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionReparado_vista.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHistorial_vista.resources
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHistorial_vista2.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionSinsolucion.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionReparado.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionTelevisores.resources

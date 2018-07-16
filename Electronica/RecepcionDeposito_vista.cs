@@ -316,7 +316,6 @@ namespace Electronica
             this.txtidpersonal.Location = new System.Drawing.Point(979, 30);
             this.txtidpersonal.Margin = new System.Windows.Forms.Padding(2);
             this.txtidpersonal.Name = "txtidpersonal";
-            this.txtidpersonal.ReadOnly = true;
             this.txtidpersonal.Size = new System.Drawing.Size(82, 20);
             this.txtidpersonal.TabIndex = 53;
             this.txtidpersonal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidpersonal_KeyPress);

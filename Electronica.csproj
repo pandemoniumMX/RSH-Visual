@@ -205,13 +205,13 @@
     <Compile Include="Electronica\RecepcionHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\RecepcionHistorial_vista3.cs">
+    <Compile Include="Electronica\RecepcionSinsolucion_vista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronica\RecepcionReparado_vista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\RecepcionHistorial_vista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\RecepcionHistorial_vista2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\RecepcionLaptops.cs">
@@ -474,14 +474,14 @@
     <EmbeddedResource Include="Electronica\RecepcionHistorial.resx">
       <DependentUpon>RecepcionHistorial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\RecepcionHistorial_vista3.resx">
-      <DependentUpon>RecepcionHistorial_vista3.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\RecepcionSinsolucion_vista.resx">
+      <DependentUpon>RecepcionSinsolucion_vista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\RecepcionReparado_vista.resx">
+      <DependentUpon>RecepcionReparado_vista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionHistorial_vista.resx">
       <DependentUpon>RecepcionHistorial_vista.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\RecepcionHistorial_vista2.resx">
-      <DependentUpon>RecepcionHistorial_vista2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionSinsolucion.resx">
       <DependentUpon>RecepcionSinsolucion.cs</DependentUpon>
@@ -669,6 +669,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guarantee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -124,6 +124,9 @@
   <data name="sad1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\iconos\sad1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shipped" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shipped.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="contract (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\iconos\contract (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\iconos\notepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shipped" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shipped.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="guarantee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guarantee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

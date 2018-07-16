@@ -88,31 +88,29 @@ namespace Electronica
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
                 Taller_actualizar3 cl = new Taller_actualizar3();
-				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
-				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.txttipo.Text = txttipo.Text.ToString();
-				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
-				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
-				cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
-				cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
-				cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
-				cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
-				cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
-				cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-				cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
-				cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
-				cl.txtabono.Text = row.Cells["abono"].Value.ToString();
-				cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
-                cl.txtresta.Text = row.Cells["restante"].Value.ToString();
+                cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.txttipo.Text = txttipo.Text.ToString();
+                cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
+                cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
+                cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
+                cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();
+                cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
+                cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
+                cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
+                cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+                cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
+                cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
+                cl.txtabono.Text = row.Cells["abono"].Value.ToString();
+                cl.txtmano.Text = row.Cells["mano_obra"].Value.ToString();
                 cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
-                cl.txtubicacion.Text = row.Cells["ubicacion"].Value.ToString();
                 cl.txtestado.Text = row.Cells["estado"].Value.ToString();
                 cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
-				cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
-				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.ShowDialog();
-				Close();
-			}
+                cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
+                cl.ShowDialog();
+                Close();
+            }
 		}
 
 		private void TablaEquipos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
