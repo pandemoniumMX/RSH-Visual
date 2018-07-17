@@ -1416,7 +1416,7 @@ namespace Electronica
                     MessageBox.Show(ex.Message);
                 }
                 //garantia electrodomesticos
-                string query_actualizar_orden4 = "update  reparar_laptops set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
+                string query_actualizar_orden4 = "update  reparar_electrodomesticos set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
                 MySqlCommand cmd_query_actualizar_orden4 = new MySqlCommand(query_actualizar_orden4, conn);
                 try
                 {
