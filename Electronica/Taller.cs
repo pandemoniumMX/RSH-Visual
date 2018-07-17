@@ -122,8 +122,7 @@ namespace Electronica
 		private Label label25;
 
 		private TextBox txtrevisadatv;
-
-		private Label label26;
+        private Label label26;
 
 		public Taller()
 		{
@@ -452,561 +451,733 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label2 = new System.Windows.Forms.Label();
-			label1 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
-			txtpendientetv = new System.Windows.Forms.TextBox();
-			txtreparaciontv = new System.Windows.Forms.TextBox();
-			txtsoluciontv = new System.Windows.Forms.TextBox();
-			txtreparadotv = new System.Windows.Forms.TextBox();
-			txtreparadosmart = new System.Windows.Forms.TextBox();
-			txtsolucionsmart = new System.Windows.Forms.TextBox();
-			txtreparacionsmart = new System.Windows.Forms.TextBox();
-			txtpendientesmart = new System.Windows.Forms.TextBox();
-			label6 = new System.Windows.Forms.Label();
-			label7 = new System.Windows.Forms.Label();
-			label8 = new System.Windows.Forms.Label();
-			label9 = new System.Windows.Forms.Label();
-			txtreparadohogar = new System.Windows.Forms.TextBox();
-			txtsolucionhogar = new System.Windows.Forms.TextBox();
-			txtreparacionhogar = new System.Windows.Forms.TextBox();
-			txtpendientehogar = new System.Windows.Forms.TextBox();
-			label10 = new System.Windows.Forms.Label();
-			label11 = new System.Windows.Forms.Label();
-			label12 = new System.Windows.Forms.Label();
-			label13 = new System.Windows.Forms.Label();
-			txtreparadoaudio = new System.Windows.Forms.TextBox();
-			txtsolucionaudio = new System.Windows.Forms.TextBox();
-			txtreparacionaudio = new System.Windows.Forms.TextBox();
-			txtpendienteaudio = new System.Windows.Forms.TextBox();
-			label14 = new System.Windows.Forms.Label();
-			label15 = new System.Windows.Forms.Label();
-			label16 = new System.Windows.Forms.Label();
-			label17 = new System.Windows.Forms.Label();
-			txtreparadolaptop = new System.Windows.Forms.TextBox();
-			txtsolucionlaptop = new System.Windows.Forms.TextBox();
-			txtreparacionlaptop = new System.Windows.Forms.TextBox();
-			txtpendientelaptop = new System.Windows.Forms.TextBox();
-			label18 = new System.Windows.Forms.Label();
-			label19 = new System.Windows.Forms.Label();
-			label20 = new System.Windows.Forms.Label();
-			label21 = new System.Windows.Forms.Label();
-			txtrevisadalaptop = new System.Windows.Forms.TextBox();
-			label22 = new System.Windows.Forms.Label();
-			txtrevisadaaudio = new System.Windows.Forms.TextBox();
-			label23 = new System.Windows.Forms.Label();
-			txtrevisadahogar = new System.Windows.Forms.TextBox();
-			label24 = new System.Windows.Forms.Label();
-			txtrevisadasmart = new System.Windows.Forms.TextBox();
-			label25 = new System.Windows.Forms.Label();
-			txtrevisadatv = new System.Windows.Forms.TextBox();
-			label26 = new System.Windows.Forms.Label();
-			button1 = new System.Windows.Forms.Button();
-			btnaudio = new System.Windows.Forms.Button();
-			btnelectro = new System.Windows.Forms.Button();
-			btncel = new System.Windows.Forms.Button();
-			btntele = new System.Windows.Forms.Button();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(15, 20);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(389, 24);
-			label2.TabIndex = 2;
-			label2.Text = "Control de equipos para reparar en taller";
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(371, 117);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(112, 20);
-			label1.TabIndex = 34;
-			label1.Text = "En reparacion:";
-			label1.Click += new System.EventHandler(label1_Click);
-			label3.AutoSize = true;
-			label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label3.Location = new System.Drawing.Point(228, 117);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(93, 20);
-			label3.TabIndex = 35;
-			label3.Text = "Pendientes:";
-			label4.AutoSize = true;
-			label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label4.Location = new System.Drawing.Point(693, 115);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(101, 20);
-			label4.TabIndex = 37;
-			label4.Text = "Sin Solución:";
-			label5.AutoSize = true;
-			label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label5.Location = new System.Drawing.Point(844, 115);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(84, 20);
-			label5.TabIndex = 36;
-			label5.Text = "Reparado:";
-			txtpendientetv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtpendientetv.Location = new System.Drawing.Point(317, 114);
-			txtpendientetv.Name = "txtpendientetv";
-			txtpendientetv.ReadOnly = true;
-			txtpendientetv.Size = new System.Drawing.Size(48, 26);
-			txtpendientetv.TabIndex = 38;
-			txtpendientetv.Click += new System.EventHandler(txtpendientetv_Click);
-			txtpendientetv.TextChanged += new System.EventHandler(textBox1_TextChanged_1);
-			txtreparaciontv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparaciontv.Location = new System.Drawing.Point(479, 114);
-			txtreparaciontv.Name = "txtreparaciontv";
-			txtreparaciontv.ReadOnly = true;
-			txtreparaciontv.Size = new System.Drawing.Size(48, 26);
-			txtreparaciontv.TabIndex = 39;
-			txtreparaciontv.Click += new System.EventHandler(txtreparaciontv_Click);
-			txtreparaciontv.TextChanged += new System.EventHandler(txtreparaciontv_TextChanged);
-			txtsoluciontv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtsoluciontv.Location = new System.Drawing.Point(790, 111);
-			txtsoluciontv.Name = "txtsoluciontv";
-			txtsoluciontv.ReadOnly = true;
-			txtsoluciontv.Size = new System.Drawing.Size(48, 26);
-			txtsoluciontv.TabIndex = 40;
-			txtsoluciontv.Click += new System.EventHandler(txtsoluciontv_Click);
-			txtsoluciontv.TextChanged += new System.EventHandler(txtsoluciontv_TextChanged);
-			txtreparadotv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparadotv.Location = new System.Drawing.Point(924, 111);
-			txtreparadotv.Name = "txtreparadotv";
-			txtreparadotv.ReadOnly = true;
-			txtreparadotv.Size = new System.Drawing.Size(48, 26);
-			txtreparadotv.TabIndex = 41;
-			txtreparadotv.Click += new System.EventHandler(txtreparadotv_Click);
-			txtreparadosmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparadosmart.Location = new System.Drawing.Point(921, 207);
-			txtreparadosmart.Name = "txtreparadosmart";
-			txtreparadosmart.ReadOnly = true;
-			txtreparadosmart.Size = new System.Drawing.Size(48, 26);
-			txtreparadosmart.TabIndex = 49;
-			txtreparadosmart.Click += new System.EventHandler(txtreparadosmart_Click);
-			txtsolucionsmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtsolucionsmart.Location = new System.Drawing.Point(787, 207);
-			txtsolucionsmart.Name = "txtsolucionsmart";
-			txtsolucionsmart.ReadOnly = true;
-			txtsolucionsmart.Size = new System.Drawing.Size(48, 26);
-			txtsolucionsmart.TabIndex = 48;
-			txtsolucionsmart.Click += new System.EventHandler(txtsolucionsmart_Click);
-			txtreparacionsmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparacionsmart.Location = new System.Drawing.Point(476, 210);
-			txtreparacionsmart.Name = "txtreparacionsmart";
-			txtreparacionsmart.ReadOnly = true;
-			txtreparacionsmart.Size = new System.Drawing.Size(48, 26);
-			txtreparacionsmart.TabIndex = 47;
-			txtreparacionsmart.Click += new System.EventHandler(txtreparacionsmart_Click);
-			txtpendientesmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtpendientesmart.Location = new System.Drawing.Point(314, 210);
-			txtpendientesmart.Name = "txtpendientesmart";
-			txtpendientesmart.ReadOnly = true;
-			txtpendientesmart.Size = new System.Drawing.Size(48, 26);
-			txtpendientesmart.TabIndex = 46;
-			txtpendientesmart.Click += new System.EventHandler(txtpendientesmart_Click);
-			txtpendientesmart.TextChanged += new System.EventHandler(txtpendientesmart_TextChanged);
-			label6.AutoSize = true;
-			label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label6.Location = new System.Drawing.Point(690, 211);
-			label6.Name = "label6";
-			label6.Size = new System.Drawing.Size(101, 20);
-			label6.TabIndex = 45;
-			label6.Text = "Sin Solución:";
-			label7.AutoSize = true;
-			label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label7.Location = new System.Drawing.Point(841, 211);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(84, 20);
-			label7.TabIndex = 44;
-			label7.Text = "Reparado:";
-			label8.AutoSize = true;
-			label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label8.Location = new System.Drawing.Point(225, 213);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(93, 20);
-			label8.TabIndex = 43;
-			label8.Text = "Pendientes:";
-			label9.AutoSize = true;
-			label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label9.Location = new System.Drawing.Point(368, 213);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(112, 20);
-			label9.TabIndex = 42;
-			label9.Text = "En reparacion:";
-			txtreparadohogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparadohogar.Location = new System.Drawing.Point(921, 474);
-			txtreparadohogar.Name = "txtreparadohogar";
-			txtreparadohogar.ReadOnly = true;
-			txtreparadohogar.Size = new System.Drawing.Size(48, 26);
-			txtreparadohogar.TabIndex = 57;
-			txtreparadohogar.Click += new System.EventHandler(txtreparadohogar_Click);
-			txtsolucionhogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtsolucionhogar.Location = new System.Drawing.Point(787, 474);
-			txtsolucionhogar.Name = "txtsolucionhogar";
-			txtsolucionhogar.ReadOnly = true;
-			txtsolucionhogar.Size = new System.Drawing.Size(48, 26);
-			txtsolucionhogar.TabIndex = 56;
-			txtsolucionhogar.Click += new System.EventHandler(txtsolucionhogar_Click);
-			txtreparacionhogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparacionhogar.Location = new System.Drawing.Point(476, 477);
-			txtreparacionhogar.Name = "txtreparacionhogar";
-			txtreparacionhogar.ReadOnly = true;
-			txtreparacionhogar.Size = new System.Drawing.Size(48, 26);
-			txtreparacionhogar.TabIndex = 55;
-			txtreparacionhogar.Click += new System.EventHandler(txtreparacionhogar_Click);
-			txtpendientehogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtpendientehogar.Location = new System.Drawing.Point(314, 477);
-			txtpendientehogar.Name = "txtpendientehogar";
-			txtpendientehogar.ReadOnly = true;
-			txtpendientehogar.Size = new System.Drawing.Size(48, 26);
-			txtpendientehogar.TabIndex = 54;
-			txtpendientehogar.Click += new System.EventHandler(txtpendientehogar_Click);
-			label10.AutoSize = true;
-			label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label10.Location = new System.Drawing.Point(690, 478);
-			label10.Name = "label10";
-			label10.Size = new System.Drawing.Size(101, 20);
-			label10.TabIndex = 53;
-			label10.Text = "Sin Solución:";
-			label11.AutoSize = true;
-			label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label11.Location = new System.Drawing.Point(841, 478);
-			label11.Name = "label11";
-			label11.Size = new System.Drawing.Size(84, 20);
-			label11.TabIndex = 52;
-			label11.Text = "Reparado:";
-			label12.AutoSize = true;
-			label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label12.Location = new System.Drawing.Point(225, 480);
-			label12.Name = "label12";
-			label12.Size = new System.Drawing.Size(93, 20);
-			label12.TabIndex = 51;
-			label12.Text = "Pendientes:";
-			label13.AutoSize = true;
-			label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label13.Location = new System.Drawing.Point(368, 480);
-			label13.Name = "label13";
-			label13.Size = new System.Drawing.Size(112, 20);
-			label13.TabIndex = 50;
-			label13.Text = "En reparacion:";
-			txtreparadoaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparadoaudio.Location = new System.Drawing.Point(921, 301);
-			txtreparadoaudio.Name = "txtreparadoaudio";
-			txtreparadoaudio.ReadOnly = true;
-			txtreparadoaudio.Size = new System.Drawing.Size(48, 26);
-			txtreparadoaudio.TabIndex = 65;
-			txtreparadoaudio.Click += new System.EventHandler(txtreparadoaudio_Click);
-			txtsolucionaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtsolucionaudio.Location = new System.Drawing.Point(787, 301);
-			txtsolucionaudio.Name = "txtsolucionaudio";
-			txtsolucionaudio.ReadOnly = true;
-			txtsolucionaudio.Size = new System.Drawing.Size(48, 26);
-			txtsolucionaudio.TabIndex = 64;
-			txtsolucionaudio.Click += new System.EventHandler(txtsolucionaudio_Click);
-			txtreparacionaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparacionaudio.Location = new System.Drawing.Point(476, 304);
-			txtreparacionaudio.Name = "txtreparacionaudio";
-			txtreparacionaudio.ReadOnly = true;
-			txtreparacionaudio.Size = new System.Drawing.Size(48, 26);
-			txtreparacionaudio.TabIndex = 63;
-			txtreparacionaudio.Click += new System.EventHandler(txtreparacionaudio_Click);
-			txtpendienteaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtpendienteaudio.Location = new System.Drawing.Point(314, 304);
-			txtpendienteaudio.Name = "txtpendienteaudio";
-			txtpendienteaudio.ReadOnly = true;
-			txtpendienteaudio.Size = new System.Drawing.Size(48, 26);
-			txtpendienteaudio.TabIndex = 62;
-			txtpendienteaudio.Click += new System.EventHandler(txtpendienteaudio_Click);
-			label14.AutoSize = true;
-			label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label14.Location = new System.Drawing.Point(690, 305);
-			label14.Name = "label14";
-			label14.Size = new System.Drawing.Size(101, 20);
-			label14.TabIndex = 61;
-			label14.Text = "Sin Solución:";
-			label15.AutoSize = true;
-			label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label15.Location = new System.Drawing.Point(841, 305);
-			label15.Name = "label15";
-			label15.Size = new System.Drawing.Size(84, 20);
-			label15.TabIndex = 60;
-			label15.Text = "Reparado:";
-			label16.AutoSize = true;
-			label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label16.Location = new System.Drawing.Point(225, 307);
-			label16.Name = "label16";
-			label16.Size = new System.Drawing.Size(93, 20);
-			label16.TabIndex = 59;
-			label16.Text = "Pendientes:";
-			label17.AutoSize = true;
-			label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label17.Location = new System.Drawing.Point(368, 307);
-			label17.Name = "label17";
-			label17.Size = new System.Drawing.Size(112, 20);
-			label17.TabIndex = 58;
-			label17.Text = "En reparacion:";
-			txtreparadolaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparadolaptop.Location = new System.Drawing.Point(921, 387);
-			txtreparadolaptop.Name = "txtreparadolaptop";
-			txtreparadolaptop.ReadOnly = true;
-			txtreparadolaptop.Size = new System.Drawing.Size(48, 26);
-			txtreparadolaptop.TabIndex = 73;
-			txtreparadolaptop.Click += new System.EventHandler(txtreparadolaptop_Click);
-			txtsolucionlaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtsolucionlaptop.Location = new System.Drawing.Point(787, 387);
-			txtsolucionlaptop.Name = "txtsolucionlaptop";
-			txtsolucionlaptop.ReadOnly = true;
-			txtsolucionlaptop.Size = new System.Drawing.Size(48, 26);
-			txtsolucionlaptop.TabIndex = 72;
-			txtsolucionlaptop.Click += new System.EventHandler(txtsolucionlaptop_Click);
-			txtreparacionlaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtreparacionlaptop.Location = new System.Drawing.Point(476, 390);
-			txtreparacionlaptop.Name = "txtreparacionlaptop";
-			txtreparacionlaptop.ReadOnly = true;
-			txtreparacionlaptop.Size = new System.Drawing.Size(48, 26);
-			txtreparacionlaptop.TabIndex = 71;
-			txtreparacionlaptop.Click += new System.EventHandler(txtreparacionlaptop_Click);
-			txtpendientelaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtpendientelaptop.Location = new System.Drawing.Point(314, 390);
-			txtpendientelaptop.Name = "txtpendientelaptop";
-			txtpendientelaptop.ReadOnly = true;
-			txtpendientelaptop.Size = new System.Drawing.Size(48, 26);
-			txtpendientelaptop.TabIndex = 70;
-			txtpendientelaptop.Click += new System.EventHandler(txtpendientelaptop_Click);
-			label18.AutoSize = true;
-			label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label18.Location = new System.Drawing.Point(690, 391);
-			label18.Name = "label18";
-			label18.Size = new System.Drawing.Size(101, 20);
-			label18.TabIndex = 69;
-			label18.Text = "Sin Solución:";
-			label19.AutoSize = true;
-			label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label19.Location = new System.Drawing.Point(841, 391);
-			label19.Name = "label19";
-			label19.Size = new System.Drawing.Size(84, 20);
-			label19.TabIndex = 68;
-			label19.Text = "Reparado:";
-			label20.AutoSize = true;
-			label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label20.Location = new System.Drawing.Point(225, 393);
-			label20.Name = "label20";
-			label20.Size = new System.Drawing.Size(93, 20);
-			label20.TabIndex = 67;
-			label20.Text = "Pendientes:";
-			label21.AutoSize = true;
-			label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label21.Location = new System.Drawing.Point(368, 393);
-			label21.Name = "label21";
-			label21.Size = new System.Drawing.Size(112, 20);
-			label21.TabIndex = 66;
-			label21.Text = "En reparacion:";
-			txtrevisadalaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtrevisadalaptop.Location = new System.Drawing.Point(623, 390);
-			txtrevisadalaptop.Name = "txtrevisadalaptop";
-			txtrevisadalaptop.ReadOnly = true;
-			txtrevisadalaptop.Size = new System.Drawing.Size(48, 26);
-			txtrevisadalaptop.TabIndex = 83;
-			txtrevisadalaptop.Click += new System.EventHandler(txtrevisadalaptop_Click);
-			label22.AutoSize = true;
-			label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label22.Location = new System.Drawing.Point(541, 394);
-			label22.Name = "label22";
-			label22.Size = new System.Drawing.Size(87, 20);
-			label22.TabIndex = 82;
-			label22.Text = "Revisadas:";
-			txtrevisadaaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtrevisadaaudio.Location = new System.Drawing.Point(623, 304);
-			txtrevisadaaudio.Name = "txtrevisadaaudio";
-			txtrevisadaaudio.ReadOnly = true;
-			txtrevisadaaudio.Size = new System.Drawing.Size(48, 26);
-			txtrevisadaaudio.TabIndex = 81;
-			txtrevisadaaudio.Click += new System.EventHandler(txtrevisadaaudio_Click);
-			label23.AutoSize = true;
-			label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label23.Location = new System.Drawing.Point(541, 308);
-			label23.Name = "label23";
-			label23.Size = new System.Drawing.Size(87, 20);
-			label23.TabIndex = 80;
-			label23.Text = "Revisadas:";
-			txtrevisadahogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtrevisadahogar.Location = new System.Drawing.Point(623, 477);
-			txtrevisadahogar.Name = "txtrevisadahogar";
-			txtrevisadahogar.ReadOnly = true;
-			txtrevisadahogar.Size = new System.Drawing.Size(48, 26);
-			txtrevisadahogar.TabIndex = 79;
-			txtrevisadahogar.Click += new System.EventHandler(txtrevisadahogar_Click);
-			label24.AutoSize = true;
-			label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label24.Location = new System.Drawing.Point(541, 481);
-			label24.Name = "label24";
-			label24.Size = new System.Drawing.Size(87, 20);
-			label24.TabIndex = 78;
-			label24.Text = "Revisadas:";
-			txtrevisadasmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtrevisadasmart.Location = new System.Drawing.Point(623, 210);
-			txtrevisadasmart.Name = "txtrevisadasmart";
-			txtrevisadasmart.ReadOnly = true;
-			txtrevisadasmart.Size = new System.Drawing.Size(48, 26);
-			txtrevisadasmart.TabIndex = 77;
-			txtrevisadasmart.Click += new System.EventHandler(txtrevisadasmart_Click);
-			label25.AutoSize = true;
-			label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label25.Location = new System.Drawing.Point(541, 214);
-			label25.Name = "label25";
-			label25.Size = new System.Drawing.Size(87, 20);
-			label25.TabIndex = 76;
-			label25.Text = "Revisadas:";
-			txtrevisadatv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			txtrevisadatv.Location = new System.Drawing.Point(626, 114);
-			txtrevisadatv.Name = "txtrevisadatv";
-			txtrevisadatv.ReadOnly = true;
-			txtrevisadatv.Size = new System.Drawing.Size(48, 26);
-			txtrevisadatv.TabIndex = 75;
-			txtrevisadatv.Click += new System.EventHandler(txtrevisadatv_Click);
-			label26.AutoSize = true;
-			label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label26.Location = new System.Drawing.Point(544, 118);
-			label26.Name = "label26";
-			label26.Size = new System.Drawing.Size(87, 20);
-			label26.TabIndex = 74;
-			label26.Text = "Revisadas:";
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button1.Image = Electronica.Properties.Resources._002_laptop1;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(62, 383);
-			button1.Margin = new System.Windows.Forms.Padding(2);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(142, 40);
-			button1.TabIndex = 33;
-			button1.Text = "     Laptop/Cpu";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += new System.EventHandler(button1_Click);
-			btnaudio.FlatAppearance.BorderSize = 0;
-			btnaudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnaudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnaudio.Image = Electronica.Properties.Resources._003_big_music_player_speaker;
-			btnaudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnaudio.Location = new System.Drawing.Point(62, 298);
-			btnaudio.Margin = new System.Windows.Forms.Padding(2);
-			btnaudio.Name = "btnaudio";
-			btnaudio.Size = new System.Drawing.Size(145, 40);
-			btnaudio.TabIndex = 32;
-			btnaudio.Text = "      Audio/Sonido";
-			btnaudio.UseVisualStyleBackColor = true;
-			btnaudio.Click += new System.EventHandler(btnaudio_Click);
-			btnelectro.FlatAppearance.BorderSize = 0;
-			btnelectro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btnelectro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btnelectro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btnelectro.Image = Electronica.Properties.Resources._001_washing_machine;
-			btnelectro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btnelectro.Location = new System.Drawing.Point(62, 470);
-			btnelectro.Margin = new System.Windows.Forms.Padding(2);
-			btnelectro.Name = "btnelectro";
-			btnelectro.Size = new System.Drawing.Size(142, 40);
-			btnelectro.TabIndex = 31;
-			btnelectro.Text = "      Linea Blanca";
-			btnelectro.UseVisualStyleBackColor = true;
-			btnelectro.Click += new System.EventHandler(btnelectro_Click);
-			btncel.FlatAppearance.BorderSize = 0;
-			btncel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btncel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btncel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btncel.Image = Electronica.Properties.Resources._004_smartphone_call;
-			btncel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btncel.Location = new System.Drawing.Point(62, 201);
-			btncel.Margin = new System.Windows.Forms.Padding(2);
-			btncel.Name = "btncel";
-			btncel.Size = new System.Drawing.Size(145, 40);
-			btncel.TabIndex = 30;
-			btncel.Text = "     Celular / Tablet";
-			btncel.UseVisualStyleBackColor = true;
-			btncel.Click += new System.EventHandler(btncel_Click);
-			btntele.FlatAppearance.BorderSize = 0;
-			btntele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btntele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btntele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btntele.Image = Electronica.Properties.Resources._005_computer_screen;
-			btntele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btntele.Location = new System.Drawing.Point(62, 105);
-			btntele.Margin = new System.Windows.Forms.Padding(2);
-			btntele.Name = "btntele";
-			btntele.Size = new System.Drawing.Size(145, 40);
-			btntele.TabIndex = 29;
-			btntele.Text = "        Televisiones";
-			btntele.UseVisualStyleBackColor = true;
-			btntele.Click += new System.EventHandler(btntele_Click);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(1059, 574);
-			base.Controls.Add(txtrevisadalaptop);
-			base.Controls.Add(label22);
-			base.Controls.Add(txtrevisadaaudio);
-			base.Controls.Add(label23);
-			base.Controls.Add(txtrevisadahogar);
-			base.Controls.Add(label24);
-			base.Controls.Add(txtrevisadasmart);
-			base.Controls.Add(label25);
-			base.Controls.Add(txtrevisadatv);
-			base.Controls.Add(label26);
-			base.Controls.Add(txtreparadolaptop);
-			base.Controls.Add(txtsolucionlaptop);
-			base.Controls.Add(txtreparacionlaptop);
-			base.Controls.Add(txtpendientelaptop);
-			base.Controls.Add(label18);
-			base.Controls.Add(label19);
-			base.Controls.Add(label20);
-			base.Controls.Add(label21);
-			base.Controls.Add(txtreparadoaudio);
-			base.Controls.Add(txtsolucionaudio);
-			base.Controls.Add(txtreparacionaudio);
-			base.Controls.Add(txtpendienteaudio);
-			base.Controls.Add(label14);
-			base.Controls.Add(label15);
-			base.Controls.Add(label16);
-			base.Controls.Add(label17);
-			base.Controls.Add(txtreparadohogar);
-			base.Controls.Add(txtsolucionhogar);
-			base.Controls.Add(txtreparacionhogar);
-			base.Controls.Add(txtpendientehogar);
-			base.Controls.Add(label10);
-			base.Controls.Add(label11);
-			base.Controls.Add(label12);
-			base.Controls.Add(label13);
-			base.Controls.Add(txtreparadosmart);
-			base.Controls.Add(txtsolucionsmart);
-			base.Controls.Add(txtreparacionsmart);
-			base.Controls.Add(txtpendientesmart);
-			base.Controls.Add(label6);
-			base.Controls.Add(label7);
-			base.Controls.Add(label8);
-			base.Controls.Add(label9);
-			base.Controls.Add(txtreparadotv);
-			base.Controls.Add(txtsoluciontv);
-			base.Controls.Add(txtreparaciontv);
-			base.Controls.Add(txtpendientetv);
-			base.Controls.Add(label4);
-			base.Controls.Add(label5);
-			base.Controls.Add(label3);
-			base.Controls.Add(label1);
-			base.Controls.Add(button1);
-			base.Controls.Add(btnaudio);
-			base.Controls.Add(btnelectro);
-			base.Controls.Add(btncel);
-			base.Controls.Add(btntele);
-			base.Controls.Add(label2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			base.Name = "Taller";
-			Text = "Clientes";
-			base.Load += new System.EventHandler(Taller_Load);
-			ResumeLayout(false);
-			PerformLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtpendientetv = new System.Windows.Forms.TextBox();
+            this.txtreparaciontv = new System.Windows.Forms.TextBox();
+            this.txtsoluciontv = new System.Windows.Forms.TextBox();
+            this.txtreparadotv = new System.Windows.Forms.TextBox();
+            this.txtreparadosmart = new System.Windows.Forms.TextBox();
+            this.txtsolucionsmart = new System.Windows.Forms.TextBox();
+            this.txtreparacionsmart = new System.Windows.Forms.TextBox();
+            this.txtpendientesmart = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtreparadohogar = new System.Windows.Forms.TextBox();
+            this.txtsolucionhogar = new System.Windows.Forms.TextBox();
+            this.txtreparacionhogar = new System.Windows.Forms.TextBox();
+            this.txtpendientehogar = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtreparadoaudio = new System.Windows.Forms.TextBox();
+            this.txtsolucionaudio = new System.Windows.Forms.TextBox();
+            this.txtreparacionaudio = new System.Windows.Forms.TextBox();
+            this.txtpendienteaudio = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtreparadolaptop = new System.Windows.Forms.TextBox();
+            this.txtsolucionlaptop = new System.Windows.Forms.TextBox();
+            this.txtreparacionlaptop = new System.Windows.Forms.TextBox();
+            this.txtpendientelaptop = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtrevisadalaptop = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtrevisadaaudio = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtrevisadahogar = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtrevisadasmart = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtrevisadatv = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnaudio = new System.Windows.Forms.Button();
+            this.btnelectro = new System.Windows.Forms.Button();
+            this.btncel = new System.Windows.Forms.Button();
+            this.btntele = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(389, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Control de equipos para reparar en taller";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(380, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "En reparacion:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(237, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Pendientes:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(702, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 20);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Sin Solución:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(853, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Reparado:";
+            // 
+            // txtpendientetv
+            // 
+            this.txtpendientetv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpendientetv.Location = new System.Drawing.Point(326, 113);
+            this.txtpendientetv.Name = "txtpendientetv";
+            this.txtpendientetv.ReadOnly = true;
+            this.txtpendientetv.Size = new System.Drawing.Size(48, 26);
+            this.txtpendientetv.TabIndex = 38;
+            this.txtpendientetv.Click += new System.EventHandler(this.txtpendientetv_Click);
+            this.txtpendientetv.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // txtreparaciontv
+            // 
+            this.txtreparaciontv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparaciontv.Location = new System.Drawing.Point(488, 113);
+            this.txtreparaciontv.Name = "txtreparaciontv";
+            this.txtreparaciontv.ReadOnly = true;
+            this.txtreparaciontv.Size = new System.Drawing.Size(48, 26);
+            this.txtreparaciontv.TabIndex = 39;
+            this.txtreparaciontv.Click += new System.EventHandler(this.txtreparaciontv_Click);
+            this.txtreparaciontv.TextChanged += new System.EventHandler(this.txtreparaciontv_TextChanged);
+            // 
+            // txtsoluciontv
+            // 
+            this.txtsoluciontv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsoluciontv.Location = new System.Drawing.Point(799, 110);
+            this.txtsoluciontv.Name = "txtsoluciontv";
+            this.txtsoluciontv.ReadOnly = true;
+            this.txtsoluciontv.Size = new System.Drawing.Size(48, 26);
+            this.txtsoluciontv.TabIndex = 40;
+            this.txtsoluciontv.Click += new System.EventHandler(this.txtsoluciontv_Click);
+            this.txtsoluciontv.TextChanged += new System.EventHandler(this.txtsoluciontv_TextChanged);
+            // 
+            // txtreparadotv
+            // 
+            this.txtreparadotv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparadotv.Location = new System.Drawing.Point(933, 110);
+            this.txtreparadotv.Name = "txtreparadotv";
+            this.txtreparadotv.ReadOnly = true;
+            this.txtreparadotv.Size = new System.Drawing.Size(48, 26);
+            this.txtreparadotv.TabIndex = 41;
+            this.txtreparadotv.Click += new System.EventHandler(this.txtreparadotv_Click);
+            // 
+            // txtreparadosmart
+            // 
+            this.txtreparadosmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparadosmart.Location = new System.Drawing.Point(930, 206);
+            this.txtreparadosmart.Name = "txtreparadosmart";
+            this.txtreparadosmart.ReadOnly = true;
+            this.txtreparadosmart.Size = new System.Drawing.Size(48, 26);
+            this.txtreparadosmart.TabIndex = 49;
+            this.txtreparadosmart.Click += new System.EventHandler(this.txtreparadosmart_Click);
+            // 
+            // txtsolucionsmart
+            // 
+            this.txtsolucionsmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsolucionsmart.Location = new System.Drawing.Point(796, 206);
+            this.txtsolucionsmart.Name = "txtsolucionsmart";
+            this.txtsolucionsmart.ReadOnly = true;
+            this.txtsolucionsmart.Size = new System.Drawing.Size(48, 26);
+            this.txtsolucionsmart.TabIndex = 48;
+            this.txtsolucionsmart.Click += new System.EventHandler(this.txtsolucionsmart_Click);
+            // 
+            // txtreparacionsmart
+            // 
+            this.txtreparacionsmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparacionsmart.Location = new System.Drawing.Point(485, 209);
+            this.txtreparacionsmart.Name = "txtreparacionsmart";
+            this.txtreparacionsmart.ReadOnly = true;
+            this.txtreparacionsmart.Size = new System.Drawing.Size(48, 26);
+            this.txtreparacionsmart.TabIndex = 47;
+            this.txtreparacionsmart.Click += new System.EventHandler(this.txtreparacionsmart_Click);
+            // 
+            // txtpendientesmart
+            // 
+            this.txtpendientesmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpendientesmart.Location = new System.Drawing.Point(323, 209);
+            this.txtpendientesmart.Name = "txtpendientesmart";
+            this.txtpendientesmart.ReadOnly = true;
+            this.txtpendientesmart.Size = new System.Drawing.Size(48, 26);
+            this.txtpendientesmart.TabIndex = 46;
+            this.txtpendientesmart.Click += new System.EventHandler(this.txtpendientesmart_Click);
+            this.txtpendientesmart.TextChanged += new System.EventHandler(this.txtpendientesmart_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(699, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 20);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Sin Solución:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(850, 210);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 20);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Reparado:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(234, 212);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 20);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Pendientes:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(377, 212);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 20);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "En reparacion:";
+            // 
+            // txtreparadohogar
+            // 
+            this.txtreparadohogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparadohogar.Location = new System.Drawing.Point(930, 473);
+            this.txtreparadohogar.Name = "txtreparadohogar";
+            this.txtreparadohogar.ReadOnly = true;
+            this.txtreparadohogar.Size = new System.Drawing.Size(48, 26);
+            this.txtreparadohogar.TabIndex = 57;
+            this.txtreparadohogar.Click += new System.EventHandler(this.txtreparadohogar_Click);
+            // 
+            // txtsolucionhogar
+            // 
+            this.txtsolucionhogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsolucionhogar.Location = new System.Drawing.Point(796, 473);
+            this.txtsolucionhogar.Name = "txtsolucionhogar";
+            this.txtsolucionhogar.ReadOnly = true;
+            this.txtsolucionhogar.Size = new System.Drawing.Size(48, 26);
+            this.txtsolucionhogar.TabIndex = 56;
+            this.txtsolucionhogar.Click += new System.EventHandler(this.txtsolucionhogar_Click);
+            // 
+            // txtreparacionhogar
+            // 
+            this.txtreparacionhogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparacionhogar.Location = new System.Drawing.Point(485, 476);
+            this.txtreparacionhogar.Name = "txtreparacionhogar";
+            this.txtreparacionhogar.ReadOnly = true;
+            this.txtreparacionhogar.Size = new System.Drawing.Size(48, 26);
+            this.txtreparacionhogar.TabIndex = 55;
+            this.txtreparacionhogar.Click += new System.EventHandler(this.txtreparacionhogar_Click);
+            // 
+            // txtpendientehogar
+            // 
+            this.txtpendientehogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpendientehogar.Location = new System.Drawing.Point(323, 476);
+            this.txtpendientehogar.Name = "txtpendientehogar";
+            this.txtpendientehogar.ReadOnly = true;
+            this.txtpendientehogar.Size = new System.Drawing.Size(48, 26);
+            this.txtpendientehogar.TabIndex = 54;
+            this.txtpendientehogar.Click += new System.EventHandler(this.txtpendientehogar_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(699, 477);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 20);
+            this.label10.TabIndex = 53;
+            this.label10.Text = "Sin Solución:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(850, 477);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 20);
+            this.label11.TabIndex = 52;
+            this.label11.Text = "Reparado:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(234, 479);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 20);
+            this.label12.TabIndex = 51;
+            this.label12.Text = "Pendientes:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(377, 479);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 20);
+            this.label13.TabIndex = 50;
+            this.label13.Text = "En reparacion:";
+            // 
+            // txtreparadoaudio
+            // 
+            this.txtreparadoaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparadoaudio.Location = new System.Drawing.Point(930, 300);
+            this.txtreparadoaudio.Name = "txtreparadoaudio";
+            this.txtreparadoaudio.ReadOnly = true;
+            this.txtreparadoaudio.Size = new System.Drawing.Size(48, 26);
+            this.txtreparadoaudio.TabIndex = 65;
+            this.txtreparadoaudio.Click += new System.EventHandler(this.txtreparadoaudio_Click);
+            // 
+            // txtsolucionaudio
+            // 
+            this.txtsolucionaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsolucionaudio.Location = new System.Drawing.Point(796, 300);
+            this.txtsolucionaudio.Name = "txtsolucionaudio";
+            this.txtsolucionaudio.ReadOnly = true;
+            this.txtsolucionaudio.Size = new System.Drawing.Size(48, 26);
+            this.txtsolucionaudio.TabIndex = 64;
+            this.txtsolucionaudio.Click += new System.EventHandler(this.txtsolucionaudio_Click);
+            // 
+            // txtreparacionaudio
+            // 
+            this.txtreparacionaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparacionaudio.Location = new System.Drawing.Point(485, 303);
+            this.txtreparacionaudio.Name = "txtreparacionaudio";
+            this.txtreparacionaudio.ReadOnly = true;
+            this.txtreparacionaudio.Size = new System.Drawing.Size(48, 26);
+            this.txtreparacionaudio.TabIndex = 63;
+            this.txtreparacionaudio.Click += new System.EventHandler(this.txtreparacionaudio_Click);
+            // 
+            // txtpendienteaudio
+            // 
+            this.txtpendienteaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpendienteaudio.Location = new System.Drawing.Point(323, 303);
+            this.txtpendienteaudio.Name = "txtpendienteaudio";
+            this.txtpendienteaudio.ReadOnly = true;
+            this.txtpendienteaudio.Size = new System.Drawing.Size(48, 26);
+            this.txtpendienteaudio.TabIndex = 62;
+            this.txtpendienteaudio.Click += new System.EventHandler(this.txtpendienteaudio_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(699, 304);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 20);
+            this.label14.TabIndex = 61;
+            this.label14.Text = "Sin Solución:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(850, 304);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 20);
+            this.label15.TabIndex = 60;
+            this.label15.Text = "Reparado:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(234, 306);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 20);
+            this.label16.TabIndex = 59;
+            this.label16.Text = "Pendientes:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(377, 306);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(112, 20);
+            this.label17.TabIndex = 58;
+            this.label17.Text = "En reparacion:";
+            // 
+            // txtreparadolaptop
+            // 
+            this.txtreparadolaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparadolaptop.Location = new System.Drawing.Point(930, 386);
+            this.txtreparadolaptop.Name = "txtreparadolaptop";
+            this.txtreparadolaptop.ReadOnly = true;
+            this.txtreparadolaptop.Size = new System.Drawing.Size(48, 26);
+            this.txtreparadolaptop.TabIndex = 73;
+            this.txtreparadolaptop.Click += new System.EventHandler(this.txtreparadolaptop_Click);
+            // 
+            // txtsolucionlaptop
+            // 
+            this.txtsolucionlaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsolucionlaptop.Location = new System.Drawing.Point(796, 386);
+            this.txtsolucionlaptop.Name = "txtsolucionlaptop";
+            this.txtsolucionlaptop.ReadOnly = true;
+            this.txtsolucionlaptop.Size = new System.Drawing.Size(48, 26);
+            this.txtsolucionlaptop.TabIndex = 72;
+            this.txtsolucionlaptop.Click += new System.EventHandler(this.txtsolucionlaptop_Click);
+            // 
+            // txtreparacionlaptop
+            // 
+            this.txtreparacionlaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtreparacionlaptop.Location = new System.Drawing.Point(485, 389);
+            this.txtreparacionlaptop.Name = "txtreparacionlaptop";
+            this.txtreparacionlaptop.ReadOnly = true;
+            this.txtreparacionlaptop.Size = new System.Drawing.Size(48, 26);
+            this.txtreparacionlaptop.TabIndex = 71;
+            this.txtreparacionlaptop.Click += new System.EventHandler(this.txtreparacionlaptop_Click);
+            // 
+            // txtpendientelaptop
+            // 
+            this.txtpendientelaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpendientelaptop.Location = new System.Drawing.Point(323, 389);
+            this.txtpendientelaptop.Name = "txtpendientelaptop";
+            this.txtpendientelaptop.ReadOnly = true;
+            this.txtpendientelaptop.Size = new System.Drawing.Size(48, 26);
+            this.txtpendientelaptop.TabIndex = 70;
+            this.txtpendientelaptop.Click += new System.EventHandler(this.txtpendientelaptop_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(699, 390);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(101, 20);
+            this.label18.TabIndex = 69;
+            this.label18.Text = "Sin Solución:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(850, 390);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(84, 20);
+            this.label19.TabIndex = 68;
+            this.label19.Text = "Reparado:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(234, 392);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(93, 20);
+            this.label20.TabIndex = 67;
+            this.label20.Text = "Pendientes:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(377, 392);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(112, 20);
+            this.label21.TabIndex = 66;
+            this.label21.Text = "En reparacion:";
+            // 
+            // txtrevisadalaptop
+            // 
+            this.txtrevisadalaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrevisadalaptop.Location = new System.Drawing.Point(632, 389);
+            this.txtrevisadalaptop.Name = "txtrevisadalaptop";
+            this.txtrevisadalaptop.ReadOnly = true;
+            this.txtrevisadalaptop.Size = new System.Drawing.Size(48, 26);
+            this.txtrevisadalaptop.TabIndex = 83;
+            this.txtrevisadalaptop.Click += new System.EventHandler(this.txtrevisadalaptop_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(550, 393);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(87, 20);
+            this.label22.TabIndex = 82;
+            this.label22.Text = "Revisadas:";
+            // 
+            // txtrevisadaaudio
+            // 
+            this.txtrevisadaaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrevisadaaudio.Location = new System.Drawing.Point(632, 303);
+            this.txtrevisadaaudio.Name = "txtrevisadaaudio";
+            this.txtrevisadaaudio.ReadOnly = true;
+            this.txtrevisadaaudio.Size = new System.Drawing.Size(48, 26);
+            this.txtrevisadaaudio.TabIndex = 81;
+            this.txtrevisadaaudio.Click += new System.EventHandler(this.txtrevisadaaudio_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(550, 307);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(87, 20);
+            this.label23.TabIndex = 80;
+            this.label23.Text = "Revisadas:";
+            // 
+            // txtrevisadahogar
+            // 
+            this.txtrevisadahogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrevisadahogar.Location = new System.Drawing.Point(632, 476);
+            this.txtrevisadahogar.Name = "txtrevisadahogar";
+            this.txtrevisadahogar.ReadOnly = true;
+            this.txtrevisadahogar.Size = new System.Drawing.Size(48, 26);
+            this.txtrevisadahogar.TabIndex = 79;
+            this.txtrevisadahogar.Click += new System.EventHandler(this.txtrevisadahogar_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(550, 480);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(87, 20);
+            this.label24.TabIndex = 78;
+            this.label24.Text = "Revisadas:";
+            // 
+            // txtrevisadasmart
+            // 
+            this.txtrevisadasmart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrevisadasmart.Location = new System.Drawing.Point(632, 209);
+            this.txtrevisadasmart.Name = "txtrevisadasmart";
+            this.txtrevisadasmart.ReadOnly = true;
+            this.txtrevisadasmart.Size = new System.Drawing.Size(48, 26);
+            this.txtrevisadasmart.TabIndex = 77;
+            this.txtrevisadasmart.Click += new System.EventHandler(this.txtrevisadasmart_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(550, 213);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(87, 20);
+            this.label25.TabIndex = 76;
+            this.label25.Text = "Revisadas:";
+            // 
+            // txtrevisadatv
+            // 
+            this.txtrevisadatv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtrevisadatv.Location = new System.Drawing.Point(635, 113);
+            this.txtrevisadatv.Name = "txtrevisadatv";
+            this.txtrevisadatv.ReadOnly = true;
+            this.txtrevisadatv.Size = new System.Drawing.Size(48, 26);
+            this.txtrevisadatv.TabIndex = 75;
+            this.txtrevisadatv.Click += new System.EventHandler(this.txtrevisadatv_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(553, 117);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 20);
+            this.label26.TabIndex = 74;
+            this.label26.Text = "Revisadas:";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Electronica.Properties.Resources._002_laptop1;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(71, 382);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 40);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "     Laptop/Cpu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnaudio
+            // 
+            this.btnaudio.FlatAppearance.BorderSize = 0;
+            this.btnaudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnaudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaudio.Image = global::Electronica.Properties.Resources._003_big_music_player_speaker;
+            this.btnaudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnaudio.Location = new System.Drawing.Point(71, 297);
+            this.btnaudio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnaudio.Name = "btnaudio";
+            this.btnaudio.Size = new System.Drawing.Size(145, 40);
+            this.btnaudio.TabIndex = 32;
+            this.btnaudio.Text = "      Audio/Sonido";
+            this.btnaudio.UseVisualStyleBackColor = true;
+            this.btnaudio.Click += new System.EventHandler(this.btnaudio_Click);
+            // 
+            // btnelectro
+            // 
+            this.btnelectro.FlatAppearance.BorderSize = 0;
+            this.btnelectro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnelectro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnelectro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnelectro.Image = global::Electronica.Properties.Resources._001_washing_machine;
+            this.btnelectro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnelectro.Location = new System.Drawing.Point(71, 469);
+            this.btnelectro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnelectro.Name = "btnelectro";
+            this.btnelectro.Size = new System.Drawing.Size(142, 40);
+            this.btnelectro.TabIndex = 31;
+            this.btnelectro.Text = "      Linea Blanca";
+            this.btnelectro.UseVisualStyleBackColor = true;
+            this.btnelectro.Click += new System.EventHandler(this.btnelectro_Click);
+            // 
+            // btncel
+            // 
+            this.btncel.FlatAppearance.BorderSize = 0;
+            this.btncel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btncel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncel.Image = global::Electronica.Properties.Resources._004_smartphone_call;
+            this.btncel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncel.Location = new System.Drawing.Point(71, 200);
+            this.btncel.Margin = new System.Windows.Forms.Padding(2);
+            this.btncel.Name = "btncel";
+            this.btncel.Size = new System.Drawing.Size(145, 40);
+            this.btncel.TabIndex = 30;
+            this.btncel.Text = "     Celular / Tablet";
+            this.btncel.UseVisualStyleBackColor = true;
+            this.btncel.Click += new System.EventHandler(this.btncel_Click);
+            // 
+            // btntele
+            // 
+            this.btntele.FlatAppearance.BorderSize = 0;
+            this.btntele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btntele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btntele.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntele.Image = global::Electronica.Properties.Resources._005_computer_screen;
+            this.btntele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btntele.Location = new System.Drawing.Point(71, 104);
+            this.btntele.Margin = new System.Windows.Forms.Padding(2);
+            this.btntele.Name = "btntele";
+            this.btntele.Size = new System.Drawing.Size(145, 40);
+            this.btntele.TabIndex = 29;
+            this.btntele.Text = "        Televisiones";
+            this.btntele.UseVisualStyleBackColor = true;
+            this.btntele.Click += new System.EventHandler(this.btntele_Click);
+            // 
+            // Taller
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1059, 574);
+            this.Controls.Add(this.txtrevisadalaptop);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.txtrevisadaaudio);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.txtrevisadahogar);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.txtrevisadasmart);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.txtrevisadatv);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.txtreparadolaptop);
+            this.Controls.Add(this.txtsolucionlaptop);
+            this.Controls.Add(this.txtreparacionlaptop);
+            this.Controls.Add(this.txtpendientelaptop);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.txtreparadoaudio);
+            this.Controls.Add(this.txtsolucionaudio);
+            this.Controls.Add(this.txtreparacionaudio);
+            this.Controls.Add(this.txtpendienteaudio);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txtreparadohogar);
+            this.Controls.Add(this.txtsolucionhogar);
+            this.Controls.Add(this.txtreparacionhogar);
+            this.Controls.Add(this.txtpendientehogar);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtreparadosmart);
+            this.Controls.Add(this.txtsolucionsmart);
+            this.Controls.Add(this.txtreparacionsmart);
+            this.Controls.Add(this.txtpendientesmart);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtreparadotv);
+            this.Controls.Add(this.txtsoluciontv);
+            this.Controls.Add(this.txtreparaciontv);
+            this.Controls.Add(this.txtpendientetv);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnaudio);
+            this.Controls.Add(this.btnelectro);
+            this.Controls.Add(this.btncel);
+            this.Controls.Add(this.btntele);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Taller";
+            this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Taller_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 	}
 }

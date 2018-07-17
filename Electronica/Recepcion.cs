@@ -39,7 +39,6 @@ namespace Electronica
 
 		public TextBox txtpersonal;
         private Button button5;
-        private Button button6;
         private Button button4;
 
 		public Recepcion()
@@ -259,7 +258,6 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_cliente_nuevo = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -437,28 +435,12 @@ namespace Electronica
             this.btn_cliente_nuevo.UseVisualStyleBackColor = true;
             this.btn_cliente_nuevo.Click += new System.EventHandler(this.Cliente_nuevo);
             // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::Properties.Resources.guarantee;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(621, 51);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 36);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "         Garantía reparados";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // Recepcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1120, 707);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtpersonal);

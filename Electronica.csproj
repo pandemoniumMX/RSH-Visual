@@ -492,6 +492,9 @@
     <EmbeddedResource Include="Electronica\RecepcionTelevisores.resx">
       <DependentUpon>RecepcionTelevisores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Taller.resx">
+      <DependentUpon>Taller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Taller_traslado_nuevo.resx">
       <DependentUpon>Taller_traslado_nuevo.cs</DependentUpon>
     </EmbeddedResource>

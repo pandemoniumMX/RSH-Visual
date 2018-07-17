@@ -1358,7 +1358,7 @@ namespace Electronica
                     int idfolio = Convert.ToInt32(txtfolio.Text);
                     string tabla = txttipo.Text;
                    //garantia tv
-                    string query_actualizar_orden = "update  reparar_tv set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
+                    string query_actualizar_orden = "update  reparar_tv set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0',abono='0',mano_obra='0',presupuesto='0' where id_equipo='" + idequipo + "'";
                     MySqlCommand cmd_query_actualizar_orden = new MySqlCommand(query_actualizar_orden, conn);
                     try
                     {
