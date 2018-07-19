@@ -127,6 +127,8 @@ namespace Electronica
         public TextBox txtrestante;
         private Button button5;
         private Button button6;
+        public TextBox txtubicacion;
+        private Label label27;
         private Button button4;
 
         public RecepcionReparado_vista()
@@ -215,7 +217,7 @@ namespace Electronica
         {
             if (txtestado.Text == "Reparada")
             {
-                if (combolocacion.Text == "Taller")
+                if (txtubicacion.Text == "Recepcion")
                     button5.Visible = true;
             }
 
@@ -224,7 +226,10 @@ namespace Electronica
                 if (combolocacion.Text == "Garantia")
                     button6.Visible = true;
             }
-           
+            if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
+            {
+                txtrestante.Text = (Convert.ToInt32(txtsubtotal.Text) - Convert.ToInt32(txtabono.Text)).ToString();
+            }
         }
 
         private void txttotal_TextChanged(object sender, EventArgs e)
@@ -320,25 +325,46 @@ namespace Electronica
 
         private void button4_Click(object sender, EventArgs e)
         {
+            int resta = Convert.ToInt32(txtrestante.Text);
             DialogResult dr = MessageBox.Show("¿Ya se le hizo entrega al cliente de su equipo? Esta acción es irreversible", "Alerta de entrega", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
             if (dr == DialogResult.Yes)
-            {
 
-                string folio = txtidequipo.Text;
-                string personal = txtpersonal.Text;
-                string idequpo = txtidequipo.Text;
-                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+
+
+                if (txtrestante.Text != "0")
+                {
+
+                    string query_costoxs = "insert into cobranza(tipo,estado,cantidad,id_equipo) values('Pago','Pendiente','" + txtrestante.Text + "','" + txtidequipo.Text + "')";
+                    MySqlCommand cmd_query_costosx = new MySqlCommand(query_costoxs, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando9 = cmd_query_costosx.ExecuteReader();
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                    string folio = txtfolio.Text;
+                    string personal = txtpersonal.Text;
+                    string idequipo = txtidequipo.Text;
+
+                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente', fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente', fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' , fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
                 try
                 {
+                    
+
                     conn.Open();
                     MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
                     conn.Close();
@@ -353,14 +379,15 @@ namespace Electronica
                     conn.Close();
                     conn.Open();
                     MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
-                    MessageBox.Show("Entrega aplicada correctamente");
+                    MessageBox.Show("Entrega de garantía aplicada correctamente");
                     conn.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
+
+            
         }
 
         protected override void Dispose(bool disposing)
@@ -434,6 +461,8 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -466,7 +495,7 @@ namespace Electronica
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label4.Location = new System.Drawing.Point(21, 162);
+            this.label4.Location = new System.Drawing.Point(21, 183);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 13);
@@ -511,7 +540,7 @@ namespace Electronica
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label8.Location = new System.Drawing.Point(17, 118);
+            this.label8.Location = new System.Drawing.Point(6, 128);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 13);
@@ -611,7 +640,7 @@ namespace Electronica
             "Domicilio",
             "Garantia",
             "Otros"});
-            this.combolocacion.Location = new System.Drawing.Point(70, 118);
+            this.combolocacion.Location = new System.Drawing.Point(64, 125);
             this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
             this.combolocacion.Name = "combolocacion";
             this.combolocacion.Size = new System.Drawing.Size(92, 21);
@@ -651,7 +680,7 @@ namespace Electronica
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label13.Location = new System.Drawing.Point(241, 162);
+            this.label13.Location = new System.Drawing.Point(241, 183);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(91, 13);
@@ -826,9 +855,15 @@ namespace Electronica
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.txtubicacion);
+            this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.txtpersonal);
             this.panel1.Controls.Add(this.txtfechaen);
             this.panel1.Controls.Add(this.txtidequipo);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.combolocacion);
             this.panel1.Location = new System.Drawing.Point(0, -7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1106, 235);
@@ -1152,6 +1187,28 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // txtubicacion
+            // 
+            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtubicacion.Location = new System.Drawing.Point(64, 152);
+            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.ReadOnly = true;
+            this.txtubicacion.Size = new System.Drawing.Size(157, 20);
+            this.txtubicacion.TabIndex = 56;
+            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label27.Location = new System.Drawing.Point(2, 155);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 13);
+            this.label27.TabIndex = 55;
+            this.label27.Text = "Ubicación:";
+            // 
             // RecepcionReparado_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1167,10 +1224,8 @@ namespace Electronica
             this.Controls.Add(this.txtmano);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtmodelo);
-            this.Controls.Add(this.combolocacion);
             this.Controls.Add(this.txtrefaccion);
             this.Controls.Add(this.txtcomentarios);
             this.Controls.Add(this.txtaccesorios);
@@ -1179,11 +1234,9 @@ namespace Electronica
             this.Controls.Add(this.txtequipo);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);

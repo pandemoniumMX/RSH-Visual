@@ -142,6 +142,10 @@ namespace Electronica
             {
                 button6.Visible = true;
             }
+            if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
+            {
+                txtresta.Text = (Convert.ToInt32(txtsubtotal.Text) - Convert.ToInt32(txtabono.Text)).ToString();
+            }
         }
 
 		private void btngenorden_Click(object sender, EventArgs e)

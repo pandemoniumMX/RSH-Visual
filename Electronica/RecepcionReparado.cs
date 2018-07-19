@@ -55,17 +55,7 @@ namespace Electronica
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
+	
 
 		private void Buscador_TextChanged(object sender, EventArgs e)
 		{
@@ -115,7 +105,7 @@ namespace Electronica
                 cl.txtapellidos.Text = row.Cells["apellidos"].Value.ToString();
                 cl.txtcelular.Text = row.Cells["celular"].Value.ToString();
                 cl.txtcorreo.Text = row.Cells["correo"].Value.ToString();
-            //    cl.txtubicacion.Text = row.Cells["ubicacion"].Value.ToString();
+                cl.txtubicacion.Text = row.Cells["ubicacion"].Value.ToString();
 
                 cl.ShowDialog();
                 Close();

@@ -133,7 +133,8 @@ namespace Electronica
                     {
                         MessageBox.Show(ex2.Message);
                     }
-
+                    string cobranza = "UPDATE cobranza SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
+                    MySqlCommand cmd_cobranza = new MySqlCommand(cobranza, conn);
                     string descuento8 = "UPDATE reparar_tv SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
                     MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
                     string descuento7 = "UPDATE reparar_laptops SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
@@ -146,6 +147,9 @@ namespace Electronica
                     MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
                     try
                     {
+                        conn.Open();
+                        MySqlDataReader leercomando9 = cmd_cobranza.ExecuteReader();
+                        conn.Close();
                         conn.Open();
                         MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
                         conn.Close();

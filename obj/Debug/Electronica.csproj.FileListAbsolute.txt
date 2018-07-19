@@ -286,3 +286,4 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.exe
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.pdb
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csprojResolveAssemblyReference.cache
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDepositos_abono.resources

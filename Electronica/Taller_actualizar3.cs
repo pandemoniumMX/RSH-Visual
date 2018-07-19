@@ -299,20 +299,13 @@ namespace Electronica
             {
                 button6.Visible = true;
             }
-
+            if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
+            {
+                txtresta.Text = (Convert.ToInt32(txtsubtotal.Text) - Convert.ToInt32(txtabono.Text)).ToString();
+            }
         }
 
-		private void txttotal_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void txttotal_KeyPress(object sender, KeyPressEventArgs e)
-		{
-		}
-
-		private void txtabono_KeyPress(object sender, KeyPressEventArgs e)
-		{
-		}
+	
 
 		private void txtmano_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -351,17 +344,7 @@ namespace Electronica
 			conn.Close();
 		}
 
-		private void panel1_Paint(object sender, PaintEventArgs e)
-		{
-		}
-
-		private void panel2_Paint(object sender, PaintEventArgs e)
-		{
-		}
-
-		private void panel3_Paint(object sender, PaintEventArgs e)
-		{
-		}
+		
 
 		protected override void Dispose(bool disposing)
 		{
@@ -770,8 +753,6 @@ namespace Electronica
             this.txtresta.Size = new System.Drawing.Size(76, 22);
             this.txtresta.TabIndex = 18;
             this.txtresta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtresta.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
-            this.txtresta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
             // 
             // txtabono
             // 
@@ -783,7 +764,6 @@ namespace Electronica
             this.txtabono.Size = new System.Drawing.Size(76, 22);
             this.txtabono.TabIndex = 17;
             this.txtabono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtabono_KeyPress);
             // 
             // label19
             // 
@@ -878,7 +858,6 @@ namespace Electronica
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1112, 298);
             this.panel3.TabIndex = 51;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button6
             // 
@@ -957,7 +936,6 @@ namespace Electronica
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1109, 235);
             this.panel1.TabIndex = 49;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label27
             // 

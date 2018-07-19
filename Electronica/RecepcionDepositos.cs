@@ -36,7 +36,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT id_equipo,id_folio,costo_total FROM reparar_Tv where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_laptops where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_electrodomesticos where estado = 'Entregado' and CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_audio where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio,costo_total FROM reparar_smartphones where estado = 'Entregado' AND CONCAT(id_equipo,id_folio,costo_total) LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_cobranza, id_equipo, tipo, estado, cantidad FROM cobranza where estado = 'Pendiente' and tipo ='Pago' and concat (id_cobranza, id_equipo, tipo, estado, cantidad) LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -94,8 +94,8 @@ namespace Electronica
 				RecepcionDeposito_vista cl = new RecepcionDeposito_vista();
 				//cl.txtidpersonal.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.txtidfolio.Text = row.Cells["id_folio"].Value.ToString();
-                cl.txtcantidad.Text = row.Cells["costo_total"].Value.ToString();
+				cl.txtidfolio.Text = row.Cells["id_cobranza"].Value.ToString();
+                cl.txtcantidad.Text = row.Cells["cantidad"].Value.ToString();
                 cl.ShowDialog();
 				Close();
 			}

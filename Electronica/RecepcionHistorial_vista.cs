@@ -4,6 +4,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Electronica
 {
@@ -219,6 +221,11 @@ namespace Electronica
                 if(txtestado.Text == "Depositado")
                     button5.Visible = true;
             }
+
+            if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
+            {
+                txtrestante.Text = (Convert.ToInt32(txtsubtotal.Text) - Convert.ToInt32(txtabono.Text)).ToString();
+            }
         }
 
 		private void txttotal_TextChanged(object sender, EventArgs e)
@@ -227,10 +234,7 @@ namespace Electronica
 
 		private void txttotal_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
-			{
-				txtsubtotal.Text = (Convert.ToInt32(txtrefaccion.Text) + Convert.ToInt32(txtmano.Text) - Convert.ToInt32(txtabono.Text)).ToString();
-			}
+			
 		}
 
 		private void panel1_Paint(object sender, PaintEventArgs e)
@@ -259,7 +263,7 @@ namespace Electronica
 
 		private void button2_Click_1(object sender, EventArgs e)
 		{
-			DialogResult dr = MessageBox.Show("¿Son correctos los costos de la orden número ?", "Confirmar información", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+			DialogResult dr = MessageBox.Show("¿Es correcto el abono de "+txtabono.Text+" a la orden de servicio número: "+txtidequipo.Text+" ?", "Confirmar información", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes)
 			{
 				if (string.IsNullOrWhiteSpace(txtabono.Text))
@@ -268,21 +272,65 @@ namespace Electronica
 				}
 				else
 				{
-					int presupuesto = Convert.ToInt32(txtrefaccion.Text);
+
+                    //generador de reporte pdf
+                    PDF_Reporte pdf = new PDF_Reporte();
+                    PDF_Abono cr = new PDF_Abono();
+
+
+                    TextObject txtfolio1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
+                    TextObject txtidequipo1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtequipo"];
+                    TextObject txtnombre1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtnombre"];
+                    TextObject txtapellido1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtapellido"];
+                    TextObject txtabono1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtabono"];
+
+
+                    txtfolio1.Text = txtfolio.Text;
+                    txtidequipo1.Text = txtidequipo.Text;
+                    txtnombre1.Text = txtnombre.Text;
+                    txtapellido1.Text = txtapellidos.Text;
+                    txtabono1.Text = txtabono.Text;
+
+                    pdf.PDF_Generar.ReportSource = cr;
+                    //f2.crystalReportViewer1.ReportSource = cr;
+                    pdf.Show();
+
+
+                    int presupuesto = Convert.ToInt32(txtrefaccion.Text);
 					int mano = Convert.ToInt32(txtmano.Text);
 					int abono = Convert.ToInt32(txtabono.Text);
 					int total2 = Convert.ToInt32(txtsubtotal.Text);
 					int folio = Convert.ToInt32(txtfolio.Text);
 					int equipo = Convert.ToInt32(txtidequipo.Text);
-					string tabla = txttipo.Text;
+                    int restante = Convert.ToInt32(txtrestante.Text);
+                    string tabla = txttipo.Text;
 					int total = int.Parse(txtsubtotal.Text);
-					string query_costos = "update " + tabla + "  set abono='" + abono + "', costo_total='" + total2 + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+
+                    restante = total2 - abono;
+
+                    string query_costoxs = "insert into cobranza(tipo,estado,cantidad,id_equipo) values('Abono','Pendiente','"+abono+"','"+txtidequipo.Text+"')";
+                    MySqlCommand cmd_query_costosx = new MySqlCommand(query_costoxs, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costosx.ExecuteReader();
+
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    //
+                    string query_costos = "update reparar_tv  set abono='" + abono + "' , restante ='"+ restante + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
 					MySqlCommand cmd_query_costos = new MySqlCommand(query_costos, conn);
 					try
 					{
 						conn.Open();
 						MySqlDataReader leercomando = cmd_query_costos.ExecuteReader();
-						MessageBox.Show("Costos agregados satisfactoriamente");
+	
 						conn.Close();
 						Close();
 					}
@@ -290,7 +338,66 @@ namespace Electronica
 					{
 						MessageBox.Show(ex.Message);
 					}
-				}
+                    string query_costos1 = "update reparar_audio  set abono='" + abono + "' , restante ='" + restante + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_costos1 = new MySqlCommand(query_costos1, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costos1.ExecuteReader();
+                   
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    string query_costos2 = "update reparar_smartphones  set abono='" + abono + "', restante ='" + restante + "'  where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_costos2 = new MySqlCommand(query_costos2, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costos2.ExecuteReader();
+
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    string query_costos3 = "update reparar_electrodomesticos  set abono='" + abono + "' , restante ='" + restante + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_costos3 = new MySqlCommand(query_costos3, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costos3.ExecuteReader();
+
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    string query_costos4 = "update reparar_laptops  set abono='" + abono + "' , restante ='" + restante + "'  where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    MySqlCommand cmd_query_costos4 = new MySqlCommand(query_costos4, conn);
+                    try
+                    {
+                        conn.Open();
+                        MySqlDataReader leercomando = cmd_query_costos4.ExecuteReader();
+                        MessageBox.Show("Abono agregado satisfactoriamente");
+                        conn.Close();
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                 
+
+                }
 			}
 		}
 
@@ -350,6 +457,7 @@ namespace Electronica
 			DialogResult dr = MessageBox.Show("¿Ya se le hizo entrega al cliente de su equipo? Esta acción es irreversible", "Alerta de entrega", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes)
 			{
+
 				string folio = txtidequipo.Text;
 				string personal = txtpersonal.Text;
 				string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
@@ -407,7 +515,18 @@ namespace Electronica
 				v.Handled = true;
 				MessageBox.Show("Solo Numeros");
 			}
-		}
+
+            if (txtabono.Text != "0")
+            {
+                if (txtubicacion.Text == "Taller")
+                    button2.Visible = true;
+            }
+            else 
+            {
+               
+                button2.Visible = false;
+            }
+        }
 
 		protected override void Dispose(bool disposing)
 		{
@@ -461,8 +580,10 @@ namespace Electronica
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.txtpersonal = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.txtegreso = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.txtcorreo = new System.Windows.Forms.TextBox();
@@ -473,21 +594,19 @@ namespace Electronica
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.txtrestante = new System.Windows.Forms.TextBox();
-            this.txtpuntos = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.txtpuntos = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -968,6 +1087,24 @@ namespace Electronica
             this.panel2.TabIndex = 47;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::Electronica.Properties.Resources.shipped;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(870, 151);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(195, 36);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "        Solicitud de traslado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // txtegreso
             // 
             this.txtegreso.BackColor = System.Drawing.SystemColors.Window;
@@ -988,6 +1125,15 @@ namespace Electronica
             this.label25.Size = new System.Drawing.Size(188, 13);
             this.label25.TabIndex = 49;
             this.label25.Text = "Fecha de entrega e inicio de garantía:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Electronica.Properties.Resources.call_answer;
+            this.pictureBox1.Location = new System.Drawing.Point(668, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
             // 
             // label21
             // 
@@ -1110,94 +1256,6 @@ namespace Electronica
             this.panel3.TabIndex = 48;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
-            this.label26.Location = new System.Drawing.Point(249, 122);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 13);
-            this.label26.TabIndex = 46;
-            this.label26.Text = "Restante:";
-            // 
-            // txtrestante
-            // 
-            this.txtrestante.BackColor = System.Drawing.SystemColors.Window;
-            this.txtrestante.Location = new System.Drawing.Point(318, 119);
-            this.txtrestante.Margin = new System.Windows.Forms.Padding(2);
-            this.txtrestante.Name = "txtrestante";
-            this.txtrestante.Size = new System.Drawing.Size(76, 20);
-            this.txtrestante.TabIndex = 47;
-            this.txtrestante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtpuntos
-            // 
-            this.txtpuntos.BackColor = System.Drawing.SystemColors.Window;
-            this.txtpuntos.Location = new System.Drawing.Point(112, 119);
-            this.txtpuntos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtpuntos.Name = "txtpuntos";
-            this.txtpuntos.ReadOnly = true;
-            this.txtpuntos.Size = new System.Drawing.Size(76, 20);
-            this.txtpuntos.TabIndex = 42;
-            this.txtpuntos.Text = "0";
-            this.txtpuntos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
-            this.label1.Location = new System.Drawing.Point(65, 122);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Puntos:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::Electronica.Properties.Resources._001_binoculars;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(27, 346);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 35);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Ver Reporte";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::Electronica.Properties.Resources.shipped;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(870, 151);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(195, 36);
-            this.button6.TabIndex = 48;
-            this.button6.Text = "        Solicitud de traslado";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Electronica.Properties.Resources.call_answer;
-            this.pictureBox1.Location = new System.Drawing.Point(668, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 34);
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.White;
@@ -1216,6 +1274,28 @@ namespace Electronica
             this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label26.Location = new System.Drawing.Point(249, 122);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(53, 13);
+            this.label26.TabIndex = 46;
+            this.label26.Text = "Restante:";
+            // 
+            // txtrestante
+            // 
+            this.txtrestante.BackColor = System.Drawing.SystemColors.Window;
+            this.txtrestante.Location = new System.Drawing.Point(318, 119);
+            this.txtrestante.Margin = new System.Windows.Forms.Padding(2);
+            this.txtrestante.Name = "txtrestante";
+            this.txtrestante.ReadOnly = true;
+            this.txtrestante.Size = new System.Drawing.Size(76, 20);
+            this.txtrestante.TabIndex = 47;
+            this.txtrestante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
@@ -1233,6 +1313,18 @@ namespace Electronica
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtpuntos
+            // 
+            this.txtpuntos.BackColor = System.Drawing.SystemColors.Window;
+            this.txtpuntos.Location = new System.Drawing.Point(112, 119);
+            this.txtpuntos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtpuntos.Name = "txtpuntos";
+            this.txtpuntos.ReadOnly = true;
+            this.txtpuntos.Size = new System.Drawing.Size(76, 20);
+            this.txtpuntos.TabIndex = 42;
+            this.txtpuntos.Text = "0";
+            this.txtpuntos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
@@ -1269,6 +1361,34 @@ namespace Electronica
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label1.Location = new System.Drawing.Point(65, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Puntos:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Electronica.Properties.Resources._001_binoculars;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(27, 346);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 35);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Ver Reporte";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // RecepcionHistorial_vista
             // 
@@ -1315,9 +1435,9 @@ namespace Electronica
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

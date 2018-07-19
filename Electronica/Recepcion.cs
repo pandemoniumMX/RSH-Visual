@@ -39,6 +39,7 @@ namespace Electronica
 
 		public TextBox txtpersonal;
         private Button button5;
+        private Button button6;
         private Button button4;
 
 		public Recepcion()
@@ -74,7 +75,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query3 = "SELECT COUNT( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' )p";
+				string query3 = "SELECT COUNT( p.estado ) AS total_total FROM (SELECT estado FROM cobranza WHERE estado =  'Pendiente')p";
 				conn.Open();
 				MySqlCommand cmd_query3 = new MySqlCommand(query3, conn);
 				int txtdeposito2 = Convert.ToInt32(cmd_query3.ExecuteScalar());
@@ -243,7 +244,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaClientes = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -258,6 +259,7 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_cliente_nuevo = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,8 +276,8 @@ namespace Electronica
             // 
             // TablaClientes
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -435,12 +437,29 @@ namespace Electronica
             this.btn_cliente_nuevo.UseVisualStyleBackColor = true;
             this.btn_cliente_nuevo.Click += new System.EventHandler(this.Cliente_nuevo);
             // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Image = global::Electronica.Properties.Resources._002_coin;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(621, 51);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(233, 36);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "      Depositos en abonos";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Recepcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1120, 707);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtpersonal);
@@ -471,5 +490,10 @@ namespace Electronica
             ss.ShowDialog();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            RecepcionDepositos_abono ss = new RecepcionDepositos_abono();
+            ss.ShowDialog();
+        }
     }
 }

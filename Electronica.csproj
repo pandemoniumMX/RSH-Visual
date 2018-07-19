@@ -107,6 +107,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\ConexionBD.cs" />
+    <Compile Include="Electronica\PDF_Abono.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDF_Abono.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Electronica\Encriptador.cs" />
     <Compile Include="Electronica\Inicio.cs">
       <SubType>Form</SubType>
@@ -191,6 +197,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\RecepcionBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronica\RecepcionDepositos_abono.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\RecepcionDepositos.cs">
@@ -419,6 +428,10 @@
     <EmbeddedResource Include="Electronica\Clientes_nuevos.resx">
       <DependentUpon>Clientes_nuevos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\PDF_Abono.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PDF_Abono.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Inicio.resx" />
     <EmbeddedResource Include="Electronica\Login.resx" />
     <EmbeddedResource Include="Electronica\Mercadolibre_actualizar.resx" />
@@ -466,6 +479,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionBuscar.resx">
       <DependentUpon>RecepcionBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\RecepcionDepositos_abono.resx">
+      <DependentUpon>RecepcionDepositos_abono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionDepositos.resx">
       <DependentUpon>RecepcionDepositos.cs</DependentUpon>

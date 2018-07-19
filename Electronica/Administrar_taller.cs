@@ -14,17 +14,17 @@ namespace Electronica
 
 		private Label label2;
 
-		private TextBox txtreparado;
+		private TextBox txttotaldepositado;
 
 		private Label label1;
 
 		private Label label3;
 
-		private TextBox txtentregar;
+		private TextBox txtlistos;
 
 		private Label label4;
 
-		private TextBox txtpendiente;
+		private TextBox txtpendientedeposito;
 
 		private Label label5;
 
@@ -112,10 +112,10 @@ namespace Electronica
 			InitializeComponent();
 			try
 			{
-				string query = "SELECT sum( p.costo_total ) AS total_total FROM (SELECT costo_total FROM reparar_smartphones WHERE estado =  'Depositado' UNION ALL SELECT costo_total FROM reparar_tv WHERE estado =  'Depositado' UNION ALL SELECT costo_total FROM reparar_laptops WHERE estado =  'Depositado' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Depositado' UNION ALL SELECT costo_total FROM reparar_audio WHERE estado =  'Depositado' )p";
+				string query = "SELECT sum( p.cantidad ) AS total_total FROM (SELECT cantidad FROM depositos)p";
 				conn.Open();
 				MySqlCommand cmd_query2 = new MySqlCommand(query, conn);
-				txtreparado.Text = cmd_query2.ExecuteScalar().ToString();
+				txttotaldepositado.Text = cmd_query2.ExecuteScalar().ToString();
 				conn.Close();
 			}
 			catch (Exception ex4)
@@ -142,7 +142,7 @@ namespace Electronica
 				string query5 = "SELECT sum( p.costo_total ) AS total_total FROM (SELECT costo_total FROM reparar_smartphones WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_tv WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_laptops WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' )p";
 				conn.Open();
 				MySqlCommand cmd_query6 = new MySqlCommand(query5, conn);
-				txtentregar.Text = cmd_query6.ExecuteScalar().ToString();
+				txtlistos.Text = cmd_query6.ExecuteScalar().ToString();
 				conn.Close();
 			}
 			catch (Exception ex8)
@@ -151,10 +151,10 @@ namespace Electronica
 			}
 			try
 			{
-				string query9 = "SELECT sum( p.costo_total ) AS total_total FROM (SELECT costo_total FROM reparar_smartphones WHERE estado =  'Entregado' UNION ALL SELECT costo_total FROM reparar_tv WHERE estado =  'Entregado' UNION ALL SELECT costo_total FROM reparar_laptops WHERE estado =  'Entregado' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Entregado' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Entregado' )p";
+				string query9 = "SELECT sum( p.cantidad ) AS total_total FROM (SELECT cantidad FROM cobranza where estado =  'Pendiente')p";
 				conn.Open();
 				MySqlCommand cmd_query10 = new MySqlCommand(query9, conn);
-				txtpendiente.Text = cmd_query10.ExecuteScalar().ToString();
+				txtpendientedeposito.Text = cmd_query10.ExecuteScalar().ToString();
 				conn.Close();
 			}
 			catch (Exception ex10)
@@ -315,12 +315,12 @@ namespace Electronica
 		private void InitializeComponent()
 		{
             this.label2 = new System.Windows.Forms.Label();
-            this.txtreparado = new System.Windows.Forms.TextBox();
+            this.txttotaldepositado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtentregar = new System.Windows.Forms.TextBox();
+            this.txtlistos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtpendiente = new System.Windows.Forms.TextBox();
+            this.txtpendientedeposito = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtttsolucion = new System.Windows.Forms.TextBox();
@@ -376,13 +376,13 @@ namespace Electronica
             this.label2.Text = "Estadisticas del taller";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtreparado
+            // txttotaldepositado
             // 
-            this.txtreparado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreparado.Location = new System.Drawing.Point(323, 69);
-            this.txtreparado.Name = "txtreparado";
-            this.txtreparado.Size = new System.Drawing.Size(100, 31);
-            this.txtreparado.TabIndex = 13;
+            this.txttotaldepositado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotaldepositado.Location = new System.Drawing.Point(323, 69);
+            this.txttotaldepositado.Name = "txttotaldepositado";
+            this.txttotaldepositado.Size = new System.Drawing.Size(100, 31);
+            this.txttotaldepositado.TabIndex = 13;
             // 
             // label1
             // 
@@ -404,13 +404,13 @@ namespace Electronica
             this.label3.TabIndex = 16;
             this.label3.Text = "Total equipos listo para entregar:";
             // 
-            // txtentregar
+            // txtlistos
             // 
-            this.txtentregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtentregar.Location = new System.Drawing.Point(759, 69);
-            this.txtentregar.Name = "txtentregar";
-            this.txtentregar.Size = new System.Drawing.Size(100, 31);
-            this.txtentregar.TabIndex = 15;
+            this.txtlistos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlistos.Location = new System.Drawing.Point(759, 69);
+            this.txtlistos.Name = "txtlistos";
+            this.txtlistos.Size = new System.Drawing.Size(100, 31);
+            this.txtlistos.TabIndex = 15;
             // 
             // label4
             // 
@@ -422,13 +422,13 @@ namespace Electronica
             this.label4.TabIndex = 18;
             this.label4.Text = "Total pendiente de depositar:";
             // 
-            // txtpendiente
+            // txtpendientedeposito
             // 
-            this.txtpendiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpendiente.Location = new System.Drawing.Point(284, 128);
-            this.txtpendiente.Name = "txtpendiente";
-            this.txtpendiente.Size = new System.Drawing.Size(100, 31);
-            this.txtpendiente.TabIndex = 17;
+            this.txtpendientedeposito.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpendientedeposito.Location = new System.Drawing.Point(284, 128);
+            this.txtpendientedeposito.Name = "txtpendientedeposito";
+            this.txtpendientedeposito.Size = new System.Drawing.Size(100, 31);
+            this.txtpendientedeposito.TabIndex = 17;
             // 
             // label5
             // 
@@ -853,11 +853,11 @@ namespace Electronica
             this.Controls.Add(this.txtttpendiente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtpendiente);
+            this.Controls.Add(this.txtpendientedeposito);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtentregar);
+            this.Controls.Add(this.txtlistos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtreparado);
+            this.Controls.Add(this.txttotaldepositado);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrar_taller";
