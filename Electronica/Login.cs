@@ -40,8 +40,10 @@ namespace Electronica
 
 		public void button1_Click(object sender, EventArgs e)
 		{
-			try
-			{
+            textBox2.Text = Seguridad.Encriptar(textBox2.Text);
+
+            try
+            {
 				conn.Open();
 				MySqlCommand cmd = new MySqlCommand("SELECT id_personal, tipo from personal  WHERE usuario=@usuario and contraseña= @contraseña ", conn);
 				cmd.Parameters.AddWithValue("usuario", textBox1.Text);
@@ -97,22 +99,22 @@ namespace Electronica
 						pop3.Popup();
 						new Principal_recepcion(dt.Rows[0][0].ToString()).Show();
 					}
-					else if (dt.Rows[0][1].ToString() == "Jefe de taller")
-					{
-						PopupNotifier pop2 = new PopupNotifier();
-						pop2.TitleText = "Sesión iniciada correctamente";
-						pop2.ContentText = "Bienvenido " + textBox1.Text + " que tengas un gran día";
-						pop2.ImagePadding = new Padding(10, 10, 10, 10);
-						pop2.Image = Resources.information;
-						pop2.TitleFont = new Font("Segoe UI", 16f);
-						pop2.TitleColor = Color.White;
-						pop2.ContentColor = Color.White;
-						pop2.ContentFont = new Font("Segoe UI", 12f);
-						pop2.BodyColor = Color.FromArgb(0, 122, 204);
-						pop2.Popup();
-						new Principal_taller(dt.Rows[0][0].ToString()).Show();
-					}
-					else if (dt.Rows[0][1].ToString() == "Jefe partes")
+                    else if (dt.Rows[0][1].ToString() == "Jefe de Taller")
+                    {
+                        PopupNotifier pop5 = new PopupNotifier();
+                        pop5.TitleText = "Sesión iniciada correctamente";
+                        pop5.ContentText = "Bienvenido " + textBox1.Text + " que tengas un gran día";
+                        pop5.ImagePadding = new Padding(10, 10, 10, 10);
+                        pop5.Image = Resources.information;
+                        pop5.TitleFont = new Font("Segoe UI", 16f);
+                        pop5.TitleColor = Color.White;
+                        pop5.ContentColor = Color.White;
+                        pop5.ContentFont = new Font("Segoe UI", 12f);
+                        pop5.BodyColor = Color.FromArgb(0, 122, 204);
+                        pop5.Popup();
+                        new Principal_taller(dt.Rows[0][0].ToString()).Show();
+                    }
+                    else if (dt.Rows[0][1].ToString() == "Jefe partes")
 					{
 						PopupNotifier pop = new PopupNotifier();
 						pop.TitleText = "Sesión iniciada correctamente";

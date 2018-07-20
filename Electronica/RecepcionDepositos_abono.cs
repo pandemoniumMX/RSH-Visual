@@ -94,7 +94,7 @@ namespace Electronica
 				RecepcionDeposito_vista cl = new RecepcionDeposito_vista();
 				//cl.txtidpersonal.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.txtidfolio.Text = row.Cells["id_cobranza"].Value.ToString();
+				cl.txtidfolio.Text = row.Cells["id_folio"].Value.ToString();
                 cl.txtcantidad.Text = row.Cells["cantidad"].Value.ToString();
                 cl.ShowDialog();
 				Close();
@@ -132,9 +132,9 @@ namespace Electronica
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 24);
+            this.label2.Size = new System.Drawing.Size(317, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Depositos pendientes";
+            this.label2.Text = "Depositos de abonos pendientes";
             // 
             // TablaEquipos
             // 
@@ -142,11 +142,11 @@ namespace Electronica
             this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaEquipos.Location = new System.Drawing.Point(12, 133);
+            this.TablaEquipos.Location = new System.Drawing.Point(247, 133);
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(343, 557);
+            this.TablaEquipos.Size = new System.Drawing.Size(642, 557);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
@@ -189,7 +189,7 @@ namespace Electronica
             this.txtfolio.TabIndex = 8;
             this.txtfolio.Visible = false;
             // 
-            // RecepcionDepositos
+            // RecepcionDepositos_abono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,9 +204,9 @@ namespace Electronica
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
-            this.Name = "RecepcionDepositos";
+            this.Name = "RecepcionDepositos_abono";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Depositos";
+            this.Text = "Depositos abonos";
             this.Load += new System.EventHandler(this.Taller_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionDepositos_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();
@@ -222,5 +222,7 @@ namespace Electronica
                 this.Close();
             }
         }
+
+       
     }
 }

@@ -218,14 +218,15 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Mercadolibre_
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.PDF_Reporte.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Personal_actualizar.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Personal_nuevo.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal_taller.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal_recepcion.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal_mercado.resources
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal_recepcion.resources
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal_taller.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Principal_tecnicos.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Recepcion.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Recepcion2.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionBuscar.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDepositos_abono.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDepositos.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDeposito_vista.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHistorial.resources
@@ -235,6 +236,7 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionHist
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionSinsolucion.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionReparado.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionTelevisores.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_traslado_nuevo.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Recepcion_ventas.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Recepcion_ventas_actualizar.resources
@@ -285,5 +287,3 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csproj.Genera
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.exe
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.pdb
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csprojResolveAssemblyReference.cache
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller.resources
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.RecepcionDepositos_abono.resources

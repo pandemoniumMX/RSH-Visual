@@ -61,8 +61,9 @@ namespace Electronica
 		}
 
 		private void AgregarClientes_Click(object sender, EventArgs e)
-		{
-			DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar actualización personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+        {
+            txtcontraseña.Text = Seguridad.Encriptar(txtcontraseña.Text);
+            DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar actualización personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes)
 			
 				if (string.IsNullOrWhiteSpace(combotipo.Text))

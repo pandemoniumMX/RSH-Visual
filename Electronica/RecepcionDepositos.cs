@@ -36,7 +36,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT id_cobranza, id_equipo, tipo, estado, cantidad FROM cobranza where estado = 'Pendiente' and tipo ='Pago' and concat (id_cobranza, id_equipo, tipo, estado, cantidad) LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_cobranza, id_equipo, tipo, estado, cantidad , id_folio FROM cobranza where estado = 'Pendiente' and tipo ='Pago' and concat (id_cobranza, id_equipo, tipo, estado, cantidad) LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -94,7 +94,7 @@ namespace Electronica
 				RecepcionDeposito_vista cl = new RecepcionDeposito_vista();
 				//cl.txtidpersonal.Text = row.Cells["id_personal"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-				cl.txtidfolio.Text = row.Cells["id_cobranza"].Value.ToString();
+				cl.txtidfolio.Text = row.Cells["id_folio"].Value.ToString();
                 cl.txtcantidad.Text = row.Cells["cantidad"].Value.ToString();
                 cl.ShowDialog();
 				Close();
@@ -142,11 +142,11 @@ namespace Electronica
             this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TablaEquipos.Location = new System.Drawing.Point(12, 133);
+            this.TablaEquipos.Location = new System.Drawing.Point(178, 133);
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(343, 557);
+            this.TablaEquipos.Size = new System.Drawing.Size(642, 557);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);

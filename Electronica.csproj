@@ -171,16 +171,16 @@
     <Compile Include="Electronica\Personal_nuevo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Principal_mercado.cs">
+    <Compile Include="Electronica\Principal_taller.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\Principal_recepcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Principal_taller.cs">
+    <Compile Include="Electronica\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronica\Principal_mercado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\Principal_tecnicos.cs">
@@ -466,10 +466,10 @@
     <EmbeddedResource Include="Electronica\Personal_nuevo.resx">
       <DependentUpon>Personal_nuevo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Principal_taller.resx" />
+    <EmbeddedResource Include="Electronica\Principal_recepcion.resx" />
     <EmbeddedResource Include="Electronica\Principal.resx" />
     <EmbeddedResource Include="Electronica\Principal_mercado.resx" />
-    <EmbeddedResource Include="Electronica\Principal_recepcion.resx" />
-    <EmbeddedResource Include="Electronica\Principal_taller.resx" />
     <EmbeddedResource Include="Electronica\Principal_tecnicos.resx" />
     <EmbeddedResource Include="Electronica\Recepcion.resx">
       <DependentUpon>Recepcion.cs</DependentUpon>

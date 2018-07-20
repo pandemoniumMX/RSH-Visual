@@ -180,7 +180,7 @@ namespace Electronica
 				string comentarios = txtcomentarios.Text;
 				int idfolio = Convert.ToInt32(txtfolio.Text);
 				string tabla = txttipo.Text;
-				string query_actualizar_orden = "update  " + tabla + " set equipo='" + equipo + "', marca='" + marca + "', modelo='" + modelo + "', accesorios= '" + accesorios + "', falla=  '" + falla + "',servicio='" + locacion + "', comentarios= '" + comentarios + "' where id_equipo='" + idequipo + "'";
+				string query_actualizar_orden = "update  " + tabla + " set equipo='" + equipo + "', marca='" + marca + "', modelo='" + modelo + "', accesorios= '" + accesorios + "', falla=  '" + falla + "',servicio='" + locacion + "', ubicacion='"+txtubicacion.Text+"' , comentarios= '" + comentarios + "' where id_equipo='" + idequipo + "'";
 				MySqlCommand cmd_query_actualizar_orden = new MySqlCommand(query_actualizar_orden, conn);
 				try
 				{
@@ -401,6 +401,7 @@ namespace Electronica
             this.btncostos = new System.Windows.Forms.Button();
             this.txtsubtotal = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.txtegreso = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -411,7 +412,6 @@ namespace Electronica
             this.txtpersonal1 = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtubicacion = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -937,6 +937,13 @@ namespace Electronica
             this.panel1.Size = new System.Drawing.Size(1109, 235);
             this.panel1.TabIndex = 49;
             // 
+            // txtubicacion
+            // 
+            this.txtubicacion.Location = new System.Drawing.Point(75, 147);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.Size = new System.Drawing.Size(146, 20);
+            this.txtubicacion.TabIndex = 59;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -1054,14 +1061,6 @@ namespace Electronica
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1108, 200);
             this.panel2.TabIndex = 56;
-            // 
-            // txtubicacion
-            // 
-            this.txtubicacion.Location = new System.Drawing.Point(75, 147);
-            this.txtubicacion.Name = "txtubicacion";
-            this.txtubicacion.ReadOnly = true;
-            this.txtubicacion.Size = new System.Drawing.Size(146, 20);
-            this.txtubicacion.TabIndex = 59;
             // 
             // Taller_actualizar3
             // 

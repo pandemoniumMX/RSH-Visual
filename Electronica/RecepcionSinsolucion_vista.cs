@@ -340,7 +340,8 @@ namespace Electronica
 					MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
 					MessageBox.Show("Devolución aplicada correctamente");
 					conn.Close();
-				}
+                    Close();
+                }
 				catch (Exception ex)
 				{
 					MessageBox.Show(ex.Message);

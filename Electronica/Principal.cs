@@ -108,7 +108,7 @@ namespace Electronica
 		private void button5_Click(object sender, EventArgs e)
 		{
 			AbrirFormaHija(new Mercadolibre());
-			txtpersonal.Text = txtpersonal.Text.ToString();
+            txtpersonal.Text = txtpersonal.Text.ToString();
 		}
 
 		private void button6_Click(object sender, EventArgs e)

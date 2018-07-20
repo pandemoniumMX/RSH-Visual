@@ -308,7 +308,7 @@ namespace Electronica
 
                     restante = total2 - abono;
 
-                    string query_costoxs = "insert into cobranza(tipo,estado,cantidad,id_equipo) values('Abono','Pendiente','"+abono+"','"+txtidequipo.Text+"')";
+                    string query_costoxs = "insert into cobranza(tipo,estado,cantidad,id_equipo,id_folio) values('Abono','Pendiente','"+abono+"','"+txtidequipo.Text+"','"+txtfolio.Text+"')";
                     MySqlCommand cmd_query_costosx = new MySqlCommand(query_costoxs, conn);
                     try
                     {

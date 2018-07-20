@@ -329,12 +329,12 @@ namespace Electronica
             DialogResult dr = MessageBox.Show("¿Ya se le hizo entrega al cliente de su equipo? Esta acción es irreversible", "Alerta de entrega", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
             if (dr == DialogResult.Yes)
 
-
+            {
 
                 if (txtrestante.Text != "0")
                 {
 
-                    string query_costoxs = "insert into cobranza(tipo,estado,cantidad,id_equipo) values('Pago','Pendiente','" + txtrestante.Text + "','" + txtidequipo.Text + "')";
+                    string query_costoxs = "insert into cobranza(tipo,estado,cantidad,id_equipo,id_folio) values('Pago','Pendiente','" + txtrestante.Text + "','" + txtidequipo.Text + "','"+txtfolio.Text+"')";
                     MySqlCommand cmd_query_costosx = new MySqlCommand(query_costoxs, conn);
                     try
                     {
@@ -347,23 +347,24 @@ namespace Electronica
                         MessageBox.Show(ex.Message);
                     }
                 }
-                    string folio = txtfolio.Text;
-                    string personal = txtpersonal.Text;
-                    string idequipo = txtidequipo.Text;
 
-                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string folio = txtfolio.Text;
+                string personal = txtpersonal.Text;
+                string idequipo = txtidequipo.Text;
+
+                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente', fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente',  restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' , restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente', fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente',  restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' , fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' ,  restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
                 try
                 {
-                    
+
 
                     conn.Open();
                     MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
@@ -381,13 +382,14 @@ namespace Electronica
                     MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
                     MessageBox.Show("Entrega de garantía aplicada correctamente");
                     conn.Close();
+                    Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
 
-            
+            }
         }
 
         protected override void Dispose(bool disposing)
@@ -437,6 +439,8 @@ namespace Electronica
             this.txtfechain = new System.Windows.Forms.TextBox();
             this.txtestado = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtubicacion = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.txtpersonal = new System.Windows.Forms.TextBox();
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -461,8 +465,6 @@ namespace Electronica
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtubicacion = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -654,6 +656,7 @@ namespace Electronica
             this.txtfolio.ReadOnly = true;
             this.txtfolio.Size = new System.Drawing.Size(76, 20);
             this.txtfolio.TabIndex = 20;
+            this.txtfolio.TextChanged += new System.EventHandler(this.txtfolio_TextChanged);
             // 
             // txtmodelo
             // 
@@ -870,6 +873,28 @@ namespace Electronica
             this.panel1.TabIndex = 46;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtubicacion
+            // 
+            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
+            this.txtubicacion.Location = new System.Drawing.Point(64, 152);
+            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.ReadOnly = true;
+            this.txtubicacion.Size = new System.Drawing.Size(157, 20);
+            this.txtubicacion.TabIndex = 56;
+            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
+            this.label27.Location = new System.Drawing.Point(2, 155);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(58, 13);
+            this.label27.TabIndex = 55;
+            this.label27.Text = "Ubicación:";
+            // 
             // txtpersonal
             // 
             this.txtpersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(133)))), ((int)(((byte)(198)))));
@@ -1052,7 +1077,7 @@ namespace Electronica
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(161, 35);
             this.button6.TabIndex = 49;
-            this.button6.Text = "    Confirmar entrega del equipo";
+            this.button6.Text = "    Confirmar entrega de garantía";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -1187,28 +1212,6 @@ namespace Electronica
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // txtubicacion
-            // 
-            this.txtubicacion.BackColor = System.Drawing.SystemColors.Window;
-            this.txtubicacion.Location = new System.Drawing.Point(64, 152);
-            this.txtubicacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtubicacion.Name = "txtubicacion";
-            this.txtubicacion.ReadOnly = true;
-            this.txtubicacion.Size = new System.Drawing.Size(157, 20);
-            this.txtubicacion.TabIndex = 56;
-            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(174)))), ((int)(((byte)(202)))));
-            this.label27.Location = new System.Drawing.Point(2, 155);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 13);
-            this.label27.TabIndex = 55;
-            this.label27.Text = "Ubicación:";
-            // 
             // RecepcionReparado_vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1319,19 +1322,19 @@ namespace Electronica
             DialogResult dr = MessageBox.Show("¿Ya se le hizo entrega al cliente de su equipo? Esta acción es irreversible", "Alerta de entrega", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
             if (dr == DialogResult.Yes)
             {
-
-                string folio = txtidequipo.Text;
+                string folio = txtfolio.Text;
+                string idequipo = txtidequipo.Text;
                 string personal = txtpersonal.Text;
                 string idequpo = txtidequipo.Text;
-                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente'fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + idequpo + "'";
+                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
                 try
                 {
@@ -1351,12 +1354,18 @@ namespace Electronica
                     MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
                     MessageBox.Show("Entrega de garantía aplicada correctamente");
                     conn.Close();
+                    Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void txtfolio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

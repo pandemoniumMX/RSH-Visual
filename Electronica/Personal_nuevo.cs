@@ -79,7 +79,10 @@ namespace Electronica
 
 		private void AgregarClientes_Click(object sender, EventArgs e)
 		{
-			DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+            txtcontraseña.Text = Seguridad.Encriptar(txtcontraseña.Text);
+           // txtcontraseña.Text = Seguridad.DesEncriptar(txtcontraseña.Text);
+
+            DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes && string.IsNullOrWhiteSpace(combotipo.Text))
 			{
 				MessageBox.Show("Campo tipo no seleccionado vacío");

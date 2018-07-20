@@ -405,7 +405,7 @@ namespace Electronica
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RecepcionDeposito_vista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Ordenes de Servicio";
+            this.Text = "Información de deposito";
             this.Load += new System.EventHandler(this.Taller_actualizar_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionDeposito_vista_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
