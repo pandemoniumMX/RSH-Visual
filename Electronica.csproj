@@ -625,6 +625,9 @@
     <EmbeddedResource Include="Electronica\Administrar_Tecnicos_reporte_actualizar.resx">
       <DependentUpon>Administrar_Tecnicos_reporte_actualizar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Tecnicos.resx">
+      <DependentUpon>Tecnicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Tecnicos_reporte.resx">
       <DependentUpon>Tecnicos_reporte.cs</DependentUpon>
     </EmbeddedResource>

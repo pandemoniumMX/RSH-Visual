@@ -215,10 +215,11 @@ namespace Electronica
             {
                 button6.Visible = true;
             }
+          
 
             if (txtubicacion.Text == "Cliente")
             {
-                if(txtestado.Text == "Depositado")
+                if(txtestado.Text == "Entregado")
                     button5.Visible = true;
             }
 
@@ -498,7 +499,12 @@ namespace Electronica
 
 		private void txtabono_KeyPress(object sender, KeyPressEventArgs v)
 		{
-			if (char.IsDigit(v.KeyChar))
+            if (txtabono.Text != "0")
+            {
+               // if (txtubicacion.Text == "Taller")
+                    button2.Visible = true;
+            }
+            if (char.IsDigit(v.KeyChar))
 			{
 				v.Handled = false;
 			}
@@ -514,18 +520,11 @@ namespace Electronica
 			{
 				v.Handled = true;
 				MessageBox.Show("Solo Numeros");
-			}
-
-            if (txtabono.Text != "0")
-            {
-                if (txtubicacion.Text == "Taller")
-                    button2.Visible = true;
-            }
-            else 
-            {
-               
                 button2.Visible = false;
             }
+
+           
+          
         }
 
 		protected override void Dispose(bool disposing)

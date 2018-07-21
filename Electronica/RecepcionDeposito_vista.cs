@@ -10,7 +10,7 @@ namespace Electronica
 {
 	public class RecepcionDeposito_vista : Form
 	{
-        private Principal prin;
+        
 
 		private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
@@ -44,21 +44,20 @@ namespace Electronica
 
 		private Label label5;
         private Label label6;
+
+        private Principal rdv;
+
         public TextBox txtcuenta;
 
         public RecepcionDeposito_vista()
         {
             InitializeComponent();
-            /*
-            int perso;
-                perso = Convert.ToInt32(txtidpersonal.Text);
-         perso = Convert.ToInt32(prin.txtpersonal.Text);
-         */
+         
         }
 
 		private void Taller_actualizar_Load(object sender, EventArgs e)
 		{
-            
+           
         }
 
 		public void button3_Click(object sender, EventArgs e)

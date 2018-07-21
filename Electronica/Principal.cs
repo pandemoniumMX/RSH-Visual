@@ -45,7 +45,15 @@ namespace Electronica
 
 		public TextBox txtpersonal;
 
-		private void AbrirFormaHija(object formhija)
+        // private RecepcionDeposito_vista rdv;
+        public TextBox personal
+        {
+            get
+            {
+                return txtpersonal;
+            }
+        }
+        private void AbrirFormaHija(object formhija)
 		{
 			if (panelcontenedor.Controls.Count > 0)
 			{
@@ -71,6 +79,7 @@ namespace Electronica
 			txtpersonal.Text = nombre;
 			AbrirFormaHija(new Inicio());
 		}
+      
 
 		private void button2_Click(object sender, EventArgs e)
 		{
@@ -99,6 +108,8 @@ namespace Electronica
 
 		private void Principal_Load(object sender, EventArgs e)
 		{
+           
+
 		}
 
 		private void panelcontenedor_Paint(object sender, PaintEventArgs e)
