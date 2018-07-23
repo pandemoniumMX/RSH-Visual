@@ -215,7 +215,7 @@ namespace Electronica
             this.Location = new System.Drawing.Point(242, 35);
             this.Name = "Taller_tv_reparacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Clientes";
+            this.Text = "Taller televisiones reparación";
             this.Load += new System.EventHandler(this.Taller_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_tv_reparacion_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();

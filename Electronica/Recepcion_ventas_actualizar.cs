@@ -523,7 +523,7 @@ namespace Electronica
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Recepcion_ventas_actualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "RecepcionTelevisores";
+            this.Text = "Recepcion Televisiones";
             this.Load += new System.EventHandler(this.RecepcionTelevisores_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recepcion_ventas_actualizar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -164,7 +164,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaClientes = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -189,8 +189,8 @@ namespace Electronica
             // 
             // TablaClientes
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaClientes.Location = new System.Drawing.Point(22, 133);
@@ -288,7 +288,7 @@ namespace Electronica
             this.Location = new System.Drawing.Point(242, 35);
             this.Name = "Recepcion_ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Clientes";
+            this.Text = "Recepción";
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recepcion_ventas_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).EndInit();

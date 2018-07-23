@@ -195,6 +195,7 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\bin\Debug\stdole.dll
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\bin\Debug\MySql.Data.xml
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csprojResolveAssemblyReference.cache
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Properties.Resources.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar_avisos.resources
@@ -277,6 +278,7 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_tv_rep
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_tv_reparada.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Taller_tv_solucion.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Administrar_Tecnicos_reporte_actualizar.resources
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Tecnicos.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Tecnicos_reporte.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Tecnicos_reporte2.resources
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Traslado_actualizar.resources
@@ -286,4 +288,3 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Properties.Resources.reso
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csproj.GenerateResource.Cache
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.exe
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.pdb
-C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csprojResolveAssemblyReference.cache

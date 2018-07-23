@@ -1251,7 +1251,7 @@ namespace Electronica
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RecepcionReparado_vista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Ordenes de Servicio";
+            this.Text = "Ordenes de servicio";
             this.Load += new System.EventHandler(this.Taller_actualizar_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionHistorial_vista_KeyDown);
             this.panel1.ResumeLayout(false);

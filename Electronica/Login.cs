@@ -182,127 +182,158 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Electronica.Login));
-			textBox1 = new System.Windows.Forms.TextBox();
-			contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(components);
-			textBox2 = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
-			label2 = new System.Windows.Forms.Label();
-			label9 = new System.Windows.Forms.Label();
-			pictureBox1 = new System.Windows.Forms.PictureBox();
-			button1 = new System.Windows.Forms.Button();
-			pictureBox2 = new System.Windows.Forms.PictureBox();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-			SuspendLayout();
-			textBox1.BackColor = System.Drawing.Color.FromArgb(7, 83, 143);
-			textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			textBox1.Font = new System.Drawing.Font("Century Gothic", 15.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			textBox1.ForeColor = System.Drawing.SystemColors.Control;
-			textBox1.Location = new System.Drawing.Point(167, 340);
-			textBox1.Margin = new System.Windows.Forms.Padding(2);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new System.Drawing.Size(132, 26);
-			textBox1.TabIndex = 0;
-			contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-			contextMenuStrip1.Name = "contextMenuStrip1";
-			contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-			textBox2.BackColor = System.Drawing.Color.FromArgb(2, 62, 124);
-			textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			textBox2.Font = new System.Drawing.Font("Century Gothic", 15.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			textBox2.ForeColor = System.Drawing.SystemColors.Control;
-			textBox2.Location = new System.Drawing.Point(167, 397);
-			textBox2.Margin = new System.Windows.Forms.Padding(2);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new System.Drawing.Size(132, 26);
-			textBox2.TabIndex = 1;
-			textBox2.UseSystemPasswordChar = true;
-			label1.AutoSize = true;
-			label1.BackColor = System.Drawing.Color.FromArgb(1, 112, 168);
-			label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			label1.Font = new System.Drawing.Font("Century Gothic", 15.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label1.ForeColor = System.Drawing.SystemColors.Control;
-			label1.Location = new System.Drawing.Point(15, 342);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(86, 24);
-			label1.TabIndex = 4;
-			label1.Text = "Usuario:";
-			label2.AutoSize = true;
-			label2.BackColor = System.Drawing.Color.FromArgb(2, 62, 124);
-			label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			label2.Font = new System.Drawing.Font("Century Gothic", 15.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label2.ForeColor = System.Drawing.SystemColors.Control;
-			label2.Location = new System.Drawing.Point(15, 399);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(135, 24);
-			label2.TabIndex = 5;
-			label2.Text = "Contraseña:";
-			label2.Click += new System.EventHandler(label2_Click);
-			label9.AutoSize = true;
-			label9.BackColor = System.Drawing.Color.FromArgb(193, 247, 249);
-			label9.Font = new System.Drawing.Font("Century Gothic", 21.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			label9.Location = new System.Drawing.Point(76, 30);
-			label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(199, 36);
-			label9.TabIndex = 28;
-			label9.Text = "Iniciar Sesión";
-			pictureBox1.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox1.BackgroundImage");
-			pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			pictureBox1.Location = new System.Drawing.Point(57, 83);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new System.Drawing.Size(242, 172);
-			pictureBox1.TabIndex = 6;
-			pictureBox1.TabStop = false;
-			button1.BackColor = System.Drawing.Color.FromArgb(2, 22, 72);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			button1.ForeColor = System.Drawing.SystemColors.Control;
-			button1.Image = Electronica.Properties.Resources._002_house_key2;
-			button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			button1.Location = new System.Drawing.Point(167, 473);
-			button1.Margin = new System.Windows.Forms.Padding(2);
-			button1.Name = "button1";
-			button1.Size = new System.Drawing.Size(132, 46);
-			button1.TabIndex = 2;
-			button1.Text = "   Iniciar";
-			button1.UseVisualStyleBackColor = false;
-			button1.Click += new System.EventHandler(button1_Click);
-			pictureBox2.Image = Electronica.Properties.Resources.landscape_3840x2160_flat_4k_5k_fog_iphone_wallpaper_forest_blue_11927;
-			pictureBox2.Location = new System.Drawing.Point(0, 0);
-			pictureBox2.Name = "pictureBox2";
-			pictureBox2.Size = new System.Drawing.Size(346, 580);
-			pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			pictureBox2.TabIndex = 29;
-			pictureBox2.TabStop = false;
-			pictureBox2.Click += new System.EventHandler(pictureBox2_Click);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.Color.MintCream;
-			base.ClientSize = new System.Drawing.Size(348, 579);
-			base.Controls.Add(label9);
-			base.Controls.Add(pictureBox1);
-			base.Controls.Add(label2);
-			base.Controls.Add(label1);
-			base.Controls.Add(button1);
-			base.Controls.Add(textBox2);
-			base.Controls.Add(textBox1);
-			base.Controls.Add(pictureBox2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-			base.Margin = new System.Windows.Forms.Padding(2);
-			base.Name = "Login";
-			base.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			Text = "Login";
-			base.FormClosing += new System.Windows.Forms.FormClosingEventHandler(Login_FormClosing_1);
-			base.FormClosed += new System.Windows.Forms.FormClosedEventHandler(Login_FormClosed);
-			base.Load += new System.EventHandler(Login_Load);
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(83)))), ((int)(((byte)(143)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBox1.Location = new System.Drawing.Point(167, 340);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 26);
+            this.textBox1.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(124)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBox2.Location = new System.Drawing.Point(167, 397);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(132, 26);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(112)))), ((int)(((byte)(168)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(15, 342);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Usuario:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(124)))));
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(15, 399);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Contraseña:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(76, 30);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(199, 36);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Iniciar Sesión";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(57, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(242, 172);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(22)))), ((int)(((byte)(72)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::Electronica.Properties.Resources._002_house_key2;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(167, 473);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 46);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "   Iniciar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Electronica.Properties.Resources.landscape_3840x2160_flat_4k_5k_fog_iphone_wallpaper_forest_blue_11927;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(346, 580);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MintCream;
+            this.ClientSize = new System.Drawing.Size(348, 579);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Iniciar Sesión";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing_1);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 	}
 }

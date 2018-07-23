@@ -224,7 +224,7 @@ namespace Electronica
             this.Location = new System.Drawing.Point(242, 35);
             this.Name = "Taller_tv_solucion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Clientes";
+            this.Text = "Taller televisiones sin solución";
             this.Load += new System.EventHandler(this.Taller_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_tv_solucion_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();

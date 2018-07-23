@@ -1427,7 +1427,7 @@ namespace Electronica
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RecepcionHistorial_vista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Ordenes de Servicio";
+            this.Text = "Historial orden de servicio";
             this.Load += new System.EventHandler(this.Taller_actualizar_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionHistorial_vista2_KeyDown);
             this.panel1.ResumeLayout(false);

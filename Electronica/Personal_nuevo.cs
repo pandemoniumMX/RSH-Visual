@@ -520,7 +520,7 @@ namespace Electronica
             this.KeyPreview = true;
             this.Name = "Personal_nuevo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Personal Nuevo";
+            this.Text = "Nuevo Personal";
             this.Load += new System.EventHandler(this.Clientes_nuevos_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Personal_nuevo_KeyDown);
             this.ResumeLayout(false);

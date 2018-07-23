@@ -536,7 +536,7 @@ namespace Electronica
             this.Location = new System.Drawing.Point(242, 35);
             this.Name = "Administrar_Tecnicos_reporte_actualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Clientes";
+            this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tecnicos_reporte_KeyDown);
             this.ResumeLayout(false);
