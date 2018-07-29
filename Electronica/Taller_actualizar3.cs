@@ -173,7 +173,7 @@ namespace Electronica
 				string falla = txtfalla.Text;
 				string accesorios = txtaccesorios.Text;
 				string equipo = txtequipo.Text;
-				string estado = txtestado.SelectedItem.ToString();
+				string estado = txtestado.Text;
 				string modelo = txtmodelo.Text;
 				string fecha = txtfechain.Text;
 				string fechaeg = txtfechaen.Text;

@@ -37,7 +37,7 @@ namespace Electronica
 
 		public void BuscarCliente(string valueToSearch)
 		{
-			string query_tabla_clientes = "SELECT * FROM `Personal` WHERE CONCAT(`Id_personal`, `Tipo`, `Usuario`, `Contraseña`, `nombre`,`apellidos`,`correo`, `celular`)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_clientes = "SELECT * FROM `Personal` WHERE CONCAT(`Id_personal`, `Tipo`, `Usuario`, `Contrasena`, `nombre`,`apellidos`,`correo`, `celular`)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_clientes = new MySqlCommand(query_tabla_clientes, conn);
 			try
 			{

@@ -428,6 +428,9 @@
     <EmbeddedResource Include="Electronica\Avisos.resx">
       <DependentUpon>Avisos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Clientes_actualizar.resx">
       <DependentUpon>Clientes_actualizar.cs</DependentUpon>
     </EmbeddedResource>

@@ -116,7 +116,7 @@ namespace Electronica
 				string apellido = txtapellidos.Text;
 				string correo = txtcorreo.Text;
 				int celular = Convert.ToInt32(txtcelular.Text);
-				string query_insertar_clientes = "insert into personal (tipo,usuario, contraseña, nombre, apellidos, correo, celular) values ('" + tipo + "','" + usuario + "','" + contraseña + "','" + nombre + "','" + apellido + "','" + correo + "','" + celular + "')";
+				string query_insertar_clientes = "insert into personal (tipo,usuario, contrasena, nombre, apellidos, correo, celular) values ('" + tipo + "','" + usuario + "','" + contraseña + "','" + nombre + "','" + apellido + "','" + correo + "','" + celular + "')";
 				MySqlCommand cmd_query_insertar_clientes = new MySqlCommand(query_insertar_clientes, conn);
 				try
 				{

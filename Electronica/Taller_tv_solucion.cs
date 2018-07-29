@@ -165,7 +165,7 @@ namespace Electronica
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
+            this.TablaEquipos.Size = new System.Drawing.Size(1080, 561);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
@@ -212,7 +212,7 @@ namespace Electronica
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1104, 557);
+            this.ClientSize = new System.Drawing.Size(1104, 702);
             this.Controls.Add(this.txttipo);
             this.Controls.Add(this.txtfolio);
             this.Controls.Add(this.label1);

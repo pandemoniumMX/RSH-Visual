@@ -150,91 +150,116 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
-			label2 = new System.Windows.Forms.Label();
-			TablaClientes = new System.Windows.Forms.DataGridView();
-			Buscador = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
-			txtfolio = new System.Windows.Forms.TextBox();
-			btn_cliente_nuevo = new System.Windows.Forms.Button();
-			Reparado = new System.Windows.Forms.TextBox();
-			((System.ComponentModel.ISupportInitialize)TablaClientes).BeginInit();
-			SuspendLayout();
-			label2.AutoSize = true;
-			label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label2.Location = new System.Drawing.Point(15, 20);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(292, 24);
-			label2.TabIndex = 2;
-			label2.Text = "Modificar Clientes Registrados";
-			label2.Click += new System.EventHandler(label2_Click);
-			dataGridViewCellStyle.BackColor = System.Drawing.Color.Silver;
-			TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle;
-			TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-			TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			TablaClientes.Location = new System.Drawing.Point(22, 133);
-			TablaClientes.Name = "TablaClientes";
-			TablaClientes.ReadOnly = true;
-			TablaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			TablaClientes.Size = new System.Drawing.Size(813, 419);
-			TablaClientes.TabIndex = 3;
-			TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(TablaClientes_CellContentClick_1);
-			TablaClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(TablaClientes_CellMouseClick);
-			Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			Buscador.Location = new System.Drawing.Point(94, 86);
-			Buscador.Name = "Buscador";
-			Buscador.Size = new System.Drawing.Size(100, 26);
-			Buscador.TabIndex = 5;
-			Buscador.TextChanged += new System.EventHandler(Buscador_TextChanged);
-			Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Buscador_KeyPress);
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(18, 86);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(80, 24);
-			label1.TabIndex = 6;
-			label1.Text = "Buscar:";
-			txtfolio.Location = new System.Drawing.Point(555, 25);
-			txtfolio.Name = "txtfolio";
-			txtfolio.Size = new System.Drawing.Size(100, 20);
-			txtfolio.TabIndex = 7;
-			txtfolio.Visible = false;
-			btn_cliente_nuevo.FlatAppearance.BorderSize = 0;
-			btn_cliente_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			btn_cliente_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			btn_cliente_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-			btn_cliente_nuevo.Image = Electronica.Properties.Resources.new_user;
-			btn_cliente_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			btn_cliente_nuevo.Location = new System.Drawing.Point(234, 81);
-			btn_cliente_nuevo.Name = "btn_cliente_nuevo";
-			btn_cliente_nuevo.Size = new System.Drawing.Size(152, 36);
-			btn_cliente_nuevo.TabIndex = 4;
-			btn_cliente_nuevo.Text = "  Nuevo Cliente";
-			btn_cliente_nuevo.UseVisualStyleBackColor = true;
-			btn_cliente_nuevo.Click += new System.EventHandler(Cliente_nuevo);
-			Reparado.Location = new System.Drawing.Point(536, 65);
-			Reparado.Name = "Reparado";
-			Reparado.Size = new System.Drawing.Size(131, 20);
-			Reparado.TabIndex = 8;
-			Reparado.Visible = false;
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(857, 574);
-			base.Controls.Add(Reparado);
-			base.Controls.Add(txtfolio);
-			base.Controls.Add(label1);
-			base.Controls.Add(Buscador);
-			base.Controls.Add(btn_cliente_nuevo);
-			base.Controls.Add(TablaClientes);
-			base.Controls.Add(label2);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			base.Name = "Clientes";
-			Text = "Clientes";
-			base.Load += new System.EventHandler(Clientes_Load);
-			((System.ComponentModel.ISupportInitialize)TablaClientes).EndInit();
-			ResumeLayout(false);
-			PerformLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TablaClientes = new System.Windows.Forms.DataGridView();
+            this.Buscador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtfolio = new System.Windows.Forms.TextBox();
+            this.btn_cliente_nuevo = new System.Windows.Forms.Button();
+            this.Reparado = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(292, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Modificar Clientes Registrados";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // TablaClientes
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaClientes.Location = new System.Drawing.Point(22, 133);
+            this.TablaClientes.Name = "TablaClientes";
+            this.TablaClientes.ReadOnly = true;
+            this.TablaClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TablaClientes.Size = new System.Drawing.Size(859, 551);
+            this.TablaClientes.TabIndex = 3;
+            this.TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaClientes_CellContentClick_1);
+            this.TablaClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaClientes_CellMouseClick);
+            // 
+            // Buscador
+            // 
+            this.Buscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscador.Location = new System.Drawing.Point(94, 86);
+            this.Buscador.Name = "Buscador";
+            this.Buscador.Size = new System.Drawing.Size(100, 26);
+            this.Buscador.TabIndex = 5;
+            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
+            this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar:";
+            // 
+            // txtfolio
+            // 
+            this.txtfolio.Location = new System.Drawing.Point(555, 25);
+            this.txtfolio.Name = "txtfolio";
+            this.txtfolio.Size = new System.Drawing.Size(100, 20);
+            this.txtfolio.TabIndex = 7;
+            this.txtfolio.Visible = false;
+            // 
+            // btn_cliente_nuevo
+            // 
+            this.btn_cliente_nuevo.FlatAppearance.BorderSize = 0;
+            this.btn_cliente_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_cliente_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cliente_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cliente_nuevo.Image = global::Electronica.Properties.Resources.new_user;
+            this.btn_cliente_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cliente_nuevo.Location = new System.Drawing.Point(234, 81);
+            this.btn_cliente_nuevo.Name = "btn_cliente_nuevo";
+            this.btn_cliente_nuevo.Size = new System.Drawing.Size(152, 36);
+            this.btn_cliente_nuevo.TabIndex = 4;
+            this.btn_cliente_nuevo.Text = "  Nuevo Cliente";
+            this.btn_cliente_nuevo.UseVisualStyleBackColor = true;
+            this.btn_cliente_nuevo.Click += new System.EventHandler(this.Cliente_nuevo);
+            // 
+            // Reparado
+            // 
+            this.Reparado.Location = new System.Drawing.Point(536, 65);
+            this.Reparado.Name = "Reparado";
+            this.Reparado.Size = new System.Drawing.Size(131, 20);
+            this.Reparado.TabIndex = 8;
+            this.Reparado.Visible = false;
+            // 
+            // Clientes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(927, 707);
+            this.Controls.Add(this.Reparado);
+            this.Controls.Add(this.txtfolio);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Buscador);
+            this.Controls.Add(this.btn_cliente_nuevo);
+            this.Controls.Add(this.TablaClientes);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Clientes";
+            this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TablaClientes)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 	}
 }

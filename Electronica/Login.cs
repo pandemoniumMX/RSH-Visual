@@ -45,9 +45,9 @@ namespace Electronica
             try
             {
 				conn.Open();
-				MySqlCommand cmd = new MySqlCommand("SELECT id_personal, tipo from personal  WHERE usuario=@usuario and contraseña= @contraseña ", conn);
+				MySqlCommand cmd = new MySqlCommand("SELECT id_personal, tipo from personal  WHERE usuario=@usuario and contrasena= @contrasena ", conn);
 				cmd.Parameters.AddWithValue("usuario", textBox1.Text);
-				cmd.Parameters.AddWithValue("contraseña", textBox2.Text);
+				cmd.Parameters.AddWithValue("contrasena", textBox2.Text);
 				MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
 				DataTable dt = new DataTable();
 				sda.Fill(dt);

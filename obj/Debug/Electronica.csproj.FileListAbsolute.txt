@@ -288,3 +288,4 @@ C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Properties.Resources.reso
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.csproj.GenerateResource.Cache
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.exe
 C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.pdb
+C:\Users\Pandemonium\Source\Repos\RSH-Visual\obj\Debug\Electronica.Clientes.resources

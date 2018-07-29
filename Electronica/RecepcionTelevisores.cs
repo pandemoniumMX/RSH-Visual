@@ -124,7 +124,7 @@ namespace Electronica
 				{
 					conn.Open();
 					MySqlDataReader leercomando = cmd_query_insertar_televisor.ExecuteReader();
-					MessageBox.Show("Television agregada correctamente");
+					//MessageBox.Show("Television agregada correctamente");
 					conn.Close();
 					Close();
 				}
@@ -310,6 +310,7 @@ namespace Electronica
             "Blu Sens",
             "Blue Point",
             "Cobia",
+            "Daewoo",
             "DWDisplay",
             "Haier",
             "Hisense",
@@ -381,9 +382,12 @@ namespace Electronica
             this.comboaccesorios.Items.AddRange(new object[] {
             "Ninguno",
             "Base",
-            "Cable de corriente",
+            "Base de pared",
+            "Cable de poder",
             "Control de TV",
             "Patas",
+            "Fuente de poder",
+            "Base y cable de poder",
             "Otros (Especificar en comentarios)"});
             this.comboaccesorios.Location = new System.Drawing.Point(356, 85);
             this.comboaccesorios.Margin = new System.Windows.Forms.Padding(2);
@@ -449,12 +453,12 @@ namespace Electronica
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 118);
+            this.label11.Location = new System.Drawing.Point(12, 121);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.Size = new System.Drawing.Size(48, 13);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Locacion:";
+            this.label11.Text = "Servicio:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // combolacacion
@@ -464,6 +468,7 @@ namespace Electronica
             this.combolacacion.Items.AddRange(new object[] {
             "Taller",
             "Domicilio",
+            "Compra",
             "Garantia",
             "Otros"});
             this.combolacacion.Location = new System.Drawing.Point(73, 118);

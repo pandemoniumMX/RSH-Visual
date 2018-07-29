@@ -100,7 +100,7 @@ namespace Electronica
 					string apellido = txtapellidos.Text;
 					string correo = txtcorreo.Text;
 					string celular = txtcelular.Text;
-					string query_insertar_clientes = "update  personal set tipo= '" + tipo + "',usuario ='" + usuario + "', contraseña='" + contraseña + "', nombre='" + nombre + "', apellidos='" + apellido + "', correo='" + correo + "', celular='" + celular + "' where id_personal ='" + folio + "'";
+					string query_insertar_clientes = "update  personal set tipo= '" + tipo + "',usuario ='" + usuario + "', contrasena='" + contraseña + "', nombre='" + nombre + "', apellidos='" + apellido + "', correo='" + correo + "', celular='" + celular + "' where id_personal ='" + folio + "'";
 					MySqlCommand cmd_query_insertar_clientes = new MySqlCommand(query_insertar_clientes, conn);
 					try
 					{

@@ -352,15 +352,15 @@ namespace Electronica
                 string personal = txtpersonal.Text;
                 string idequipo = txtidequipo.Text;
 
-                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , restante='0' ,fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente',  restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente',  restante='0' ,fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' , restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' , restante='0' ,fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente',  restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente',  restante='0' ,fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' ,  restante='0' ,fecha_entregar=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
+                string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' ,  restante='0' ,fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + idequipo + "' and id_folio='" + folio + "'";
                 MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
                 try
                 {

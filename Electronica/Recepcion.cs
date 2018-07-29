@@ -281,10 +281,10 @@ namespace Electronica
             this.TablaClientes.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.TablaClientes.Location = new System.Drawing.Point(110, 180);
+            this.TablaClientes.Location = new System.Drawing.Point(129, 178);
             this.TablaClientes.Name = "TablaClientes";
             this.TablaClientes.ReadOnly = true;
-            this.TablaClientes.Size = new System.Drawing.Size(885, 419);
+            this.TablaClientes.Size = new System.Drawing.Size(853, 499);
             this.TablaClientes.TabIndex = 3;
             this.TablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaClientes_CellContentClick);
             this.TablaClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaClientes_CellMouseClick);
@@ -339,6 +339,7 @@ namespace Electronica
             this.txtpersonal.Name = "txtpersonal";
             this.txtpersonal.Size = new System.Drawing.Size(100, 20);
             this.txtpersonal.TabIndex = 13;
+            this.txtpersonal.Visible = false;
             // 
             // button5
             // 
