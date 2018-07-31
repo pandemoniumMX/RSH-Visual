@@ -127,7 +127,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -143,14 +143,14 @@ namespace Electronica
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(288, 24);
+            this.label2.Size = new System.Drawing.Size(391, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Buscar Linea blanca en Taller";
+            this.label2.Text = "Buscar otros equipos en Taller revisados";
             // 
             // TablaEquipos
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 129);
@@ -184,7 +184,7 @@ namespace Electronica
             // 
             // txtfolio
             // 
-            this.txtfolio.Location = new System.Drawing.Point(377, 25);
+            this.txtfolio.Location = new System.Drawing.Point(341, 56);
             this.txtfolio.Name = "txtfolio";
             this.txtfolio.Size = new System.Drawing.Size(100, 20);
             this.txtfolio.TabIndex = 7;
@@ -200,7 +200,7 @@ namespace Electronica
             this.txttipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txttipo.Visible = false;
             // 
-            // Taller_electrodomesticos_diagnosticada
+            // Taller_otros_diagnosticada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,7 +215,7 @@ namespace Electronica
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
-            this.Name = "Taller_electrodomesticos_diagnosticada";
+            this.Name = "Taller_otros_diagnosticada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Taller_Load);

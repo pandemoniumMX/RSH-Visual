@@ -57,15 +57,9 @@ namespace Electronica
 
 		private Button btntele;
 
-		private Button btncel;
-
 		private Button btnelectro;
 
-		private Button btnaudio;
-
 		private Label label9;
-
-		private Button button1;
 
 		public Recepcion2()
 		{
@@ -129,9 +123,8 @@ namespace Electronica
 					txtcelular.Text = celular;
 					txtpuntos.Text = Convert.ToString(puntos);
 					txtfecha.Text = fecha;
-					btnaudio.Visible = true;
+					
 					btntele.Visible = true;
-					btncel.Visible = true;
 					btnelectro.Visible = true;
 					btnhistorial.Visible = true;
 				}
@@ -164,35 +157,18 @@ namespace Electronica
 		{
 		}
 
-		private void btncel_Click(object sender, EventArgs e)
-		{
-			limpiarpanelanidado();
-			RecepcionTablets_Cel rec = new RecepcionTablets_Cel();
-			rec.txtidoculto.Text = txtfolio.Text.ToString();
-			rec.TopLevel = false;
-			rec.Parent = panelanidado;
-			rec.Show();
-		}
-
+		
 		private void btnelectro_Click(object sender, EventArgs e)
 		{
 			limpiarpanelanidado();
-			RecepcionElectrodomesticos rec = new RecepcionElectrodomesticos();
+			RecepcionOtros rec = new RecepcionOtros();
 			rec.txtidoculto.Text = txtfolio.Text.ToString();
 			rec.TopLevel = false;
 			rec.Parent = panelanidado;
 			rec.Show();
 		}
 
-		private void btnaudio_Click(object sender, EventArgs e)
-		{
-			limpiarpanelanidado();
-			RecepcionAudio rec = new RecepcionAudio();
-			rec.txtidoculto.Text = txtfolio.Text.ToString();
-			rec.TopLevel = false;
-			rec.Parent = panelanidado;
-			rec.Show();
-		}
+		
 
 		private void Recepcion_Load(object sender, EventArgs e)
 		{
@@ -242,15 +218,6 @@ namespace Electronica
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			limpiarpanelanidado();
-			RecepcionLaptops rec = new RecepcionLaptops();
-			rec.txtidoculto.Text = txtfolio.Text.ToString();
-			rec.TopLevel = false;
-			rec.Parent = panelanidado;
-			rec.Show();
-		}
 
 		private void panelanidado_Paint(object sender, PaintEventArgs e)
 		{
@@ -285,10 +252,7 @@ namespace Electronica
             this.label2 = new System.Windows.Forms.Label();
             this.panelanidado = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnaudio = new System.Windows.Forms.Button();
             this.btnelectro = new System.Windows.Forms.Button();
-            this.btncel = new System.Windows.Forms.Button();
             this.btntele = new System.Windows.Forms.Button();
             this.btnhistorial = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
@@ -481,42 +445,6 @@ namespace Electronica
             this.label9.Text = "Orden de Servicio:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Electronica.Properties.Resources._002_laptop1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(642, 157);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 39);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "       Laptop/Cpu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnaudio
-            // 
-            this.btnaudio.BackColor = System.Drawing.SystemColors.Control;
-            this.btnaudio.FlatAppearance.BorderSize = 0;
-            this.btnaudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnaudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnaudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaudio.Image = global::Electronica.Properties.Resources._003_big_music_player_speaker;
-            this.btnaudio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnaudio.Location = new System.Drawing.Point(475, 157);
-            this.btnaudio.Margin = new System.Windows.Forms.Padding(2);
-            this.btnaudio.Name = "btnaudio";
-            this.btnaudio.Size = new System.Drawing.Size(139, 39);
-            this.btnaudio.TabIndex = 26;
-            this.btnaudio.Text = "      Audio/Sonido";
-            this.btnaudio.UseVisualStyleBackColor = false;
-            this.btnaudio.Click += new System.EventHandler(this.btnaudio_Click);
-            // 
             // btnelectro
             // 
             this.btnelectro.BackColor = System.Drawing.SystemColors.Control;
@@ -526,32 +454,14 @@ namespace Electronica
             this.btnelectro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnelectro.Image = global::Electronica.Properties.Resources._001_washing_machine;
             this.btnelectro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnelectro.Location = new System.Drawing.Point(796, 157);
+            this.btnelectro.Location = new System.Drawing.Point(298, 157);
             this.btnelectro.Margin = new System.Windows.Forms.Padding(2);
             this.btnelectro.Name = "btnelectro";
-            this.btnelectro.Size = new System.Drawing.Size(140, 39);
+            this.btnelectro.Size = new System.Drawing.Size(155, 39);
             this.btnelectro.TabIndex = 25;
-            this.btnelectro.Text = "      Linea blanca";
+            this.btnelectro.Text = "      Otros equipos";
             this.btnelectro.UseVisualStyleBackColor = false;
             this.btnelectro.Click += new System.EventHandler(this.btnelectro_Click);
-            // 
-            // btncel
-            // 
-            this.btncel.BackColor = System.Drawing.SystemColors.Control;
-            this.btncel.FlatAppearance.BorderSize = 0;
-            this.btncel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btncel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncel.Image = global::Electronica.Properties.Resources._004_smartphone_call;
-            this.btncel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncel.Location = new System.Drawing.Point(302, 157);
-            this.btncel.Margin = new System.Windows.Forms.Padding(2);
-            this.btncel.Name = "btncel";
-            this.btncel.Size = new System.Drawing.Size(148, 39);
-            this.btncel.TabIndex = 24;
-            this.btncel.Text = "     Celular / Tablet";
-            this.btncel.UseVisualStyleBackColor = false;
-            this.btncel.Click += new System.EventHandler(this.btncel_Click);
             // 
             // btntele
             // 
@@ -649,11 +559,8 @@ namespace Electronica
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1104, 702);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnaudio);
             this.Controls.Add(this.btnelectro);
-            this.Controls.Add(this.btncel);
             this.Controls.Add(this.btntele);
             this.Controls.Add(this.panelanidado);
             this.Controls.Add(this.label2);

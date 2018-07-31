@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Electronica
 {
-	public class RecepcionElectrodomesticos : Form
+	public class RecepcionOtros : Form
 	{
 		private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
@@ -51,7 +51,7 @@ namespace Electronica
 
 		public TextBox txtmarca;
 
-		public RecepcionElectrodomesticos()
+		public RecepcionOtros()
 		{
 			InitializeComponent();
 		}
