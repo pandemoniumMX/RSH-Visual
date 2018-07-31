@@ -110,26 +110,6 @@ namespace Electronica
 			}
 		}
 
-		private void txtetiqueta1_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void combofalla_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void comboaccesorios_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void txtetiqueta2_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void RecepcionTelevisores_Load(object sender, EventArgs e)
-		{
-		}
-
 		private void button1_Click(object sender, EventArgs e)
 		{
 			opf.InitialDirectory = "C:\\Users";
@@ -178,10 +158,7 @@ namespace Electronica
 			}
 		}
 
-		private void combopartes_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
+		
 		private void txtcosto_KeyPress(object sender, KeyPressEventArgs v)
 		{
 			if (char.IsDigit(v.KeyChar))
@@ -524,7 +501,6 @@ namespace Electronica
             this.Name = "Recepcion_ventas_actualizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Recepcion Televisiones";
-            this.Load += new System.EventHandler(this.RecepcionTelevisores_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recepcion_ventas_actualizar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -55,17 +55,7 @@ namespace Electronica
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
+	
 
 		private void Buscador_TextChanged(object sender, EventArgs e)
 		{
@@ -82,10 +72,6 @@ namespace Electronica
 			BuscarEquipos("");
 		}
 
-		private void Cliente_nuevo(object sender, EventArgs e)
-		{
-		}
-
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			if (e.RowIndex >= 0)
@@ -99,9 +85,7 @@ namespace Electronica
 			}
 		}
 
-		private void TablaEquipos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+		
 
 		protected override void Dispose(bool disposing)
 		{
@@ -146,7 +130,6 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1085, 515);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador

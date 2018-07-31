@@ -37,7 +37,7 @@ namespace Electronica
 		public void BuscarEquipos(string valueToSearch)
 		{
 			int folio = Convert.ToInt32(txt_folio.Text);
-			string query_tabla_equipos = "SELECT * FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM clientes LEFT JOIN reparar_laptops USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where id_folio = '" + folio + "' and CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_audio USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_smartphones USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT * FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -56,22 +56,9 @@ namespace Electronica
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
+		
 
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void Buscador_TextChanged(object sender, EventArgs e)
-		{
-		}
-
+		
 		private void Buscador_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			string valueToSearch = Buscador.Text.ToString();
@@ -83,9 +70,7 @@ namespace Electronica
 			BuscarEquipos("");
 		}
 
-		private void Cliente_nuevo(object sender, EventArgs e)
-		{
-		}
+	
 
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
@@ -123,10 +108,7 @@ namespace Electronica
 			}
 		}
 
-		private void TablaEquipos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
+		
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && components != null)
@@ -170,7 +152,6 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1085, 419);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador
@@ -180,7 +161,6 @@ namespace Electronica
             this.Buscador.Name = "Buscador";
             this.Buscador.Size = new System.Drawing.Size(100, 26);
             this.Buscador.TabIndex = 5;
-            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
             this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
             // 
             // label1

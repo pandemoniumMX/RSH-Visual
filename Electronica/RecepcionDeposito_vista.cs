@@ -136,12 +136,7 @@ namespace Electronica
                     MySqlCommand cmd_cobranza = new MySqlCommand(cobranza, conn);
                     string descuento8 = "UPDATE reparar_tv SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
                     MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-                    string descuento7 = "UPDATE reparar_laptops SET estado = 'Depositado'  WHERE id_equipo ='" + equipo + "'";
-                    MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-                    string descuento6 = "UPDATE reparar_smartphones SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "'";
-                    MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-                    string descuento5 = "UPDATE reparar_audio SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "'";
-                    MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
+                    
                     string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Depositado' WHERE id_equipo ='" + equipo + "'";
                     MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
                     try
@@ -152,15 +147,7 @@ namespace Electronica
                         conn.Open();
                         MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
                         conn.Close();
-                        conn.Open();
-                        MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-                        conn.Close();
-                        conn.Open();
-                        MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
-                        conn.Close();
-                        conn.Open();
-                        MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
-                        conn.Close();
+                     
                         conn.Open();
                         MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
                         MessageBox.Show("Ticket de pago registrado exitosamente");

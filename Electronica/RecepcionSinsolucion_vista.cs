@@ -134,7 +134,7 @@ namespace Electronica
 			try
 			{
 				int folio = Convert.ToInt32(txtfolio.Text);
-				string descuento = "select sum(p.puntos) as total_total from(SELECT puntos FROM reparar_smartphones where id_folio = '" + folio + "' and estado='Reparado' UNION ALL SELECT puntos FROM reparar_tv where id_folio = '" + folio + "' and estado='Reparado' UNION ALL SELECT puntos FROM reparar_electrodomesticos where id_folio = '" + folio + "' and estado='Reparado' UNION ALL SELECT puntos FROM reparar_audio where id_folio = '" + folio + "' and estado='Reparado' UNION ALL SELECT puntos FROM reparar_laptops where id_folio = '" + folio + "' and estado='Reparado') p";
+				string descuento = "select sum(p.puntos) as total_total from(SELECT puntos FROM reparar_electrodomesticos where id_folio = '" + folio + "' and estado='Reparado' UNION ALL SELECT puntos FROM reparar_tv where id_folio = '" + folio + "' and estado='Reparado' ) p";
 				conn.Open();
 				MySqlCommand cmd_descuento = new MySqlCommand(descuento, conn);
 				txtpuntos.Text = cmd_descuento.ExecuteScalar().ToString();
@@ -175,14 +175,7 @@ namespace Electronica
 			}
 		}
 
-		private void comboestado_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
+		
 		private void button2_Click(object sender, EventArgs e)
 		{
 			int presupuesto = Convert.ToInt32(txtrefaccion.Text);
@@ -206,18 +199,6 @@ namespace Electronica
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void Taller_actualizar_Load(object sender, EventArgs e)
-		{
-		}
-
-		private void txttotal_TextChanged(object sender, EventArgs e)
-		{
-		}
-
 		private void txttotal_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
@@ -226,9 +207,7 @@ namespace Electronica
 			}
 		}
 
-		private void panel1_Paint(object sender, PaintEventArgs e)
-		{
-		}
+		
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
@@ -250,13 +229,7 @@ namespace Electronica
 			conn.Close();
 		}
 
-		private void button2_Click_1(object sender, EventArgs e)
-		{
-		}
-
-		private void panel3_Paint(object sender, PaintEventArgs e)
-		{
-		}
+	
 
 		private void button3_Click(object sender, EventArgs e)
 		{
@@ -267,14 +240,9 @@ namespace Electronica
 				string total = txtsubtotal.Text;
 				string descuento8 = "UPDATE reparar_tv SET puntos = '0', costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='Reparado'";
 				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-				string descuento7 = "UPDATE reparar_laptops SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
+				string descuento7 = "UPDATE reparar_electrodomesticos SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
 				MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-				string descuento6 = "UPDATE reparar_smartphones SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-				string descuento5 = "UPDATE reparar_audio SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-				string descuento4 = "UPDATE reparar_electrodomesticos SET puntos = '0' , costo_total='" + total + "' WHERE id_equipo ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
+				
 				try
 				{
 					conn.Open();
@@ -282,15 +250,8 @@ namespace Electronica
 					conn.Close();
 					conn.Open();
 					MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
+					
+				
 					MessageBox.Show("Descuento aplicado satisfcatoriamente");
 					conn.Close();
 				}
@@ -301,9 +262,7 @@ namespace Electronica
 			}
 		}
 
-		private void panel2_Paint(object sender, PaintEventArgs e)
-		{
-		}
+		
 
 		private void button4_Click(object sender, EventArgs e)
 		{
@@ -314,14 +273,9 @@ namespace Electronica
 				string personal = txtpersonal.Text;
 				string descuento8 = "UPDATE reparar_tv SET estado = 'Devuelto', ubicacion='Cliente' , fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
 				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-				string descuento7 = "UPDATE reparar_laptops SET estado = 'Devuelto', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
+				string descuento7 = "UPDATE reparar_electrodomesticos SET estado = 'Devuelto', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
 				MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-				string descuento6 = "UPDATE reparar_smartphones SET estado = 'Devuelto', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-				string descuento5 = "UPDATE reparar_audio SET estado = 'Devuelto', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-				string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Devuelto', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
+			
 				try
 				{
 					conn.Open();
@@ -329,15 +283,7 @@ namespace Electronica
 					conn.Close();
 					conn.Open();
 					MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
+				
 					MessageBox.Show("Devolución aplicada correctamente");
 					conn.Close();
                     Close();
@@ -720,7 +666,6 @@ namespace Electronica
             this.combotecnico.Size = new System.Drawing.Size(126, 21);
             this.combotecnico.TabIndex = 35;
             this.combotecnico.Visible = false;
-            this.combotecnico.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -755,7 +700,6 @@ namespace Electronica
             this.txtsubtotal.Size = new System.Drawing.Size(76, 20);
             this.txtsubtotal.TabIndex = 38;
             this.txtsubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtsubtotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             this.txtsubtotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttotal_KeyPress);
             // 
             // txtabono
@@ -829,7 +773,6 @@ namespace Electronica
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1106, 235);
             this.panel1.TabIndex = 46;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtpersonal
             // 
@@ -874,7 +817,6 @@ namespace Electronica
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1106, 201);
             this.panel2.TabIndex = 47;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtegreso
             // 
@@ -1025,7 +967,6 @@ namespace Electronica
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1106, 301);
             this.panel3.TabIndex = 48;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label25
             // 
@@ -1112,7 +1053,6 @@ namespace Electronica
             this.button2.Text = "       Ver y aplicar descuento";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label1
             // 
@@ -1187,7 +1127,6 @@ namespace Electronica
             this.Name = "RecepcionSinsolucion_vista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Ordenes de Servicio";
-            this.Load += new System.EventHandler(this.Taller_actualizar_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RecepcionHistorial_vista_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

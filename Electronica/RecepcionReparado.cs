@@ -30,13 +30,11 @@ namespace Electronica
 			InitializeComponent();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+		
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM clientes LEFT JOIN reparar_laptops USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where estado = 'Reparada' and CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_audio USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT* FROM clientes LEFT JOIN reparar_smartphones USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT * FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT * FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where estado = 'Reparada' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch +"%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -72,10 +70,7 @@ namespace Electronica
 			BuscarEquipos("");
 		}
 
-		private void Cliente_nuevo(object sender, EventArgs e)
-		{
-		}
-
+		
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			if (e.RowIndex >= 0)
@@ -112,9 +107,7 @@ namespace Electronica
             }
 		}
 
-		private void TablaEquipos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+		
 
 		protected override void Dispose(bool disposing)
 		{
@@ -159,7 +152,6 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1085, 557);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador

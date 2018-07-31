@@ -97,7 +97,10 @@ namespace Electronica
 
 		private void btngenerar_Click(object sender, EventArgs e)
 		{
-			if (string.IsNullOrWhiteSpace(combopartes.Text))
+            DialogResult dr = MessageBox.Show("¿Está seguro de enviar la información anterior? Verifique la información, esta acción es irreversible", "Informacion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+            if (dr == DialogResult.Yes && opf.CheckFileExists)
+            {
+                if (string.IsNullOrWhiteSpace(combopartes.Text))
 			{
 				MessageBox.Show("Campo tipo de pieza no seleccionado");
 			}
@@ -121,10 +124,7 @@ namespace Electronica
 			{
 				MessageBox.Show("Campo etiqueta 1 vacía");
 			}
-			if (string.IsNullOrWhiteSpace(txtetiqueta2.Text))
-			{
-				MessageBox.Show("Campo etiqueta 2 vacía");
-			}
+						
 			if (string.IsNullOrWhiteSpace(comboestado.Text))
 			{
 				MessageBox.Show("Campo estado no seleccionado");
@@ -135,9 +135,7 @@ namespace Electronica
 			}
 			else
 			{
-				DialogResult dr = MessageBox.Show("¿Está seguro de enviar la información anterior? Verifique la información, esta acción es irreversible", "Informacion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
-				if (dr == DialogResult.Yes && opf.CheckFileExists)
-				{
+				
 					int almacen = Convert.ToInt32(comboalmacen.SelectedItem.ToString());
 					int cantidad = Convert.ToInt32(combocantidad.SelectedItem.ToString());
 					string pieza = combopartes.SelectedItem.ToString();
@@ -152,8 +150,8 @@ namespace Electronica
 					string CorrectFilename7 = Path.GetFileName(opf3.FileName.Replace("\\\\", "\\"));
 					string CorrectFilename6 = Path.GetFileName(opf4.FileName.Replace("\\\\", "\\"));
 					string CorrectFilename5 = Path.GetFileName(opf5.FileName.Replace("\\\\", "\\"));
-					Directory.CreateDirectory(("Base de datos\\Publicaciones Mercadolibre\\Almacen\\" + almacen + "\\" + marcas + "\\" + modelos + "\\" + etiqueta_3 + "\\" + etiqueta_2) ?? "");
-					string ruta = "\\\\Base de datos\\\\Publicaciones Mercadolibre\\\\Almacen\\\\" + almacen + "\\\\" + marcas + "\\\\" + modelos + "\\\\" + etiqueta_3 + "\\\\" + etiqueta_2 + "\\\\";
+					Directory.CreateDirectory(("Base de datos\\Publicaciones Mercadolibre\\Almacen\\" + almacen + "\\" + marcas + "\\" + modelos + "\\" + etiqueta_3) ?? "");
+					string ruta = "\\\\Base de datos\\\\Publicaciones Mercadolibre\\\\Almacen\\\\" + almacen + "\\\\" + marcas + "\\\\" + modelos + "\\\\" + etiqueta_3 + "\\\\";
 					string paths = Application.StartupPath;
 					File.Copy(opf.FileName, paths + ruta + CorrectFilename9);
 					File.Copy(opf2.FileName, paths + ruta + CorrectFilename8);

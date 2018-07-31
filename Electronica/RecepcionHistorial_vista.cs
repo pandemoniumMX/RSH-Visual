@@ -339,7 +339,7 @@ namespace Electronica
 					{
 						MessageBox.Show(ex.Message);
 					}
-                    string query_costos1 = "update reparar_audio  set abono='" + abono + "' , restante ='" + restante + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
+                    string query_costos1 = "update reparar_electrodomesticos  set abono='" + abono + "' , restante ='" + restante + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
                     MySqlCommand cmd_query_costos1 = new MySqlCommand(query_costos1, conn);
                     try
                     {
@@ -354,48 +354,7 @@ namespace Electronica
                         MessageBox.Show(ex.Message);
                     }
 
-                    string query_costos2 = "update reparar_smartphones  set abono='" + abono + "', restante ='" + restante + "'  where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-                    MySqlCommand cmd_query_costos2 = new MySqlCommand(query_costos2, conn);
-                    try
-                    {
-                        conn.Open();
-                        MySqlDataReader leercomando = cmd_query_costos2.ExecuteReader();
-
-                        conn.Close();
-                        Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    string query_costos3 = "update reparar_electrodomesticos  set abono='" + abono + "' , restante ='" + restante + "' where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-                    MySqlCommand cmd_query_costos3 = new MySqlCommand(query_costos3, conn);
-                    try
-                    {
-                        conn.Open();
-                        MySqlDataReader leercomando = cmd_query_costos3.ExecuteReader();
-
-                        conn.Close();
-                        Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    string query_costos4 = "update reparar_laptops  set abono='" + abono + "' , restante ='" + restante + "'  where id_folio='" + folio + "' and id_equipo='" + equipo + "'";
-                    MySqlCommand cmd_query_costos4 = new MySqlCommand(query_costos4, conn);
-                    try
-                    {
-                        conn.Open();
-                        MySqlDataReader leercomando = cmd_query_costos4.ExecuteReader();
-                        MessageBox.Show("Abono agregado satisfactoriamente");
-                        conn.Close();
-                        Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                   
                  
 
                 }
@@ -415,14 +374,8 @@ namespace Electronica
 				string total = txtsubtotal.Text;
 				string descuento8 = "UPDATE reparar_tv SET puntos = '0', costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='Reparado'";
 				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-				string descuento7 = "UPDATE reparar_laptops SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
+				string descuento7 = "UPDATE reparar_electrodomesticos SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
 				MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-				string descuento6 = "UPDATE reparar_smartphones SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-				string descuento5 = "UPDATE reparar_audio SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-				string descuento4 = "UPDATE reparar_electrodomesticos SET puntos = '0' , costo_total='" + total + "' WHERE id_equipo ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
 				try
 				{
 					conn.Open();
@@ -430,15 +383,8 @@ namespace Electronica
 					conn.Close();
 					conn.Open();
 					MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
+					
+				
 					MessageBox.Show("Descuento aplicado satisfcatoriamente");
 					conn.Close();
 				}
@@ -463,14 +409,9 @@ namespace Electronica
 				string personal = txtpersonal.Text;
 				string descuento8 = "UPDATE reparar_tv SET estado = 'Entregado', ubicacion='Cliente' , fecha_egreso=CURRENT_TIMESTAMP WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
 				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-				string descuento7 = "UPDATE reparar_laptops SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
+				string descuento7 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
 				MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-				string descuento6 = "UPDATE reparar_smartphones SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento6 = new MySqlCommand(descuento6, conn);
-				string descuento5 = "UPDATE reparar_audio SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento5 = new MySqlCommand(descuento5, conn);
-				string descuento4 = "UPDATE reparar_electrodomesticos SET estado = 'Entregado', ubicacion='Cliente' WHERE id_equipo ='" + folio + "' and id_personal='" + personal + "'";
-				MySqlCommand cmd_descuento4 = new MySqlCommand(descuento4, conn);
+				
 				try
 				{
 					conn.Open();
@@ -478,15 +419,8 @@ namespace Electronica
 					conn.Close();
 					conn.Open();
 					MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando6 = cmd_descuento6.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando5 = cmd_descuento5.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando4 = cmd_descuento4.ExecuteReader();
+			
+				
 					MessageBox.Show("Entrega aplicada correctamente");
 					conn.Close();
 				}
@@ -1492,7 +1426,7 @@ namespace Electronica
                     }
 
                 //garantia smarthphone
-                string query_actualizar_orden1 = "update  reparar_smartphones set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
+                string query_actualizar_orden1 = "update  reparar_electrodomesticos set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
                 MySqlCommand cmd_query_actualizar_orden1 = new MySqlCommand(query_actualizar_orden1, conn);
                 try
                 {
@@ -1505,50 +1439,7 @@ namespace Electronica
                 {
                     MessageBox.Show(ex.Message);
                 }
-                //garantia audio
-                string query_actualizar_orden2 = "update  reparar_audio set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
-                MySqlCommand cmd_query_actualizar_orden2 = new MySqlCommand(query_actualizar_orden2, conn);
-                try
-                {
-                    conn.Open();
-                    MySqlDataReader leercomando = cmd_query_actualizar_orden2.ExecuteReader();
-                    conn.Close();
-                    Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                //garantia laptops
-                string query_actualizar_orden3 = "update  reparar_laptops set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
-                MySqlCommand cmd_query_actualizar_orden3 = new MySqlCommand(query_actualizar_orden3, conn);
-                try
-                {
-                    conn.Open();
-                    MySqlDataReader leercomando = cmd_query_actualizar_orden3.ExecuteReader();
-                    conn.Close();
-                    Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                //garantia electrodomesticos
-                string query_actualizar_orden4 = "update  reparar_electrodomesticos set estado='Pendiente', ubicacion='Recepcion' , servicio='Garantia' , id_personal='0' where id_equipo='" + idequipo + "'";
-                MySqlCommand cmd_query_actualizar_orden4 = new MySqlCommand(query_actualizar_orden4, conn);
-                try
-                {
-                    conn.Open();
-                    MySqlDataReader leercomando = cmd_query_actualizar_orden4.ExecuteReader();
-                    MessageBox.Show("Reingreso por garantía exitosamente");
-                    conn.Close();
-                    Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+               
 
             }
         }

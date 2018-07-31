@@ -126,7 +126,7 @@ namespace Electronica
             //total equipos devueltos
             try
             {
-                string query = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_audio WHERE estado =  'Devuelto' )p";
+                string query = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_tv WHERE estado =  'Devuelto' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Devuelto' )p";
                 conn.Open();
                 MySqlCommand cmd_query2 = new MySqlCommand(query, conn);
                 txtdevuelto.Text = cmd_query2.ExecuteScalar().ToString();
@@ -139,7 +139,7 @@ namespace Electronica
 
             try
 			{
-				string query5 = "SELECT sum( p.costo_total ) AS total_total FROM (SELECT costo_total FROM reparar_smartphones WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_tv WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_laptops WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' )p";
+				string query5 = "SELECT sum( p.costo_total ) AS total_total FROM (SELECT costo_total FROM reparar_tv WHERE estado =  'Reparada' UNION ALL SELECT costo_total FROM reparar_electrodomesticos WHERE estado =  'Reparada' )p";
 				conn.Open();
 				MySqlCommand cmd_query6 = new MySqlCommand(query5, conn);
 				txtlistos.Text = cmd_query6.ExecuteScalar().ToString();
@@ -163,7 +163,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query10 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Pendiente' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Pendiente' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Pendiente' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Pendiente' UNION ALL SELECT estado FROM reparar_audio WHERE estado =  'Pendiente' )p";
+				string query10 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_tv WHERE estado =  'Pendiente' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Pendiente' )p";
 				conn.Open();
 				MySqlCommand cmd_query9 = new MySqlCommand(query10, conn);
 				txtttpendiente.Text = cmd_query9.ExecuteScalar().ToString();
@@ -175,7 +175,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query8 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Diagnosticada' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Diagnosticada' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Diagnosticada' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Diagnosticada' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Diagnosticada' )p";
+				string query8 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Diagnosticada' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Diagnosticada' )p";
 				conn.Open();
 				MySqlCommand cmd_query8 = new MySqlCommand(query8, conn);
 				txtttrevisadas.Text = cmd_query8.ExecuteScalar().ToString();
@@ -187,7 +187,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query7 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'En reparacion' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'En reparacion' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'En reparacion' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'En reparacion' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'En reparacion' )p";
+				string query7 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'En reparacion' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'En reparacion' )p";
 				conn.Open();
 				MySqlCommand cmd_query7 = new MySqlCommand(query7, conn);
 				txtttreparacion.Text = cmd_query7.ExecuteScalar().ToString();
@@ -199,7 +199,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query6 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Sin solucion' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Sin solucion' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Sin solucion' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Sin solucion' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Sin solucion' )p";
+				string query6 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Sin solucion' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Sin solucion' )p";
 				conn.Open();
 				MySqlCommand cmd_query5 = new MySqlCommand(query6, conn);
 				txtttsolucion.Text = cmd_query5.ExecuteScalar().ToString();
@@ -211,7 +211,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query4 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Reparada' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Reparada' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Reparada' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Reparada' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Reparada' )p";
+				string query4 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Reparada' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Reparada' )p";
 				conn.Open();
 				MySqlCommand cmd_query4 = new MySqlCommand(query4, conn);
 				txtttreparadas.Text = cmd_query4.ExecuteScalar().ToString();
@@ -223,7 +223,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query3 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' )p";
+				string query3 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Entregado' )p";
 				conn.Open();
 				MySqlCommand cmd_query3 = new MySqlCommand(query3, conn);
 				txtttentregadas.Text = cmd_query3.ExecuteScalar().ToString();
@@ -235,7 +235,7 @@ namespace Electronica
 			}
 			try
 			{
-				string query2 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP\t UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP )p";
+				string query2 = "SELECT count( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP\t UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Entregado' and fecha_egreso=CURRENT_TIMESTAMP )p";
 				conn.Open();
 				MySqlCommand cmd_query = new MySqlCommand(query2, conn);
 				txthoy.Text = cmd_query.ExecuteScalar().ToString();
@@ -247,25 +247,6 @@ namespace Electronica
 			}
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void Buscador_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void Buscador_KeyPress(object sender, KeyPressEventArgs e)
-		{
-		}
 
 		private void Clientes_Load(object sender, EventArgs e)
 		{
@@ -277,9 +258,6 @@ namespace Electronica
 			ss.ShowDialog();
 		}
 
-		private void label2_Click(object sender, EventArgs e)
-		{
-		}
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
@@ -299,9 +277,6 @@ namespace Electronica
 			ss.ShowDialog();
 		}
 
-		private void TablaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
 
 		protected override void Dispose(bool disposing)
 		{
@@ -374,7 +349,6 @@ namespace Electronica
             this.label2.Size = new System.Drawing.Size(263, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Estadisticas del taller";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txttotaldepositado
             // 

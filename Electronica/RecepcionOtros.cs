@@ -123,29 +123,7 @@ namespace Electronica
 			}
 		}
 
-		private void comboaccesorios_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void combomarca_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void combolocacion_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void combofalla_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void txtpresupuesto_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void txtabono_TextChanged(object sender, EventArgs e)
-		{
-		}
+		
 
 		private void txtmodelo_TextChanged(object sender, EventArgs e)
 		{
@@ -155,57 +133,15 @@ namespace Electronica
 			}
 		}
 
-		private void fechapicker_ValueChanged(object sender, EventArgs e)
-		{
-		}
+		
 
-		private void label12_Click(object sender, EventArgs e)
-		{
-		}
+	
 
-		private void label11_Click(object sender, EventArgs e)
-		{
-		}
+	
 
-		private void label10_Click(object sender, EventArgs e)
-		{
-		}
+		
 
-		private void label9_Click(object sender, EventArgs e)
-		{
-		}
 
-		private void label8_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void label7_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void label6_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void label4_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void label3_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void RecepcionTablets_Cel_Load(object sender, EventArgs e)
-		{
-		}
-
-		private void label13_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-		}
 
 		private void txtmarca_TextChanged(object sender, EventArgs e)
 		{
@@ -292,7 +228,6 @@ namespace Electronica
 			label6.Size = new System.Drawing.Size(45, 13);
 			label6.TabIndex = 5;
 			label6.Text = "Modelo:";
-			label6.Click += new System.EventHandler(label6_Click);
 			label7.AutoSize = true;
 			label7.Location = new System.Drawing.Point(250, 113);
 			label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -300,7 +235,6 @@ namespace Electronica
 			label7.Size = new System.Drawing.Size(150, 13);
 			label7.TabIndex = 6;
 			label7.Text = "Fecha de solicitud de servicio:";
-			label7.Click += new System.EventHandler(label7_Click);
 			label8.AutoSize = true;
 			label8.Location = new System.Drawing.Point(250, 77);
 			label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -308,7 +242,6 @@ namespace Electronica
 			label8.Size = new System.Drawing.Size(62, 13);
 			label8.TabIndex = 7;
 			label8.Text = "Accesorios:";
-			label8.Click += new System.EventHandler(label8_Click);
 			label9.AutoSize = true;
 			label9.Location = new System.Drawing.Point(250, 45);
 			label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -316,7 +249,6 @@ namespace Electronica
 			label9.Size = new System.Drawing.Size(40, 13);
 			label9.TabIndex = 8;
 			label9.Text = "Marca:";
-			label9.Click += new System.EventHandler(label9_Click);
 			label10.AutoSize = true;
 			label10.Location = new System.Drawing.Point(22, 136);
 			label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -324,7 +256,6 @@ namespace Electronica
 			label10.Size = new System.Drawing.Size(54, 13);
 			label10.TabIndex = 9;
 			label10.Text = "Locacion:";
-			label10.Click += new System.EventHandler(label10_Click);
 			label11.AutoSize = true;
 			label11.Location = new System.Drawing.Point(22, 108);
 			label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -332,7 +263,6 @@ namespace Electronica
 			label11.Size = new System.Drawing.Size(32, 13);
 			label11.TabIndex = 10;
 			label11.Text = "Falla:";
-			label11.Click += new System.EventHandler(label11_Click);
 			txtequipo.Location = new System.Drawing.Point(67, 42);
 			txtequipo.Margin = new System.Windows.Forms.Padding(2);
 			txtequipo.Name = "txtequipo";
@@ -361,14 +291,12 @@ namespace Electronica
 			combolocacion.Name = "combolocacion";
 			combolocacion.Size = new System.Drawing.Size(90, 21);
 			combolocacion.TabIndex = 5;
-			combolocacion.SelectedIndexChanged += new System.EventHandler(combolocacion_SelectedIndexChanged);
 			fechapicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
 			fechapicker.Location = new System.Drawing.Point(253, 136);
 			fechapicker.Margin = new System.Windows.Forms.Padding(2);
 			fechapicker.Name = "fechapicker";
 			fechapicker.Size = new System.Drawing.Size(151, 20);
 			fechapicker.TabIndex = 6;
-			fechapicker.ValueChanged += new System.EventHandler(fechapicker_ValueChanged);
 			txtcomentarios.Location = new System.Drawing.Point(518, 56);
 			txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
 			txtcomentarios.Multiline = true;
@@ -443,7 +371,6 @@ namespace Electronica
 			base.Margin = new System.Windows.Forms.Padding(2);
 			base.Name = "RecepcionElectrodomesticos";
 			Text = "RecepcionTablets_Cel";
-			base.Load += new System.EventHandler(RecepcionTablets_Cel_Load);
 			ResumeLayout(false);
 			PerformLayout();
 		}

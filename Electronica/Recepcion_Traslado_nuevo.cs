@@ -30,10 +30,10 @@ namespace Electronica
 		private Label label2;
 
 		private Label label4;
-        public TextBox txtubicacion;
         private Label label6;
         public TextBox txtidequipo;
         private ComboBox combodestino;
+        private ComboBox txtubicacion;
         private Label label5;
 
 		public Recepcion_Traslado_nuevo(string qs, string qs1, string qs2)
@@ -72,8 +72,8 @@ namespace Electronica
 			{
 				int folio = Convert.ToInt32(txtfolio.Text);
 				string direccion = txtaviso.Text;
-                string ubi = txtubicacion.Text;
-				string coment = txtcomentarios.Text;
+                string ubi = txtubicacion.SelectedItem.ToString();
+                string coment = txtcomentarios.Text;
                 string destino = combodestino.SelectedItem.ToString();
                 int idequipo = Convert.ToInt32(txtidequipo.Text);
 				string query = "insert into traslado(estado,direccion,comentarios,ubicacion,destino,id_equipo,id_folio) values('Pendiente','" + direccion + "','" + coment + "','" + ubi + "','" + destino + "','"+ idequipo + "','" + folio + "')";
@@ -89,6 +89,7 @@ namespace Electronica
 				{
 					MessageBox.Show(ex.Message);
 				}
+                
                 //modificando ubicacion despues de solicitar el traslado television
                 
                 string query1 = "update reparar_tv set ubicacion='Recepcion con traslado solicitado' where id_equipo = '" + idequipo + "' and id_folio='"+folio+"' ";
@@ -104,51 +105,7 @@ namespace Electronica
                 {
                     MessageBox.Show(ex.Message);
                 }
-                //modificando ubicacion despues de solicitar el traslado smartphones
-
-                string query2 = "update reparar_smartphones set ubicacion='Recepcion con traslado solicitado' where id_equipo = '" + idequipo + "' and id_folio='" + folio + "' ";
-                MySqlCommand cmd_query2 = new MySqlCommand(query2, conn);
-                try
-                {
-                    conn.Open();
-                    MySqlDataReader leer = cmd_query2.ExecuteReader();
-
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                //modificando ubicacion despues de solicitar el traslado computadoras
-
-                string query3 = "update reparar_laptops set ubicacion='Recepcion con traslado solicitado' where id_equipo = '" + idequipo + "' and id_folio='" + folio + "' ";
-                MySqlCommand cmd_query3 = new MySqlCommand(query3, conn);
-                try
-                {
-                    conn.Open();
-                    MySqlDataReader leer = cmd_query3.ExecuteReader();
-
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                //modificando ubicacion despues de solicitar el traslado audio
-
-                string query4 = "update reparar_audio set ubicacion='Recepcion con traslado solicitado' where id_equipo = '" + idequipo + "' and id_folio='" + folio + "' ";
-                MySqlCommand cmd_query4 = new MySqlCommand(query4, conn);
-                try
-                {
-                    conn.Open();
-                    MySqlDataReader leer = cmd_query4.ExecuteReader();
-
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+              
                 //modificando ubicacion despues de solicitar el traslado electrodomesticos
 
                 string query5 = "update reparar_electrodomesticos set ubicacion='Recepcion con traslado solicitado' where id_equipo = '" + idequipo + "' and id_folio='" + folio + "' ";
@@ -166,7 +123,7 @@ namespace Electronica
                 }
 
                 Close();
-
+                
 
 
             }
@@ -213,10 +170,10 @@ namespace Electronica
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtubicacion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.combodestino = new System.Windows.Forms.ComboBox();
+            this.txtubicacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -315,17 +272,6 @@ namespace Electronica
             this.label5.TabIndex = 53;
             this.label5.Text = "Destino:";
             // 
-            // txtubicacion
-            // 
-            this.txtubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtubicacion.Location = new System.Drawing.Point(185, 94);
-            this.txtubicacion.Name = "txtubicacion";
-            this.txtubicacion.ReadOnly = true;
-            this.txtubicacion.Size = new System.Drawing.Size(114, 26);
-            this.txtubicacion.TabIndex = 54;
-            this.txtubicacion.Text = "Recepcion";
-            this.txtubicacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -360,16 +306,30 @@ namespace Electronica
             this.combodestino.Size = new System.Drawing.Size(114, 28);
             this.combodestino.TabIndex = 1;
             // 
+            // txtubicacion
+            // 
+            this.txtubicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtubicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtubicacion.FormattingEnabled = true;
+            this.txtubicacion.Items.AddRange(new object[] {
+            "Bodega",
+            "Cliente",
+            "Taller"});
+            this.txtubicacion.Location = new System.Drawing.Point(185, 97);
+            this.txtubicacion.Name = "txtubicacion";
+            this.txtubicacion.Size = new System.Drawing.Size(114, 28);
+            this.txtubicacion.TabIndex = 58;
+            // 
             // Recepcion_Traslado_nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(347, 661);
+            this.Controls.Add(this.txtubicacion);
             this.Controls.Add(this.combodestino);
             this.Controls.Add(this.txtidequipo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtubicacion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);

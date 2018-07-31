@@ -121,21 +121,7 @@ namespace Electronica
 			}
 		}
 
-		private void txtetiqueta1_TextChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void combofalla_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void comboaccesorios_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void txtetiqueta2_TextChanged(object sender, EventArgs e)
-		{
-		}
+	
 
 		private void RecepcionTelevisores_Load(object sender, EventArgs e)
 		{
@@ -189,9 +175,7 @@ namespace Electronica
 			}
 		}
 
-		private void combopartes_SelectedIndexChanged(object sender, EventArgs e)
-		{
-		}
+	
 
 		private void txtcosto_KeyPress(object sender, KeyPressEventArgs v)
 		{
@@ -212,10 +196,6 @@ namespace Electronica
 				v.Handled = true;
 				MessageBox.Show("Solo Numeros");
 			}
-		}
-
-		private void txtcosto_TextChanged(object sender, EventArgs e)
-		{
 		}
 
 		private void txtcosto_KeyPress_1(object sender, KeyPressEventArgs v)
