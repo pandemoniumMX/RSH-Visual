@@ -4,6 +4,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace Electronica
 {
@@ -59,10 +61,10 @@ namespace Electronica
 		private void Clientes_nuevos_Load(object sender, EventArgs e)
 		{
 		}
-
-		private void AgregarClientes_Click(object sender, EventArgs e)
+     
+        private void AgregarClientes_Click(object sender, EventArgs e)
         {
-            txtcontraseña.Text = Seguridad.Encriptar(txtcontraseña.Text);
+            txtcontraseña.Text = GetMD5(txtcontraseña.Text);
             DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar actualización personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes)
 			
@@ -117,8 +119,27 @@ namespace Electronica
 				}
 			
 		}
+        public string GetMD5(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
 
-		private void txtfoliosig_TextChanged(object sender, EventArgs e)
+            //compute hash from the bytes of text
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+
+            //get hash result after compute it
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits
+                //for each byte
+                  strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
+        }
+        private void txtfoliosig_TextChanged(object sender, EventArgs e)
 		{
 		}
 
@@ -472,7 +493,9 @@ namespace Electronica
             "Jefe de Tecnicos",
             "Jefe de Taller",
             "Jefe de Bodega",
+            "Jefe de Traslado",
             "Tecnico",
+            "Traslado",
             "Recepcion",
             "Chofer"});
             this.combotipo.Location = new System.Drawing.Point(140, 40);

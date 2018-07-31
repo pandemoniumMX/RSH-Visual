@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Electronica
 {
-	public class Taller_laptops : Form
+	public class Taller_otros : Form
 	{
 		private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
@@ -35,7 +35,7 @@ namespace Electronica
 
 		public TextBox txttipo;
 
-		public Taller_laptops()
+		public Taller_otros()
 		{
 			InitializeComponent();
 		}
@@ -46,7 +46,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM `reparar_laptops` WHERE concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT * FROM `reparar_electrodomesticos` WHERE concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -69,10 +69,7 @@ namespace Electronica
 		{
 		}
 
-		private void TablaEquipos_CellClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
+	
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 		}
@@ -98,39 +95,33 @@ namespace Electronica
 
 		private void btntele_Click(object sender, EventArgs e)
 		{
-			Taller_laptops_pendiente ss = new Taller_laptops_pendiente();
+			Taller_otros_pendiente ss = new Taller_otros_pendiente();
 			ss.ShowDialog();
 		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			Taller_laptops_reparacion ss = new Taller_laptops_reparacion();
+			Taller_otros_reparacion ss = new Taller_otros_reparacion();
 			ss.ShowDialog();
 		}
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
-			Taller_laptops_diagnosticada ss = new Taller_laptops_diagnosticada();
+			Taller_otros_diagnosticada ss = new Taller_otros_diagnosticada();
 			ss.ShowDialog();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			Taller_laptops_reparacion ss = new Taller_laptops_reparacion();
+			Taller_otros_reparacion ss = new Taller_otros_reparacion();
 			ss.ShowDialog();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			Taller_laptops_reparada ss = new Taller_laptops_reparada();
+			Taller_otros_reparada ss = new Taller_otros_reparada();
 			ss.ShowDialog();
 		}
-
-		private void TablaEquipos_CellClick_1(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
-		
 
 		protected override void Dispose(bool disposing)
 		{
@@ -144,6 +135,7 @@ namespace Electronica
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -164,15 +156,22 @@ namespace Electronica
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(408, 24);
+            this.label2.Size = new System.Drawing.Size(282, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Buscar Laptops y computadooras en Taller";
+            this.label2.Text = "Buscar linea blanca en Taller";
             // 
             // TablaEquipos
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
             this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TablaEquipos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 129);
             this.TablaEquipos.Name = "TablaEquipos";
@@ -180,8 +179,6 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellClick_1);
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellClick);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador
@@ -293,10 +290,10 @@ namespace Electronica
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(100, 20);
             this.txttipo.TabIndex = 36;
-            this.txttipo.Text = "reparar_laptops";
+            this.txttipo.Text = "reparar_electrodomesticos";
             this.txttipo.Visible = false;
             // 
-            // Taller_laptops
+            // Taller_electrodomesticos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -316,18 +313,18 @@ namespace Electronica
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
-            this.Name = "Taller_laptops";
+            this.Name = "Taller_electrodomesticos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Taller_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_laptops_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_electrodomesticos_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
 		}
 
-        private void Taller_laptops_KeyDown(object sender, KeyEventArgs e)
+        private void Taller_electrodomesticos_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -342,6 +339,7 @@ namespace Electronica
                 DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
                 Taller_actualizar3 cl = new Taller_actualizar3();
                 cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
                 cl.txttipo.Text = txttipo.Text.ToString();
                 cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
                 cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
@@ -351,6 +349,7 @@ namespace Electronica
                 cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
                 cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
                 cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+                cl.txtegreso.Text = row.Cells["fecha_entregar"].Value.ToString();
                 cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
                 cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
                 cl.txtabono.Text = row.Cells["abono"].Value.ToString();
@@ -359,7 +358,11 @@ namespace Electronica
                 cl.txtsubtotal.Text = row.Cells["costo_total"].Value.ToString();
                 cl.txtubicacion.Text = row.Cells["ubicacion"].Value.ToString();
                 cl.txtestado.Text = row.Cells["estado"].Value.ToString();
+                cl.txtpersonal1.Text = row.Cells["id_personal"].Value.ToString();
+                cl.combotecnico.Text = row.Cells["id_personal"].Value.ToString();
+                cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
                 cl.ShowDialog();
+                Close();
             }
         }
     }

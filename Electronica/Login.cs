@@ -6,7 +6,8 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using Tulpep.NotificationWindow;
-
+using System.Text;
+using System.Security.Cryptography;
 namespace Electronica
 {
 	public class Login : Form
@@ -37,11 +38,12 @@ namespace Electronica
 		{
 			InitializeComponent();
 		}
+       
 
 		public void button1_Click(object sender, EventArgs e)
 		{
-            textBox2.Text = Seguridad.Encriptar(textBox2.Text);
-
+            // textBox2.Text = Seguridad.Encriptar(textBox2.Text);
+            textBox2.Text = GetMD5(textBox2.Text);
             try
             {
 				conn.Open();
@@ -138,11 +140,27 @@ namespace Electronica
 			}
 		}
 
-		private void label2_Click(object sender, EventArgs e)
-		{
-		}
+        public string GetMD5(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
 
-		private void label3_Click(object sender, EventArgs e)
+            //compute hash from the bytes of text
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+
+            //get hash result after compute it
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits
+                //for each byte
+              strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
+        }
+        private void label3_Click(object sender, EventArgs e)
 		{
 		}
 
@@ -253,7 +271,6 @@ namespace Electronica
             this.label2.Size = new System.Drawing.Size(135, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label9
             // 

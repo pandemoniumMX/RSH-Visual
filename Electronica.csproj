@@ -113,7 +113,6 @@
       <DependentUpon>PDF_Abono.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Electronica\Encriptador.cs" />
     <Compile Include="Electronica\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,7 +261,6 @@
     <Compile Include="Electronica\Recepcion_ventas_nueva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Seguridad.cs" />
     <Compile Include="Electronica\Taller.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,79 +270,25 @@
     <Compile Include="Electronica\Taller_actualizar3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Taller_audio.cs">
+    <Compile Include="Electronica\Taller_otros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Taller_audio_diagnosticada.cs">
+    <Compile Include="Electronica\Taller_otros_diagnosticada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Taller_audio_pendiente.cs">
+    <Compile Include="Electronica\Taller_otros_pendiente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Taller_audio_reparacion.cs">
+    <Compile Include="Electronica\Taller_otros_reparacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Taller_audio_reparada.cs">
+    <Compile Include="Electronica\Taller_otros_reparada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Electronica\Taller_audio_solucion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_electrodomesticos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_electrodomesticos_diagnosticada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_electrodomesticos_pendiente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_electrodomesticos_reparacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_electrodomesticos_reparada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_electrodomesticos_solucion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_laptops.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_laptops_diagnosticada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_laptops_pendiente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_laptops_reparacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_laptops_reparada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_laptops_solucion.cs">
+    <Compile Include="Electronica\Taller_otros_solucion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\Taller_reportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_smart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_smart_diagnosticada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_smart_pendiente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_smart_reparacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_smart_reparada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Electronica\Taller_smart_solucion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Electronica\Taller_tv.cs">
@@ -542,80 +486,26 @@
     <EmbeddedResource Include="Electronica\Recepcion_ventas_nueva.resx" />
     <EmbeddedResource Include="Electronica\Taller_actualizar.resx" />
     <EmbeddedResource Include="Electronica\Taller_actualizar3.resx" />
-    <EmbeddedResource Include="Electronica\Taller_audio.resx">
-      <DependentUpon>Taller_audio.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\Taller_otros.resx">
+      <DependentUpon>Taller_otros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_audio_diagnosticada.resx">
-      <DependentUpon>Taller_audio_diagnosticada.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\Taller_otros_diagnosticada.resx">
+      <DependentUpon>Taller_otros_diagnosticada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_audio_pendiente.resx">
-      <DependentUpon>Taller_audio_pendiente.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\Taller_otros_pendiente.resx">
+      <DependentUpon>Taller_otros_pendiente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_audio_reparacion.resx">
-      <DependentUpon>Taller_audio_reparacion.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\Taller_otros_reparacion.resx">
+      <DependentUpon>Taller_otros_reparacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_audio_reparada.resx">
-      <DependentUpon>Taller_audio_reparada.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\Taller_otros_reparada.resx">
+      <DependentUpon>Taller_otros_reparada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_audio_solucion.resx">
-      <DependentUpon>Taller_audio_solucion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_electrodomesticos.resx">
-      <DependentUpon>Taller_electrodomesticos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_electrodomesticos_diagnosticada.resx">
-      <DependentUpon>Taller_electrodomesticos_diagnosticada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_electrodomesticos_pendiente.resx">
-      <DependentUpon>Taller_electrodomesticos_pendiente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_electrodomesticos_reparacion.resx">
-      <DependentUpon>Taller_electrodomesticos_reparacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_electrodomesticos_reparada.resx">
-      <DependentUpon>Taller_electrodomesticos_reparada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_electrodomesticos_solucion.resx">
-      <DependentUpon>Taller_electrodomesticos_solucion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_laptops.resx">
-      <DependentUpon>Taller_laptops.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_laptops_diagnosticada.resx">
-      <DependentUpon>Taller_laptops_diagnosticada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_laptops_pendiente.resx">
-      <DependentUpon>Taller_laptops_pendiente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_laptops_reparacion.resx">
-      <DependentUpon>Taller_laptops_reparacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_laptops_reparada.resx">
-      <DependentUpon>Taller_laptops_reparada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_laptops_solucion.resx">
-      <DependentUpon>Taller_laptops_solucion.cs</DependentUpon>
+    <EmbeddedResource Include="Electronica\Taller_otros_solucion.resx">
+      <DependentUpon>Taller_otros_solucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Taller_reportes.resx">
       <DependentUpon>Taller_reportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_smart.resx">
-      <DependentUpon>Taller_smart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_smart_diagnosticada.resx">
-      <DependentUpon>Taller_smart_diagnosticada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_smart_pendiente.resx">
-      <DependentUpon>Taller_smart_pendiente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_smart_reparacion.resx">
-      <DependentUpon>Taller_smart_reparacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_smart_reparada.resx">
-      <DependentUpon>Taller_smart_reparada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\Taller_smart_solucion.resx">
-      <DependentUpon>Taller_smart_solucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Taller_tv.resx">
       <DependentUpon>Taller_tv.cs</DependentUpon>

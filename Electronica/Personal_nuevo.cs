@@ -4,7 +4,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.Text;
+using System.Security.Cryptography;
 namespace Electronica
 {
 	public class Personal_nuevo : Form
@@ -68,19 +69,35 @@ namespace Electronica
 				MessageBox.Show(ex.Message);
 			}
 		}
+        public string GetMD5(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
 
-		private void label1_Click(object sender, EventArgs e)
-		{
-		}
+            //compute hash from the bytes of text
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
 
-		private void Clientes_nuevos_Load(object sender, EventArgs e)
+            //get hash result after compute it
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits
+                //for each byte
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
+        }
+
+        private void Clientes_nuevos_Load(object sender, EventArgs e)
 		{
 		}
 
 		private void AgregarClientes_Click(object sender, EventArgs e)
 		{
-            txtcontraseña.Text = Seguridad.Encriptar(txtcontraseña.Text);
-           // txtcontraseña.Text = Seguridad.DesEncriptar(txtcontraseña.Text);
+            //  txtcontraseña.Text = Seguridad.Encriptar(txtcontraseña.Text);
+            txtcontraseña.Text = GetMD5(txtcontraseña.Text);
 
             DialogResult dr = MessageBox.Show("¿Los datos del personal son correctos?", "Confirmar personal nuevo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 			if (dr == DialogResult.Yes && string.IsNullOrWhiteSpace(combotipo.Text))
@@ -312,7 +329,6 @@ namespace Electronica
             this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo de Usuario:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtnombre
             // 

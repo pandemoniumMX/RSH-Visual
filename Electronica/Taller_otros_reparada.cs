@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Electronica
 {
-	public class Taller_electrodomesticos_pendiente : Form
+	public class Taller_otros_reparada : Form
 	{
 		private MySqlConnection conn = ConexionBD.ObtenerConexion();
 
@@ -25,7 +25,7 @@ namespace Electronica
 
 		public TextBox txttipo;
 
-		public Taller_electrodomesticos_pendiente()
+		public Taller_otros_reparada()
 		{
 			InitializeComponent();
 		}
@@ -36,8 +36,8 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-            string query_tabla_equipos = "SELECT * FROM `reparar_electrodomesticos` WHERE estado='pendiente' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
-            MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
+			string query_tabla_equipos = "SELECT * FROM `reparar_electrodomesticos` WHERE estado='Reparada' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
 				MySqlDataAdapter tabla = new MySqlDataAdapter();
@@ -86,13 +86,14 @@ namespace Electronica
 		{
 		}
 
+		
 
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			if (e.RowIndex >= 0)
 			{
 				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				Taller_actualizar cl = new Taller_actualizar();
+                Taller_actualizar3 cl = new Taller_actualizar3();
                 cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
                 cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
                 cl.txttipo.Text = txttipo.Text.ToString();
@@ -119,6 +120,10 @@ namespace Electronica
                 cl.ShowDialog();
                 Close();
             }
+		}
+
+		private void TablaEquipos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+		{
 		}
 
 		protected override void Dispose(bool disposing)
@@ -164,6 +169,7 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
             this.TablaEquipos.TabIndex = 3;
+            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador
@@ -196,7 +202,7 @@ namespace Electronica
             // 
             // txttipo
             // 
-            this.txttipo.Location = new System.Drawing.Point(1150, 38);
+            this.txttipo.Location = new System.Drawing.Point(1156, 45);
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(138, 20);
             this.txttipo.TabIndex = 9;
@@ -204,7 +210,7 @@ namespace Electronica
             this.txttipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txttipo.Visible = false;
             // 
-            // Taller_electrodomesticos_pendiente
+            // Taller_electrodomesticos_reparada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,18 +225,18 @@ namespace Electronica
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(242, 35);
-            this.Name = "Taller_electrodomesticos_pendiente";
+            this.Name = "Taller_electrodomesticos_reparada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Taller_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_electrodomesticos_pendiente_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Taller_electrodomesticos_reparada_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.TablaEquipos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
 		}
 
-        private void Taller_electrodomesticos_pendiente_KeyDown(object sender, KeyEventArgs e)
+        private void Taller_electrodomesticos_reparada_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
