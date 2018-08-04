@@ -34,7 +34,7 @@ namespace Electronica
 			InitializeComponent();
 			try
 			{
-				string query = "SELECT COUNT( p.estado ) AS total_total FROM (SELECT estado FROM reparar_smartphones WHERE estado =  'Reparado' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Reparado' UNION ALL SELECT estado FROM reparar_laptops WHERE estado =  'Reparado' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Reparado' UNION ALL SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Reparado' )p";
+				string query = "SELECT COUNT( p.estado ) AS total_total FROM (SELECT estado FROM reparar_electrodomesticos WHERE estado =  'Reparado' UNION ALL SELECT estado FROM reparar_tv WHERE estado =  'Reparado')p";
 				conn.Open();
 				MySqlCommand cmd_query = new MySqlCommand(query, conn);
 				int Reparado = Convert.ToInt32(cmd_query.ExecuteScalar());
