@@ -30,13 +30,10 @@ namespace Electronica
 			InitializeComponent();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM `reparar_tv` WHERE estado='Reparada' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE estado='Reparada' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -55,10 +52,7 @@ namespace Electronica
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-		}
-
+		
 		private void Buscador_TextChanged(object sender, EventArgs e)
 		{
 		}
@@ -74,13 +68,8 @@ namespace Electronica
 			BuscarEquipos("");
 		}
 
-		private void Cliente_nuevo(object sender, EventArgs e)
-		{
-		}
+	
 
-		private void TablaEquipos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
 
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
@@ -99,7 +88,7 @@ namespace Electronica
                 cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
                 cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
                 cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-                cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
+              //  cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
                 cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
                 cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
                 cl.txtabono.Text = row.Cells["abono"].Value.ToString();
@@ -116,10 +105,7 @@ namespace Electronica
             }
 		}
 
-		private void TablaEquipos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
+	
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && components != null)
@@ -163,7 +149,6 @@ namespace Electronica
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaEquipos.Size = new System.Drawing.Size(1080, 561);
             this.TablaEquipos.TabIndex = 3;
-            this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             // 
             // Buscador

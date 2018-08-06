@@ -211,7 +211,7 @@ namespace Electronica
         {
             if (txtestado.Text == "Reparada")
             {
-                if (txtubicacion.Text == "Recepcion")
+               
                     button5.Visible = true;
             }
 

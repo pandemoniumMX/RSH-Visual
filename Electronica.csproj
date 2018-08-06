@@ -27,6 +27,10 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -66,6 +70,10 @@
     <Reference Include="System.Drawing">
       <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
     </Reference>
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Electronica.Properties\Resources.cs" />
@@ -96,6 +104,12 @@
     </Compile>
     <Compile Include="Electronica\Avisos.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronica\Carga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Electronica\Carga.Designer.cs">
+      <DependentUpon>Carga.cs</DependentUpon>
     </Compile>
     <Compile Include="Electronica\Clientes.cs">
       <SubType>Form</SubType>
@@ -149,14 +163,20 @@
     <Compile Include="Electronica\Mercadolibre_vista.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Electronica\PDF_Orden_otros.cs">
+      <DependentUpon>PDF_Orden_otros.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Electronica\PDF_Terminos.cs">
       <DependentUpon>PDF_Terminos.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Electronica\PDF_Orden.cs">
-      <DependentUpon>PDF_Orden.rpt</DependentUpon>
+    <Compile Include="Electronica\PDF_Orden_tv.cs">
+      <DependentUpon>PDF_Orden_tv.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -363,6 +383,9 @@
     <EmbeddedResource Include="Electronica\Avisos.resx">
       <DependentUpon>Avisos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\Carga.resx">
+      <DependentUpon>Carga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,13 +420,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\Mercadolibre_ventas_vista.resx" />
     <EmbeddedResource Include="Electronica\Mercadolibre_vista.resx" />
+    <EmbeddedResource Include="Electronica\PDF_Orden_otros.resx">
+      <DependentUpon>PDF_Orden_otros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Electronica\PDF_Terminos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PDF_Terminos.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Electronica\PDF_Orden.rpt">
+    <EmbeddedResource Include="Electronica\PDF_Orden_tv.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PDF_Orden.cs</LastGenOutput>
+      <LastGenOutput>PDF_Orden_tv.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\PDF_Reporte.resx">
       <DependentUpon>PDF_Reporte.cs</DependentUpon>
@@ -437,6 +463,9 @@
     <EmbeddedResource Include="Electronica\RecepcionDeposito_vista.resx" />
     <EmbeddedResource Include="Electronica\RecepcionHistorial.resx">
       <DependentUpon>RecepcionHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Electronica\RecepcionOtros.resx">
+      <DependentUpon>RecepcionOtros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Electronica\RecepcionSinsolucion_vista.resx">
       <DependentUpon>RecepcionSinsolucion_vista.cs</DependentUpon>
@@ -558,6 +587,10 @@
     <None Include="electronicaxDataSet.xss">
       <DependentUpon>electronicaxDataSet.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="Electronica\PDF_Orden_otros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PDF_Orden_otros.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="iconos\contract.png" />
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Electronica
 {
@@ -21,8 +23,6 @@ namespace Electronica
 
 		private Label label6;
 
-		private Label label7;
-
 		private Label label8;
 
 		private Label label9;
@@ -34,8 +34,6 @@ namespace Electronica
 		private TextBox txtmodelo;
 
 		private ComboBox combolocacion;
-
-		private DateTimePicker fechapicker;
 
 		private TextBox txtcomentarios;
 
@@ -50,8 +48,10 @@ namespace Electronica
 		private TextBox txtaccesorios;
 
 		public TextBox txtmarca;
+        public TextBox txtnombre;
+        public TextBox txtapellido;
 
-		public RecepcionOtros()
+        public RecepcionOtros()
 		{
 			InitializeComponent();
 		}
@@ -79,28 +79,58 @@ namespace Electronica
 			{
 				MessageBox.Show("Campo locacion no seleccionado");
 			}
-			if (string.IsNullOrWhiteSpace(fechapicker.Text))
-			{
-				MessageBox.Show("Campo fecha no asignada");
-			}
+			
 			else
 			{
-				string equipo = txtequipo.Text;
+
+                Carga ss = new Carga();
+                ss.ShowDialog();
+
+                //generador de reporte pdf
+                PDF_Reporte pdf = new PDF_Reporte();
+                PDF_Orden_otros cr = new PDF_Orden_otros();
+
+
+                TextObject txtfolio1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
+                TextObject txtnom = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtnom"];
+                TextObject txtape = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtape"];
+                TextObject txtequipo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtequipo"];
+                TextObject txtmarca1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmarca"];
+                TextObject txtmodelo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmodelo"];
+                TextObject txtservicio = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["servicio"];
+                TextObject txtaccesorios = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["accesorios"];
+                TextObject txtfalla1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtfalla"];
+
+                txtfolio1.Text = txtidoculto.Text;
+                txtnom.Text = txtnombre.Text;
+                txtape.Text = txtapellido.Text;
+                txtmarca1.Text = txtmarca.Text;
+                txtmodelo1.Text = txtmodelo.Text;
+                txtfalla1.Text = txtfalla.Text;
+                txtservicio.Text = combolocacion.Text;
+                txtaccesorios.Text = txtservicio.Text;
+
+
+                pdf.PDF_Generar.ReportSource = cr;
+                //f2.crystalReportViewer1.ReportSource = cr;
+                pdf.Show();
+
+                string equipo = txtequipo.Text;
 				string marca = txtmarca.Text;
 				string falla = txtfalla.Text;
 				string locacion = combolocacion.SelectedItem.ToString();
 				string accesorios = txtaccesorios.Text;
 				string modelo = txtmodelo.Text;
-				string fecha = Convert.ToDateTime(fechapicker.Text).ToString("yyyy-MM-dd");
+			
 				string comentarios = txtcomentarios.Text;
 				int idfolio = Convert.ToInt32(txtidoculto.Text);
-				string query_insertar_cel = "insert into reparar_electrodomesticos (equipo, marca, modelo, accesorios, falla, comentarios,fecha_entregar,fecha_egreso, servicio, estado,ubicacion, id_folio) values ('" + equipo + "', '" + marca + "', '" + modelo + "','" + accesorios + "', '" + falla + "','" + comentarios + "','" + fecha + "', '" + fecha + "',  '" + locacion + "','Pendiente','Recepcion', '" + idfolio + "') ";
+				string query_insertar_cel = "insert into reparar_electrodomesticos (equipo, marca, modelo, accesorios, falla, comentarios,fecha_entregar,fecha_egreso, servicio, estado,ubicacion, id_folio) values ('" + equipo + "', '" + marca + "', '" + modelo + "','" + accesorios + "', '" + falla + "','" + comentarios + "', '" + locacion + "','Pendiente','Recepcion', '" + idfolio + "') ";
 				MySqlCommand cmd_query_insertar_cel = new MySqlCommand(query_insertar_cel, conn);
 				try
 				{
 					conn.Open();
 					MySqlDataReader leercomando = cmd_query_insertar_cel.ExecuteReader();
-					MessageBox.Show(equipo + " agregado(a) correctamente");
+				//	MessageBox.Show(equipo + " agregado(a) correctamente");
 					conn.Close();
 					Close();
 				}
@@ -111,9 +141,7 @@ namespace Electronica
 			}
 		}
 
-		private void label2_Click(object sender, EventArgs e)
-		{
-		}
+	
 
 		private void txtequipo_TextChanged(object sender, EventArgs e)
 		{
@@ -132,14 +160,7 @@ namespace Electronica
 				MessageBox.Show("Debe completar la informacion");
 			}
 		}
-
-		
-
-	
-
-	
-
-		
+        
 
 
 
@@ -178,201 +199,244 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-			label1 = new System.Windows.Forms.Label();
-			label2 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
-			label6 = new System.Windows.Forms.Label();
-			label7 = new System.Windows.Forms.Label();
-			label8 = new System.Windows.Forms.Label();
-			label9 = new System.Windows.Forms.Label();
-			label10 = new System.Windows.Forms.Label();
-			label11 = new System.Windows.Forms.Label();
-			txtequipo = new System.Windows.Forms.TextBox();
-			txtmodelo = new System.Windows.Forms.TextBox();
-			combolocacion = new System.Windows.Forms.ComboBox();
-			fechapicker = new System.Windows.Forms.DateTimePicker();
-			txtcomentarios = new System.Windows.Forms.TextBox();
-			txtidoculto = new System.Windows.Forms.TextBox();
-			txtfalla = new System.Windows.Forms.TextBox();
-			txtaccesorios = new System.Windows.Forms.TextBox();
-			txtmarca = new System.Windows.Forms.TextBox();
-			gtngenorden = new System.Windows.Forms.Button();
-			SuspendLayout();
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(8, 7);
-			label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(285, 20);
-			label1.TabIndex = 0;
-			label1.Text = "Orden de Servicio de Linea Blanca";
-			label2.AutoSize = true;
-			label2.Location = new System.Drawing.Point(20, 47);
-			label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(43, 13);
-			label2.TabIndex = 1;
-			label2.Text = "Equipo:";
-			label2.Click += new System.EventHandler(label2_Click);
-			label5.AutoSize = true;
-			label5.Location = new System.Drawing.Point(515, 36);
-			label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(68, 13);
-			label5.TabIndex = 4;
-			label5.Text = "Comentarios:";
-			label6.AutoSize = true;
-			label6.Location = new System.Drawing.Point(19, 78);
-			label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label6.Name = "label6";
-			label6.Size = new System.Drawing.Size(45, 13);
-			label6.TabIndex = 5;
-			label6.Text = "Modelo:";
-			label7.AutoSize = true;
-			label7.Location = new System.Drawing.Point(250, 113);
-			label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label7.Name = "label7";
-			label7.Size = new System.Drawing.Size(150, 13);
-			label7.TabIndex = 6;
-			label7.Text = "Fecha de solicitud de servicio:";
-			label8.AutoSize = true;
-			label8.Location = new System.Drawing.Point(250, 77);
-			label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label8.Name = "label8";
-			label8.Size = new System.Drawing.Size(62, 13);
-			label8.TabIndex = 7;
-			label8.Text = "Accesorios:";
-			label9.AutoSize = true;
-			label9.Location = new System.Drawing.Point(250, 45);
-			label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(40, 13);
-			label9.TabIndex = 8;
-			label9.Text = "Marca:";
-			label10.AutoSize = true;
-			label10.Location = new System.Drawing.Point(22, 136);
-			label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label10.Name = "label10";
-			label10.Size = new System.Drawing.Size(54, 13);
-			label10.TabIndex = 9;
-			label10.Text = "Locacion:";
-			label11.AutoSize = true;
-			label11.Location = new System.Drawing.Point(22, 108);
-			label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			label11.Name = "label11";
-			label11.Size = new System.Drawing.Size(32, 13);
-			label11.TabIndex = 10;
-			label11.Text = "Falla:";
-			txtequipo.Location = new System.Drawing.Point(67, 42);
-			txtequipo.Margin = new System.Windows.Forms.Padding(2);
-			txtequipo.Name = "txtequipo";
-			txtequipo.Size = new System.Drawing.Size(102, 20);
-			txtequipo.TabIndex = 0;
-			txtequipo.TextChanged += new System.EventHandler(txtequipo_TextChanged);
-			txtmodelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-			txtmodelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtmodelo.Location = new System.Drawing.Point(67, 75);
-			txtmodelo.Margin = new System.Windows.Forms.Padding(2);
-			txtmodelo.Name = "txtmodelo";
-			txtmodelo.Size = new System.Drawing.Size(102, 20);
-			txtmodelo.TabIndex = 2;
-			txtmodelo.TextChanged += new System.EventHandler(txtmodelo_TextChanged);
-			combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			combolocacion.FormattingEnabled = true;
-			combolocacion.Items.AddRange(new object[4]
-			{
-				"Taller",
-				"Servicio a domicilio",
-				"Re-ingreso por garantia",
-				"Otro"
-			});
-			combolocacion.Location = new System.Drawing.Point(80, 133);
-			combolocacion.Margin = new System.Windows.Forms.Padding(2);
-			combolocacion.Name = "combolocacion";
-			combolocacion.Size = new System.Drawing.Size(90, 21);
-			combolocacion.TabIndex = 5;
-			fechapicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			fechapicker.Location = new System.Drawing.Point(253, 136);
-			fechapicker.Margin = new System.Windows.Forms.Padding(2);
-			fechapicker.Name = "fechapicker";
-			fechapicker.Size = new System.Drawing.Size(151, 20);
-			fechapicker.TabIndex = 6;
-			txtcomentarios.Location = new System.Drawing.Point(518, 56);
-			txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
-			txtcomentarios.Multiline = true;
-			txtcomentarios.Name = "txtcomentarios";
-			txtcomentarios.Size = new System.Drawing.Size(273, 122);
-			txtcomentarios.TabIndex = 7;
-			txtidoculto.Location = new System.Drawing.Point(355, 0);
-			txtidoculto.Margin = new System.Windows.Forms.Padding(2);
-			txtidoculto.Name = "txtidoculto";
-			txtidoculto.Size = new System.Drawing.Size(102, 20);
-			txtidoculto.TabIndex = 23;
-			txtidoculto.Visible = false;
-			txtfalla.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-			txtfalla.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtfalla.Location = new System.Drawing.Point(67, 105);
-			txtfalla.Margin = new System.Windows.Forms.Padding(2);
-			txtfalla.Name = "txtfalla";
-			txtfalla.Size = new System.Drawing.Size(102, 20);
-			txtfalla.TabIndex = 4;
-			txtfalla.TextChanged += new System.EventHandler(txtfalla_TextChanged);
-			txtaccesorios.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-			txtaccesorios.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-			txtaccesorios.Location = new System.Drawing.Point(316, 74);
-			txtaccesorios.Margin = new System.Windows.Forms.Padding(2);
-			txtaccesorios.Name = "txtaccesorios";
-			txtaccesorios.Size = new System.Drawing.Size(102, 20);
-			txtaccesorios.TabIndex = 3;
-			txtaccesorios.TextChanged += new System.EventHandler(txtaccesorios_TextChanged);
-			txtmarca.Location = new System.Drawing.Point(294, 40);
-			txtmarca.Margin = new System.Windows.Forms.Padding(2);
-			txtmarca.Name = "txtmarca";
-			txtmarca.Size = new System.Drawing.Size(102, 20);
-			txtmarca.TabIndex = 1;
-			txtmarca.TextChanged += new System.EventHandler(txtmarca_TextChanged);
-			gtngenorden.FlatAppearance.BorderSize = 0;
-			gtngenorden.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(0, 122, 204);
-			gtngenorden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			gtngenorden.Image = Electronica.Properties.Resources.contract;
-			gtngenorden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			gtngenorden.Location = new System.Drawing.Point(659, 271);
-			gtngenorden.Margin = new System.Windows.Forms.Padding(2);
-			gtngenorden.Name = "gtngenorden";
-			gtngenorden.Size = new System.Drawing.Size(132, 37);
-			gtngenorden.TabIndex = 8;
-			gtngenorden.Text = "Generar Orden";
-			gtngenorden.UseVisualStyleBackColor = true;
-			gtngenorden.Click += new System.EventHandler(gtngenorden_Click);
-			base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			BackColor = System.Drawing.SystemColors.Control;
-			base.ClientSize = new System.Drawing.Size(857, 419);
-			base.Controls.Add(txtfalla);
-			base.Controls.Add(txtaccesorios);
-			base.Controls.Add(txtmarca);
-			base.Controls.Add(txtidoculto);
-			base.Controls.Add(gtngenorden);
-			base.Controls.Add(txtcomentarios);
-			base.Controls.Add(fechapicker);
-			base.Controls.Add(combolocacion);
-			base.Controls.Add(txtmodelo);
-			base.Controls.Add(txtequipo);
-			base.Controls.Add(label11);
-			base.Controls.Add(label10);
-			base.Controls.Add(label9);
-			base.Controls.Add(label8);
-			base.Controls.Add(label7);
-			base.Controls.Add(label6);
-			base.Controls.Add(label5);
-			base.Controls.Add(label2);
-			base.Controls.Add(label1);
-			base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			base.Margin = new System.Windows.Forms.Padding(2);
-			base.Name = "RecepcionElectrodomesticos";
-			Text = "RecepcionTablets_Cel";
-			ResumeLayout(false);
-			PerformLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtequipo = new System.Windows.Forms.TextBox();
+            this.txtmodelo = new System.Windows.Forms.TextBox();
+            this.combolocacion = new System.Windows.Forms.ComboBox();
+            this.txtcomentarios = new System.Windows.Forms.TextBox();
+            this.txtidoculto = new System.Windows.Forms.TextBox();
+            this.txtfalla = new System.Windows.Forms.TextBox();
+            this.txtaccesorios = new System.Windows.Forms.TextBox();
+            this.txtmarca = new System.Windows.Forms.TextBox();
+            this.gtngenorden = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(285, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Orden de Servicio de Linea Blanca";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 47);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Equipo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(515, 36);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Comentarios:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 78);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Modelo:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(250, 77);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Accesorios:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(250, 45);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Marca:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 136);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Locacion:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(22, 108);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Falla:";
+            // 
+            // txtequipo
+            // 
+            this.txtequipo.Location = new System.Drawing.Point(67, 42);
+            this.txtequipo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtequipo.Name = "txtequipo";
+            this.txtequipo.Size = new System.Drawing.Size(102, 20);
+            this.txtequipo.TabIndex = 0;
+            this.txtequipo.TextChanged += new System.EventHandler(this.txtequipo_TextChanged);
+            // 
+            // txtmodelo
+            // 
+            this.txtmodelo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtmodelo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtmodelo.Location = new System.Drawing.Point(67, 75);
+            this.txtmodelo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.Size = new System.Drawing.Size(102, 20);
+            this.txtmodelo.TabIndex = 2;
+            this.txtmodelo.TextChanged += new System.EventHandler(this.txtmodelo_TextChanged);
+            // 
+            // combolocacion
+            // 
+            this.combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combolocacion.FormattingEnabled = true;
+            this.combolocacion.Items.AddRange(new object[] {
+            "Taller",
+            "Servicio a domicilio",
+            "Re-ingreso por garantia",
+            "Otro"});
+            this.combolocacion.Location = new System.Drawing.Point(80, 133);
+            this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
+            this.combolocacion.Name = "combolocacion";
+            this.combolocacion.Size = new System.Drawing.Size(90, 21);
+            this.combolocacion.TabIndex = 5;
+            // 
+            // txtcomentarios
+            // 
+            this.txtcomentarios.Location = new System.Drawing.Point(518, 56);
+            this.txtcomentarios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcomentarios.Multiline = true;
+            this.txtcomentarios.Name = "txtcomentarios";
+            this.txtcomentarios.Size = new System.Drawing.Size(273, 122);
+            this.txtcomentarios.TabIndex = 7;
+            // 
+            // txtidoculto
+            // 
+            this.txtidoculto.Location = new System.Drawing.Point(355, 0);
+            this.txtidoculto.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidoculto.Name = "txtidoculto";
+            this.txtidoculto.Size = new System.Drawing.Size(102, 20);
+            this.txtidoculto.TabIndex = 23;
+            this.txtidoculto.Visible = false;
+            // 
+            // txtfalla
+            // 
+            this.txtfalla.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtfalla.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtfalla.Location = new System.Drawing.Point(67, 105);
+            this.txtfalla.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfalla.Name = "txtfalla";
+            this.txtfalla.Size = new System.Drawing.Size(102, 20);
+            this.txtfalla.TabIndex = 4;
+            this.txtfalla.TextChanged += new System.EventHandler(this.txtfalla_TextChanged);
+            // 
+            // txtaccesorios
+            // 
+            this.txtaccesorios.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtaccesorios.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtaccesorios.Location = new System.Drawing.Point(316, 74);
+            this.txtaccesorios.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaccesorios.Name = "txtaccesorios";
+            this.txtaccesorios.Size = new System.Drawing.Size(102, 20);
+            this.txtaccesorios.TabIndex = 3;
+            this.txtaccesorios.TextChanged += new System.EventHandler(this.txtaccesorios_TextChanged);
+            // 
+            // txtmarca
+            // 
+            this.txtmarca.Location = new System.Drawing.Point(294, 40);
+            this.txtmarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.Size = new System.Drawing.Size(102, 20);
+            this.txtmarca.TabIndex = 1;
+            this.txtmarca.TextChanged += new System.EventHandler(this.txtmarca_TextChanged);
+            // 
+            // gtngenorden
+            // 
+            this.gtngenorden.FlatAppearance.BorderSize = 0;
+            this.gtngenorden.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.gtngenorden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gtngenorden.Image = global::Electronica.Properties.Resources.contract;
+            this.gtngenorden.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gtngenorden.Location = new System.Drawing.Point(659, 256);
+            this.gtngenorden.Margin = new System.Windows.Forms.Padding(2);
+            this.gtngenorden.Name = "gtngenorden";
+            this.gtngenorden.Size = new System.Drawing.Size(132, 37);
+            this.gtngenorden.TabIndex = 8;
+            this.gtngenorden.Text = "Generar Orden";
+            this.gtngenorden.UseVisualStyleBackColor = true;
+            this.gtngenorden.Click += new System.EventHandler(this.gtngenorden_Click);
+            // 
+            // RecepcionOtros
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(857, 419);
+            this.Controls.Add(this.txtfalla);
+            this.Controls.Add(this.txtaccesorios);
+            this.Controls.Add(this.txtmarca);
+            this.Controls.Add(this.txtidoculto);
+            this.Controls.Add(this.gtngenorden);
+            this.Controls.Add(this.txtcomentarios);
+            this.Controls.Add(this.combolocacion);
+            this.Controls.Add(this.txtmodelo);
+            this.Controls.Add(this.txtequipo);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "RecepcionOtros";
+            this.Text = "RecepcionTablets_Cel";
+            this.Load += new System.EventHandler(this.RecepcionOtros_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
-	}
+
+        private void RecepcionOtros_Load(object sender, EventArgs e)
+        {
+            //Mayusculas permanentes en campo modelo y falla
+            txtmodelo.CharacterCasing = CharacterCasing.Upper;
+            txtfalla.CharacterCasing = CharacterCasing.Upper;
+        }
+    }
 }

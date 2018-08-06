@@ -30,13 +30,10 @@ namespace Electronica
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
 
         public void BuscarEquipos(string valueToSearch)
         {
-            string query_tabla_equipos = "SELECT * FROM `reparar_tv` WHERE estado='Sin solucion' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+            string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE estado='Sin solucion' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
             MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
             try
             {
@@ -55,17 +52,8 @@ namespace Electronica
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void TablaEquipos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
+   
+       
 
         private void Buscador_TextChanged(object sender, EventArgs e)
         {
@@ -82,10 +70,7 @@ namespace Electronica
             BuscarEquipos("");
         }
 
-        private void Cliente_nuevo(object sender, EventArgs e)
-        {
-        }
-
+        
         private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -103,7 +88,7 @@ namespace Electronica
                 cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
                 cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
                 cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-                cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
+              //  cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
                 cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
                 cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
                 cl.txtabono.Text = row.Cells["abono"].Value.ToString();
