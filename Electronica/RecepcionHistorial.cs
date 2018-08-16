@@ -30,14 +30,11 @@ namespace Electronica
 			InitializeComponent();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
-
+		
 		public void BuscarEquipos(string valueToSearch)
 		{
 			int folio = Convert.ToInt32(txt_folio.Text);
-			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%' union all SELECT id_equipo,id_folio, id_personal, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
+            string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal,nombre,apellidos,celular,correo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar,fecha_egreso, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado FROM clientes LEFT JOIN reparar_Tv USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'  union all SELECT id_equipo,id_folio, id_personal,nombre,apellidos,celular,correo, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, fecha_egreso, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado FROM clientes LEFT JOIN reparar_electrodomesticos USING(id_folio) where id_folio = '" + folio + "' AND CONCAT(id_folio,nombre,apellidos,correo,celular,id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,id_folio,id_personal) LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{

@@ -160,13 +160,16 @@ namespace Electronica
 		
 		private void btnelectro_Click(object sender, EventArgs e)
 		{
-			limpiarpanelanidado();
-			RecepcionOtros rec = new RecepcionOtros();
-			rec.txtidoculto.Text = txtfolio.Text.ToString();
-			rec.TopLevel = false;
-			rec.Parent = panelanidado;
-			rec.Show();
-		}
+            limpiarpanelanidado();
+            RecepcionOtros ret = new RecepcionOtros();
+            ret.txtidoculto.Text = txtfolio.Text.ToString();
+            ret.txtnombre.Text = txtnombre.Text.ToString();
+            ret.txtapellido.Text = txtapellido.Text.ToString();
+
+            ret.TopLevel = false;
+            ret.Parent = panelanidado;
+            ret.Show();
+        }
 
 		
 

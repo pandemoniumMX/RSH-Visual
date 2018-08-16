@@ -330,17 +330,68 @@ namespace Electronica
 		{
 		}
 
-		private void txttotal_KeyPress(object sender, KeyPressEventArgs e)
+		private void txttotal_KeyPress(object sender, KeyPressEventArgs v)
 		{
-		}
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
+            }
+        }
 
-		private void txtabono_KeyPress(object sender, KeyPressEventArgs e)
+		private void txtabono_KeyPress(object sender, KeyPressEventArgs v)
 		{
-		}
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
+            }
+        }
 
-		private void txtrefaccion_KeyPress(object sender, KeyPressEventArgs e)
+		private void txtrefaccion_KeyPress(object sender, KeyPressEventArgs v)
 		{
-		}
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
+            }
+        }
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
@@ -675,6 +726,7 @@ namespace Electronica
             this.txtmano.Size = new System.Drawing.Size(76, 22);
             this.txtmano.TabIndex = 16;
             this.txtmano.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtmano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmano_KeyPress_1);
             // 
             // label15
             // 
@@ -789,9 +841,11 @@ namespace Electronica
             this.txt_puntos.Location = new System.Drawing.Point(512, 519);
             this.txt_puntos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_puntos.Name = "txt_puntos";
+            this.txt_puntos.ReadOnly = true;
             this.txt_puntos.Size = new System.Drawing.Size(76, 22);
             this.txt_puntos.TabIndex = 46;
             this.txt_puntos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_puntos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_puntos_KeyPress);
             // 
             // label20
             // 
@@ -1175,6 +1229,48 @@ namespace Electronica
         {
             Taller_traslado_nuevo ss = new Taller_traslado_nuevo(txtfolio.Text, txtidequipo.Text);
             ss.ShowDialog();
+        }
+
+        private void txtmano_KeyPress_1(object sender, KeyPressEventArgs v)
+        {
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
+            }
+        }
+
+        private void txt_puntos_KeyPress(object sender, KeyPressEventArgs v)
+        {
+            if (char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Numeros");
+            }
         }
     }
 }

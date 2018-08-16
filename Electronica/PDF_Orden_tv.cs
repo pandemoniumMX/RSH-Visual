@@ -23,7 +23,7 @@ namespace Electronica {
         
         public override string ResourceName {
             get {
-                return "PDF_Orden.rpt";
+                return "PDF_Orden_tv.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Electronica {
         
         public override string FullResourceName {
             get {
-                return "Electronica.PDF_Orden.rpt";
+                return "Electronica.PDF_Orden_tv.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Electronica {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedPDF_Orden : Component, ICachedReport {
+    public class CachedPDF_Orden_tv : Component, ICachedReport {
         
-        public CachedPDF_Orden() {
+        public CachedPDF_Orden_tv() {
         }
         
         [Browsable(false)]

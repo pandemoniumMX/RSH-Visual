@@ -55,10 +55,7 @@ namespace Electronica
 
 	
 
-		private void Buscador_TextChanged(object sender, EventArgs e)
-		{
-		}
-
+		
 		private void Buscador_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			string valueToSearch = Buscador.Text.ToString();
@@ -73,10 +70,10 @@ namespace Electronica
 		
 		private void TablaEquipos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			if (e.RowIndex >= 0)
-			{
-				DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
-				RecepcionReparado_vista cl = new RecepcionReparado_vista();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = TablaEquipos.Rows[e.RowIndex];
+                RecepcionReparado_vista cl = new RecepcionReparado_vista();
                 cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
                 cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
                 cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
@@ -95,7 +92,7 @@ namespace Electronica
                 cl.txtestado.Text = row.Cells["estado"].Value.ToString();
                 cl.txtpersonal.Text = row.Cells["id_personal"].Value.ToString();
                 cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
-          //      cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
+                cl.txtfechaen.Text = row.Cells["fecha_egreso"].Value.ToString();
                 cl.txtnombre.Text = row.Cells["nombre"].Value.ToString();
                 cl.txtapellidos.Text = row.Cells["apellidos"].Value.ToString();
                 cl.txtcelular.Text = row.Cells["celular"].Value.ToString();
@@ -161,7 +158,6 @@ namespace Electronica
             this.Buscador.Name = "Buscador";
             this.Buscador.Size = new System.Drawing.Size(100, 26);
             this.Buscador.TabIndex = 5;
-            this.Buscador.TextChanged += new System.EventHandler(this.Buscador_TextChanged);
             this.Buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Buscador_KeyPress);
             // 
             // label1

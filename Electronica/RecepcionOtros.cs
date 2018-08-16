@@ -33,8 +33,6 @@ namespace Electronica
 
 		private TextBox txtmodelo;
 
-		private ComboBox combolocacion;
-
 		private TextBox txtcomentarios;
 
 		private Button gtngenorden;
@@ -46,10 +44,11 @@ namespace Electronica
 		private TextBox txtfalla;
 
 		private TextBox txtaccesorios;
-
-		public TextBox txtmarca;
         public TextBox txtnombre;
         public TextBox txtapellido;
+        private ComboBox combolacacion;
+        public TextBox txtmarca;
+  
 
         public RecepcionOtros()
 		{
@@ -75,7 +74,7 @@ namespace Electronica
 			{
 				MessageBox.Show("Campo falla vacío");
 			}
-			if (string.IsNullOrWhiteSpace(combolocacion.Text))
+			if (string.IsNullOrWhiteSpace(combolacacion.Text))
 			{
 				MessageBox.Show("Campo locacion no seleccionado");
 			}
@@ -91,24 +90,25 @@ namespace Electronica
                 PDF_Orden_otros cr = new PDF_Orden_otros();
 
 
-                TextObject txtfolio1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
+                TextObject txtfolio = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
                 TextObject txtnom = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtnom"];
                 TextObject txtape = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtape"];
                 TextObject txtequipo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtequipo"];
                 TextObject txtmarca1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmarca"];
                 TextObject txtmodelo1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmodelo"];
                 TextObject txtservicio = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["servicio"];
-                TextObject txtaccesorios = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["accesorios"];
+                TextObject accesorios1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["accesorios"];
                 TextObject txtfalla1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtfalla"];
 
-                txtfolio1.Text = txtidoculto.Text;
+                txtfolio.Text = txtidoculto.Text;
                 txtnom.Text = txtnombre.Text;
                 txtape.Text = txtapellido.Text;
                 txtmarca1.Text = txtmarca.Text;
+                txtequipo1.Text =txtequipo.Text;
                 txtmodelo1.Text = txtmodelo.Text;
                 txtfalla1.Text = txtfalla.Text;
-                txtservicio.Text = combolocacion.Text;
-                txtaccesorios.Text = txtservicio.Text;
+                txtservicio.Text = combolacacion.Text;
+                accesorios1.Text = txtaccesorios.Text;
 
 
                 pdf.PDF_Generar.ReportSource = cr;
@@ -118,7 +118,7 @@ namespace Electronica
                 string equipo = txtequipo.Text;
 				string marca = txtmarca.Text;
 				string falla = txtfalla.Text;
-				string locacion = combolocacion.SelectedItem.ToString();
+				string locacion = combolacacion.SelectedItem.ToString();
 				string accesorios = txtaccesorios.Text;
 				string modelo = txtmodelo.Text;
 			
@@ -209,13 +209,15 @@ namespace Electronica
             this.label11 = new System.Windows.Forms.Label();
             this.txtequipo = new System.Windows.Forms.TextBox();
             this.txtmodelo = new System.Windows.Forms.TextBox();
-            this.combolocacion = new System.Windows.Forms.ComboBox();
             this.txtcomentarios = new System.Windows.Forms.TextBox();
             this.txtidoculto = new System.Windows.Forms.TextBox();
             this.txtfalla = new System.Windows.Forms.TextBox();
             this.txtaccesorios = new System.Windows.Forms.TextBox();
             this.txtmarca = new System.Windows.Forms.TextBox();
             this.gtngenorden = new System.Windows.Forms.Button();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
+            this.combolacacion = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -285,9 +287,9 @@ namespace Electronica
             this.label10.Location = new System.Drawing.Point(22, 136);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Locacion:";
+            this.label10.Text = "Servicio:";
             // 
             // label11
             // 
@@ -318,21 +320,6 @@ namespace Electronica
             this.txtmodelo.Size = new System.Drawing.Size(102, 20);
             this.txtmodelo.TabIndex = 2;
             this.txtmodelo.TextChanged += new System.EventHandler(this.txtmodelo_TextChanged);
-            // 
-            // combolocacion
-            // 
-            this.combolocacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combolocacion.FormattingEnabled = true;
-            this.combolocacion.Items.AddRange(new object[] {
-            "Taller",
-            "Servicio a domicilio",
-            "Re-ingreso por garantia",
-            "Otro"});
-            this.combolocacion.Location = new System.Drawing.Point(80, 133);
-            this.combolocacion.Margin = new System.Windows.Forms.Padding(2);
-            this.combolocacion.Name = "combolocacion";
-            this.combolocacion.Size = new System.Drawing.Size(90, 21);
-            this.combolocacion.TabIndex = 5;
             // 
             // txtcomentarios
             // 
@@ -399,19 +386,55 @@ namespace Electronica
             this.gtngenorden.UseVisualStyleBackColor = true;
             this.gtngenorden.Click += new System.EventHandler(this.gtngenorden_Click);
             // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(518, 7);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(102, 20);
+            this.txtnombre.TabIndex = 24;
+            this.txtnombre.Visible = false;
+            // 
+            // txtapellido
+            // 
+            this.txtapellido.Location = new System.Drawing.Point(647, 7);
+            this.txtapellido.Margin = new System.Windows.Forms.Padding(2);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(102, 20);
+            this.txtapellido.TabIndex = 25;
+            this.txtapellido.Visible = false;
+            // 
+            // combolacacion
+            // 
+            this.combolacacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combolacacion.FormattingEnabled = true;
+            this.combolacacion.Items.AddRange(new object[] {
+            "Taller",
+            "Domicilio",
+            "Compra",
+            "Garantia",
+            "Otros"});
+            this.combolacacion.Location = new System.Drawing.Point(67, 133);
+            this.combolacacion.Margin = new System.Windows.Forms.Padding(2);
+            this.combolacacion.Name = "combolacacion";
+            this.combolacacion.Size = new System.Drawing.Size(178, 21);
+            this.combolacacion.TabIndex = 26;
+            // 
             // RecepcionOtros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(857, 419);
+            this.Controls.Add(this.combolacacion);
+            this.Controls.Add(this.txtapellido);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.txtfalla);
             this.Controls.Add(this.txtaccesorios);
             this.Controls.Add(this.txtmarca);
             this.Controls.Add(this.txtidoculto);
             this.Controls.Add(this.gtngenorden);
             this.Controls.Add(this.txtcomentarios);
-            this.Controls.Add(this.combolocacion);
             this.Controls.Add(this.txtmodelo);
             this.Controls.Add(this.txtequipo);
             this.Controls.Add(this.label11);

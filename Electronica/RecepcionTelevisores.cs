@@ -83,7 +83,7 @@ namespace Electronica
                 PDF_Orden_tv cr = new PDF_Orden_tv();
 
 
-                TextObject txtfolio1 = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
+                TextObject txtfolio = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["txtfolio"];
                 TextObject txtnom = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtnom"];
                 TextObject txtape = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtape"];
                 TextObject txtmarca1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtmarca"];
@@ -92,7 +92,7 @@ namespace Electronica
                 TextObject txtaccesorios = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["accesorios"];
                 TextObject txtfalla1 = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtfalla"];
 
-                txtfolio1.Text = txtidoculto.Text;
+                txtfolio.Text = txtidoculto.Text;
                 txtnom.Text = txtnombre.Text;
                 txtape.Text = txtapellido.Text;
                 txtmarca1.Text = combomarca.Text;
