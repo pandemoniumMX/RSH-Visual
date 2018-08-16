@@ -134,19 +134,7 @@ namespace Electronica
         public RecepcionReparado_vista()
         {
             InitializeComponent();
-            try
-            {
-                int folio = Convert.ToInt32(txtfolio.Text);
-                string descuento = "select sum(p.puntos) as total_total from(SELECT puntos FROM reparar_electrodomesticos where id_folio = '" + folio + "' and estado='Reparado' UNION ALL SELECT puntos FROM reparar_tv where id_folio = '" + folio + "' and estado='Reparado' ) p";
-                conn.Open();
-                MySqlCommand cmd_descuento = new MySqlCommand(descuento, conn);
-                txtpuntos.Text = cmd_descuento.ExecuteScalar().ToString();
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+          
         }
 
         private void btngenorden_Click(object sender, EventArgs e)
@@ -203,9 +191,7 @@ namespace Electronica
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
+        
 
         private void Taller_actualizar_Load(object sender, EventArgs e)
         {
@@ -223,6 +209,20 @@ namespace Electronica
             if (!string.IsNullOrEmpty(txtrefaccion.Text) && !string.IsNullOrEmpty(txtmano.Text) && !string.IsNullOrEmpty(txtabono.Text))
             {
                 txtrestante.Text = (Convert.ToInt32(txtsubtotal.Text) - Convert.ToInt32(txtabono.Text)).ToString();
+            }
+
+            try
+            {
+                int folio = Convert.ToInt32(txtfolio.Text);
+                string descuento = "select sum(p.puntos) as total_total from(SELECT puntos FROM reparar_electrodomesticos where id_folio = '" + folio + "' and estado='Entregado' UNION ALL SELECT puntos FROM reparar_tv where id_folio = '" + folio + "' and estado='Entregado' ) p";
+                conn.Open();
+                MySqlCommand cmd_descuento = new MySqlCommand(descuento, conn);
+                txtpuntos.Text = cmd_descuento.ExecuteScalar().ToString();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -265,10 +265,10 @@ namespace Electronica
             if (dr == DialogResult.Yes)
             {
                 string folio = txtfolio.Text;
-                string total = txtsubtotal.Text;
-                string descuento8 = "UPDATE reparar_tv SET puntos = '0', costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='Reparado'";
+                string total = txtrestante.Text;
+                string descuento8 = "UPDATE reparar_tv SET puntos = '0', restante='" + total + "' WHERE id_folio ='" + folio + "' and estado='Entregado'";
                 MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-                string descuento7 = "UPDATE reparar_electrodomesticos SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
+                string descuento7 = "UPDATE reparar_electrodomesticos SET puntos = '0' , restante='" + total + "' WHERE id_folio ='" + folio + "' and estado='Entregado'";
                 MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
                
                 try
@@ -503,9 +503,9 @@ namespace Electronica
             this.label8.Location = new System.Drawing.Point(6, 128);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Locacion:";
+            this.label8.Text = "Servicio:";
             // 
             // label9
             // 
@@ -614,7 +614,6 @@ namespace Electronica
             this.txtfolio.ReadOnly = true;
             this.txtfolio.Size = new System.Drawing.Size(76, 20);
             this.txtfolio.TabIndex = 20;
-            this.txtfolio.TextChanged += new System.EventHandler(this.txtfolio_TextChanged);
             // 
             // txtmodelo
             // 
@@ -1119,6 +1118,7 @@ namespace Electronica
             this.button3.TabIndex = 44;
             this.button3.Text = "    Confirmar descuento";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
@@ -1134,8 +1134,9 @@ namespace Electronica
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 35);
             this.button2.TabIndex = 43;
-            this.button2.Text = "       Ver y aplicar descuento";
+            this.button2.Text = "      Aplicar puntos";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label1
             // 
@@ -1316,9 +1317,13 @@ namespace Electronica
             }
         }
 
-        private void txtfolio_TextChanged(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtpuntos.Text) && !string.IsNullOrEmpty(txtsubtotal.Text))
+            {
+                txtrestante.Text = (Convert.ToInt32(txtpuntos.Text) - Convert.ToInt32(txtsubtotal.Text)).ToString();
+                button3.Visible = true;
+            }
         }
     }
 }

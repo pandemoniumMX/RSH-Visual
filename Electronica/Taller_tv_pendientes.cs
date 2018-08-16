@@ -33,7 +33,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso,servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE estado='pendiente' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal,equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso,servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE estado='pendiente' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -86,7 +86,7 @@ namespace Electronica
 				cl.txtfolio.Text = row.Cells["id_folio"].Value.ToString();
 				cl.txtidequipo.Text = row.Cells["id_equipo"].Value.ToString();
 				cl.txttipo.Text = txttipo.Text.ToString();
-				cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
+				//cl.txtequipo.Text = row.Cells["equipo"].Value.ToString();
 				cl.txtmarca.Text = row.Cells["marca"].Value.ToString();
 				cl.txtmodelo.Text = row.Cells["modelo"].Value.ToString();
 				cl.txtaccesorios.Text = row.Cells["accesorios"].Value.ToString();

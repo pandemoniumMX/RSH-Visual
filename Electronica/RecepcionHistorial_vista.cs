@@ -367,32 +367,8 @@ namespace Electronica
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			DialogResult dr = MessageBox.Show("¿Está seguro(a) de aplicar el descuento? Esta acción es irreversible", "Alerta de descuento", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
-			if (dr == DialogResult.Yes)
-			{
-				string folio = txtfolio.Text;
-				string total = txtsubtotal.Text;
-				string descuento8 = "UPDATE reparar_tv SET puntos = '0', costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='Reparado'";
-				MySqlCommand cmd_descuento8 = new MySqlCommand(descuento8, conn);
-				string descuento7 = "UPDATE reparar_electrodomesticos SET puntos = '0' , costo_total='" + total + "' WHERE id_folio ='" + folio + "' and estado='reparado'";
-				MySqlCommand cmd_descuento7 = new MySqlCommand(descuento7, conn);
-				try
-				{
-					conn.Open();
-					MySqlDataReader leercomando8 = cmd_descuento8.ExecuteReader();
-					conn.Close();
-					conn.Open();
-					MySqlDataReader leercomando7 = cmd_descuento7.ExecuteReader();
-					
-				
-					MessageBox.Show("Descuento aplicado satisfcatoriamente");
-					conn.Close();
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
-			}
+		
+			
 		}
 
 		private void panel2_Paint(object sender, PaintEventArgs e)
@@ -616,9 +592,9 @@ namespace Electronica
             this.label8.Location = new System.Drawing.Point(17, 128);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Locacion:";
+            this.label8.Text = "Servicio:";
             // 
             // label9
             // 

@@ -33,7 +33,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal, equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE estado='Reparada' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal,equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE estado='Reparada' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{

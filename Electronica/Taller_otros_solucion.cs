@@ -30,13 +30,11 @@ namespace Electronica
 			InitializeComponent();
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-		}
+		
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM `reparar_electrodomesticos` WHERE estado='Sin solucion' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal,equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, fecha_entregar, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_electrodomesticos` WHERE estado='Sin solucion' and concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -136,7 +134,7 @@ namespace Electronica
 
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.TablaEquipos = new System.Windows.Forms.DataGridView();
             this.Buscador = new System.Windows.Forms.TextBox();
@@ -158,15 +156,15 @@ namespace Electronica
             // 
             // TablaEquipos
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.TablaEquipos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TablaEquipos.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.TablaEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaEquipos.Location = new System.Drawing.Point(12, 129);
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
+            this.TablaEquipos.Size = new System.Drawing.Size(1080, 561);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaEquipos_CellContentClick_1);
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
@@ -214,7 +212,7 @@ namespace Electronica
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1104, 558);
+            this.ClientSize = new System.Drawing.Size(1104, 702);
             this.Controls.Add(this.txttipo);
             this.Controls.Add(this.txtfolio);
             this.Controls.Add(this.label1);

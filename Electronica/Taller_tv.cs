@@ -42,7 +42,7 @@ namespace Electronica
 
 		public void BuscarEquipos(string valueToSearch)
 		{
-			string query_tabla_equipos = "SELECT * FROM `reparar_tv` WHERE concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
+			string query_tabla_equipos = "SELECT id_equipo,id_folio, id_personal,equipo, marca, modelo, accesorios, falla, comentarios, fecha_ingreso, servicio,ubicacion,presupuesto,mano_obra,abono,restante,costo_total,estado,puntos FROM `reparar_tv` WHERE concat(id_equipo,equipo,marca,modelo,accesorios,falla,comentarios,fecha_ingreso,fecha_entregar,fecha_egreso,servicio,presupuesto,mano_obra,abono,costo_total,estado,puntos,id_folio,id_personal)LIKE '%" + valueToSearch + "%'";
 			MySqlCommand cmd_query_tabla_equipos = new MySqlCommand(query_tabla_equipos, conn);
 			try
 			{
@@ -170,7 +170,7 @@ namespace Electronica
             this.TablaEquipos.Name = "TablaEquipos";
             this.TablaEquipos.ReadOnly = true;
             this.TablaEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TablaEquipos.Size = new System.Drawing.Size(1080, 417);
+            this.TablaEquipos.Size = new System.Drawing.Size(1080, 561);
             this.TablaEquipos.TabIndex = 3;
             this.TablaEquipos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TablaEquipos_CellMouseClick);
             this.TablaEquipos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TablaEquipos_MouseClick);
@@ -292,7 +292,7 @@ namespace Electronica
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1104, 558);
+            this.ClientSize = new System.Drawing.Size(1104, 702);
             this.Controls.Add(this.txttipo);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -347,8 +347,8 @@ namespace Electronica
                 cl.txtfalla.Text = row.Cells["falla"].Value.ToString();
                 cl.txtcomentarios.Text = row.Cells["comentarios"].Value.ToString();
                 cl.txtfechain.Text = row.Cells["fecha_ingreso"].Value.ToString();
-                cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
-                cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
+              //  cl.txtfechaen.Text = row.Cells["fecha_entregar"].Value.ToString();
+              //  cl.txtegreso.Text = row.Cells["fecha_egreso"].Value.ToString();
                 cl.combolocacion.Text = row.Cells["servicio"].Value.ToString();
                 cl.txtrefaccion.Text = row.Cells["presupuesto"].Value.ToString();
                 cl.txtabono.Text = row.Cells["abono"].Value.ToString();
